@@ -47,7 +47,7 @@ intersphinx_disabled_domains = ["std"]
 
 templates_path = ["_templates"]
 
-# language = 'zh_CN'
+language = 'en'  #'zh_CN'
 locale_dirs = ['../locales/']  # path is example but recommended.
 gettext_compact = False  # optional.
 
@@ -71,7 +71,8 @@ x_blog_feed_templates = {
     # Create content text suitable posting to social media
     "social": {
         # Format tags as hashtags and append to the content
-        "content": "{{ title }}{% for tag in post.tags %}"
+        "content":
+        "{{ title }}{% for tag in post.tags %}"
         " #{{ tag.name|trim()|replace(' ', '') }}"
         "{% endfor %}",
     },
@@ -88,7 +89,6 @@ html_logo = f"{develop_root}/doc/images/Nuitka-Logo-Symbol.png"
 html_copy_source = False
 html_show_sourcelink = False
 html_show_sphinx = False
-
 
 favicons = favicons = [
     {
@@ -138,6 +138,7 @@ epub_show_urls = "footnote"
 
 autodoc_member_order = "bysource"
 
+
 # Enable our own CSS to be used.
 def setup(app):
     app.add_css_file("my_theme.css")
@@ -150,7 +151,7 @@ html_theme_options = {
     "prev_next_buttons_location": "none",
     "analytics_id": "G-V73VK1T804",
     "analytics_anonymize_ip": True,
-    "includehidden" : False,
+    "includehidden": False,
 }
 
 html_extra_path = ["../files"]

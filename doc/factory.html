@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -11,39 +13,59 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Factory Instructions</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/asciinema-player_2.6.1.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/asciinema-custom.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <title>Factory Instructions</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="canonical" href="https://nuitka.net/doc/factory.html" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/clipboard.min.js"></script>
-        <script src="../_static/copybutton.js"></script>
-        <script src="../_static/tabs.js"></script>
-        <script src="../_static/asciinema-player_2.6.1.js"></script>
-        <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Presentations" href="../pages/Presentations.html" />
-    <link rel="prev" title="API documentation" href="api-doc.html" />   
+    <link rel="next" title="Internationalization" href="../use.html" />
+    <link rel="prev" title="API documentation" href="api-doc.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+     
 <link
   rel="alternate"
   type="application/atom+xml"
-  href="../blog/atom.xml"
+  href="../posts/atom.xml"
   title="Nuitka Blog"
 />
  
@@ -72,109 +94,375 @@
   }
 </style>
 
-</head>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
-            <img src="../_static/Nuitka-Logo-Symbol.png" class="logo" alt="Logo"/>
-          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../use.html">Internationalization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/Nuitka-Logo-Symbol.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../_toc/blog.html">
+   Nuitka Blog
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../_toc/commercial.html">
+   Commercial Users
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="commercial.html">
+     Nuitka Commercial
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../_toc/information.html">
+   Release Information
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Changelog.html">
+     Nuitka Release 0.6.19 (Draft)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="roadmap.html">
+     Roadmap
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../_toc/more.html">
+   More documentation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="api-doc.html">
+     API doc
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Factory Instructions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use.html">
+     Internationalization
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../_toc/other.html">
+   Other
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../_toc/shop.html">
+   Shop
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../shop/cancel.html">
+     Something went Wrong
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../shop/success.html">
+     Thanks for your order!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="commercial/protect-constants-data.html">
+     Protect Program Constants Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../_toc/start.html">
+   start
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="download.html">
+     Download
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../_toc/under-construction.html">
+   Under construction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="welcome.html">
+     Welcome
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="commercial.html">Nuitka Commercial</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html">Nuitka Release 0.6.19 (Draft)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html#nuitka-release-0-6-17">Nuitka Release 0.6.17</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Changelog.html#older-releases">Older Releases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="api-doc.html">API doc</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Factory Instructions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#factory-rationale">Factory Rationale</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-get-factory">How to get <code class="docutils literal notranslate"><span class="pre">factory</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#git">git</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pip">pip</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#word-of-warning">Word of Warning</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Media</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Other</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/nuitka-demo.html">Nuitka Demo</a></li>
-</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+<button><a href="https://github.com/daobook/nuitka-doc/">en</a></button>
+<button><a href="https://github.com/daobook/nuitka-doc/zh_CN">zh_CN</a></button>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
 
         </div>
-      </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Nuitka the Python Compiler</a>
-      </nav>
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#factory-rationale">
+   Factory Rationale
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-factory">
+   How to get
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     factory
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git">
+     git
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pip">
+     pip
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#word-of-warning">
+   Word of Warning
+  </a>
+ </li>
+</ul>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-              <section id="factory-instructions">
-<h1>Factory Instructions<a class="headerlink" href="#factory-instructions" title="Permalink to this headline"></a></h1>
-<section id="factory-rationale">
-<h2>Factory Rationale<a class="headerlink" href="#factory-rationale" title="Permalink to this headline"></a></h2>
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Factory Instructions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#factory-rationale">
+   Factory Rationale
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-factory">
+   How to get
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     factory
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git">
+     git
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pip">
+     pip
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#word-of-warning">
+   Word of Warning
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                 <div class="section" id="factory-instructions">
+<h1>Factory Instructions<a class="headerlink" href="#factory-instructions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="factory-rationale">
+<h2>Factory Rationale<a class="headerlink" href="#factory-rationale" title="Permalink to this headline">¶</a></h2>
 <p>Both the <code class="docutils literal notranslate"><span class="pre">master</span></code> and <code class="docutils literal notranslate"><span class="pre">develop</span></code> branch are supposed to be working
 for people at all times. For experiments in the context of issues and
 generally features not yet ready for prime time, there we have the
 factory branch.</p>
 <p>You have probably come here, because you were asked to checkout a change
 made for you on <code class="docutils literal notranslate"><span class="pre">factory</span></code>.</p>
-</section>
-<section id="how-to-get-factory">
-<h2>How to get <code class="docutils literal notranslate"><span class="pre">factory</span></code><a class="headerlink" href="#how-to-get-factory" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="how-to-get-factory">
+<h2>How to get <code class="docutils literal notranslate"><span class="pre">factory</span></code><a class="headerlink" href="#how-to-get-factory" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/Nuitka/Nuitka/actions/workflows/testing.yml?query=branch%3Afactory"><img alt="Factory Status" src="https://github.com/Nuitka/Nuitka/actions/workflows/testing.yml/badge.svg?branch=factory" /></a></p>
-<section id="git">
-<h3>git<a class="headerlink" href="#git" title="Permalink to this headline"></a></h3>
+<div class="section" id="git">
+<h3>git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone --branch factory https://github.com/Nuitka/Nuitka.git
 </pre></div>
 </div>
-</section>
-<section id="pip">
-<h3>pip<a class="headerlink" href="#pip" title="Permalink to this headline"></a></h3>
+</div>
+<div class="section" id="pip">
+<h3>pip<a class="headerlink" href="#pip" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U --force-reinstall <span class="s2">&quot;https://github.com/Nuitka/Nuitka/archive/factory.zip&quot;</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="word-of-warning">
-<h2>Word of Warning<a class="headerlink" href="#word-of-warning" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+<div class="section" id="word-of-warning">
+<h2>Word of Warning<a class="headerlink" href="#word-of-warning" title="Permalink to this headline">¶</a></h2>
 <p>This personal branch may include all kinds of stupid mistakes, e.g. not
 being executable with all versions, crashing, not working at all. They
 also frequently change without notice. So please use it only for the
@@ -182,86 +470,51 @@ issue at hand or even more than usually on your own risk.</p>
 <p>Once confirmed and found good, fixes will normally appear on develop
 branch relatively shortly, try to use those instead from then on, and
 wait for the change to appear there.</p>
-</section>
-</section>
+</div>
+</div>
 
 <div class="section">
    
 </div>
 
-           </div>
-          </div>
-          <footer>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
-  </div>
-
-  
-<div class='share-button-container'>
-    <div class="socialbutton-wrapper">
-        <a href="https://twitter.com/share?url=https://nuitka.net/doc/factory.html&hashtags=nuitka" target="_blank">
-            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
-                <p class="icon">
-                    <img src="/_static/icon-twitter.png">
-                </p>
-
-                <p class="shares">share...</p>
-            </div>
-        </a>
-
-        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/doc/factory.html&hashtag=%23nuitka"  target="_blank">
-            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
-                <p class="icon">
-                    <img src="/_static/icon-facebook.png">
-                </p>
-
-                <p class="shares">share...</p>
-            </div>
-        </a>
-
-        <a href="http://www.reddit.com/submit?url=https://nuitka.net/doc/factory.html" target="_blank">
-            <div class="socialbutton reddit">
-                <p class="icon">
-                    <img src="/_static/icon-reddit.png">
-                </p>
-
-                <p class="shares">share...</p>
-            </div>
-        </a>
-    </div>
-</div>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-      $('a[href^="http://"], a[href^="https://"]').not('a[class*=internal]').attr('target', '_blank');
-    });
-  </script>
-
-
-</footer>
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="api-doc.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">API documentation</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../use.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Internationalization</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Kay Hayen<br/>
+    
+        &copy; Copyright 2022, Kay Hayen and Nuitka Contributors.<br/>
+  </p>
+</footer>
+</main>
+
+
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-    <!-- Theme Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V73VK1T804"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-      gtag('config', 'G-V73VK1T804', {
-          'anonymize_ip': true,
-      });
-    </script> 
-
-</body>
+  </body>
 </html>

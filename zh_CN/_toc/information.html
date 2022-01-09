@@ -1,0 +1,1295 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad.png" sizes="72x72" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-iphone4.png" sizes="114x114" type="image/png">
+    <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
+    <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
+
+    <title>Release Information</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/my_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script src="../_static/asciinema-player_2.6.1.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <link rel="canonical" href="https://nuitka.net/_toc/information.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Nuitka Release 0.6.19 (Draft)" href="../doc/Changelog.html" />
+    <link rel="prev" title="Nuitka Commercial" href="../doc/commercial.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+     
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../posts/atom.xml"
+  title="Nuitka Blog"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/Nuitka-Logo-Symbol.png" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="搜索文档..." aria-label="搜索文档..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="blog.html">
+   Nuitka Blog
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="commercial.html">
+   Commercial Users
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../doc/commercial.html">
+     Nuitka Commercial
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Release Information
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../doc/Changelog.html">
+     Nuitka Release 0.6.19 (Draft)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../doc/roadmap.html">
+     Roadmap
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="more.html">
+   More documentation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../doc/api-doc.html">
+     API doc
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../doc/factory.html">
+     工厂说明书
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../use.html">
+     国际化
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="other.html">
+   Other
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="shop.html">
+   Shop
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../shop/cancel.html">
+     Something went Wrong
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../shop/success.html">
+     Thanks for your order!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../doc/commercial/protect-constants-data.html">
+     Protect Program Constants Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="start.html">
+   start
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../doc/download.html">
+     Download
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="under-construction.html">
+   Under construction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../doc/welcome.html">
+     Welcome
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div>
+<button><a href="https://github.com/daobook/nuitka-doc/">en</a></button>
+<button><a href="https://github.com/daobook/nuitka-doc/zh_CN">zh_CN</a></button>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="切换导航" aria-controls="site-navigation"
+                title="切换导航" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/"><button type="button"
+                class="btn btn-secondary topbarbtn" title="下载源文件" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="列印成PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="全屏模式"
+        title="全屏模式"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Release Information</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                 <div class="section" id="release-information">
+<h1>Release Information<a class="headerlink" href="#release-information" title="永久链接至标题">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.19 (Draft)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#bug-fixes">Bug Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#new-features">New Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#optimization">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#organisational">Organisational</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#cleanups">Cleanups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#tests">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id1">Bug Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id2">New Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id3">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id4">Organisational</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id5">Cleanups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id6">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id7">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-17">Nuitka Release 0.6.17</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id8">Bug Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id9">New Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id10">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id11">Organisational</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id12">Cleanups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id13">Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#id14">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-16">Nuitka Release 0.6.16</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id15">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id16">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id17">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id18">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id19">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id20">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-15">Nuitka Release 0.6.15</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id21">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id22">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id23">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id24">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id25">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id26">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id27">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-14">Nuitka Release 0.6.14</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id28">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id29">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id30">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id31">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id32">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id33">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id34">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-13">Nuitka Release 0.6.13</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id35">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id36">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id37">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id38">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id39">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id40">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id41">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-12">Nuitka Release 0.6.12</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id42">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id43">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id44">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id45">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id46">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id47">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id48">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-11">Nuitka Release 0.6.11</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id49">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id50">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id51">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id52">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id53">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id54">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id55">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-10">Nuitka Release 0.6.10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id56">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id57">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id58">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id59">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id60">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id61">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id62">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-9">Nuitka Release 0.6.9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id63">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id64">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id65">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id66">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id67">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id68">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-8">Nuitka Release 0.6.8</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id69">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id70">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id71">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id72">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id73">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id74">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id75">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-7">Nuitka Release 0.6.7</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id76">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id77">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id78">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id79">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id80">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id81">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id82">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-6">Nuitka Release 0.6.6</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id83">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id84">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id85">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id86">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id87">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id88">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id89">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-5">Nuitka Release 0.6.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id90">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id91">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id92">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id93">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id94">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id95">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id96">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-4">Nuitka Release 0.6.4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id97">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id98">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id99">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id100">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id101">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id102">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id103">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-3">Nuitka Release 0.6.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id104">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id105">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id106">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id107">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id108">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id109">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id110">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-2">Nuitka Release 0.6.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id111">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id112">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id113">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id114">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id115">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-1">Nuitka Release 0.6.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id116">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id117">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id118">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id119">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id120">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id121">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-0">Nuitka Release 0.6.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id122">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id123">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id124">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id125">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id126">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id127">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id128">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-33">Nuitka Release 0.5.33</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id129">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id130">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id131">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id132">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id133">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id134">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id135">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-32">Nuitka Release 0.5.32</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id136">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id137">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id138">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id139">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id140">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id141">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id142">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-31">Nuitka Release 0.5.31</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id143">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id144">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id145">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id146">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id147">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id148">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-30">Nuitka Release 0.5.30</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id149">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id150">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id151">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id152">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id153">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id154">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id155">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-29">Nuitka Release 0.5.29</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id156">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id157">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id158">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id159">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id160">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id161">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-28">Nuitka Release 0.5.28</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id162">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id163">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id164">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id165">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id166">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id167">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id168">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-27">Nuitka Release 0.5.27</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id169">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id170">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id171">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id172">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id173">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id174">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id175">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-26">Nuitka Release 0.5.26</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id176">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id177">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id178">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id179">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id180">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id181">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id182">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-25">Nuitka Release 0.5.25</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id183">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id184">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id185">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id186">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id187">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id188">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id189">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-24">Nuitka Release 0.5.24</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id190">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id191">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id192">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id193">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-23">Nuitka Release 0.5.23</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id194">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id195">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id196">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id197">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id198">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id199">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-22">Nuitka Release 0.5.22</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id200">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id201">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id202">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id203">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-21">Nuitka Release 0.5.21</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id204">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id205">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id206">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id207">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id208">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id209">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-20">Nuitka Release 0.5.20</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id210">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id211">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id212">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id213">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-19">Nuitka Release 0.5.19</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id214">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id215">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id216">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id217">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-18">Nuitka Release 0.5.18</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id218">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id219">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id220">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id221">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id222">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-17">Nuitka Release 0.5.17</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id223">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id224">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id225">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id226">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id227">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id228">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id229">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-16">Nuitka Release 0.5.16</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id230">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id231">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id232">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id233">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id234">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id235">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-15">Nuitka Release 0.5.15</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id236">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id237">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id238">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id239">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id240">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id241">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-14">Nuitka Release 0.5.14</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id242">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id243">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id244">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id245">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id246">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id247">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id248">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-13">Nuitka Release 0.5.13</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id249">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id250">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id251">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id252">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id253">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id254">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id255">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-12">Nuitka Release 0.5.12</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id256">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id257">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id258">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id259">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id260">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id261">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-11">Nuitka Release 0.5.11</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id262">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id263">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id264">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id265">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#testing">Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id266">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id267">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-10">Nuitka Release 0.5.10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id268">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id269">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#cleanup">Cleanup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id270">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id271">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id272">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-9">Nuitka Release 0.5.9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id273">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id274">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id275">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id276">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id277">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id278">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-8">Nuitka Release 0.5.8</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id279">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id280">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id281">Cleanup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id282">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id283">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id284">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-7">Nuitka Release 0.5.7</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id285">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id286">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id287">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id288">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id289">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id290">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-6">Nuitka Release 0.5.6</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id291">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id292">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id293">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id294">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id295">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-5">Nuitka Release 0.5.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id296">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id297">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id298">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id299">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id300">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id301">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id302">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-4">Nuitka Release 0.5.4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id303">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id304">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id305">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id306">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id307">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-3">Nuitka Release 0.5.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id308">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id309">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id310">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#new-tests">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id311">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id312">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id313">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-2">Nuitka Release 0.5.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id314">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id315">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id316">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id317">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id318">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id319">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id320">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-1">Nuitka Release 0.5.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id321">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id322">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id323">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id324">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id325">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-5-0">Nuitka Release 0.5.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id326">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id327">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id328">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id329">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id330">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id331">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-4-7">Nuitka Release 0.4.7</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id332">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id333">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id334">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id335">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id336">Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id337">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id338">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-4-6">Nuitka Release 0.4.6</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id339">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id340">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id341">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id342">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id343">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id344">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-4-5">Nuitka Release 0.4.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id345">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id346">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id347">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id348">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id349">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-4-4">Nuitka Release 0.4.4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id350">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id351">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id352">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id353">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id354">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id355">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id356">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-4-3">Nuitka Release 0.4.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id357">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id358">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id359">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id360">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id361">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id362">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id363">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-4-2">Nuitka Release 0.4.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id364">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id365">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id366">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id367">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id368">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id369">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-4-1">Nuitka Release 0.4.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id370">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id371">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id372">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id373">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id374">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id375">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id376">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-4-0">Nuitka Release 0.4.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id377">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id378">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id379">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id380">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id381">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id382">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id383">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-25">Nuitka Release 0.3.25</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id384">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id385">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id386">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id387">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id388">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id389">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id390">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-24">Nuitka Release 0.3.24</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id391">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id392">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id393">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id394">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id395">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id396">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-23">Nuitka Release 0.3.23</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id397">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id398">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id399">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id400">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id401">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-22">Nuitka Release 0.3.22</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id402">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id403">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id404">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id405">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id406">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id407">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id408">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-21">Nuitka Release 0.3.21</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id409">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id410">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id411">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id412">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id413">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id414">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-20">Nuitka Release 0.3.20</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id415">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id416">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id417">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id418">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id419">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id420">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id421">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-19">Nuitka Release 0.3.19</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id422">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id423">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id424">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id425">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id426">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id427">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id428">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-18">Nuitka Release 0.3.18</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id429">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id430">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id431">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id432">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id433">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id434">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-17">Nuitka Release 0.3.17</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id435">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id436">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id437">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id438">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id439">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id440">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id441">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-16">Nuitka Release 0.3.16</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id442">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id443">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id444">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id445">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id446">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id447">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id448">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-15">Nuitka Release 0.3.15</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id449">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id450">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id451">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id452">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id453">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id454">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id455">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-14">Nuitka Release 0.3.14</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id456">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id457">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id458">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id459">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id460">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id461">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id462">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-13">Nuitka Release 0.3.13</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id463">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id464">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id465">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id466">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id467">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id468">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-12">Nuitka Release 0.3.12</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id469">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id470">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id471">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id472">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id473">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-11">Nuitka Release 0.3.11</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id474">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id475">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id476">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id477">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id478">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#numbers">Numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id479">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-10">Nuitka Release 0.3.10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id480">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id481">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id482">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id483">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id484">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id485">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-9">Nuitka Release 0.3.9</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id486">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id487">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#exceptions">Exceptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#function-calls">Function Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#parameter-parsing">Parameter Parsing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#attribute-access">Attribute Access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#constants">Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#iteration">Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#built-ins">Built-ins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id488">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id489">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id490">Organisational</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-8">Nuitka Release 0.3.8</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id491">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id492">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id493">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id494">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id495">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id496">Numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-7">Nuitka Release 0.3.7</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id497">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id498">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id499">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id500">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id501">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id502">Numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-6">Nuitka Release 0.3.6</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id503">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id504">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id505">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id506">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id507">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id508">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id509">Numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-5">Nuitka Release 0.3.5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id510">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id511">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id512">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id513">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id514">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id515">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id516">Numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-4">Nuitka Release 0.3.4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id517">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id518">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id519">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id520">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id521">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id522">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id523">Numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-3">Nuitka Release 0.3.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id524">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#generators">Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id525">Function Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#classes">Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#others">Others</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id526">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id527">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id528">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id529">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id530">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id531">Numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-2">Nuitka Release 0.3.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id532">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id533">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id534">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id535">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id536">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id537">Numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-1">Nuitka Release 0.3.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id538">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id539">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id540">Numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-3-0">Nuitka Release 0.3.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id541">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#performance-enhancements">Performance Enhancements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id542">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id543">Numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-2-4">Nuitka Release 0.2.4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id544">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id545">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id546">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id547">New Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-2-3">Nuitka Release 0.2.3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id548">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#reduced-differences-new-features">Reduced Differences / New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#tests-work">Tests Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id549">Cleanups</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-2-2">Nuitka Release 0.2.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id550">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#reduced-differences">Reduced Differences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id551">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id552">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id553">Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id554">New Tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id555">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-2-1">Nuitka Release 0.2.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id556">Bug Fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id557">Reduced Differences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id558">Cleanups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id559">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-2">Nuitka Release 0.2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id560">Bug fixes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id561">Organisational</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id562">Reduced Differences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id563">New Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../doc/Changelog.html#id564">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-1-1">Nuitka Release 0.1.1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../doc/roadmap.html#user-extensibility">用户可扩展性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/roadmap.html#standalone">单机版</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/roadmap.html#nuitka-python-public">Nuitka-Python (public)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/roadmap.html#performance-public">Performance (public)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/roadmap.html#macos-enhancements">macOS enhancements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/roadmap.html#container-builds-commercial">Container Builds (commercial)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/roadmap.html#support-for-next-python-version-3-10">Support for Next Python Version (3.10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/roadmap.html#wheels-build">Wheels Build</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/roadmap.html#features-to-be-added-for-0-6-19">Features to be added for 0.6.19</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../doc/roadmap.html#features-to-be-added-for-0-6-20">Features to be added for 0.6.20</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
+   
+</div>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../doc/commercial.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">Nuitka Commercial</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../doc/Changelog.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">Nuitka Release 0.6.19 (Draft)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      通过 Kay Hayen<br/>
+    
+        &copy; 版权 2022, Kay Hayen and Nuitka Contributors.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

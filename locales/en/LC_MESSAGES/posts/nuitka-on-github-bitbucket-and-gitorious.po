@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:7
+msgid "Nuitka on Github, Bitbucket and Gitorious"
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:9
+msgid ""
+"This is to let you know, that I have *finally* carved in and created "
+"accounts on all those \"social\" platforms, that deal with code. So far I"
+" had resisted their terms (you pay us when we get sued), but I have given"
+" up on that stance, it's likely irrelevant, as Nuitka won't get sued, and"
+" if it is, those are not the issues."
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:15
+msgid ""
+"And I don't want to feel too old school it seems. And who knows, maybe "
+"this helps Nuitka to get more contributions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:18
+msgid "So these are the landing pages:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:20
+msgid "Bitbucket (since deleted)"
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:22
+msgid ""
+"I kind of like the looks of it the most. Also it's very popular for "
+"Python people due to its Mercurial ties. I also liked that it imported my"
+" Nuitka repository easily."
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:26
+msgid "`Github <https://github.com/kayhayen/Nuitka>`_"
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:28
+msgid ""
+"Is not being on Github allowed these days? Anyway, from ease of use, the "
+"interface looks more powerful."
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:31
+msgid "Gitorious (since discontinued)"
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:33
+msgid ""
+"The interface and looks definitely are worst. But it's Free Software, and"
+" an open platform, so it has to be in the list."
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:36
+msgid ""
+"Let me know what you think. I am going to push 'develop' at pre-release "
+"and 'master' at release time, automatically from the release scripts into"
+" all these. Hopefully that way, they turn out to be time savers no "
+"wasters."
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:41
+msgid ""
+"And yes, I couldn't decide on one. Since I fancy Free Software, Gitorious"
+" probably would have won, but it would also miss the point of expanding "
+"the reach. And for as long as I don't use their issue tracking or Wikis, "
+"it appears to be not necessary to make that decision."
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:48
+msgid ""
+"The preferred for use, and most up to date repository will remain `the "
+"one from Downloads </pages/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-on-github-bitbucket-and-gitorious.rst:51
+msgid "So fork away, like it, and stuff. Awaiting your pull requests..."
+msgstr ""
+

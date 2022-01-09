@@ -1,0 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-in-arch-linux.rst:7
+msgid "Nuitka in Arch Linux"
+msgstr ""
+
+#: ../../doc/posts/nuitka-in-arch-linux.rst:9
+msgid "Got this message:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-in-arch-linux.rst:18
+msgid ""
+"So, that is another sign of Nuitka getting more external recognition. It "
+"is showing that the eco system around Nuitka is indeed warming up."
+msgstr ""
+
+#: ../../doc/posts/nuitka-in-arch-linux.rst:21
+msgid ""
+"Many thanks to Alexander Rødseth and Panagiotis Mavrogiorgos for "
+"maintaining the Nuitka packages inside Arch and on AUR."
+msgstr ""
+

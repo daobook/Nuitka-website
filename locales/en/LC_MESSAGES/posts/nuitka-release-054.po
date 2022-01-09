@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-054.rst:7
+msgid "Nuitka Release 0.5.4"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:13
+msgid ""
+"This release is aiming at preparatory changes to enable optimization "
+"based on SSA analysis, introducing a variable registry, so that variables"
+" no longer trace their references to themselves."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:17
+msgid ""
+"Otherwise, MinGW64 support has been added, and lots of bug fixes were "
+"made to improve the compatibility."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:22
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:24
+msgid ""
+"Using new variable registry, now properly detecting actual need for "
+"sharing variables. Optimization may discover that it is unnecessary to "
+"share a variable, and then it no longer is. This also allows ``--debug`` "
+"without it reporting unused variable warnings on Python3."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:29
+msgid ""
+"Scons startup has been accelerated, removing scans for unused tools, and "
+"avoiding making more than one gcc version check."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:34
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:36
+msgid ""
+"Compatibility: In case of unknown encodings, Nuitka was not giving the "
+"name of the problematic encoding in the error message. Fixed in 0.5.3.3 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:40
+msgid ""
+"Submodules with the same name as built-in modules were wrongly shadowed. "
+"Fixed in 0.5.3.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:43
+msgid ""
+"Python3: Added implementations of ``is_package`` to the meta path based "
+"loader."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:46
+msgid ""
+"Python3.4: Added ``find_spec`` implementation to the meta path based "
+"loader for increased compatibility."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:49
+msgid ""
+"Python3: Corrections for ``--debug`` to work with Python3 and MSVC "
+"compiler more often."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:52
+msgid ""
+"Fixed crash with ``--show-scons`` when no compiler was found. Fixed in "
+"0.5.3.5 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:55
+msgid ""
+"Standalone: Need to blacklist ``lib2to3`` from standard library as well. "
+"Fixed in 0.5.3.4 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:58
+msgid ""
+"Python3: Adapted to changes in ``SyntaxError`` on newer Python releases, "
+"there is now a ``msg`` that can override ``reason``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:61
+msgid ""
+"Standalone Windows: Preserve ``sys.executable`` as it might be used to "
+"fork binaries."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:64
+msgid ""
+"Windows: The caching of Scons was not arch specific, and files could be "
+"used again, even if changing the arch from ``x86`` to ``x86_64`` or back."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:68
+msgid ""
+"Windows: On 32 bit Python it can happen that with large number of "
+"generators running concurrently (>1500), one cannot be started anymore. "
+"Raising an ``MemoryError`` now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:74
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:76
+msgid ""
+"Added support for MinGW64. Currently needs to be run with ``PATH`` "
+"environment properly set up."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:79
+msgid ""
+"Updated internal version of Scons to 2.3.2, which breaks support for VS "
+"2008, but adds support for VS 2013 and VS 2012. The VS 2013 is now the "
+"recommended compiler."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:83
+msgid "Added RPM package and repository for RHEL 7."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:85
+msgid ""
+"The output of ``--show-scons`` now includes the used compiler, including "
+"the MSVC version."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:88
+msgid ""
+"Added option ``--msvc`` to select the MSVC compiler version to use, which"
+" overrides automatic selection of the latest."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:91
+msgid ""
+"Added option ``-python-flag=no_warnings`` to disable user and deprecation"
+" warnings at run time."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:94
+msgid "Repository for Ubuntu Raring was removed, no more supported by Ubuntu."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:99
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:101
+msgid ""
+"Made technical and logical sharing decisions separate functions and "
+"implement them in a dedicated variable registry."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:104
+msgid "The Scons file has seen a major cleanup."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:108
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:110
+msgid ""
+"This release is mostly a maintenance release. The Scons integrations has "
+"been heavily visited, as has been Python3 and esp. Python3.4 "
+"compatibility, and results from the now possible debug test runs."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-054.rst:114
+msgid ""
+"Standalone should be even more practical now, and MinGW64 is an option "
+"for those cases, where MSVC is too slow."
+msgstr ""
+

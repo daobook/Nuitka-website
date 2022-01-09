@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0314.rst:7
+msgid "Nuitka Release 0.3.14"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:13
+msgid ""
+"This is to inform you about the new stable release of Nuitka. This time "
+"it contains mostly organisational improvements, some bug fixes, improved "
+"compatibility and cleanups."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:17
+msgid ""
+"It is again the result of working towards compilation of a real program "
+"(Mercurial). This time, I have added support for proper handling of "
+"compiled types by the ``inspect`` module."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:23
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:25
+msgid ""
+"Fix for \"Missing checks in parameter parsing with star list, star dict "
+"and positional arguments\". There was whole in the checks for argument "
+"counts, now the correct error is given. Fixed in 0.3.13a already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:30
+msgid ""
+"The simple slice operations with 2 values, not extended with 3 values, "
+"were not applying the correct order for evaluation. Fixed in 0.3.13a "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:34
+msgid ""
+"The simple slice operations couldn't handle ``None`` as the value for "
+"lower or upper index. Fixed in 0.3.11a already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:37
+msgid ""
+"The in-place simple slice operations evaluated the slice index "
+"expressions twice, which could cause problems if they had side effects. "
+"Fixed in 0.3.11a already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:43
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:45
+msgid ""
+"Run time patching the ``inspect`` module so it accepts compiled "
+"functions, compiled methods, and compiled generator objects. The "
+"``test_inspect`` test of CPython is nearly working unchanged with this."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:50
+msgid ""
+"The generator functions didn't have ``CO_GENERATOR`` set in their code "
+"object, setting it made compatible with CPython in this regard too. The "
+"inspect module will therefore return correct value for "
+"``inspect.isgeneratorfunction()`` too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:57
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:59
+msgid "Slice indexes that are ``None`` are now constant propagated as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:61
+msgid ""
+"Slightly more efficient code generation for dual star arg functions, "
+"removing useless checks."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:66
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:68
+msgid ""
+"Moved the Scons, static C++ files, and assembler files to new package "
+"``nuitka.build`` where also now ``SconsInterface`` module lives."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:71
+msgid "Moved the Qt dialog files to ``nuitka.gui``"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:73
+msgid "Moved the \"unfreezer\" code to its own static C++ file."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:75
+msgid "Some PyLint cleanups."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:79
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:81
+msgid "New test ``Recursion`` to cover recursive functions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:83
+msgid "New test ``Inspection`` to cover the patching of ``inspect`` module."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:85
+msgid "Cover ``execfile`` on the class level as well in ``ExecEval`` test."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:87
+msgid "Cover evaluation order of simple slices in ``OrderCheck`` too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:91
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:93
+msgid "There is a new issue tracker available (since migrated and removed)"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:95
+msgid ""
+"Please register and report issues you encounter with Nuitka. I have put "
+"all the known issues there and started to use it recently. It's Roundup "
+"based like https://bugs.python.org is, so people will find it familiar."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:100
+msgid ""
+"The ``setup.py`` is now apparently functional. The source releases for "
+"download are made it with, and it appears the binary distributions work "
+"too. We may now build a windows installer. It's currently in testing, we "
+"will make it available when finished."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:107
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:109
+msgid ""
+"The new source organisation makes packaging Nuitka really easy now. From "
+"here, we can likely provide \"binary\" package of Nuitka soon. A windows "
+"installer will be nice."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:113
+msgid ""
+"The patching of ``inspect`` works wonders for compatibility for those "
+"programs that insist on checking types, instead of doing duck typing. The"
+" function call problem, was an issue found by the Mercurial test suite."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0314.rst:118
+msgid ""
+"For the \"hg.exe\" to pass all of its test suite, more work may be "
+"needed, this is the overall goal I am currently striving for. Once real "
+"world programs like Mercurial work, we can use these as more meaningful "
+"benchmarks and resume work on optimization."
+msgstr ""
+

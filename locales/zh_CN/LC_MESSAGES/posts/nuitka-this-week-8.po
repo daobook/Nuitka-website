@@ -9,34 +9,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/nuitka-this-week-8.rst:7
+#: ../../doc/posts/nuitka-this-week-8.rst:7
 msgid "Nuitka this week #8"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:9
-msgid "目录"
+#: ../../doc/posts/nuitka-this-week-8.rst:9
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:13
+#: ../../doc/posts/nuitka-this-week-8.rst:13
 msgid "Public / Private CI / Workflow"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:17
+#: ../../doc/posts/nuitka-this-week-8.rst:17
 msgid ""
 "I wrote this as part of a discussion recently, and I think it makes sense"
 " to share it here. This is a lot text though, feel free to skip forward."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:21
+#: ../../doc/posts/nuitka-this-week-8.rst:21
 msgid ""
 "Indeed I have a private repo, where I push and only private CI picks up. "
 "Based on Buildbot, I run many more compilations, basically around the "
@@ -44,7 +44,7 @@ msgid ""
 "or codegen changes, and well UI changes too."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:26
+#: ../../doc/posts/nuitka-this-week-8.rst:26
 msgid ""
 "Public CI offerings like Travis are not aimed at allowing this many "
 "compilations. It will be a while before public cloud infrastructure will "
@@ -54,7 +54,7 @@ msgid ""
 "it themselves."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:33
+#: ../../doc/posts/nuitka-this-week-8.rst:33
 msgid ""
 "My scope is running the CPython test suites on Windows and Linux. These "
 "are the adapted 26, 27, 32, 33, 34, 35, 36, 37 suites, and also to get "
@@ -64,7 +64,7 @@ msgid ""
 "raise."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:40
+#: ../../doc/posts/nuitka-this-week-8.rst:40
 msgid ""
 "On Windows I compile with and without debug mode, x86 and x64, and it's "
 "kind of getting too much. For Linux I have 2 laptops in use, and an ARM "
@@ -73,7 +73,7 @@ msgid ""
 "room for improvement there as well."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:46
+#: ../../doc/posts/nuitka-this-week-8.rst:46
 msgid ""
 "For memory usage I still compile mercurial and observe the memory it used"
 " in addition to comparing the mercurial tests to expected outputs its "
@@ -83,7 +83,7 @@ msgid ""
 "with without knowing."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:53
+#: ../../doc/posts/nuitka-this-week-8.rst:53
 msgid ""
 "Caching the CPython outputs of tests to compare against is something I am"
 " going to make operational these days, trying to make things ever faster."
@@ -91,18 +91,18 @@ msgid ""
 "output, which will typically not change at all."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:58
+#: ../../doc/posts/nuitka-this-week-8.rst:58
 msgid ""
 "But for the time being, ``ccache.exe`` and ``clcache.exe`` seem to have "
 "done wonders for Windows too, but I will want to investigate some more to"
 " avoid unnecessary cache misses."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:63
+#: ../../doc/posts/nuitka-this-week-8.rst:63
 msgid "Workflow"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:65
+#: ../../doc/posts/nuitka-this-week-8.rst:65
 msgid ""
 "As for my workflow with Nuitka, I often tend to let some commits settle "
 "in my private repo only until they become trusted. Other times I will "
@@ -111,7 +111,7 @@ msgid ""
 "easier."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:71
+#: ../../doc/posts/nuitka-this-week-8.rst:71
 msgid ""
 "I am more conservative with factory right after telling people to try "
 "something there. But also I break it on purpose, just trying out "
@@ -120,7 +120,7 @@ msgid ""
 "pull request of mine that is not ever going to be finished."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:77
+#: ../../doc/posts/nuitka-this-week-8.rst:77
 msgid ""
 "Then on occasions I am making a sorting of all commits on factory and "
 "split it into some things that become hotfixes, some things that become "
@@ -131,7 +131,7 @@ msgid ""
 "hardly any regressions."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:85
+#: ../../doc/posts/nuitka-this-week-8.rst:85
 msgid ""
 "I do however normally not take things as hotfixes that are on develop "
 "already, I hate the duplication of commits. Hotfixes must be small and "
@@ -140,11 +140,11 @@ msgid ""
 "already. No panic needed to add missing stuff and break others."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:92
+#: ../../doc/posts/nuitka-this-week-8.rst:92
 msgid "Hunting bugs with bisect"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:94
+#: ../../doc/posts/nuitka-this-week-8.rst:94
 msgid ""
 "For me the git bisect is very important. My private commit history is "
 "basically a total mess and worthless, but on factory I am making very "
@@ -155,7 +155,7 @@ msgid ""
 "and be done with it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:102
+#: ../../doc/posts/nuitka-this-week-8.rst:102
 msgid ""
 "It's amazing how much time this can save. My goal is to always have a "
 "workable state which is supposed to pass all tests. Obviously I cannot "
@@ -164,17 +164,17 @@ msgid ""
 " amending develop and even stable."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:108
+#: ../../doc/posts/nuitka-this-week-8.rst:108
 msgid ""
 "I am doing that to be sure to have that bisect ability, but fortunately "
 "it's rare that kind of bug occurs, and I try not to do it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:112
+#: ../../doc/posts/nuitka-this-week-8.rst:112
 msgid "Experimental Changes"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:114
+#: ../../doc/posts/nuitka-this-week-8.rst:114
 msgid ""
 "As with recent changes, I sometimes make changes with the "
 "``isExperimental()`` marker, activating breaking changes only gradually. "
@@ -185,7 +185,7 @@ msgid ""
 "that was still in factory."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:122
+#: ../../doc/posts/nuitka-this-week-8.rst:122
 msgid ""
 "Then I will remove the experimental code. I feel it's very important and "
 "even ideal to be able to always compare outputs to a fully working "
@@ -197,13 +197,13 @@ msgid ""
 "example."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:131
+#: ../../doc/posts/nuitka-this-week-8.rst:131
 msgid ""
 "Then looking at that diff, I can tell where the unwanted effect is, and "
 "fix all the things, and that way find bugs much faster."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:134
+#: ../../doc/posts/nuitka-this-week-8.rst:134
 msgid ""
 "Even better, if I decide to make a cleanup action as part of making a "
 "change more viable to execute, then I get to execute it on stable "
@@ -214,11 +214,11 @@ msgid ""
 "complete it, and actually reap some of its benefits already."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:143
+#: ../../doc/posts/nuitka-this-week-8.rst:143
 msgid "Hardware"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:145
+#: ../../doc/posts/nuitka-this-week-8.rst:145
 msgid ""
 "Obviously this takes a lot of hardware and CPU to be able to compile this"
 " much Python code on a regular basis. And I really wish I could add one "
@@ -226,11 +226,11 @@ msgid ""
 " I know, I am only dreaming. But it would really help the cause."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:152
+#: ../../doc/posts/nuitka-this-week-8.rst:152
 msgid "Milestone Release"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:154
+#: ../../doc/posts/nuitka-this-week-8.rst:154
 msgid ""
 "So the 0.6 is out, and already a hotfix that addresses mostly use cases "
 "of people that didn't work. More people seemed to have tried out 0.6.0 "
@@ -239,32 +239,32 @@ msgid ""
 "contained ones for 0.5.33 which did have one that was not easy to fix."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:160
+#: ../../doc/posts/nuitka-this-week-8.rst:160
 msgid "So that went really smooth."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:164
+#: ../../doc/posts/nuitka-this-week-8.rst:164
 msgid "UI rework"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:166
+#: ../../doc/posts/nuitka-this-week-8.rst:166
 msgid ""
 "The UI needs more work still. Specifically that packages do not "
 "automatically include all stuff below them and have to be specified by "
 "file path instead of by name, is really annoying to me."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:170
+#: ../../doc/posts/nuitka-this-week-8.rst:170
 msgid ""
 "But I had delayed 0.6 for some UI work, and the quirks are to remain "
 "some. I will work on these things eventually."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:175
+#: ../../doc/posts/nuitka-this-week-8.rst:175
 msgid "Benchmarks"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:177
+#: ../../doc/posts/nuitka-this-week-8.rst:177
 #, python-format
 msgid ""
 "So I updated the website to state that PyStone is now 312% faster, from a"
@@ -272,14 +272,14 @@ msgid ""
 "for Python3, and it's much less there. That is pretty sad."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:181
+#: ../../doc/posts/nuitka-this-week-8.rst:181
 msgid ""
 "I will be looking into that for 0.6.1 release, or I will have to update "
 "the wording to provide 2 numbers there, because it seems for Python3 "
 "performance with Nuitka it might be misleading."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:185
+#: ../../doc/posts/nuitka-this-week-8.rst:185
 msgid ""
 "Something with unicode strings and in-place operations is driving me "
 "crazy. Nuitka is apparently slower for that, and I can't point where that"
@@ -288,11 +288,11 @@ msgid ""
 "extending in realloc fail more often, but I cannot know yet."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:193
+#: ../../doc/posts/nuitka-this-week-8.rst:193
 msgid "Inplace Operations"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:195
+#: ../../doc/posts/nuitka-this-week-8.rst:195
 msgid ""
 "So more work has been put into those, adding more specialization, and "
 "esp. also applying them for module variables as well. CPython can do "
@@ -300,18 +300,18 @@ msgid ""
 "should be doing this much clever with its more static knowledge."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:200
+#: ../../doc/posts/nuitka-this-week-8.rst:200
 msgid ""
 "But I cannot tell you how much scratching my head was wasted debugging "
 "that. I was totally stupid about how I approached that, looking from the "
 "final solution, it was always easy. Just not for me apparently."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:206
+#: ../../doc/posts/nuitka-this-week-8.rst:206
 msgid "New use cases"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:208
+#: ../../doc/posts/nuitka-this-week-8.rst:208
 msgid ""
 "Talked about those above. So the top level ``logging`` module of your own"
 " was working fine in accelerated mode, but for standalone it failed and "
@@ -322,18 +322,18 @@ msgid ""
 " it touched too much."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:216
+#: ../../doc/posts/nuitka-this-week-8.rst:216
 msgid ""
 "Then pure Python3 packages need not have ``__init__.py`` and so far that "
 "was best working for sub-packages, but after 0.6.0.1 hotfix, now it will "
 "also work for the main module you compile to be that empty."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:222
+#: ../../doc/posts/nuitka-this-week-8.rst:222
 msgid "Tcl/Tk Standalone"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:224
+#: ../../doc/posts/nuitka-this-week-8.rst:224
 msgid ""
 "So instructions have been provided how to properly make that work for "
 "Python standalone on Windows. I have yet to live up to my promise and "
@@ -341,11 +341,11 @@ msgid ""
 "for 0.6.1 though."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:231
+#: ../../doc/posts/nuitka-this-week-8.rst:231
 msgid "Caching Examined"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:233
+#: ../../doc/posts/nuitka-this-week-8.rst:233
 msgid ""
 "So I am looking at ccache on Linux right now, and found e.g. that it was "
 "reporting that ``gcc --version`` was called a lot at startup of Scons and"
@@ -355,14 +355,14 @@ msgid ""
 "version query and not do it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:240
+#: ../../doc/posts/nuitka-this-week-8.rst:240
 msgid ""
 "And for the gcc version output, monkey patching scons to a version of "
 "getting that output that caches the result, removes those unnecessary "
 "forks."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:244
+#: ../../doc/posts/nuitka-this-week-8.rst:244
 msgid ""
 "So ``ccache`` is being called less frequently, and actually these "
 "``--version`` outputs appears to actually take measurable time. It's not "
@@ -370,7 +370,7 @@ msgid ""
 "avoiding by itself."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:249
+#: ../../doc/posts/nuitka-this-week-8.rst:249
 msgid ""
 "That said, the goal is for ``ccache`` and ``clcache`` to make them both "
 "report their effectiveness of cache usage after the end of a test suite "
@@ -378,37 +378,37 @@ msgid ""
 "used to its full effect."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:256
+#: ../../doc/posts/nuitka-this-week-8.rst:256
 msgid "Twitter"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:258
+#: ../../doc/posts/nuitka-this-week-8.rst:258
 msgid ""
 "I continue to be very active there. I put out a poll about the comment "
 "system, and disabling Disqus comments as a result, I will focus on "
 "Twitter for web site comments too now."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:262
+#: ../../doc/posts/nuitka-this-week-8.rst:262
 #, python-format
 msgid "`Follow @kayhayen <https://twitter.com/kayhayen?ref_src=twsrc%5Etfw>`_"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:264
+#: ../../doc/posts/nuitka-this-week-8.rst:264
 msgid "And lets not forget, having followers make me happy. So do re-tweets."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:266
+#: ../../doc/posts/nuitka-this-week-8.rst:266
 msgid ""
 "Adding Twitter more prominently to the web site is something that is also"
 " going to happen."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:271
+#: ../../doc/posts/nuitka-this-week-8.rst:271
 msgid "Help Wanted"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:273
+#: ../../doc/posts/nuitka-this-week-8.rst:273
 #, python-format
 msgid ""
 "If you are interested, I am tagging issues `help wanted "
@@ -416,15 +416,15 @@ msgid ""
 " and there is a bunch, and very likely at least one *you* can help with."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:277
+#: ../../doc/posts/nuitka-this-week-8.rst:277
 msgid "Nuitka definitely needs more people to work on it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:281
+#: ../../doc/posts/nuitka-this-week-8.rst:281
 msgid "Plans"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:283
+#: ../../doc/posts/nuitka-this-week-8.rst:283
 msgid ""
 "Working on the 0.6.1 release, attacking more in-place add operations as a"
 " first goal, and now turning to binary operations, I am trying to shape "
@@ -433,7 +433,7 @@ msgid ""
 "issue will arise there, what to do with mixed input types."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:289
+#: ../../doc/posts/nuitka-this-week-8.rst:289
 msgid ""
 "My desire is for in-place operations to fully catch up with CPython, as "
 "these can easily loose a lot of performance. Closure variables and their "
@@ -444,23 +444,26 @@ msgid ""
 "0.6.1 release."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:297
+#: ../../doc/posts/nuitka-this-week-8.rst:297
 msgid ""
 "This feels not too far away, but we will see. I am considering next "
 "weekend for release."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:302
+#: ../../doc/posts/nuitka-this-week-8.rst:302
 msgid "Donations"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:304
+#: ../../doc/posts/nuitka-this-week-8.rst:304
 msgid ""
 "If you want to help, but cannot spend the time, please consider to donate"
 " to Nuitka, and go here:"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-8.rst:307
+#: ../../doc/posts/nuitka-this-week-8.rst:307
 msgid "`Donate to Nuitka </pages/donations.html>`_"
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

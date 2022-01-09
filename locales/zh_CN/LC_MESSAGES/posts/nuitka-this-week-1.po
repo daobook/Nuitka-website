@@ -9,35 +9,35 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/nuitka-this-week-1.rst:7
+#: ../../doc/posts/nuitka-this-week-1.rst:7
 msgid "Nuitka this week #1"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:9
-msgid "目录"
+#: ../../doc/posts/nuitka-this-week-1.rst:9
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:13
+#: ../../doc/posts/nuitka-this-week-1.rst:13
 msgid "New Series Rationale"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:15
+#: ../../doc/posts/nuitka-this-week-1.rst:15
 msgid ""
 "I think I tend to prefer coding over communication too much. I think I "
 "need to make more transparent what I am doing. Also things, will be "
 "getting exciting continuously for a while now."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:19
+#: ../../doc/posts/nuitka-this-week-1.rst:19
 msgid ""
 "I used to status report posts, many years ago, every 3 months or so, and "
 "that was nice for me also to get an idea of what changed, but I stopped. "
@@ -45,18 +45,18 @@ msgid ""
 "contribute."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:24
+#: ../../doc/posts/nuitka-this-week-1.rst:24
 msgid ""
 "This time I am getting more intense. I will aim to do roughly weekly or "
 "bi-weekly reports, where I highlight things that are going on, newly "
 "found issues, hotfixes, all the things Nuitka."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:30
+#: ../../doc/posts/nuitka-this-week-1.rst:30
 msgid "Planned Mode"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:32
+#: ../../doc/posts/nuitka-this-week-1.rst:32
 msgid ""
 "I will do it this fashion. I will write a post to the mailing list, right"
 " about wednesday every week or so. I need to pick a day. I am working "
@@ -64,7 +64,7 @@ msgid ""
 "this."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:37
+#: ../../doc/posts/nuitka-this-week-1.rst:37
 msgid ""
 "The writing will not be too high quality at times. Bare with me there. "
 "Then I will check feedback from the list, if any. Hope is for it to point"
@@ -72,25 +72,25 @@ msgid ""
 "away."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:42
+#: ../../doc/posts/nuitka-this-week-1.rst:42
 msgid ""
 "Topics are going to be random, albeit repeating. I will try and make "
 "links to previous issues where applicable. Therefore also the TOC, which "
 "makes for link targets in the pages."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:48
+#: ../../doc/posts/nuitka-this-week-1.rst:48
 msgid "Locals Dict"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:50
+#: ../../doc/posts/nuitka-this-week-1.rst:50
 msgid ""
 "When I am speaking of locals dict, I am talking of class scopes (and "
 "functions with ``exec`` statements). These started to use actual "
 "dictionary a while ago, which was a severe setback to optimization."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:54
+#: ../../doc/posts/nuitka-this-week-1.rst:54
 msgid ""
 "Right now, so for this week, after a first prototype was making the "
 "replacement of local dict assignment and references for Python2, and kind"
@@ -101,7 +101,7 @@ msgid ""
 "ought to not be affected."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:62
+#: ../../doc/posts/nuitka-this-week-1.rst:62
 msgid ""
 "Therefore I made a global registry of locals scopes, and working on "
 "those, I checked its variables, if they can be forward propagated, and do"
@@ -111,7 +111,7 @@ msgid ""
 "it can remain this way for now."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:69
+#: ../../doc/posts/nuitka-this-week-1.rst:69
 msgid ""
 "Once I did that, I was interested to see the effect, but to my horror, I "
 "noticed, that memory was not released for the locals dict nodes. It was "
@@ -121,15 +121,15 @@ msgid ""
 "to help scaling at all."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:76
+#: ../../doc/posts/nuitka-this-week-1.rst:76
 msgid "Solution is finalization"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:80
+#: ../../doc/posts/nuitka-this-week-1.rst:80
 msgid "Nodes need Finalization"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:82
+#: ../../doc/posts/nuitka-this-week-1.rst:82
 msgid ""
 "So replaced nodes reference a parent, and then the locals scope "
 "references variables, and trace collections referencing variables, which "
@@ -138,13 +138,13 @@ msgid ""
 "that."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:88
+#: ../../doc/posts/nuitka-this-week-1.rst:88
 msgid ""
 "For a solution, I started to add a finalize method, which released the "
 "links for locals scopes, when they are fully propagated, on the next run."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:92
+#: ../../doc/posts/nuitka-this-week-1.rst:92
 msgid ""
 "Adding a finalize to all nodes, ought to make sure, memory is released "
 "soon, and might even find bugs, as nodes become unusable after they are "
@@ -154,11 +154,11 @@ msgid ""
 "used. That is messy."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:101
+#: ../../doc/posts/nuitka-this-week-1.rst:101
 msgid "Impact on Memory Usage"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:103
+#: ../../doc/posts/nuitka-this-week-1.rst:103
 msgid ""
 "The result was a bit disappointing. Yes, memory usage of mercurial "
 "compilation went back again, but mostly to what it had been. Some classes"
@@ -171,11 +171,11 @@ msgid ""
 "lean."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:115
+#: ../../doc/posts/nuitka-this-week-1.rst:115
 msgid "Type Hints Question"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:117
+#: ../../doc/posts/nuitka-this-week-1.rst:117
 msgid ""
 "Then, asking about type hints, I got the usual question about Nuitka "
 "going to use it. And my stance is unchanged. They are just hints, not "
@@ -187,11 +187,11 @@ msgid ""
 " advantage."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:128
+#: ../../doc/posts/nuitka-this-week-1.rst:128
 msgid "Python 3.7"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:130
+#: ../../doc/posts/nuitka-this-week-1.rst:130
 msgid ""
 "Then, for Python 3.7, I have long gotten the 3.6 test suite to pass. I "
 "raised 2 bugs with CPython, one of which lead to update of a failing "
@@ -201,7 +201,7 @@ msgid ""
 "and have proper code generation, that allows for it to be unset."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:137
+#: ../../doc/posts/nuitka-this-week-1.rst:137
 msgid ""
 "This was of course a bit of work. But the optimization behind was always "
 "kind of necessary to get right. But now, that I got this, think of my "
@@ -209,7 +209,7 @@ msgid ""
 "annotiatons then corrupt the module annotations"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:142
+#: ../../doc/posts/nuitka-this-week-1.rst:142
 msgid ""
 "The other bug is a reference counting bug, where Nuitka tests were "
 "failing with CPython 3.7, and turns out, there is a bug in the dictionary"
@@ -218,7 +218,7 @@ msgid ""
 "are disabled."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:148
+#: ../../doc/posts/nuitka-this-week-1.rst:148
 msgid ""
 "Working through the 3.7 suite, I am cherry picking commits, that e.g. "
 "allow the ``repr`` of compiled functions to contain ``<compiled_function "
@@ -229,18 +229,18 @@ msgid ""
 "was added to coroutines, but that is mostly it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:158
+#: ../../doc/posts/nuitka-this-week-1.rst:158
 msgid "Coroutine Compatibility"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:160
+#: ../../doc/posts/nuitka-this-week-1.rst:160
 msgid ""
 "A bigger thing was that I debugged coroutines and their interaction with "
 "uncompiled and compiled coroutines awaiting one another, and turns out, "
 "there was a lot to improve."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:164
+#: ../../doc/posts/nuitka-this-week-1.rst:164
 msgid ""
 "The next release will be much better compatible with ``asyncio`` module "
 "and its futures, esp with exceptions to cancel tasks passed along. That "
@@ -250,11 +250,11 @@ msgid ""
 "everything else has to."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:173
+#: ../../doc/posts/nuitka-this-week-1.rst:173
 msgid "PyLint Troubles"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:175
+#: ../../doc/posts/nuitka-this-week-1.rst:175
 msgid ""
 "For PyLint, the 2.0.0 release found new things, but unfortunately for "
 "2.0.1 there is a lot of regressions that I had to report. I fixed the "
@@ -262,13 +262,13 @@ msgid ""
 " start to fail due to a PyLint release finding new warnings."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:180
+#: ../../doc/posts/nuitka-this-week-1.rst:180
 msgid ""
 "Currently, if you make a PR on Github, a PyLint update will break it. And"
 " also the cron job on Travis that checks master."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:183
+#: ../../doc/posts/nuitka-this-week-1.rst:183
 msgid ""
 "As somebody pointed out, I am now using `requires.io "
 "<https://requires.io/github/kayhayen/Nuitka/requirements/?branch=factory>`"
@@ -276,18 +276,18 @@ msgid ""
 "Python2, that kind of is bound to give alarms for now."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:190
+#: ../../doc/posts/nuitka-this-week-1.rst:190
 msgid "TODO solving"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:192
+#: ../../doc/posts/nuitka-this-week-1.rst:192
 msgid ""
 "I have a habit of doing off tasks, when I am with my notebook in some "
 "place, and don't know what to work on. So I have some 2 hours recently "
 "like this, and used it to look at ``TODO`` and resolve them."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:196
+#: ../../doc/posts/nuitka-this-week-1.rst:196
 msgid ""
 "I did a bunch of cleanups for static code helpers. There was one in my "
 "mind about calling a function with a single argument. That fast call "
@@ -295,11 +295,11 @@ msgid ""
 "using code ugly."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:203
+#: ../../doc/posts/nuitka-this-week-1.rst:203
 msgid "Issues Encountered"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:205
+#: ../../doc/posts/nuitka-this-week-1.rst:205
 msgid ""
 "So the ``enum`` module of Python3 hates compiled classes and their "
 "``staticmethod`` around ``__new__``. Since it manually unwraps "
@@ -309,20 +309,20 @@ msgid ""
 "the call."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:212
+#: ../../doc/posts/nuitka-this-week-1.rst:212
 msgid ""
 "I am contemplating submitting an upstream patch for CPython here. The "
 "hard coded check for ``PyFunction`` on the ``__new__`` value is hard to "
 "emulate."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:216
+#: ../../doc/posts/nuitka-this-week-1.rst:216
 msgid ""
 "So I am putting the ``staticmethod`` into the dictionary passed already. "
 "But the undecorated function should be there for full compatibility."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:219
+#: ../../doc/posts/nuitka-this-week-1.rst:219
 msgid ""
 "If I were to make compiled function type that is both a staticmethod "
 "alike and a function, maybe I can work around it. But it's ugly and a "
@@ -330,23 +330,26 @@ msgid ""
 " to call ``__new__`` manually"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:226
+#: ../../doc/posts/nuitka-this-week-1.rst:226
 msgid "Plans"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:228
+#: ../../doc/posts/nuitka-this-week-1.rst:228
 msgid ""
 "I intend to make a release, probably this weekend. It might not contain "
 "full 3.7 compatibility yet, although I am aiming at that."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:231
+#: ../../doc/posts/nuitka-this-week-1.rst:231
 msgid ""
 "Then I want to turn to \"goto generators\", a scalability improvement of "
 "generators and coroutines that I will talk about next week then."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-1.rst:234
+#: ../../doc/posts/nuitka-this-week-1.rst:234
 msgid "Until next week."
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

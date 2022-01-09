@@ -1,0 +1,409 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0320.rst:7
+msgid "Nuitka Release 0.3.20"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:13
+msgid ""
+"This time there are a few bug fixes and some really major cleanups, lots "
+"of new optimization and preparations for more. And then there is a new "
+"compiler clang and a new platform supported. macOS X appears to work "
+"mostly, thanks for the patches from Pete Hunt."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:20
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:22
+msgid ""
+"The use of a local variable name as an expression was not covered and "
+"lead to a compiler crash. Totally amazing, but true, nothing in the test "
+"suite of CPython covered this. Fixed in release 0.3.19.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:27
+msgid ""
+"The use of a closure variable name as an expression was not covered as "
+"well. And in this case corrupted the reference count. Fixed in release "
+"0.3.19.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:31
+msgid ""
+"The ``from x import *`` attempted to respect ``__all__`` but failed to do"
+" so. Fixed in release 0.3.19.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:34
+msgid ""
+"The ``from x import *`` didn't give a ``SyntaxError`` when used on "
+"Python3. Fixed in release 0.3.19.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:37
+msgid ""
+"The syntax error messages for \"global for function argument name\" and "
+"\"duplicate function argument name\" are now identical as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:40
+msgid ""
+"Parameter values of generator function could cause compilation errors "
+"when used in the closure of list contractions. Fixed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:45
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:47
+msgid ""
+"Added support for disabling the console for Windows binaries. Thanks for "
+"the patch go to Michael H Kent."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:50
+msgid "Enhanced Python3 support for syntax errors, these are now also compatible."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:53
+msgid "Support for macOS X was added."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:55
+msgid ""
+"Support for using the clang compiler was added, it can be enforced via "
+"``--clang`` option. Currently this option is mainly intended to allow "
+"testing the \"macOS X\" support as good as possible under Linux."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:61
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:63
+msgid ""
+"Enhanced all optimization that previously worked on \"constants\" to work"
+" on \"compile time constants\" instead. A \"compile time constant\" can "
+"currently also be any form of a built-in name or exception reference. It "
+"is intended to expand this in the future."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:68
+msgid ""
+"Added support for built-ins ``bin``, ``oct``, and ``hex``, which also can"
+" be computed at compile time, if their arguments are compile time "
+"constant."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:72
+msgid ""
+"Added support for the ``iter`` built-in in both forms, one and two "
+"arguments. These cannot be computed at compile time, but now will execute"
+" faster."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:76
+msgid ""
+"Added support for the ``next`` built-in, also in its both forms, one and "
+"two arguments. These also cannot be computed at compile time, but now "
+"will execute faster as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:80
+msgid ""
+"Added support for the ``open`` built-in in all its form. We intend for "
+"future releases to be able to track file opens for including them into "
+"the executable if data files."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:84
+msgid ""
+"Optimize the ``__debug__`` built-in constant as well. It cannot be "
+"assigned, yet code can determine a mode of operation from it, and "
+"apparently some code does. When compiling the mode is decided."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:88
+msgid ""
+"Optimize the ``Ellipsis`` built-in constant as well. It falls in the same"
+" category as ``True``, ``False``, ``None``, i.e. names of built-in "
+"constants that a singletons."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:92
+msgid ""
+"Added support for anonymous built-in references, i.e. built-ins which "
+"have names that are not normally accessible. An example is ``type(None)``"
+" which is not accessible from anywhere. Other examples of such names are "
+"``compiled_method_or_function``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:97
+msgid ""
+"Having these as represented internally, and flagged as \"compile time "
+"constants\", allows the compiler to make more compile time optimization "
+"and to generate more efficient C++ code for it that won't e.g. call the "
+"``type`` built-in with ``None`` as an argument."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:102
+msgid ""
+"All built-in names used in the program are now converted to \"built-in "
+"name references\" in a first step. Unsupported built-ins like e.g. "
+"``zip``, for which Nuitka has no own code or understanding yet, remained "
+"as \"module variables\", which made access to them slow, and difficult to"
+" recognize."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:108
+msgid ""
+"Added optimization for module attributes ``__file__``, ``__doc__`` and "
+"``__package__`` if they are read only. It's the same as was done for "
+"``__name__`` so far only."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:112
+msgid ""
+"Added optimization for slices and subscripts of \"compile time constant\""
+" values. These will play a more important role, once value propagation "
+"makes them more frequent."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:118
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:120
+msgid ""
+"Created a \"change log\" from the previous release announcements. It's as"
+" ReStructured Text and converted to PDF for the release as well, but I "
+"chose not to include that in Debian, because it's so easy to generate the"
+" PDF on that yourself."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:125
+msgid ""
+"The posting of release announcements is now prepared by a script that "
+"converts the ReStructured Text to HTML and adds it to Wordpress as a "
+"draft posting or updates it, until it's release time. Simple, sweet and "
+"elegant."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:132
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:134
+msgid ""
+"Split out the ``nuitka.nodes.Nodes`` module into many topic nodes, so "
+"that there are now ``nuitka.nodes.BoolNodes`` or "
+"``nuitka.nodes.LoopNodes`` to host nodes of similar kinds, so that it is "
+"now cleaner."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:139
+msgid ""
+"Split ``del`` statements into their own node kind, and use much simpler "
+"node structures for them. The following blocks are absolutely the same:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:153
+msgid ""
+"So that's now represented in the node tree. And even more complex looking"
+" cases, like this one, also the same:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:160
+msgid ""
+"This one gives a different parse tree, but the same bytecode. And so "
+"Nuitka need no longer concern itself with this at all, and can remove the"
+" tuple from the parse tree immediately. That makes them easy to handle. "
+"As you may have noted already, it also means, there is no way to enforce "
+"that two things are deleted or none at all."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:166
+msgid ""
+"Turned the function and class builder statements into mere assignment "
+"statements, where defaults and base classes are handled by wrapping "
+"expressions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:170
+msgid ""
+"Previously they are also kind of assignment statements too, which is not "
+"needed. Now they were reduced to only handle the ``bases`` for classes "
+"and the ``defaults`` for functions and make optional."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:174
+msgid ""
+"Refactored the decorator handling to the tree building stage, presenting "
+"them as function calls on \"function body expression\" or class body "
+"expression\"."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:178
+msgid ""
+"This allowed to remove the special code for decorators from code "
+"generation and C++ templates, making decorations easy subjects for future"
+" optimization, as they practically are now just function calls."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:190
+msgid ""
+"It's just a different form of writing things. Nothing requires the "
+"implementation of decorators, it's just functions calls with function "
+"bodies before the assignment."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:194
+msgid "The following is only similar:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:207
+msgid ""
+"It's only similar, because the assignment to an intermediate value of "
+"``C`` and ``f`` is not done, and if an exception was raised by the "
+"decoration, that name could persist. For Nuitka, the function and class "
+"body, before having a name, are an expression, and so can of course be "
+"passed to decorators already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:213
+msgid ""
+"The in-place assignments statements are now handled using temporary "
+"variable blocks"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:216
+msgid ""
+"Adding support for scoped temporary variables and references to them, it "
+"was possible to re-formulate in-place assignments expressions as normal "
+"look-ups, in-place operation call and then assignment statement. This "
+"allowed to remove static templates and will yield even better generated "
+"code in the future."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:222
+msgid ""
+"The for loop used to have has a \"source\" expression as child, and the "
+"iterator over it was only taken at the code generation level, so that "
+"step was therefore invisible to optimization. Moved it to tree building "
+"stage instead, where optimization can work on it then."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:227
+msgid ""
+"Tree building now generally allows statement sequences to be ``None`` "
+"everywhere, and pass statements are immediately eliminated from them "
+"immediately. Empty statement sequences are now forbidden to exist."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:231
+msgid ""
+"Moved the optimization for ``__name__`` to compute node of variable "
+"references, where it doesn't need anything complex to replace with the "
+"constant value if it's only read."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:235
+msgid ""
+"Added new bases classes and mix-in classes dedicated to expressions, "
+"giving a place for some defaults."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:238
+msgid "Made the built-in code more reusable."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:242
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:244
+msgid ""
+"Added some more diagnostic tests about complex assignment and ``del`` "
+"statements."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:247
+msgid ""
+"Added syntax test for star import on function level, that must fail on "
+"Python3."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:250
+msgid "Added syntax test for duplicate argument name."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:252
+msgid "Added syntax test for global on a function argument name."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:256
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:258
+msgid ""
+"The decorator and building changes, the assignment changes, and the node "
+"cleanups are all very important progress for the type inference work, "
+"because they remove special casing the that previously would have been "
+"required. Lambdas and functions now really are the same thing right after"
+" tree building. The in-place assignments are now merely done using "
+"standard assignment code, the built functions and classes are now "
+"assigned to names in assignment statements, much *more* consistency "
+"there."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:267
+msgid ""
+"Yet, even more work will be needed in the same direction. There may e.g. "
+"be work required to cover ``with`` statements as well. And assignments "
+"will become no more complex than unpacking from a temporary variable."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:271
+msgid ""
+"For this release, there is only minimal progress on the Python3 front, "
+"despite the syntax support, which is only minuscule progress. The "
+"remaining tasks appear all more or less difficult work that I don't want "
+"to touch now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0320.rst:276
+msgid ""
+"There are still remaining steps, but we can foresee that a release may be"
+" done that finally actually does type inference and becomes the effective"
+" Python compiler this project is all about."
+msgstr ""
+

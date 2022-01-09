@@ -1,0 +1,351 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-064.rst:7
+msgid "Nuitka Release 0.6.4"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:13
+msgid ""
+"This release contains many bug fixes all across the board. There is also "
+"new optimization and many organisational improvements."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:20
+msgid ""
+"When linking very large programs or packages, with gcc compiler, Scons "
+"can produce commands that are too large for the OS. This happens sooner "
+"on the Windows OS, but also on Linux. We now have a workaround that "
+"avoids long command lines by using ``@sources.tmp`` syntax."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:26
+msgid ""
+"Standalone: Remove temporary module after its use, instead of keeping it "
+"in ``sys.modules`` where e.g. ``Quart`` code tripped over its "
+"``__file__`` value that is illegal on Windows."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:30
+msgid ""
+"Fixed non-usage of our enhanced detection of ``gcc`` version for "
+"compilers if given as a full path."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:33
+msgid "Fixed non-detection of ``gnu-cc`` as a form of gcc compiler."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:35
+msgid ""
+"Python3.4: The ``__spec__`` value corrections for compiled modules was "
+"not taking into account that there was a ``__spec__`` value, which can "
+"happen if something is wrapping imported modules."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:39
+msgid "Standalone: Added implicit dependencies for ``passlib``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:41
+msgid ""
+"Windows: Added workaround for OS command line length limit in compilation"
+" with MinGW64."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:44
+msgid ""
+"Python2: Revive the ``enum`` plugin, there are backports of the buggy "
+"code it tries to patch up."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:47
+msgid ""
+"Windows: Fixup handling of SxS with non zero language id, these occur "
+"e.g. in Anaconda."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:50
+msgid ""
+"Plugins: Handle multiple PyQt plugin paths, e.g. on openSUSE this is "
+"done, also enhanced finding that path with Anaconda on Windows."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:53
+msgid ""
+"Plugins: For ``multiprocessing`` on Windows, allow the ``.exe`` suffix to"
+" not be present, which can happen when ran from command line."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:57
+msgid ""
+"Windows: Better version checks for DLLs on Python3, the ``ctypes`` helper"
+" code needs more definitions to work properly."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:60
+msgid "Standalone: Added support for both ``pycryptodome`` and ``pycryptodomex``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:63
+msgid ""
+"Fix, the ``chr`` built-in was not giving fully compatible error on non "
+"number input."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:66
+msgid "Fix, the ``id`` built-in doesn't raise an exception, but said otherwise."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:69
+msgid ""
+"Python3: Proper C identifiers for names that fit into ``latin-1``, but "
+"are not ``ascii`` encodings."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:74
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:76
+msgid ""
+"Windows: Catch most common user error of using compiler from one "
+"architecture against Python from another. We now check those and compare "
+"it, and if they do not match, inform the user directly. Previously the "
+"compilation could fail, or the linking, with cryptic errors."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:82
+msgid ""
+"Distutils: Using setuptools and its runners works now too, not merely "
+"only pure distutils."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:85
+msgid "Distutils: Added more ways to pass Nuitka specific options via distutils."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:88
+msgid "Python3.8: Initial compatibility changes to get basic tests to work."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:92
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:94
+msgid ""
+"Nuitka is participating in the GSoC 2019 with 2 students, Batakrishna and"
+" Tommy."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:97
+msgid ""
+"Point people creating PRs to using the ``pre-commit`` hook in the "
+"template. Due to making the style issues automatic, we can hope to "
+"encounter less noise and resulting merge problems."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:101
+msgid ""
+"Many improvements to the ``pre-commit`` hook were done, hopefully "
+"completing its development."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:104
+msgid ""
+"Updated to latest ``pylint``, ``black``, and ``isort`` versions, also "
+"added ``codespell`` to check for typos in the source code, but that is "
+"not automated yet."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:108
+msgid "Added description of how to use experimental flags for your PRs."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:110
+msgid ""
+"Removed mirroring from Bitbucket and Gitlab, as we increasingly use the "
+"Github organisation features."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:113
+msgid ""
+"Added support for Ubuntu Disco, removed support for Ubuntu Artful "
+"packages."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:118
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:120
+msgid ""
+"Windows: Attach data blobs as Windows resource files directly for "
+"programs and avoid using C data files for modules or MinGW64, which can "
+"be slow."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:124
+msgid ""
+"Specialization of helper codes for ``+`` is being done for more types and"
+" more thoroughly and fully automatic with Jinja2 templating code. This "
+"does replace previously manual code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:128
+msgid ""
+"Added specialization of helper codes for ``*`` operation which is "
+"entirely new."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:131
+msgid ""
+"Added specialization of helper codes for ``-`` operation which is "
+"entirely new."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:134
+msgid ""
+"Dedicated nodes for specialized operations now allow to save memory and "
+"all use type shape based analysis to predict result types and exception "
+"control flow."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:138
+msgid ""
+"Better code generation for boolean type values, removing error checks "
+"when possible."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:141
+msgid "Better static analysis for even more type operations."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:145
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:147
+msgid "Fixed many kinds of typos in the code base with ``codespell``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:149
+msgid ""
+"Apply automatic formatting to more test runner code, these were "
+"previously not done."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:152
+msgid ""
+"Avoid using ``shutil.copytree`` which fails to work when directory "
+"already exists, instead provide ``nuitka.util.FileOperations.copyTree`` "
+"and use that exclusively."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:158
+msgid "Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:160
+msgid ""
+"Added new mode of operation to test runners, ``only`` that executes just "
+"one test and stops, useful during development."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:163
+msgid ""
+"Added new mechanism for standalone tests to expression modules that need "
+"to be importable, or else to skip the test by a special comment in the "
+"file, instead of by coded checks in the test runner."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:167
+msgid ""
+"Added also for more complex cases, another form of special comment, that "
+"can be any expression, that decides if the test makes sense."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:170
+msgid ""
+"Cover also setuptools in our distutils tests and made the execution more "
+"robust against variable behavior of distutils and setuptools."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:173
+msgid "Added standalone test for Urllib3."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:175
+msgid "Added standalone test for rsa."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:177
+msgid "Added standalone test for Pmw."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:179
+msgid "Added standalone test for passlib."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:183
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:185
+msgid ""
+"Again this release is a sign of increasing adoption of Nuitka. The GSoC "
+"2019 is also showing effects, definitely will in the next release."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:188
+msgid ""
+"This release has a lot of new optimization, called specialization, but "
+"for it to really used, in many instances, we need to get away from "
+"working on C types for variables only, and get to them beig used for "
+"expressions more often. Otherwise much of the new special code is not "
+"used for most code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:194
+msgid ""
+"The focus of this release has been again to open up development further "
+"and to incorporate findings from users. The number of fixes or new use "
+"cases working is astounding."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-064.rst:198
+msgid ""
+"In upcoming releases, new built-ins will be optimized, and specialization"
+" of operations will hit more and more code now that the infrastructure "
+"for it is in place."
+msgstr ""
+

@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-044.rst:7
+msgid "Nuitka Release 0.4.4"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:13
+msgid ""
+"This release marks the point, where Nuitka for the first time supports "
+"all major current Python versions and all major features. It adds Python "
+"3.3 support and it adds support for threading. And then there is a "
+"massive amount of fixes that improve compatibility even further."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:18
+msgid ""
+"Aside of that, there is major performance work. One side is the "
+"optimization of call performance (to CPython non-compiled functions) and "
+"to compiled functions, both. This gave a serious improvement to "
+"performance."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:23
+msgid ""
+"Then of course, we are making other, long term performance progress, as "
+"in \"--experimental\" mode, the SSA code starts to optimize unused code "
+"away. That code is not yet ready for prime time yet, but the trace "
+"structure will hold."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:30
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:32
+msgid "Python3.3 support."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:34
+msgid ""
+"The test suite of CPython3.3 passes now too. The ``yield from`` is now "
+"supported, but the improved argument parsing error messages are not "
+"implemented yet."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:38
+msgid ""
+"Tracing user provided constants, now Nuitka warns about too large "
+"constants produced during optimization."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:41
+msgid ""
+"Line numbers of expressions are now updates as evaluation progresses. "
+"This almost corrects."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:44
+msgid ""
+"Now only expression parts that cannot raise, do not update, which can "
+"still cause difference, but much less often, and then definitely useless."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:48
+msgid "Experimental support for threads."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:50
+msgid ""
+"Threading appears to work just fine in the most cases. It's not as "
+"optimal as I wanted it to be, but that's going to change with time."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:55
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:57
+msgid ""
+"Previous corrections for ``==``, ``!=``, and ``<=``, caused a performance"
+" regression for these operations in case of handling identical objects."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:61
+msgid ""
+"For built-in objects of sane types (not ``float``), these operations are "
+"now accelerated again. The overreaching acceleration of ``>=`` was still "
+"there (bug, see below) and has been adapted too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:65
+msgid ""
+"Calling non-compiled Python functions from compiled functions was slower "
+"than in CPython. It is now just as fast."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:68
+msgid ""
+"Calling compiled functions without keyword arguments has been accelerated"
+" with a dedicated entry point that may call the implementation directly "
+"and avoid parameter parsing almost entirely."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:72
+msgid ""
+"Making calls to compiled and non-compiled Python functions no longer "
+"requires to build a temporary tuple and therefore is much faster."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:75
+msgid ""
+"Parameter parsing code is now more compact, and re-uses error raises, or "
+"creates them on the fly, instead of hard coding it. Saves binary size and"
+" should be more cache friendly."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:81
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:83
+msgid "Corrected false optimization of ``a >= a`` on C++ level."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:85
+msgid ""
+"When it's not done during Nuitka compile time optimization, the rich "
+"comparison helper still contained short cuts for ``>=``. This is now the "
+"same for all the comparison operators."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:89
+msgid ""
+"Calling a function with default values, not providing it, and not "
+"providing a value for a value without default, was not properly detecting"
+" the error, and instead causing a run time crash."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:101
+msgid "This now properly raises the ``TypeError`` exception."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:103
+msgid ""
+"Constants created with ``+`` could become larger than the normally "
+"enforced limits. Not as likely to become huge, but still potentially an "
+"issue."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:107
+msgid ""
+"The ``vars`` built-in, when used on something without ``__dict__`` "
+"attribute, was giving ``AttributeError`` instead of ``TypeError``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:110
+msgid ""
+"When re-cursing to modules at compile time, script directory and current "
+"directory were used last, while at run time, it was the other way around,"
+" which caused overloaded standard library modules to not be embedded."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:115
+msgid "Thanks for the patch to James Michael DuPont."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:117
+msgid ""
+"Super without arguments was not raising the correct ``RuntimeError`` "
+"exception in functions that cannot be methods, but ``UnboundLocalError`` "
+"instead."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:126
+msgid ""
+"Generators no longer use ``raise StopIteration`` for return statements, "
+"because that one is not properly handled in ``try``/``except`` clauses, "
+"where it's not supposed to trigger, while ``try``/``finally`` should be "
+"honored."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:131
+msgid ""
+"Exception error message when throwing non-exceptions into generators was "
+"not compatible."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:134
+msgid ""
+"The use of ``return`` with value in generators is a ``SyntaxError`` "
+"before Python3.3, but that was not raised."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:137
+msgid ""
+"Variable names of the \"__var\" style need to be mangled. This was only "
+"done for classes, but not for functions contained in classes, there they "
+"are now mangled too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:141
+msgid "Python3: Exceptions raised with causes were not properly chaining."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:143
+msgid ""
+"Python3: Specifying the file encoding corrupted line numbers, making them"
+" all of by one."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:148
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:150
+msgid ""
+"For containers (``tuple``, ``list``, ``set``, ``dict``) defined on the "
+"source code level, Nuitka immediately created constant references from "
+"them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:154
+msgid ""
+"For function calls, class creations, slice objects, this code is now re-"
+"used, and its dictionaries and tuples, may now become constants "
+"immediately, reducing noise in optimization steps."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:158
+msgid ""
+"The parameter parsing code got cleaned up. There were a lot of relics "
+"from previously explored paths. And error raises were part of the "
+"templates, but now are external code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:162
+msgid ""
+"Global variable management moved to module objects and out of "
+"\"Variables\" module."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:165
+msgid "Make sure, nodes in the tree are not shared by accident."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:167
+msgid ""
+"This helped to find a case of duplicate use in the complex call helpers "
+"functions. Code generation will now notice this kind of duplication in "
+"debug mode."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:171
+msgid ""
+"The complex call helper functions were manually taking variable closure, "
+"which made these functions inconsistent to other functions, e.g. no "
+"variable version was allocated to assignments."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:175
+msgid ""
+"Removing the manual setting of variables allowed a huge reduction of code"
+" volume, as it became more generic code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:178
+msgid ""
+"Converting user provided constants to create containers into constants "
+"immediately, to avoid noise from doing this in optimization."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:182
+msgid ""
+"The ``site`` module is now imported explicitly in the ``__main__`` "
+"module, so it can be handled by the recursion code as well. This will "
+"help portable mode."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:186
+msgid "Many line length 80 changes, improved comments."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:190
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:192
+msgid ""
+"The CPython3.3 test suite was added, and run with both Python3.2 and "
+"Python3.3, finding new bugs."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:195
+msgid ""
+"The ``doctest`` to code generation didn't successfully handle all tests, "
+"most notably, \"test_generators.py\" was giving a ``SyntaxError`` and "
+"therefore not actually active. Correcting that improved the coverage of "
+"generator testing."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:202
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:204
+msgid "The portable code is still delayed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:206
+msgid ""
+"Support for Python3.3 was a higher priority, but the intention is to get "
+"it into shape for Europython still."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:209
+msgid ""
+"Added notes about it being disabled it in the `User Manual "
+"<https://nuitka.net/doc/user-manual.html>`__ documentation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:214
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:216
+msgid ""
+"This release is in preparation for Europython 2013. Wanted to get this "
+"much out, as it changes the status slides quite a bit, and all of that "
+"was mostly done in my Cyprus holiday a while ago."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-044.rst:220
+msgid ""
+"The portable code has not seen progress. The idea here is to get this "
+"into a development version later."
+msgstr ""
+

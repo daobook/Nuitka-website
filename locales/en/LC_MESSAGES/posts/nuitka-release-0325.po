@@ -1,0 +1,306 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0325.rst:7
+msgid "Nuitka Release 0.3.25"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:13
+msgid ""
+"This release brings about changes on all fronts, bug fixes, new features."
+" Also very importantly Nuitka no longer uses C++11 for its code, but mere"
+" C++03. There is new re-formulation work, and re-factoring of functions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:18
+msgid ""
+"But the most important part is this: Mercurial unit tests are working. "
+"Nearly. With the usual disclaimer of me being wrong, all remaining errors"
+" are errors of the test, or minor things. Hope is that these unit tests "
+"can be added as release tests to Nuitka. And once that is done, the next "
+"big Python application can come."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:26
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:28
+msgid ""
+"Local variables were released when an exception was raised that escaped "
+"the local function. They should only be released, after another exception"
+" was raised somewhere."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:32
+msgid "Identifiers of nested tuples and lists could collide."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:39
+msgid ""
+"Both tuples had the same name previously, not the end of the tuple is "
+"marked too. Fixed in 0.3.24.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:42
+msgid ""
+"The ``__name__`` when used read-only in modules in packages was optimized"
+" to a string value that didn't contain the package name."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:45
+msgid ""
+"Exceptions set when entering compiled functions were unset at function "
+"exit."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:50
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:52
+msgid ""
+"Compiled frames support. Before, Nuitka was creating frames with the "
+"standard CPython C/API functions, and tried its best to cache them. This "
+"involved some difficulties, but as it turns out, it is actually possible "
+"to instead provide a compatible type of our own, that we have full "
+"control over."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:58
+msgid ""
+"This will become the base of enhanced compatibility. Keeping references "
+"to local variables attached to exception tracebacks is something we may "
+"be able to solve now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:62
+msgid ""
+"Enhanced Python3 support, added support for ``nonlocal`` declarations and"
+" many small corrections for it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:65
+msgid ""
+"Writable ``__defaults__`` attribute for compiled functions, actually "
+"changes the default value used at call time. Not supported is changing "
+"the amount of default parameters."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:71
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:73
+msgid ""
+"Keep the functions along with the module and added \"FunctionRef\" node "
+"kind to point to them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:76
+msgid ""
+"Reformulated ``or`` and ``and`` operators with the conditional expression"
+" construct which makes the \"short-circuit\" branch."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:79
+msgid ""
+"Access ``self`` in methods from the compiled function object instead of "
+"pointer to context object, making it possible to access the function "
+"object."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:83
+msgid ""
+"Removed \"OverflowCheck\" module and its usage, avoids one useless scan "
+"per function to determine the need for \"locals dictionary\"."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:86
+msgid ""
+"Make \"compileTree\" of \"MainControl\" module to only do what the name "
+"says and moved the rest out, making the top level control clearer."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:89
+msgid ""
+"Don't export module entry points when building executable and not "
+"modules. These exports cause MinGW and MSVC compilers to create export "
+"libraries."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:95
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:97
+msgid "More efficient code for conditional expressions in conditions:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:104
+msgid ""
+"See above, this code is now the typical pattern for each ``or`` and "
+"``and``, so this was much needed now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:109
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:111
+msgid ""
+"The remaining uses of C++11 have been removed. Code generated with Nuitka"
+" and complementary C++ code now compile with standard C++03 compilers. "
+"This lowers the Nuitka requirements and enables at least g++ 4.4 to work "
+"with Nuitka."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:116
+msgid ""
+"The usages of the GNU extension operation ``a ?: b`` have replaced with "
+"standard C++ constructs. This is needed to support MSVC which doesn't "
+"have this."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:120
+msgid ""
+"Added examples for the typical use cases to the `User Manual "
+"<https://nuitka.net/doc/user-manual.html>`__."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:123
+msgid ""
+"The \"compare_with_cpython\" script has gained an option to immediately "
+"remove the Nuitka outputs (build directory and binary) if successful. "
+"Also the temporary files are now put under \"/var/tmp\" if available."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:127
+msgid ""
+"Debian package improvements, registering with ``doc-base`` the `User "
+"Manual <https://nuitka.net/doc/user-manual.html>`__ so it is easier to "
+"discover. Also suggest ``mingw32`` package which provides the cross "
+"compiler to Windows."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:132
+msgid ""
+"Partial support for MSVC (Visual Studio 2008 to be exact, the version "
+"that works with CPython2.6 and CPython2.7)."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:135
+msgid ""
+"All basic tests that do not use generators are working now, but those "
+"will currently cause crashes."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:138
+msgid "Renamed the ``--g++-only`` option to ``--c++-only``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:140
+msgid ""
+"The old name is no longer correct after clang and MSVC have gained "
+"support, and it could be misunderstood to influence compiler selection, "
+"rather than causing the C++ source code to not be updated, so manual "
+"changes will the used."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:145
+msgid ""
+"Catch exceptions for ``continue``, ``break``, and ``return`` only where "
+"needed for ``try``/``finally`` and loop constructs."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:150
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:152
+msgid ""
+"Added CPython3.2 test suite as \"tests/CPython32\" from 3.2.3 and run it "
+"with CPython2.7 to check that Nuitka gives compatible error messages. It "
+"is not expected to pass yet on Python3.2, but work will be done towards "
+"this goal."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:157
+msgid ""
+"Make CPython2.7 test suite runner also execute the generated \"doctest\" "
+"modules."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:160
+msgid "Enabled tests for default parameters and their reference counts."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:164
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:166
+msgid ""
+"This release marks an important point. The compiled frames are exciting "
+"new technology, that will allow even better integration with CPython, "
+"while improving speed. Lowering the requirements to C++03 means, we will "
+"become usable on Android and with MSVC, which will make adoption of "
+"Nuitka on Windows easier for many."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:172
+msgid ""
+"Structurally the outstanding part is the function as references cleanup. "
+"This was a blocker for value propagation, because now functions "
+"references can be copied, whereas previously this was duplicating the "
+"whole function body, which didn't work, and wasn't acceptable. Now, work "
+"can resume in this domain."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:178
+msgid ""
+"Also very exciting when it comes to optimization is the remove of special"
+" code for ``or`` and ``and`` operators, as these are now only mere "
+"conditional expressions. Again, this will make value propagation easier "
+"with two special cases less."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:183
+msgid ""
+"And then of course, with Mercurial unit tests running compiled with "
+"Nuitka, an important milestone has been hit."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0325.rst:186
+msgid ""
+"For a while now, the focus will be on completing Python3 support, XML "
+"based optimization regression tests, benchmarks, and other open ends. "
+"Once that is done, and more certainty about Mercurial tests support, I "
+"may call it a 0.4 and start with local type inference for actual speed "
+"gains."
+msgstr ""
+

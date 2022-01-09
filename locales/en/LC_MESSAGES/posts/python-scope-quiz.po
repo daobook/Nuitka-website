@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/python-scope-quiz.rst:7
+msgid "Quiz Question"
+msgstr ""
+
+#: ../../doc/posts/python-scope-quiz.rst:9
+msgid "Say you have the following module code:"
+msgstr ""
+
+#: ../../doc/posts/python-scope-quiz.rst:27
+msgid ""
+"What is going to happen? Well, think about it, the solution is in the "
+"next paragraph."
+msgstr ""
+
+#: ../../doc/posts/python-scope-quiz.rst:32
+msgid "Solution"
+msgstr ""
+
+#: ../../doc/posts/python-scope-quiz.rst:34
+msgid ""
+"The correct answer is that the call \"some_function()\" is going to give "
+"you a \"UnboundLocalError\" exception."
+msgstr ""
+
+#: ../../doc/posts/python-scope-quiz.rst:37
+msgid ""
+"This is because it in functions unlike in classes (or modules) do look "
+"ahead for assigned to variable names. Python allocates a slot for local "
+"variables of functions and that is a property that doesn't change - "
+"unless you say \"global\" of course. This slot is used for every access "
+"to the variable name, which forbids you to make it local."
+msgstr ""
+
+#: ../../doc/posts/python-scope-quiz.rst:43
+msgid ""
+"Surprised? I was too! I only learned it while doing my `Python compiler "
+"Nuitka </pages/overview.html>`_ and I made it a separate posting, because"
+" it really surprised me how different function body and class body work."
+msgstr ""
+

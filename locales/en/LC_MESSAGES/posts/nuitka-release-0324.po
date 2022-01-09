@@ -1,0 +1,341 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0324.rst:7
+msgid "Nuitka Release 0.3.24"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:13
+msgid "This release contains progress on many fronts, except performance."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:15
+msgid ""
+"The extended coverage from running the CPython 2.7 and CPython 3.2 "
+"(partially) test suites shows in a couple of bug fixes and general "
+"improvements in compatibility."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:19
+msgid ""
+"Then there is a promised new feature that allows to compile whole "
+"packages."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:22
+msgid ""
+"Also there is more Python3 compatibility, the CPython 3.2 test suite now "
+"succeeds up to \"test_builtin.py\", where it finds that ``str`` doesn't "
+"support the new parameters it has gained, future releases will improve on"
+" this."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:27
+msgid ""
+"And then of course, more re-formulation work, in this case, class "
+"definitions are now mere simple functions. This and later function "
+"references, is the important and only progress towards type inference."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:33
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:35
+msgid ""
+"The compiled method type can now be used with ``copy`` module. That "
+"means, instances with methods can now be copied too. Fixed in 0.3.23.1 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:39
+msgid ""
+"The ``assert`` statement as of Python2.7 creates the ``AssertionError`` "
+"object from a given value immediately, instead of delayed as it was with "
+"Python2.6. This makes a difference for the form with 2 arguments, and if "
+"the value is a tuple. Fixed in 0.3.23.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:45
+msgid ""
+"Sets written like this didn't work unless they were predicted at compile "
+"time:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:52
+msgid ""
+"This apparently rarely used Python2.7 syntax didn't have code generation "
+"yet and crashed the compiler. Fixed in 0.3.23.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:55
+msgid ""
+"For Python2, the default encoding for source files is ``ascii``, and it "
+"is now enforced by Nuitka as well, with the same ``SyntaxError``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:58
+msgid ""
+"Corner cases of ``exec`` statements with nested functions now give proper"
+" ``SyntaxError`` exceptions under Python2."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:61
+msgid ""
+"The ``exec`` statement with a tuple of length 1 as argument, now also "
+"gives a ``TypeError`` exception under Python2."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:64
+msgid "For Python2, the ``del`` of a closure variable is a ``SyntaxError``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:68
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:70
+msgid ""
+"Added support creating compiled packages. If you give Nuitka a directory "
+"with an \"__init__.py\" file, it will compile that package into a \".so\""
+" file. Adding the package contents with ``--recurse-dir`` allows to "
+"compile complete packages now. Later there will be a cleaner interface "
+"likely, where the later is automatic."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:76
+msgid ""
+"Added support for providing directories as main programs. It's OK if they"
+" contain a \"__main__.py\" file, then it's used instead, otherwise give "
+"compatible error message."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:80
+msgid ""
+"Added support for optimizing the ``super`` built-in. It was already "
+"working correctly, but not optimized on CPython2. But for CPython3, the "
+"variant without any arguments required dedicated code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:84
+msgid ""
+"Added support for optimizing the ``unicode`` built-in under Python2. It "
+"was already working, but will become the basis for the ``str`` built-in "
+"of Python3 in future releases."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:88
+msgid ""
+"For Python3, lots of compatibility work has been done. The Unicode issues"
+" appear to be ironed out now. The ``del`` of closure variables is allowed"
+" and supported now. Built-ins like ``ord`` and ``chr`` work more "
+"correctly and attributes are now interned strings, so that monkey "
+"patching classes works."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:96
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:98
+msgid ""
+"Migrated \"bin/benchmark.sh\" to Python as \"misc/run-valgrind.py\" and "
+"made it a bit more portable that way. Prefers \"/var/tmp\" if it exists "
+"and creates temporary files in a secure manner. Triggered by the Debian "
+"\"insecure temp file\" bug."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:103
+msgid ""
+"Migrated \"bin/make-dependency-graph.sh\" to Python as \"misc/make-"
+"dependency-graph.py\" and made a more portable and powerful that way."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:107
+msgid ""
+"The filtering is done a more robust way. Also it creates temporary files "
+"in a secure manner, also triggered by the Debian \"insecure temp file\" "
+"bug."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:111
+msgid ""
+"And it creates SVG files and no longer PostScript as the first one is "
+"more easily rendered these days."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:114
+msgid ""
+"Removed the \"misc/gist\" git sub-module, which was previously used by "
+"\"misc/make-doc.py\" to generate HTML from `User Manual "
+"<https://nuitka.net/doc/user-manual.html>`__ and `Developer Manual "
+"<https://nuitka.net/doc/developer-manual.html>`__."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:119
+msgid ""
+"These are now done with Nikola, which is much better at it and it "
+"integrates with the web site."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:122
+msgid "Lots of formatting improvements to the change log, and manuals:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:124
+msgid "Marking identifiers with better suited ReStructured Text markup."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:125
+msgid "Added links to the bug tracker all Issues."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:126
+msgid "Unified wordings, quotation, across the documents."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:130
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:132
+msgid ""
+"The creation of the class dictionaries is now done with normal function "
+"bodies, that only needed to learn how to throw an exception when directly"
+" called, instead of returning ``NULL``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:136
+msgid ""
+"Also the assignment of ``__module__`` and ``__doc__`` in these has become"
+" visible in the node tree, allowing their proper optimization."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:139
+msgid ""
+"These re-formulation changes allowed to remove all sorts of special "
+"treatment of ``class`` code in the code generation phase, making things a"
+" lot simpler."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:143
+msgid ""
+"There was still a declaration of ``PRINT_ITEMS`` and uses of it, but no "
+"definition of it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:146
+msgid ""
+"Code generation for \"main\" module and \"other\" modules are now merged,"
+" and no longer special."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:149
+msgid ""
+"The use of raw strings was found unnecessary and potentially still buggy "
+"and has been removed. The dependence on C++11 is getting less and less."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:155
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:157
+msgid ""
+"Updated CPython2.6 test suite \"tests/CPython26\" to 2.6.8, adding tests "
+"for recent bug fixes in CPython. No changes to Nuitka were needed in "
+"order to pass, which is always good news."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:161
+msgid ""
+"Added CPython2.7 test suite as \"tests/CPython27\" from 2.7.3, making it "
+"public for the first time. Previously a private copy of some age, with "
+"many no longer needed changes had been used by me. Now it is up to par "
+"with what was done before for \"tests/CPython26\", so this pending action"
+" is finally done."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:167
+msgid ""
+"Added test to cover Python2 syntax error of having a function with "
+"closure variables nested inside a function that is an overflow function."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:171
+msgid "Added test \"BuiltinSuper\" to cover ``super`` usage details."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:173
+msgid "Added test to cover ``del`` on nested scope as syntax error."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:175
+msgid "Added test to cover ``exec`` with a tuple argument of length 1."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:177
+msgid "Added test to cover ``barry_as_FLUFL`` future import to work."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:179
+msgid ""
+"Removed \"Unicode\" from known error cases for CPython3.2, it's now "
+"working."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:184
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:186
+msgid ""
+"This release brought forward the most important remaining re-formulation "
+"changes needed for Nuitka. Removing class bodies, makes optimization yet "
+"again simpler. Still, making function references, so they can be copied, "
+"is missing for value propagation to progress."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:191
+msgid ""
+"Generally, as usual, a focus has been laid on correctness. This is also "
+"the first time, I am release with a known bug though, one which I believe"
+" now, may be the root cause of the mercurial tests not yet passing."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:196
+msgid ""
+"The solution will be involved and take a bit of time. It will be about "
+"\"compiled frames\" and be a (invasive) solution. It likely will make "
+"Nuitka faster too. But this release includes lots of tiny improvements, "
+"for Python3 and also for Python2. So I wanted to get this out now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0324.rst:201
+msgid "As usual, please check it out, and let me know how you fare."
+msgstr ""
+

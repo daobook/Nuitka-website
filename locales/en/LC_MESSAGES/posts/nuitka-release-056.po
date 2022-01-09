@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-056.rst:7
+msgid "Nuitka Release 0.5.6"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:13
+msgid ""
+"This release brings bug fixes, important new optimization, newly "
+"supported platforms, and important compatibility improvements. Progress "
+"on all fronts."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:19
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:21
+msgid ""
+"Closure taking of global variables in member functions of classes that "
+"had a class variable of the same name was binding to the class variable "
+"as opposed to the module variable."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:25
+msgid ""
+"Overwriting compiled function's ``__doc__`` attribute more than once "
+"could corrupt the old value, leading to crashes. Fixed in 0.5.5.2 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:29
+msgid ""
+"Compatibility Python2: The ``exec`` statement ``execfile`` were changing "
+"``locals()`` was given as an argument."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:41
+msgid "Previously Nuitka treated all 3 variants the same."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:43
+msgid ""
+"Compatibility: Empty branches with a condition were reduced to only the "
+"condition, but they need in fact to also check the truth value:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:55
+msgid ""
+"Detection of Windows virtualenv was not working properly. Fixed in "
+"0.5.5.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:58
+msgid ""
+"Large enough constants structures are now unstreamed via ``marshal`` "
+"module, avoiding large codes being generated with no point. Fixed in "
+"0.5.5.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:62
+msgid ""
+"Windows: Pressing CTRL-C gave two stack traces, one from the re-execution"
+" of Nuitka which was rather pointless. Fixed in 0.5.5.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:66
+msgid ""
+"Windows: Searching for virtualenv environments didn't terminate in all "
+"cases. Fixed in 0.5.5.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:69
+msgid ""
+"During installation from PyPI with Python3 versions, there were errors "
+"given for the Python2 only scons files. Fixed in 0.5.5.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:73
+msgid "Fix, the arguments of ``yield from`` expressions could be leaked."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:75
+msgid ""
+"Fix, closure taking of a class variable could have in a sub class where "
+"the module variable was meant."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:91
+msgid ""
+"Fix, setting ``CXX`` environment variable because the installed gcc has "
+"too low version, wasn't affecting the version check at all."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:94
+msgid ""
+"Fix, on Debian/Ubuntu with ``hardening-wrapper`` installed the version "
+"check was always failing, because these report a shortened version number"
+" to Scons."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:100
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:102
+msgid ""
+"Local variables that must be assigned also have no side effects, making "
+"use of SSA. This allows for a host of optimization to be applied to them "
+"as well, often yielding simpler access/assign code, and discovering in "
+"more cases that frames are not necessary."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:107
+msgid "Micro optimization to ``dict`` built-in for simpler code generation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:111
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:113
+msgid "Added support for ARM \"hard float\" architecture."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:115
+msgid "Added package for Ubuntu 14.10 for download."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:117
+msgid "Added package for openSUSE 13.2 for download."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:119
+msgid ""
+"Donations were used to buy a Cubox-i4 Pro. It got Debian Jessie installed"
+" on it, and will be used to run an even larger amount of tests."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:123
+msgid ""
+"Made it more clear in the user documentation that the ``.exe`` suffix is "
+"used for all platforms, and why."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:126
+msgid ""
+"Generally updated information in User Manual and Developer Manual about "
+"the optimization status."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:129
+msgid ""
+"Using Nikola 7.1 with external filters instead of our own, outdated "
+"branch for the web site."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:134
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:136
+msgid ""
+"PyLint clean for the first time ever. We now have a Buildbot driven test "
+"that this stays that way."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:139
+msgid ""
+"Massive indentation cleanup of keyword argument calls. We have a rule to "
+"align the keywords, but as this was done manually, it could easily get "
+"out of touch. Now with a \"autoformat\" tool based on RedBaron, it's "
+"correct. Also, spacing around arguments is now automatically corrected. "
+"More to come."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:145
+msgid ""
+"For ``exec`` statements, the coping back to local variables is now an "
+"explicit node in the tree, leader to cleaner code generation, as it now "
+"uses normal variable assignment code generation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:149
+msgid ""
+"The ``MaybeLocalVariables`` became explicit about which variable they "
+"might be, and contribute to its SSA trace as well, which was incomplete "
+"before."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:153
+msgid ""
+"Removed some cases of code duplication that were marked as TODO items. "
+"This often resulted in cleanups."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:156
+msgid ""
+"Do not use ``replaceWith`` on child nodes, that potentially were re-used "
+"during their computation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:161
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:163
+msgid ""
+"The release is mainly the result of consolidation work. While the "
+"previous release contained many important enhancements, this is another "
+"important step towards full SSA, closing one loop whole (class variables "
+"and ``exec`` functions), as well as applying it to local variables, "
+"largely extending its use."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:169
+msgid ""
+"The amount of cleanups is tremendous, in huge part due to infrastructure "
+"problems that prevented release repeatedly. This reduces the "
+"technological debt very much."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-056.rst:173
+msgid ""
+"More importantly, it would appear that now eliminating local and "
+"temporary variables that are not necessary is only a small step away. But"
+" as usual, while this may be easy to implement now, it will uncover more "
+"bugs in existing code, that we need to address before we continue."
+msgstr ""
+

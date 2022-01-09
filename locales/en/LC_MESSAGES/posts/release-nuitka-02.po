@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/release-nuitka-02.rst:7
+msgid "Nuitka Release 0.2"
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:13
+msgid "Good day, this is a major step ahead, improvements everywhere."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:17
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:19
+msgid ""
+"Migrated the Python parser from the deprecated and problematic "
+"``compiler`` module to the ``ast`` module which fixes the ``d[a,] = b`` "
+"parser problem. A pity it was not available at the time I started, but "
+"the migration was relatively painless now."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:24
+msgid ""
+"I found and fixed wrong encoding of binary data into C++ literals. Now "
+"Nuitka uses C++0x raw strings, and these problems are gone."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:27
+msgid ""
+"The decoding of constants was done with the ``marshal`` module, but that "
+"appears to not deeply care enough about unicode encoding it seems. Using "
+"``cPickle`` now, which seems less efficient, but is more correct."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:32
+msgid ""
+"Another difference is gone: The ``continue`` and ``break`` inside loops "
+"do no longer prevent the execution of finally blocks inside the loop."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:38
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:40
+msgid ""
+"I now maintain the \"README.txt\" in org-mode, and intend to use it as "
+"the issue tracker, but I am still a beginner at that."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:43
+msgid "Update"
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:45
+msgid "Turned out I never master it, and used ReStructured Text instead."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:47
+msgid ""
+"There is a public git repository for you to track Nuitka releases. Make "
+"your changes and then ``git pull --rebase``. If you encounter conflicts "
+"in things you consider useful, please submit the patches and a pull "
+"request. When you make your clones of Nuitka public, use ``nuitka-"
+"unofficial`` or not the name ``Nuitka`` at all."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:53
+msgid "There is a now a mailing list (since closed)."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:57
+msgid "Reduced Differences"
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:59
+msgid ""
+"Did you know you could write ``lambda : (yield something)`` and it gives "
+"you a lambda that creates a generator that produces that one value? Well,"
+" now Nuitka has support for lambda generator functions."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:63
+msgid ""
+"The ``from __future__ import division`` statement works as expected now, "
+"leading to some newly passing CPython tests."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:66
+msgid ""
+"Same for ``from __future__ import unicode_literals`` statement, these "
+"work as expected now, removing many differences in the CPython tests that"
+" use this already."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:72
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:74
+msgid ""
+"The ``Python`` binary provided and ``Nuitka.py`` are now capable of "
+"accepting parameters for the program executed, in order to make it even "
+"more of a drop-in replacement to ``python``."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:78
+msgid ""
+"Inlining of ``exec`` statements with constant expressions. These are now "
+"compiled at compile time, not at run time anymore. I observed that an "
+"increasing number of CPython tests use exec to do things in isolation or "
+"to avoid warnings, and many more these tests will now be more effective. "
+"I intend to do the same with eval expressions too, probably in a minor "
+"release."
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:87
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/release-nuitka-02.rst:89
+msgid ""
+"So give it a whirl. I consider it to be substantially better than before,"
+" and the list of differences to CPython is getting small enough, plus "
+"there is already a fair bit of polish to it. Just watch out that it needs"
+" gcc-4.5 or higher now."
+msgstr ""
+

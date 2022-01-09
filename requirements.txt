@@ -11,3 +11,4 @@ ablog
 restructuredtext-lint
 unidecode
 sphinx-rtd-theme
+myst-parser

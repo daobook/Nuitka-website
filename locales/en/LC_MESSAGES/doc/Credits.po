@@ -1,0 +1,267 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../Nuitka-develop/Credits.rst:3
+msgid "Credits"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:7
+msgid "Nuitka Namesake"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:9
+msgid ""
+"The most credits are deserved by my everloving and forgiving wife, who "
+"bares with me for spending literally all my spare and other time thinking"
+" of Nuitka."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:13
+msgid ""
+"See an image of her on Twitter and make her happy with donations and "
+"Nuitka Commercial subscripts."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:22
+msgid "Contributors to Nuitka"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:24
+msgid ""
+"Thanks go to these individuals for their much-valued contributions to "
+"Nuitka."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:27
+msgid "The order is sorted by time."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:29
+msgid ""
+"Li Xuan Ji: Contributed patches for general portability issue and "
+"enhancements to the environment variable settings."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:32
+msgid ""
+"Nicolas Dumazet: Found and fixed reference counting issues, ``import`` "
+"packages work, improved some of the English and generally made good code "
+"contributions all over the place, solved code generation TODOs, did tree "
+"building cleanups, core stuff."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:37
+msgid ""
+"Khalid Abu Bakr: Submitted patches for his work to support MinGW and "
+"Windows, debugged the issues, and helped me to get cross compile with "
+"MinGW from Linux to Windows. This was quite difficult stuff."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:41
+msgid ""
+"Liu Zhenhai: Submitted patches for Windows support, making the inline "
+"Scons copy actually work on Windows as well. Also reported import related"
+" bugs, and generally helped me make the Windows port more usable through "
+"his testing and information."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:46
+msgid ""
+"Christopher Tott: Submitted patches for Windows, and general as well as "
+"structural cleanups."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:49
+msgid "Pete Hunt: Submitted patches for macOS X support."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:51
+msgid ""
+"\"ownssh\": Submitted patches for built-ins module guarding, and made "
+"massive efforts to make high-quality bug reports. Also the initial "
+"\"standalone\" mode implementation was created by him."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:55
+msgid ""
+"Juan Carlos Paco: Submitted cleanup patches, created a Nuitka GUI and a "
+"Ninja IDE plugin for Nuitka. Both of no longer actively maintained "
+"though."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:59
+msgid "\"Dr. Equivalent\": Submitted the Nuitka Logo."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:61
+msgid "Johan Holmberg: Submitted patch for Python3 support on macOS X."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:63
+msgid ""
+"Umbra: Submitted patches to make the Windows port more usable, adding "
+"user provided application icons, as well as MSVC support for large "
+"constants and console applications."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:67
+msgid ""
+"David Cortesi: Submitted patches and test cases to make macOS port more "
+"usable, specifically for the Python3 standalone support of Qt."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:70
+msgid ""
+"Andrew Leech: Submitted github pull request to allow using \"-m nuitka\" "
+"to call the compiler. Also pull request to improve \"bist_nuitka\" and to"
+" do the registration."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:74
+msgid ""
+"Paweł K: Submitted github pull request to remove glibc from standalone "
+"distribution, saving size and improving robustness considering the "
+"various distributions."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:78
+msgid ""
+"Orsiris de Jong: Submitted github pull request to implement the "
+"dependency walking with ``pefile`` under Windows. Also provided the "
+"implementation of Dejong Stacks."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:82
+msgid ""
+"Jorj X. McKie: Submitted github pull requests with NumPy plugin to retain"
+" its accelerating libraries, and Tkinter to include the TCL distribution "
+"on Windows."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:88
+msgid "Projects used by Nuitka"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:90
+msgid "The `CPython project <https://www.python.org>`__"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:92
+msgid ""
+"Thanks for giving us CPython, which is the base of Nuitka. We are nothing"
+" without it."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:95
+msgid "The `GCC project <https://gcc.gnu.org>`__"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:97
+msgid ""
+"Thanks for not only the best compiler suite but also thanks for making it"
+" easy supporting to get Nuitka off the ground. Your compiler was the "
+"first usable for Nuitka and with very little effort."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:101
+msgid "The `Scons project <https://www.scons.org>`__"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:103
+msgid ""
+"Thanks for tackling the difficult points and providing a Python "
+"environment to make the build results. This is such a perfect fit to "
+"Nuitka and a dependency that will likely remain."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:107
+msgid "The `valgrind project <https://valgrind.org>`__"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:109
+msgid ""
+"Luckily we can use Valgrind to determine if something is an actual "
+"improvement without the noise. And it's also helpful to determine what's "
+"actually happening when comparing."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:113
+msgid "The `NeuroDebian project <https://neuro.debian.net>`__"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:115
+msgid ""
+"Thanks for hosting the build infrastructure that the Debian and sponsor "
+"Yaroslav Halchenko uses to provide packages for all Ubuntu versions."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:119
+msgid "The `openSUSE Buildservice <https://openbuildservice.org>`__"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:121
+msgid ""
+"Thanks for hosting this excellent service that allows us to provide RPMs "
+"for a large variety of platforms and make them available immediately "
+"nearly at release time."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:125
+msgid "The `MinGW64 project <https://mingw-w64.org>`__"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:127
+msgid ""
+"Thanks for porting the gcc to Windows. This allowed portability of Nuitka"
+" with relatively little effort."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:130
+msgid "The `Buildbot project <https://buildbot.net>`__"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:132
+msgid ""
+"Thanks for creating an easy to deploy and use continuous integration "
+"framework that also runs on Windows and is written and configured in "
+"Python code. This allows running the Nuitka tests long before release "
+"time."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:137
+msgid "The `isort project <https://timothycrosley.github.io/isort/>`__"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:139
+msgid ""
+"Thanks for making nice import ordering so easy. This makes it so easy to "
+"let your IDE do it and clean up afterward."
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:142
+msgid "The `black project <https://github.com/ambv/black>`__"
+msgstr ""
+
+#: ../../Nuitka-develop/Credits.rst:144
+msgid ""
+"Thanks for making a fast and reliable way for automatically formatting "
+"the Nuitka source code."
+msgstr ""
+

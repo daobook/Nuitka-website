@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-051.rst:7
+msgid "Nuitka Release 0.5.1"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:13
+msgid ""
+"This release brings corrections and major improvements to how standalone "
+"mode performs. Much of it was contributed via patches and bug reports."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:20
+msgid ""
+"There was a crash when using ``next`` on a non-iterable. Fixed in 0.5.0.1"
+" already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:23
+msgid ""
+"Module names with special characters not allowed in C identifiers were "
+"not fully supported. Fixed in 0.5.0.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:26
+msgid ""
+"Name mangling for classes with leading underscores was not removing them "
+"from resulting attribute names. This broke at ``__slots__`` with private "
+"attributes for such classes. Fixed in 0.5.0.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:30
+msgid ""
+"Standalone on Windows might need \"cp430\" encoding. Fixed in 0.5.0.2 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:33
+msgid ""
+"Standalone mode didn't work with ``lxml.etree`` due to lack of hard coded"
+" dependencies. When a shared library imports things, Nuitka cannot detect"
+" it easily."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:37
+msgid ""
+"Wasn't working on macOS 64 bits due to using Linux 64 bits specific code."
+" Fixed in 0.5.0.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:40
+msgid ""
+"On MinGW the constants blob was not properly linked on some "
+"installations, this is now done differently (see below)."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:45
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:47
+msgid ""
+"Memory usages are now traced with ``--show-progress`` allowing us to "
+"trace where things go wrong."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:52
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:54
+msgid ""
+"Standalone mode now includes standard library as bytecode by default. "
+"This is workaround scalability issues with many constants from many "
+"modules. Future releases are going to undo it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:58
+msgid ""
+"On Windows the constants blob is now stored as a resource, avoiding "
+"compilation via C code for MSVC as well. MinGW was changed to use the "
+"same code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:64
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:66
+msgid ""
+"Expanded test coverage for \"standalone mode\" demonstrating usage of "
+"\"hex\" encoding, PySide, and PyGtk packages."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:71
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:73
+msgid ""
+"This release is mostly an interim maintenance release for standalone. "
+"Major changes that provide optimization beyond that, termed \"C-ish code "
+"generation\" are delayed for future releases."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:77
+msgid ""
+"This release makes standalone practical which is an important point. "
+"Instead of hour long compilation, even for small programs, we are down to"
+" less than a minute."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-051.rst:81
+msgid ""
+"The solution of the scalability issues with many constants from many "
+"modules will be top priority going forward. Since they are about how even"
+" single use constants are created all in one place, this will be easy, "
+"but as large changes are happening in \"C-ish code generation\", we are "
+"waiting for these to complete."
+msgstr ""
+

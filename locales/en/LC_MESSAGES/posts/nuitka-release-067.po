@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-067.rst:7
+msgid "Nuitka Release 0.6.7"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:13
+msgid ""
+"This release contains bug fixes and improvements to the packaging, for "
+"the RPM side as well as for Debian, to cover Python3 only systems as they"
+" are now becoming more common."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:19
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:21
+msgid ""
+"Compatibility: The value of ``__module__`` for extension modules was not "
+"dependent into which package the module was loaded, it now is."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:24
+msgid "Anaconda: Enhanced detection of Anaconda for Python 3.6 and higher."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:26
+msgid ""
+"CentOS6: Detect gcc version to allow saving on macro memory usage, very "
+"old gcc didn't have that."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:29
+msgid ""
+"Include Python3 for all Fedora versions where it works as well as for "
+"openSUSE versions 15 and higher."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:32
+msgid ""
+"Windows: Using short path names to interact with Scons avoids problems "
+"with unicode paths in all cases."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:35
+msgid ""
+"macOS: The usage of ``install_name_tool`` could sometimes fail due to "
+"length limits, we now increase it at link time."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:38
+msgid ""
+"macOS: Do not link against ``libpython`` for module mode. This prevented "
+"extension modules from actually being usable."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:41
+msgid "Python3.6: Follow coroutine fixes in our asyncgen implementation as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:44
+msgid ""
+"Fix, our version number handling could overflow with minor versions past "
+"10, so we limited it for now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:49
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:51
+msgid ""
+"Added support for Python 3.8, the experimental was already there and "
+"pretty good, but now added the last obscure features too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:54
+msgid "Plugins can now provide C code to be included in the compilation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:56
+msgid ""
+"Distutils: Added targets ``build_nuitka`` and ``install_nuitka`` to "
+"complement ``bdist_nuitka``, so we support software other than wheels, "
+"e.g. RPM packaging that compiles with Nuitka."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:60
+msgid ""
+"Added support for ``lldb`` the Clang debugger with the ``--debugger`` "
+"mode."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:65
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:67
+msgid ""
+"Make the file prefix map actually work for gcc and clang, and compile "
+"files inside the build folder, unless we are running in debugger mode, so"
+" we use ``ccache`` caching across different compilations for at least the"
+" static parts."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:72
+msgid "Avoid compilation of ``__frozen.c`` in accelerated mode, it's not used."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:75
+msgid ""
+"Prefer using the inline copy of scons over systems scons. The later will "
+"only be slower. Use the fallback to external scons only from the Debian "
+"packages, since there we consider it forbidden to include software as a "
+"duplicate."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:82
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:84
+msgid ""
+"Added recommended plugins for Visual Code, replacing the list in the "
+"Developer Manual."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:87
+msgid "Added repository for Fedora 30 for download."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:89
+msgid "Added repository for CentOS 8 for download."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:91
+msgid ""
+"Updated inline copy of Scons used for Python3 to 3.1.2, which is said to "
+"be faster for large compilations."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:94
+msgid ""
+"Removed Eclipse setup from the manual, it's only infererior at this point"
+" and we do not use it ourselves."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:97
+msgid ""
+"Debian: Stop recommending PyQt5 in the package, we no longer use it for "
+"built-in GUI that was removed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:100
+msgid ""
+"Debian: Bumped the standards version and modernized the packaging, "
+"solving a few warnings during the build."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:105
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:107
+msgid "Scons: Avoid to add Unix only include paths on Windows."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:109
+msgid "Scons: Have the static source code in a dedicated folder for clarity."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:113
+msgid "Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:115
+msgid ""
+"Added tests to Github Actions, for the supported Python versions for all "
+"of Linux, macOS and Windows, covering the later publicly for the first "
+"time. We use Anaconda on macOS for the tests now, rather than Homebrew."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:120
+msgid ""
+"Enable IO encoding to make sure we use UTF8 for more test suites that "
+"actually need it in case of problems."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:123
+msgid ""
+"Comparing module outputs now handles segfaults by running in the debugger"
+" too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:128
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:130
+msgid ""
+"This release adds full support for Python 3.8 finally, which took us a "
+"while, and it cleans up a lot on the packaging side. There aren't that "
+"many important bug fixes, but it's still nice to this cleaned up."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-067.rst:134
+msgid ""
+"We have important actual optimization in the pipeline that will apply "
+"specialization to target types and for comparison operations. We expect "
+"to see actual performance improvements in the next release again."
+msgstr ""
+

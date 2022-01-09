@@ -9,24 +9,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/state-of-nuitka.rst:7
+#: ../../doc/posts/state-of-nuitka.rst:7
 msgid "State of Nuitka"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:9
-msgid "目录"
+#: ../../doc/posts/state-of-nuitka.rst:9
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:11
+#: ../../doc/posts/state-of-nuitka.rst:11
 msgid ""
 "For quite some time, publicly, very little has happened with my Python "
 "compiler Nuitka. But that doesn't mean, there hasn't been progress. In "
@@ -34,7 +34,7 @@ msgid ""
 "summarizes, what happened."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:16
+#: ../../doc/posts/state-of-nuitka.rst:16
 msgid ""
 "The last release, 0.5.1 was more of a maintenance release than making "
 "real changes. It turns out, that the bigger changes got delayed by a "
@@ -42,11 +42,11 @@ msgid ""
 "means."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:23
+#: ../../doc/posts/state-of-nuitka.rst:23
 msgid "C-ish vs. C++-ish"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:25
+#: ../../doc/posts/state-of-nuitka.rst:25
 msgid ""
 "When I started working on Nuitka, the big question was if it is possible "
 "to create a sufficiently compatible compiler. The use of C++11 then, "
@@ -54,7 +54,7 @@ msgid ""
 "the language, and to fully integrate with CPython for compatibility."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:30
+#: ../../doc/posts/state-of-nuitka.rst:30
 msgid ""
 "The main goal was to get it going to work correctly. As time went on, "
 "execution order demanded to do away with variadic templates, raw strings "
@@ -62,7 +62,7 @@ msgid ""
 "point."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:35
+#: ../../doc/posts/state-of-nuitka.rst:35
 msgid ""
 "And then, as Nuitka became less and less template based, and shoving more"
 " things into the node tree, and re-formulations, making this where the "
@@ -71,15 +71,15 @@ msgid ""
 "implementations:"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:41
+#: ../../doc/posts/state-of-nuitka.rst:41
 msgid "C++ exceptions are god damn slow"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:43
+#: ../../doc/posts/state-of-nuitka.rst:43
 msgid "Everything should be a in a single statement."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:45
+#: ../../doc/posts/state-of-nuitka.rst:45
 msgid ""
 "The later was my choice. Initially it made it easy to pass on references "
 "and put the releasing C++ class around every expression as necessary. "
@@ -87,11 +87,11 @@ msgid ""
 "references where necessary, and it was not all that bad. Yet limiting."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:50
+#: ../../doc/posts/state-of-nuitka.rst:50
 msgid "This led to a couple of issues."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:52
+#: ../../doc/posts/state-of-nuitka.rst:52
 msgid ""
 "The order of call arguments release for e.g. ``f(g(h()))`` was not "
 "completely compatible, with the way how CPython does it. C++ destructors "
@@ -99,21 +99,21 @@ msgid ""
 "and make the order and timing of finalization not compatible."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:58
+#: ../../doc/posts/state-of-nuitka.rst:58
 msgid ""
 "The generated C++ code complexity became large. The compilation of the "
 "generated C++ in some cases was huge. To the point, that e.g. \"code too "
 "complex\" was giving by compilers like MSVC for some modules."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:63
+#: ../../doc/posts/state-of-nuitka.rst:63
 msgid ""
 "Cases of in-place assignments were discovered, where CPython outperforms "
 "Nuitka by a large margin. But these don't fit into that style of code "
 "generation."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:67
+#: ../../doc/posts/state-of-nuitka.rst:67
 msgid ""
 "So, at some point, the pain had built up. Code generation was already "
 "lighter than in the beginning. For example, initially ``with`` statements"
@@ -121,27 +121,27 @@ msgid ""
 "long gone."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:72
+#: ../../doc/posts/state-of-nuitka.rst:72
 msgid ""
 "I took a deep dive, and **rewrote** the whole code generation, to be much"
 " more \"C-ish\" than \"C++-ish\". A huge undertaking that would take "
 "months."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:76
+#: ../../doc/posts/state-of-nuitka.rst:76
 msgid ""
 "Where previously, code didn't have to handle return error codes (a C++ "
 "exception was thrown), now everything needed a return value name, and "
 "error check."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:80
+#: ../../doc/posts/state-of-nuitka.rst:80
 msgid ""
 "Where classes were previously conviently made sure things happened at "
 "function or scope exit, manual handling needed to be added."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:83
+#: ../../doc/posts/state-of-nuitka.rst:83
 msgid ""
 "The handling of ``continue``, ``break``, and ``return`` was previously "
 "done with exceptions being thrown, if they were to pass a "
@@ -150,42 +150,42 @@ msgid ""
 "behaviour."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:91
+#: ../../doc/posts/state-of-nuitka.rst:91
 msgid "Rewriting Code Generation"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:93
+#: ../../doc/posts/state-of-nuitka.rst:93
 msgid ""
 "Redoing code generation, over months, while ultimately, slowly, arriving "
 "at a point where Nuitka would be doing this, it already did before, was "
 "kind of frustrating."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:97
+#: ../../doc/posts/state-of-nuitka.rst:97
 msgid ""
 "Of course, the performance benefit would be there, but it would not be "
 "all that much, except for exception raising and handling. There it would "
 "be huge. Ultimately for PyStone, a couple of extra percents were gained."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:101
+#: ../../doc/posts/state-of-nuitka.rst:101
 msgid ""
 "This really was a point, where I felt, that Nuitka will make it or break."
 " And for a long time, I honestly wasn't so sure, that I pull through. But"
 " I did."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:107
+#: ../../doc/posts/state-of-nuitka.rst:107
 msgid "Current Situation"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:109
+#: ../../doc/posts/state-of-nuitka.rst:109
 msgid ""
 "The current pre-release is release quality. You should try it out, it's "
 "great."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:112
+#: ../../doc/posts/state-of-nuitka.rst:112
 msgid ""
 "There are many changes to Standalone mode. Due to changes in how "
 "constants are now created in the modules that uses them, instead of "
@@ -194,31 +194,31 @@ msgid ""
 "relatively good), now takes minutes only."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:118
+#: ../../doc/posts/state-of-nuitka.rst:118
 msgid ""
 "The support for virtualenv's of all kinds seems to work on Windows, "
 "Linux, and macOS, which all seem to have different kinds of codes."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:121
+#: ../../doc/posts/state-of-nuitka.rst:121
 msgid ""
 "The support for macOS is now there. Thanks to a virtual server month "
 "donated to Jarrad Hope, I was able to iron issues out."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:124
+#: ../../doc/posts/state-of-nuitka.rst:124
 msgid ""
 "The final release will also work with standalone binaries created on "
 "Fedora 20 which got hard code rpaths removed on the factory git branch."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:128
+#: ../../doc/posts/state-of-nuitka.rst:128
 msgid ""
 "And yet, I am not yet releasing. In fact, I would like to ask you to give"
 " it a roll, and integrate test feedback."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:131
+#: ../../doc/posts/state-of-nuitka.rst:131
 msgid ""
 "Although more tests than ever are executed and pass, (e.g. the Mercurial "
 "test suite is now run each time I make a commit, and fully identically "
@@ -226,14 +226,14 @@ msgid ""
 "can never be enough."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:136
+#: ../../doc/posts/state-of-nuitka.rst:136
 msgid ""
 "The changes I made are the most intense ever, and definitely have "
 "potential for regressions. I am used to providing very high quality "
 "releases."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:140
+#: ../../doc/posts/state-of-nuitka.rst:140
 msgid ""
 "Also, I am working on the Buildbot instances to automate the production "
 "of `performance graphs <https://speedcenter.nuitka.net>`__, which get "
@@ -241,7 +241,7 @@ msgid ""
 "automatically for each release that gets made."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:145
+#: ../../doc/posts/state-of-nuitka.rst:145
 msgid ""
 "And generally, I am trying to improve my work flow, to make it easier to "
 "push out releases with less effort. Buildbot should drive the release "
@@ -249,17 +249,17 @@ msgid ""
 "and this should be even less painful in the future."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:152
+#: ../../doc/posts/state-of-nuitka.rst:152
 msgid "Open Points"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:154
+#: ../../doc/posts/state-of-nuitka.rst:154
 msgid ""
 "With this release, presenting great progress, many things remain in an "
 "unfinished state."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:157
+#: ../../doc/posts/state-of-nuitka.rst:157
 msgid ""
 "The support for Python3.4 is not complete. Most things work, but some "
 "need more work. Specifically the changes to ``__class__`` variable "
@@ -267,7 +267,7 @@ msgid ""
 "handling."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:162
+#: ../../doc/posts/state-of-nuitka.rst:162
 msgid ""
 "Currently there are variables, closure variables, temp variables, and "
 "then temp variable references. The way they work is different. One way "
@@ -276,13 +276,13 @@ msgid ""
 "where that is suddenly necessary."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:168
+#: ../../doc/posts/state-of-nuitka.rst:168
 msgid ""
 "With this done, the SSA code will be even easier to write, as temp "
 "variables and named variables will finally be fully unified."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:171
+#: ../../doc/posts/state-of-nuitka.rst:171
 msgid ""
 "The use of C++ classes is largely reduced now. But a few still remain, "
 "namely for local variables, closure variables, and temp variables that "
@@ -291,57 +291,57 @@ msgid ""
 "the class doesn't do anything in terms of code anymore."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:178
+#: ../../doc/posts/state-of-nuitka.rst:178
 msgid "Removing these classes may well gain more performance."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:180
+#: ../../doc/posts/state-of-nuitka.rst:180
 msgid ""
 "Now that code generation can more easily make a difference, and SSA "
 "apparently is becoming reliable, it could be used to *know* that values "
 "must be value and to optimize checks away."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:184
+#: ../../doc/posts/state-of-nuitka.rst:184
 msgid ""
 "Currently every variable access checks for \"NULL\", when it's part of an"
 " assign trace. Some optimizations exist for parameter variables without "
 "``del`` on them, that do not use SSA."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:188
+#: ../../doc/posts/state-of-nuitka.rst:188
 msgid ""
 "This could be expanded and made general, allowing for much less code to "
 "be generated (specifically avoiding error code, and release code for "
 "variables that cannot give an error)."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:192
+#: ../../doc/posts/state-of-nuitka.rst:192
 msgid ""
 "The SSA has been found unreliable in some instances, due to bugs that I "
 "believe I found. We could attempt and forward propagate variable "
 "assignments to where they are used, eliminating variables, etc."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:196
+#: ../../doc/posts/state-of-nuitka.rst:196
 msgid ""
 "This is a place, where a lot of performance can be gained. We really want"
 " to be there. And \"C-ish\" now makes this ever more attractive, despite "
 "the large delay in time it has caused."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:200
+#: ../../doc/posts/state-of-nuitka.rst:200
 msgid ""
 "The in-place assignment code for strings, where CPython can be way faster"
 " than current Nuitka, it bears a risk of getting it wrong. It is "
 "therefore pushed to a future release."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:206
+#: ../../doc/posts/state-of-nuitka.rst:206
 msgid "Other Things"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:208
+#: ../../doc/posts/state-of-nuitka.rst:208
 msgid ""
 "For the website, I am relocating the virtual machine to a dedicated "
 "server rented for an increased price. This will allow to add a few more "
@@ -349,22 +349,22 @@ msgid ""
 "It's more expensive, but I feel a better investment of my time."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:213
+#: ../../doc/posts/state-of-nuitka.rst:213
 msgid ""
 "As mentioned before, I am not going to conferences this year. Enjoy "
 "Europython, and consider having a Lightning talk about Nuitka. I will be "
 "there next year again."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:219
+#: ../../doc/posts/state-of-nuitka.rst:219
 msgid "Call for Help"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:221
+#: ../../doc/posts/state-of-nuitka.rst:221
 msgid "Please test the latest release of Nuitka."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:223
+#: ../../doc/posts/state-of-nuitka.rst:223
 msgid ""
 "Please consider `making a donation </pages/donations.html>`_ to support "
 "my work on Nuitka. I have continuous monthly costs of it, so it would be "
@@ -372,18 +372,18 @@ msgid ""
 "financial cost to me."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:229
+#: ../../doc/posts/state-of-nuitka.rst:229
 msgid ""
 "Please join the mailing list (since closed), and offer your help with "
 "tasks. Nuitka can seriously take more people developing, testing, "
 "reviewing, and quality checking it."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:235
+#: ../../doc/posts/state-of-nuitka.rst:235
 msgid "Final Words"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:237
+#: ../../doc/posts/state-of-nuitka.rst:237
 msgid ""
 "So, there is this \"C-ish\" release 0.5.2 cooking. You are invited to "
 "help. Big, improvements are coming to Nuitka. Even after this next huge "
@@ -391,11 +391,14 @@ msgid ""
 "complete over the summer."
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:242
+#: ../../doc/posts/state-of-nuitka.rst:242
 msgid "Yours,"
 msgstr ""
 
-#: ../../posts/state-of-nuitka.rst:243
+#: ../../doc/posts/state-of-nuitka.rst:243
 msgid "Kay"
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

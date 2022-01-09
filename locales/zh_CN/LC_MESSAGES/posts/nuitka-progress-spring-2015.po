@@ -9,42 +9,42 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/nuitka-progress-spring-2015.rst:7
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:7
 msgid "Nuitka Progress in Spring 2015"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:9
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:9
 msgid ""
 "It's absolutely time to speak about what's going on with Nuitka, there "
 "have been a few releases, and big things are going to happen now. The "
 "ones I have always talked of, it's happening now."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:13
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:13
 msgid ""
 "I absolutely prefer to talk of things when they are completed, that is "
 "why I am shy to make these kinds of postings, but this time, I think it's"
 " warranted. The next couple of releases are going to be very different."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:18
-msgid "目录"
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:18
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:22
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:22
 msgid "SSA (Single State Assignment Form)"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:24
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:24
 msgid ""
 "For a long, long time already, each release of Nuitka has worked towards "
 "increasing `\"SSA\" "
@@ -52,21 +52,21 @@ msgid ""
 "Nuitka."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:29
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:29
 msgid ""
 "The component that works on this, is now called \"trace collection\", and"
 " does the major driving part for optimization. It collects \"variable "
 "traces\" and puts them together into \"global\" forms as well."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:33
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:33
 msgid ""
 "Based on these traces, optimizations can be made. Having SSA or not, is "
 "(to me) the difference between Nuitka as a mere compiler, and Nuitka as "
 "an optimizing compiler."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:37
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:37
 msgid ""
 "The major news is that factory versions of Nuitka now do this in serious "
 "ways, propagating values forward, and we also are close to eliminating "
@@ -74,37 +74,37 @@ msgid ""
 "propagated."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:42
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:42
 msgid ""
 "So we can now finally see that big step, jump really, happening, and "
 "Nuitka does now do some pretty good static optimization, at least "
 "locally."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:46
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:46
 msgid ""
 "Still, right now, this trivial code assigns to a local variable, then "
 "reads from it to return. But not for much longer."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:55
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:55
 msgid ""
 "This is going to instantly give performance gains, and more importantly, "
 "will enable analysis, that leads to avoiding e.g. the creation of "
 "function objects for local functions, becoming able to in-line, etc."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:59
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:59
 msgid ""
 "This is major excitement to me. And I cannot wait to have the releases "
 "that do this."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:64
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:64
 msgid "Scalability"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:66
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:66
 msgid ""
 "The focus has also been lately, to reduce Nuitka's own memory usage. It "
 "has gone down by a large factor, often by avoiding cyclic dependencies in"
@@ -112,7 +112,7 @@ msgid ""
 " with properly."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:71
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:71
 msgid ""
 "The scalability of Nuitka also depends much on generated code size. With "
 "the optimization become more clever, less code needs to be generated, and"
@@ -121,21 +121,21 @@ msgid ""
 "edition, but with the latest MSVC, which appears to be better."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:79
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:79
 msgid "Compatibility"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:81
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:81
 msgid ""
 "There was not a whole lot to gain in the compatibility domain anymore. "
 "Nothing important certainly. But there are import changes."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:85
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:85
 msgid "Python 3.5"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:87
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:87
 msgid ""
 "The next release has changes to compile and run the Python3.4 test suite "
 "successfully. Passing here means, to pass/fail in the same way as does "
@@ -143,13 +143,13 @@ msgid ""
 " having coverage for exception codes."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:92
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:92
 msgid ""
 "The new ``@`` operator is not supported yet. I will wait with that for "
 "things to stabilize. It's currently only an alpha release."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:95
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:95
 msgid ""
 "However, Nuitka has probably never been this close to supporting a new "
 "Python version at release time. And since 3.4 was such a heavy drain, and"
@@ -157,22 +157,22 @@ msgid ""
 "I wanted to know what is coming a bit sooner."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:101
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:101
 msgid "Cells for Closure"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:103
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:103
 msgid ""
 "We now provide a ``__closure__`` value for compiled functions too. These "
 "are not writable in Python, so it's only a view. Having moved storage "
 "into the compiled function object, that was easy."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:108
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:108
 msgid "Importing Enhancements"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:110
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:110
 msgid ""
 "The the past couple of releases, the import logic was basically re-"
 "written with compatibility much increased. The handling of file case "
@@ -180,7 +180,7 @@ msgid ""
 "future flags for relative imports has been added."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:115
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:115
 msgid ""
 "It's mainly the standalone community that will have issues, when just one"
 " of these imports doesn't find the correct thing, but picking the wrong "
@@ -188,19 +188,19 @@ msgid ""
 "too. So once we do cross module optimization, this must be rock solid."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:121
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:121
 msgid "I think we have gotten there, tackling these finer details now too."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:125
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:125
 msgid "Performance"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:128
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:128
 msgid "Graphs and Benchmarks"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:130
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:130
 msgid ""
 "Nuitka, users don't know what to expect regarding the speed of their code"
 " after compilation through Nuitka, neither now nor after type inference "
@@ -209,7 +209,7 @@ msgid ""
 "affect real code?"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:136
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:136
 msgid ""
 "There may well be no significant gain at all for many people, while there"
 " is a number for PyStone that suggests higher. The current and future "
@@ -217,7 +217,7 @@ msgid ""
 " is even worth for someone to try."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:141
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:141
 msgid ""
 "Nuitka really has to catch up here. The work on automated performance "
 "graphs has some made progress, and they are supposed to show up on "
@@ -225,7 +225,7 @@ msgid ""
 "``master``, ``develop`` or ``factory`` git branches change."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:148
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:148
 msgid ""
 "There currently is no structure to these graphs. There is no explanations"
 " or comments, and there is no trend indicators. All of which makes it "
@@ -233,20 +233,20 @@ msgid ""
 "necessary."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:153
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:153
 msgid ""
 "However, as a glimpse of what will happen when we in-line functions, take"
 " a look at the case, where we already eliminate parameter parsing only, "
 "and make tremendous speedups:"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:157
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:157
 msgid ""
 "`Lambda call construct case <https://speedcenter.nuitka.net/constructs"
 "/construct-calllambdaexpressiondirectly.html>`__"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:160
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:160
 msgid ""
 "Right now (the graph gets automatic updates with each change), what you "
 "should see, is that ``develop`` branch is 20 times faster than CPython "
@@ -254,50 +254,50 @@ msgid ""
 "that with actually in-line, this will of course be even better."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:165
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:165
 msgid ""
 "It's artificial, but once we can forward propagate local function "
 "creations, it will apply there too. The puzzle completes."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:168
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:168
 msgid ""
 "But we also need to put real programs and use cases to test. This may "
 "need your help. Let me know if you want to."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:173
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:173
 msgid "Standalone"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:175
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:175
 msgid ""
 "The standalone mode of Nuitka is pretty good, and as usual it continued "
 "to improve only."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:178
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:178
 msgid ""
 "Nothing all that important going on there, except the work on a plug-in "
 "framework, which is under development, and being used to handle e.g. PyQt"
 " plug-ins, or known issues with certain packages."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:182
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:182
 msgid ""
 "The importing improvements already mentioned, have now allowed to cover "
 "many more libraries successfully than before."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:187
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:187
 msgid "Other Stuff"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:190
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:190
 msgid "Debian Stable"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:192
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:192
 msgid ""
 "Nuitka is now part of Debian stable, aka Jessie. Debian and Python are "
 "the two things closest to my heart in the tech field. You can imagine "
@@ -305,34 +305,34 @@ msgid ""
 "import milestone to Nuitka for me."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:198
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:198
 msgid "Funding"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:200
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:200
 msgid ""
 "Nuitka receives the occasional `donation </pages/donations.html>`_ and "
 "those make me very happy. As there is no support from organization like "
 "the PSF, I am all on my own there."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:205
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:205
 msgid ""
 "This year I likely will travel to Europython 2015, and would ask you to "
 "support me with that, it's going to be expensive."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:209
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:209
 msgid "EuroPython 2015"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:211
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:211
 msgid ""
 "I have plans to present Nuitka's function in-lining there, real stuff, on"
 " a fully and functional compiler that works as a drop-in replacement."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:214
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:214
 #, python-format
 msgid ""
 "Not 100% sure if I can make it by the time, but things look good. "
@@ -341,11 +341,11 @@ msgid ""
 " wise."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:220
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:220
 msgid "Collaborators"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:222
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:222
 msgid ""
 "Things are coming along nicely. When I started out, I was fully aware "
 "that the project is something that I can do on my own if necessary, and "
@@ -353,7 +353,7 @@ msgid ""
 "that's probably very typical."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:227
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:227
 msgid ""
 "But you can join and should do so now, just `follow this link </doc/user-"
 "manual.html#join-nuitka>`_ or become part of the mailing list (since "
@@ -362,47 +362,47 @@ msgid ""
 "know the drill probably."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:233
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:233
 msgid ""
 "Nuitka is about to make break through progress. And you can be a part of "
 "it. Now."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:238
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:238
 msgid "Future"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:240
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:240
 msgid "So, there is multiple things going on:"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:242
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:242
 msgid "More SSA usage"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:244
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:244
 msgid "The next releases are going to be all about getting this done."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:246
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:246
 msgid ""
 "Once we take it to that next level, Nuitka will be able to speed up some "
 "things by much more than the factor it basically has provided for 2 years"
 " now, and it's probably going to happen long before EuroPython 2015."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:251
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:251
 msgid "Function in-lining"
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:253
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:253
 msgid ""
 "For locally declared functions, it should become possible to avoid their "
 "creation, and make direct calls instead of ones that use function objects"
 " and expensive parameter handling."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:257
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:257
 msgid ""
 "The next step there of course is to not only bind the arguments to the "
 "function signature, but then also to in-line and potentially specialize "
@@ -410,13 +410,13 @@ msgid ""
 " ready to show off."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:262
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:262
 msgid ""
 "When these 2 things come to term, Nuitka will have made really huge steps"
 " ahead and laid the ground for success."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:265
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:265
 msgid ""
 "From then on, a boatload of work remains. The infrastructure in place, "
 "still there is going to be plenty of work to optimize more and more "
@@ -424,9 +424,12 @@ msgid ""
 "codes for booleans, ints or float values."
 msgstr ""
 
-#: ../../posts/nuitka-progress-spring-2015.rst:270
+#: ../../doc/posts/nuitka-progress-spring-2015.rst:270
 msgid ""
 "Let me know, if you are willing to help. I really need that help to make "
 "things happen faster. Nuitka will become more and more important only."
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

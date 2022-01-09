@@ -1,0 +1,508 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0514.rst:7
+msgid "Nuitka Release 0.5.14"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:13
+msgid ""
+"This release is an intermediate step towards value propagation, which is "
+"not considered ready for stable release yet. The major point is the "
+"elimination of the ``try``/``finally`` expressions, as they are problems "
+"to SSA. The ``try``/``finally`` statement change is delayed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:18
+msgid ""
+"There are also a lot of bug fixes, and enhancements to code generation, "
+"as well as major cleanups of code base."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:23
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:25
+msgid "Python3: Added support assignments trailing star assignment."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:31
+msgid "This raised ``ValueError`` before."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:33
+msgid "Python3: Properly detect illegal double star assignments."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:39
+msgid ""
+"Python3: Properly detect the syntax error to star assign from non-"
+"tuple/list."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:46
+msgid ""
+"Python3.4: Fixed a crash of the binary when copying dictionaries with "
+"split tables received as star arguments."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:49
+msgid ""
+"Python3: Fixed reference loss, when using ``raise a from b`` where ``b`` "
+"was an exception instance. Fixed in 0.5.13.8 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:52
+msgid ""
+"Windows: Fix, the flag ``--disable-windows-console`` was not properly "
+"handled for MinGW32 run time resulting in a crash."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:55
+msgid ""
+"Python2.7.10: Was not recognizing this as a 2.7.x variant and therefore "
+"not applying minor version compatibility levels properly."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:58
+msgid ""
+"Fix, when choosing to have frozen source references, code objects were "
+"not use the same value as ``__file__`` did for its filename."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:61
+msgid ""
+"Fix, when re-executing itself to drop the ``site`` module, make sure we "
+"find the same file again, and not according to the ``PYTHONPATH`` changes"
+" coming from it. Fixed in 0.5.13.4 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:65
+msgid ""
+"Enhanced code generation for ``del variable`` statements, where it's "
+"clear that the value must be assigned."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:68
+msgid ""
+"When pressing CTRL-C, the stack traces from both Nuitka and Scons were "
+"given, we now avoid the one from Scons."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:71
+msgid ""
+"Fix, the dump from ``--xml`` no longer contains functions that have "
+"become unused during analysis."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:74
+msgid ""
+"Standalone: Creating or running programs from inside unicode paths was "
+"not working on Windows. Fixed in 0.5.13.7 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:77
+msgid ""
+"Namespace package support was not yet complete, importing the parent of a"
+" package was still failing. Fixed in 0.5.13.7 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:80
+msgid ""
+"Python2.6: Compatibility for exception check messages enhanced with "
+"newest minor releases."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:83
+msgid ""
+"Compatibility: The ``NameError`` in classes needs to say ``global name`` "
+"and not just ``name`` too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:86
+msgid ""
+"Python3: Fixed creation of XML representation, now done without ``lxml`` "
+"as it doesn't support needed features on that version. Fixed in 0.5.13.5 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:90
+msgid ""
+"Python2: Fix, when creating code for the largest negative constant to "
+"still fit into ``int``, that was only working in the main module. Fixed "
+"in 0.5.13.5 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:94
+msgid ""
+"Compatibility: The ``print`` statement raised an assertion on unicode "
+"objects that could not be encoded with ``ascii`` codec."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:99
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:101
+msgid "Added support for Windows 10."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:103
+msgid ""
+"Followed changes for Python 3.5 beta 2. Still only usable as a Python 3.4"
+" replacement, no new features."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:106
+msgid ""
+"Using a self compiled Python running from the source tree is now "
+"supported."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:109
+msgid ""
+"Added support for Anaconda Python distribution. As it doesn't install the"
+" Python DLL, we copy it along for acceleration mode."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:112
+msgid "Added support for Visual Studio 2015. Fixed in 0.5.13.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:114
+msgid ""
+"Added support for self compiled Python versions running from build tree, "
+"this is intended to help debug things on Windows."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:119
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:121
+msgid ""
+"Function in-lining is now present in the code, but still disabled, "
+"because it needs more changes in other areas, before we can generally do "
+"it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:125
+msgid ""
+"Trivial outlines, result of re-formulations or function in-lining, are "
+"now in-lined, in case they just return an expression."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:128
+msgid ""
+"The re-formulation for ``or`` and ``and`` has been giving up, eliminating"
+" the use of a ``try``/``finally`` expression, at the cost of dedicated "
+"boolean nodes and code generation for these."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:132
+#, python-format
+msgid ""
+"This saves around 8% of compile time memory for Nuitka, and allows for "
+"faster and more complete optimization, and gets rid of a complicated "
+"structure for analysis."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:136
+msgid ""
+"When a frame is used in an exception, its locals are detached. This was "
+"done more often than necessary and even for frames that are not necessary"
+" our own ones. This will speed up some exception cases."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:140
+msgid ""
+"When the default arguments, or the keyword default arguments (Python3) or"
+" the annotations (Python3) were raising an exception, the function "
+"definition is now replaced with the exception, saving a code generation. "
+"This happens frequently with Python2/Python3 compatible code guarded by "
+"version checks."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:146
+msgid ""
+"The SSA analysis for loops now properly traces \"break\" statement "
+"situations and merges the post-loop situation from all of them. This "
+"significantly allows for and improves optimization of code following the "
+"loop."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:151
+msgid ""
+"The SSA analysis of ``try``/``finally`` statements has been greatly "
+"enhanced. The handler for ``finally`` is now optimized for exception "
+"raise and no exception raise individually, as well as for ``break``, "
+"``continue`` and ``return`` in the tried code. The SSA analysis for after"
+" the statement is now the result of merging these different cases, should"
+" they not abort."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:158
+msgid ""
+"The code generation for ``del`` statements is now taking advantage should"
+" there be definite knowledge of previous value. This speed them up "
+"slightly."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:162
+msgid ""
+"The SSA analysis of ``del`` statements now properly decided if the "
+"statement can raise or not, allowing for more optimization."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:165
+msgid ""
+"For list contractions, the re-formulation was enhanced using the new "
+"outline construct instead of a pseudo function, leading to better "
+"analysis and code generation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:169
+msgid ""
+"Comparison chains are now re-formulated into outlines too, allowing for "
+"better analysis of them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:172
+msgid ""
+"Exceptions raised in function creations, e.g. in default values, are now "
+"propagated, eliminating the function's code. This happens most often with"
+" Python2/Python3 in branches. On the other hand, function creations that "
+"cannot are also annotated now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:177
+msgid ""
+"Closure variables that become unreferenced outside of the function become"
+" normal variables leading to better tracing and code generation for them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:181
+msgid ""
+"Function creations cannot raise except their defaults, keyword defaults "
+"or annotations do."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:184
+msgid ""
+"Built-in references can now be converted to strings at compile time, e.g."
+" when printed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:189
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:191
+msgid "Removed gitorious mirror of the git repository, they shut down."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:193
+msgid ""
+"Make it more clear in the documentation that Python2 is needed at compile"
+" time to create Python3 executables."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:198
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:200
+msgid ""
+"Moved more parts of code generation to their own modules, and used "
+"registry for code generation for more expression kinds."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:203
+msgid ""
+"Unified ``try``/``except`` and ``try``/``finally`` into a single "
+"construct that handles both through "
+"``try``/``except``/``break``/``continue``/``return`` semantics. Finally "
+"is now solved via duplicating the handler into cases necessary."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:209
+msgid ""
+"No longer are nodes annotated with information if they need to publish "
+"the exception or not, this is now all done with the dedicated nodes."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:213
+msgid ""
+"The ``try``/``finally`` expressions have been replaced with outline "
+"function bodies, that instead of side effect statements, are more like "
+"functions with return values, allowing for easier analysis and dedicated "
+"code generation of much lower complexity."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:218
+msgid ""
+"No more \"tolerant\" flag for release nodes, we now decide this fully "
+"based on SSA information."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:221
+msgid ""
+"Added helper for assertions that code flow does not reach certain "
+"positions, e.g. a function must return or raise, aborting statements do "
+"not continue and so on."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:225
+msgid ""
+"To keep cloning of code parts as simple as possible, the limited use of "
+"``makeCloneAt`` has been changed to a new ``makeClone`` which produces "
+"identical copies, which is what we always do. And a generic cloning based"
+" on \"details\" has been added, requiring to make constructor arguments "
+"and details complete and consistent."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:231
+msgid ""
+"The re-formulation code helpers have been improved to be more convenient "
+"at creating nodes."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:234
+msgid ""
+"The old ``nuitka.codegen`` module ``Generator`` was still used for many "
+"things. These now all got moved to appropriate code generation modules, "
+"and their users got updated, also moving some code generator functions in"
+" the process."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:239
+msgid ""
+"The module ``nuitka.codegen.CodeTemplates`` got replaces with direct uses"
+" of the proper topic module from ``nuitka.codegen.templates``, with some "
+"more added, and their names harmonized to be more easily recognizable."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:244
+msgid "Added more assertions to the generated code, to aid bug finding."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:246
+msgid "The autoformat now sorts pylint markups for increased consistency."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:248
+msgid ""
+"Releases no longer have a ``tolerant`` flag, this was not needed anymore "
+"as we use SSA."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:251
+msgid ""
+"Handle CTRL-C in scons code preventing per job messages that are not "
+"helpful and avoid tracebacks from scons, also remove more unused tools "
+"like ``rpm`` from out in-line copy."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:257
+msgid "Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:259
+msgid "Added the CPython3.4 test suite."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:261
+msgid ""
+"The CPython3.2, CPython3.3, and CPython3.4 test suite now run with "
+"Python2 giving the same errors. Previously there were a few specific "
+"errors, some with line numbers, some with different ``SyntaxError`` be "
+"raised, due to different order of checks."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:266
+msgid "This increases the coverage of the exception raising tests somewhat."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:268
+msgid ""
+"Also the CPython3.x test suites now all pass with debug Python, as does "
+"the CPython 2.6 test suite with 2.6 now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:271
+msgid ""
+"Added tests to cover all forms of unpacking assignments supported in "
+"Python3, to be sure there are no other errors unknown to us."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:274
+msgid ""
+"Started to document the reference count tests, and to make it more robust"
+" against SSA optimization. This will take some time and is work in "
+"progress."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:278
+msgid ""
+"Made the compile library test robust against modules that raise a syntax "
+"error, checking that Nuitka does the same."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:281
+msgid ""
+"Refined more tests to be directly executable with Python3, this is an "
+"ongoing effort."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:286
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:288
+msgid ""
+"This release is clearly major. It represents a huge step forward for "
+"Nuitka as it improves nearly every aspect of code generation and "
+"analysis. Removing the ``try``/``finally`` expression nodes proved to be "
+"necessary in order to even have the correct SSA in their cases. Very "
+"important optimization was blocked by it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:294
+msgid ""
+"Going forward, the ``try``/``finally`` statements will be removed and "
+"dead variable elimination will happen, which then will give function "
+"inlining. This is expected to happen in one of the next releases."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0514.rst:298
+msgid ""
+"This release is a consolidation of 8 hotfix releases, and many "
+"refactorings needed towards the next big step, which might also break "
+"things, and for that reason is going to get its own release cycle."
+msgstr ""
+

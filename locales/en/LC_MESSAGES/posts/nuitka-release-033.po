@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-033.rst:7
+msgid "Nuitka Release 0.3.3"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:13
+msgid ""
+"This release of Nuitka continues the focus on performance. It also cleans"
+" up a few open topics. One is \"doctests\", these are now extracted from "
+"the CPython 2.6 test suite more completely. The other is that the CPython"
+" 2.7 test suite is now passed completely. There is some more work ahead "
+"though, to extract all of the \"doctests\" and to do that for both "
+"versions of the tests."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:20
+msgid ""
+"This means an even higher level of compatibility has been achieved, then "
+"there is performance improvements, and ever cleaner structure."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:25
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:28
+msgid "Generators"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:30
+msgid ""
+"Generator functions tracked references to the common and the instance "
+"context independently, now the common context is not released before the "
+"instance contexts are."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:34
+msgid ""
+"Generator functions didn't check the arguments to ``throw()`` the way "
+"they are in CPython, now they do."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:37
+msgid ""
+"Generator functions didn't trace exceptions to \"stderr\" if they "
+"occurred while closing unfinished ones in \"del\"."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:40
+msgid ""
+"Generator functions used the slightly different wordings for some error "
+"messages."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:44
+msgid "Function Calls"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:46
+msgid ""
+"Extended call syntax with ``**`` allows that to use a mapping, and it is "
+"now checked if it really is a mapping and if the contents has string "
+"keys."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:50
+msgid ""
+"Similarly, extended call syntax with ``*`` allows a sequence, it is now "
+"checked if it really is a sequence."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:53
+msgid ""
+"Error message for duplicate keyword arguments or too little arguments now"
+" describe the duplicate parameter and the callable the same way CPython "
+"does."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:57
+msgid ""
+"Now checks to the keyword argument list first before considering the "
+"parameter counts. This is slower in the error case, but more compatible "
+"with CPython."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:62
+msgid "Classes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:64
+msgid ""
+"The \"locals()\" built-in when used in the class scope (not in a method) "
+"now is correctly writable and writes to it change the resulting class."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:68
+msgid ""
+"Name mangling for private identifiers was not always done entirely "
+"correct."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:72
+msgid "Others"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:74
+msgid "Exceptions didn't always have the correct stack reported."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:76
+msgid ""
+"The pickling of some tuples showed that \"cPickle\" can have non-"
+"reproducible results, using \"pickle\" to stream constants now"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:81
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:83
+msgid ""
+"Access to instance attributes has become faster by writing specific code "
+"for the case. This is done in JIT way, attempting at run time to optimize"
+" attribute access for instances."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:87
+msgid ""
+"Assignments now often consider what's cheaper for the other side, instead"
+" of taking a reference to a global variable, just to have to release it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:91
+msgid ""
+"The function call code built argument tuples and dictionaries as "
+"constants, now that is true for every tuple usage."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:96
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:98
+msgid ""
+"The static helper classes, and the prelude code needed have been moved to"
+" separate C++ files and are now accessed \"#include\". This makes the "
+"code inside C++ files as opposed to a Python string and therefore easier "
+"to read and or change."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:105
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:107
+msgid ""
+"The generator functions and generator expressions have the attribute "
+"\"gi_running\" now. These indicate if they are currently running."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:112
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:114
+msgid ""
+"The script to extract the \"doctests\" from the CPython test suite has "
+"been rewritten entirely and works with more doctests now. Running these "
+"tests created increased the test coverage a lot."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:118
+msgid "The Python 2.7 test suite has been added."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:122
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:124
+msgid ""
+"One can now run multiple \"compare_with_cpython\" instances in parallel, "
+"which enables background test runs."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:127
+msgid ""
+"There is now a new environment variable \"NUITKA_INCLUDE\" which needs to"
+" point to the directory Nuitka's C++ includes live in. Of course the "
+"\"create-environment.sh\" script generates that for you easily."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:133
+msgid "Numbers"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:135
+msgid "python 2.6:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:142
+msgid "Nuitka 0.3.3:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-033.rst:149
+#, python-format
+msgid "This is 80% for 0.3.3, up from 66% before."
+msgstr ""
+

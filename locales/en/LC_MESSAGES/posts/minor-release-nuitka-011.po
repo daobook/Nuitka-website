@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:7
+msgid "Nuitka Release 0.1.1"
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:13
+msgid ""
+"I just have just updated Nuitka to version 0.1.1 which is a bug fix "
+"release to 0.1, which corrects many of the small things:"
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:16
+msgid ""
+"Updated the CPython test suite to 2.6.6rc and minimized much of existing "
+"differences in the course."
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:19
+msgid ""
+"Compiles standalone executable that includes modules (with --deep "
+"option), but packages are not yet included successfully."
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:22
+msgid "Reference leaks with exceptions are no more."
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:24
+msgid ""
+"``sys.exc_info()`` works now mostly as expected (it's not a stack of "
+"exceptions)."
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:27
+msgid "More readable generated code, better organisation of C++ template code."
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:30
+msgid "Restored debug option ``--g++-only``."
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:32
+msgid ""
+"The biggest thing probably is the progress with exception tracebacks "
+"objects in exception handlers, which were not there before (always "
+"``None``). Having these in place will make it much more compatible. Also "
+"with manually raised exceptions and assertions, tracebacks will now be "
+"more correct to the line."
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:38
+msgid ""
+"On a bad news, I discovered that the ``compiler`` module that I use to "
+"create the AST from Python source code, is not only deprecated, but also "
+"broken. I created the `CPython bug <http://bugs.python.org/issue9656>`__ "
+"about it, basically it cannot distinguish some code of the form ``d[1,] ="
+" None`` from ``d[1] = None``. This will require a migration of the "
+"``ast`` module, which should not be too challenging, but will take some "
+"time."
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:46
+msgid ""
+"I am aiming at it for a 0.2 release. Generating wrong code (Nuitka sees "
+"``d[1] = None`` in both cases) is a show blocker and needs a solution."
+msgstr ""
+
+#: ../../doc/posts/minor-release-nuitka-011.rst:49
+msgid ""
+"So, yeah. It's better, it's there, but still experimental. You will find "
+"its latest version here. Please try it out and let me know what you think"
+" in the comments section."
+msgstr ""
+

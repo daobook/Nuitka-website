@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/not-going-to-fosdem-2014.rst:7
+msgid "Not going to FOSDEM 2014"
+msgstr ""
+
+#: ../../doc/posts/not-going-to-fosdem-2014.rst:9
+msgid ""
+"So I submitted a talk for FOSDEM \"Python has a compiler now\". And it "
+"didn't get accepted. Quite a surprise to me, but likely mostly logical. "
+"These are the accepted talks (link since became unavailable) and well, it"
+" surely didn't fit in, right."
+msgstr ""
+
+#: ../../doc/posts/not-going-to-fosdem-2014.rst:14
+msgid ""
+"My intent was to introduce `Nuitka </pages/overview.html>`__ to the "
+"larger community. Not going to happen now, but maybe next year."
+msgstr ""
+
+#: ../../doc/posts/not-going-to-fosdem-2014.rst:17
+msgid ""
+"Clearly triggered by the rejection, I am questioning Europython 2014 in "
+"Berlin as a useful destination too. To me it seems, that code writing is "
+"the best way to create the community at this time anyway."
+msgstr ""
+

@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/jorj-x-mckie.rst:5
+msgid "Self-Introduction Jorj McKie"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:9
+msgid "Jorj X. McKie"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:11
+msgid "Hello everyone,"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:13
+msgid ""
+"I am Jorj X. McKie (this is **not** my real name!) and I am an "
+"enthusiastic supporter of Nuitka. For the time being, my focus area "
+"within this package is standalone compilation and maintenance of the "
+"plugin feature."
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:18
+msgid ""
+"Apart from extending Nuitka's support to virtually all Python packages "
+"living out there, my driving motivation in this respect is keeping up and"
+" improving the usability of Nuitka."
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:22
+msgid ""
+"You may want to look into the `Nuitka Utilities "
+"<https://github.com/Nuitka/NUITKA-Utilities>`_ repository, which contains"
+" many things I am working on."
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:32
+msgid "Short Biography"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:34
+msgid "Born 1951 as Harald Lieder near the city of Leipzig"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:36
+msgid ""
+"Studied Mathematics and Physics at the Frankfurt/M Johann-Wolfgang-Goethe"
+" University from 10/1970 through 06/1976 (Diploma in Mathematics)"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:57
+msgid "Professional career overview"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:41
+msgid ""
+"insurance company (4 years): application and systems programming (IBM "
+"mainframe, Cobol, Assembler), data center lead"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:44
+msgid ""
+"book wholesaler (5 years): systems programming and data center lead (IBM "
+"mainframe)"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:47
+msgid ""
+"consulting company (until 2009): leading of or participating in numerous "
+"large and **very** large projects mostly around banking applications, "
+"banking mergers, data center optimization and quality assurance."
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:52
+msgid ""
+"since 2009: retirement, living on Isla Margarita, Venezuela. Enjoying my "
+"beautiful house, pursuing my hobbies: mathematics, science theory, "
+"biological evolution theory, science fiction (my pseudonym comes from "
+"novels by one of my favorite authors Frank Herbert) and of course "
+"programming (maintainer of `PyMuPDF "
+"<https://github.com/pymupdf/PyMuPDF>`_, and Nuitka)."
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:64
+msgid "Images from Isla Margarita"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:67
+msgid "House Frontview with Guardians"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:72
+msgid "In favorite Pizzeria with my Wife"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:77
+msgid "Seaview from my Terrace"
+msgstr ""
+
+#: ../../doc/posts/jorj-x-mckie.rst:82
+msgid "Sunrise view from House"
+msgstr ""
+

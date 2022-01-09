@@ -9,28 +9,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/nuitka-this-week-10.rst:7
+#: ../../doc/posts/nuitka-this-week-10.rst:7
 msgid "Nuitka this week #10"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:9
-msgid "目录"
+#: ../../doc/posts/nuitka-this-week-10.rst:9
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:13
+#: ../../doc/posts/nuitka-this-week-10.rst:13
 msgid "Communication vs. Coding"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:15
+#: ../../doc/posts/nuitka-this-week-10.rst:15
 msgid ""
 "Recently it was a bit more tough to make that decision. First, there was "
 "much going privately, with me ill, then child ill, and ill again, and "
@@ -38,25 +38,25 @@ msgid ""
 "incomplete things."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:20
+#: ../../doc/posts/nuitka-this-week-10.rst:20
 msgid ""
 "Even now, I am torn between fixing issues for 0.6.1 and doing this, but I"
 " know that it will take at least one week, so I am missing the point, if "
 "I wait for it more."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:24
+#: ../../doc/posts/nuitka-this-week-10.rst:24
 msgid ""
 "Bear in mind, that this is supposed to be a quick, not too polished, and "
 "straight from top of my head, even if really a lot of content. But I feel"
 " that esp. the optimization parts are worth reading."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:30
+#: ../../doc/posts/nuitka-this-week-10.rst:30
 msgid "Hotfixes"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:32
+#: ../../doc/posts/nuitka-this-week-10.rst:32
 msgid ""
 "There has been another hotfix, 0.6.0.6 and there ought to be one 0.6.0.7,"
 " at least on factory there is a bunch of stuff for it, but I didn't "
@@ -65,17 +65,17 @@ msgid ""
 "so I might skip on that really."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:38
+#: ../../doc/posts/nuitka-this-week-10.rst:38
 msgid ""
 "So for the most fixes, I suspect, develop is going to be the way until "
 "next week."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:43
+#: ../../doc/posts/nuitka-this-week-10.rst:43
 msgid "Google Summer of Code for Nuitka"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:45
+#: ../../doc/posts/nuitka-this-week-10.rst:45
 msgid ""
 "Nobody has stepped up, which means it will not happen unfortunately. This"
 " would be your last chance to step up. I know you will feel not "
@@ -83,18 +83,18 @@ msgid ""
 "obstacles in case I go missing. Contact me and I will be very happy."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:52
+#: ../../doc/posts/nuitka-this-week-10.rst:52
 msgid "Pythran and Nuitka"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:54
+#: ../../doc/posts/nuitka-this-week-10.rst:54
 msgid ""
 "As suggested by @wuoulf (Wolf Vollprecht) we had a meeting at the side of"
 " the PyCon DE 2018 conference in Karlsruhe, abusing the C++ regular table"
 " as a forum for that, which was a very nice experience."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:58
+#: ../../doc/posts/nuitka-this-week-10.rst:58
 msgid ""
 "First of all, Wolf is so much more knowledgeable about AnaConda and could"
 " point out to me, very important stuff, not the least, that AnaConda "
@@ -104,7 +104,7 @@ msgid ""
 "important for me."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:65
+#: ../../doc/posts/nuitka-this-week-10.rst:65
 msgid ""
 "But for Pythran which is limited Python, specialized to translate Numpy "
 "API to C++, we showed each other, Nuitka and Pythran details, and somehow"
@@ -113,19 +113,19 @@ msgid ""
 "integrate with Pythran compilation."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:71
+#: ../../doc/posts/nuitka-this-week-10.rst:71
 msgid "This was a huge success."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:75
+#: ../../doc/posts/nuitka-this-week-10.rst:75
 msgid "Performance Work"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:78
+#: ../../doc/posts/nuitka-this-week-10.rst:78
 msgid "Adding specialized object operations"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:80
+#: ../../doc/posts/nuitka-this-week-10.rst:80
 msgid ""
 "See last week, this has seen more completion. Both `+` and `+=` are more "
 "or less covered for the selected subset. The CPython test suites were "
@@ -134,18 +134,18 @@ msgid ""
 " added them more and more."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:87
+#: ../../doc/posts/nuitka-this-week-10.rst:87
 msgid "Controlflow Descriptions"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:89
+#: ../../doc/posts/nuitka-this-week-10.rst:89
 msgid ""
 "Shapes were added for the `+` and `<` operation so far, but didn't "
 "influence anything else really but code generation, but of course they "
 "should also impact optimization phase."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:93
+#: ../../doc/posts/nuitka-this-week-10.rst:93
 msgid ""
 "So the query for type shape has been enhanced to return not only a type "
 "shape saying that `int+float -> float`, but also now an object that "
@@ -155,11 +155,11 @@ msgid ""
 "and in the optimization to not have to mark things as unknown."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:101
+#: ../../doc/posts/nuitka-this-week-10.rst:101
 msgid "Preparations for comparison operations"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:103
+#: ../../doc/posts/nuitka-this-week-10.rst:103
 msgid ""
 "So optimization now also has proper type shape functions for the `<` and "
 "the warnings when they fail to know what to do for concrete types. This "
@@ -169,17 +169,17 @@ msgid ""
 "expression could raise."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:110
+#: ../../doc/posts/nuitka-this-week-10.rst:110
 msgid ""
 "Specializing the rich comparisons helper codes is the next step, but so "
 "far I didn't quite get to it yet, but it has been started."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:114
+#: ../../doc/posts/nuitka-this-week-10.rst:114
 msgid "Comparison Conditions"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:116
+#: ../../doc/posts/nuitka-this-week-10.rst:116
 msgid ""
 "Preparing `<` optimization for the loop, I noticed that `not` was "
 "optimized for `in` to become `not in`, and also `is` to become `is not`, "
@@ -187,18 +187,18 @@ msgid ""
 "we can now also switch `not <` to `>=` and `not =` to `!=` of course."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:121
+#: ../../doc/posts/nuitka-this-week-10.rst:121
 msgid ""
 "And since our reformulation of `while a < b` ends up having a statement "
 "like `if not a < b: break` as part of its re-formulation, that is again "
 "one step closer to optimizing my example loop."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:126
+#: ../../doc/posts/nuitka-this-week-10.rst:126
 msgid "Local variable escaping"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:128
+#: ../../doc/posts/nuitka-this-week-10.rst:128
 msgid ""
 "Much to my shock, I noticed that the code which is responsible to handle "
 "escaping control flow (i.e. unknown code is executed), was not only doing"
@@ -206,7 +206,7 @@ msgid ""
 "more or less did it for all local variables with Python3."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:133
+#: ../../doc/posts/nuitka-this-week-10.rst:133
 msgid ""
 "Fixing that allows for a lot more optimization obviously, and makes my "
 "test find missing ones, and even bugs in existing ones, that were "
@@ -214,7 +214,7 @@ msgid ""
 "once), now that I am looking at concrete examples."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:138
+#: ../../doc/posts/nuitka-this-week-10.rst:138
 msgid ""
 "One noticeable sign was that more of my tests failed with warnings about "
 "missing code helpers. And another that in my while loop with `int` "
@@ -224,33 +224,33 @@ msgid ""
 "renamed it `int`."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:146
+#: ../../doc/posts/nuitka-this-week-10.rst:146
 msgid "Benchmarks Missing"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:148
+#: ../../doc/posts/nuitka-this-week-10.rst:148
 msgid ""
 "Speedcenter got repaired, but I need to add the loop examples I am using "
 "as test cases before next release, so I can show what Nuitka 0.6.1 will "
 "have achieved or at least have improved somewhat already."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:152
+#: ../../doc/posts/nuitka-this-week-10.rst:152
 msgid ""
 "But currently these examples only serve as input for general improvements"
 " that then take a lot of time, and don't have immediate impact on their "
 "own."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:156
+#: ../../doc/posts/nuitka-this-week-10.rst:156
 msgid "Still would be good to see where Nuitka is standing after each one."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:160
+#: ../../doc/posts/nuitka-this-week-10.rst:160
 msgid "Static Linking"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:162
+#: ../../doc/posts/nuitka-this-week-10.rst:162
 msgid ""
 "So static linking works now, provided it's not a `pyenv` crappy "
 "`libpython.a` but one that can actually work. I got this to work on Linux"
@@ -259,7 +259,7 @@ msgid ""
 "with that."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:168
+#: ../../doc/posts/nuitka-this-week-10.rst:168
 msgid ""
 "I am interested to see what this means for performance impact. But it "
 "will allow to address issues, where embedded CPython run time is plain "
@@ -267,11 +267,11 @@ msgid ""
 "this is great news."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:175
+#: ../../doc/posts/nuitka-this-week-10.rst:175
 msgid "Conda CC"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:177
+#: ../../doc/posts/nuitka-this-week-10.rst:177
 msgid ""
 "Using Conda CC by default as a fallback in `--mingw` mode on Windows is "
 "something that was easy to add. So when no other `gcc` is found, and MSVC"
@@ -282,18 +282,18 @@ msgid ""
 "our own at least."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:185
+#: ../../doc/posts/nuitka-this-week-10.rst:185
 msgid ""
 "I will try with `--lto` eventually though and see what it does. But I "
 "think static linking on Windows is not supported by CPython, but I am not"
 " entirely sure of that."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:191
+#: ../../doc/posts/nuitka-this-week-10.rst:191
 msgid "Annotations Future Feature"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:193
+#: ../../doc/posts/nuitka-this-week-10.rst:193
 msgid ""
 "Found a 3.7 feature that is not covered by the test suite, the "
 "`__future__` flag `annotations` wasn't working as expected. In this, "
@@ -303,69 +303,69 @@ msgid ""
 " that was only very hard to get at, and with evil hackery."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:200
+#: ../../doc/posts/nuitka-this-week-10.rst:200
 msgid ""
 "For 3.8 a bug fix is promised that will give us the string immediately, "
 "but for now my hack must suffice."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:205
+#: ../../doc/posts/nuitka-this-week-10.rst:205
 msgid "MSI files"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:207
+#: ../../doc/posts/nuitka-this-week-10.rst:207
 msgid ""
 "Following the 3.7.1 release, there are MSI files again, as the regression"
 " of 3.7.0 to build them has been fixed in that release. The MSI files "
 "will work with 3.7.0 also, just the building was broken."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:213
+#: ../../doc/posts/nuitka-this-week-10.rst:213
 msgid "Overall"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:215
+#: ../../doc/posts/nuitka-this-week-10.rst:215
 msgid ""
 "So 0.6.1 is in still in full swing in terms of optimization. I think I "
 "need to make a release soon, simply because there is too much unreleased,"
 " but useful stuff already."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:219
+#: ../../doc/posts/nuitka-this-week-10.rst:219
 msgid ""
 "I might have to postpone my goal of C int performance for one example "
 "loop until next release. No harm in that. There already are plenty of "
 "performance improvements across the board."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:225
+#: ../../doc/posts/nuitka-this-week-10.rst:225
 msgid "Twitter"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:227
+#: ../../doc/posts/nuitka-this-week-10.rst:227
 msgid "I continue to be very active there."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:229
+#: ../../doc/posts/nuitka-this-week-10.rst:229
 #, python-format
 msgid "`Follow @kayhayen <https://twitter.com/kayhayen?ref_src=twsrc%5Etfw>`_"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:231
+#: ../../doc/posts/nuitka-this-week-10.rst:231
 msgid "And lets not forget, having followers make me happy. So do re-tweets."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:233
+#: ../../doc/posts/nuitka-this-week-10.rst:233
 msgid ""
 "Adding Twitter more prominently to the web site is something that is also"
 " going to happen."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:238
+#: ../../doc/posts/nuitka-this-week-10.rst:238
 msgid "Help Wanted"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:240
+#: ../../doc/posts/nuitka-this-week-10.rst:240
 #, python-format
 msgid ""
 "If you are interested, I am tagging issues `help wanted "
@@ -373,21 +373,24 @@ msgid ""
 " and there is a bunch, and very likely at least one *you* can help with."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:244
+#: ../../doc/posts/nuitka-this-week-10.rst:244
 msgid "Nuitka definitely needs more people to work on it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:248
+#: ../../doc/posts/nuitka-this-week-10.rst:248
 msgid "Donations"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:250
+#: ../../doc/posts/nuitka-this-week-10.rst:250
 msgid ""
 "If you want to help, but cannot spend the time, please consider to donate"
 " to Nuitka, and go here:"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-10.rst:253
+#: ../../doc/posts/nuitka-this-week-10.rst:253
 msgid "`Donate to Nuitka </pages/donations.html>`_"
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

@@ -9,28 +9,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/nuitka-this-week-6.rst:7
+#: ../../doc/posts/nuitka-this-week-6.rst:7
 msgid "Nuitka this week #6"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:9
-msgid "目录"
+#: ../../doc/posts/nuitka-this-week-6.rst:9
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:13
+#: ../../doc/posts/nuitka-this-week-6.rst:13
 msgid "Holiday"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:15
+#: ../../doc/posts/nuitka-this-week-6.rst:15
 msgid ""
 "In my 2 weeks holiday, I indeed focused on a really big thing, and got "
 "more done that I had hoped for. For C types, ``nuitka_bool``, which is a "
@@ -39,11 +39,11 @@ msgid ""
 "anymore."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:22
+#: ../../doc/posts/nuitka-this-week-6.rst:22
 msgid "bool"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:24
+#: ../../doc/posts/nuitka-this-week-6.rst:24
 msgid ""
 "Condition codes are no longer special. They all need a boolean value from"
 " the expression used as a condition, and there was a special paths for "
@@ -53,7 +53,7 @@ msgid ""
 "generation handles it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:31
+#: ../../doc/posts/nuitka-this-week-6.rst:31
 msgid ""
 "For where it is used, code gets a lot lighter, and of course faster, "
 "although I didn't measure it yet. Going to ``Py_True``/``Py_False`` and "
@@ -61,7 +61,7 @@ msgid ""
 " cleaner as a side effect of that C bool work."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:36
+#: ../../doc/posts/nuitka-this-week-6.rst:36
 msgid ""
 "This seems to be so good, that actually it's the default for this to be "
 "used in 0.6.0, and that itself is a major break through. Not so much for "
@@ -69,11 +69,11 @@ msgid ""
 "soon and will give massive performance gains."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:42
+#: ../../doc/posts/nuitka-this-week-6.rst:42
 msgid "void"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:44
+#: ../../doc/posts/nuitka-this-week-6.rst:44
 msgid ""
 "And what was really good, is that not only did I get ``bool`` to work "
 "almost perfectly, I also started work on the ``void`` C target type and "
@@ -82,13 +82,13 @@ msgid ""
 "soon, even before the ``void`` code generation is out."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:50
+#: ../../doc/posts/nuitka-this-week-6.rst:50
 msgid ""
 "The ``void`` C type cannot read values back, and unused values should not"
 " be used, so this gives errors for cases where that becomes obvious."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:57
+#: ../../doc/posts/nuitka-this-week-6.rst:57
 msgid ""
 "Consider this expression. The ``or`` expression, that one is going to "
 "producing a value, which is then released, but not used otherwise. New "
@@ -96,11 +96,11 @@ msgid ""
 "as the condition and if not true, then evaluates ``b`` but ignores it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:67
+#: ../../doc/posts/nuitka-this-week-6.rst:67
 msgid "The ``void`` evaluation of ``b`` can then do further optimization for it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:70
+#: ../../doc/posts/nuitka-this-week-6.rst:70
 msgid ""
 "Void code generation can therefore highlight missed opportunities for "
 "this kid of optimization, and found a couple of these. That is why I was "
@@ -108,7 +108,7 @@ msgid ""
 "optimization here, is a really nice synergy between the two."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:75
+#: ../../doc/posts/nuitka-this-week-6.rst:75
 msgid ""
 "Plus I got all the tests to work with it, and solved the missing "
 "optimizations it found very easily. And instead of allocating an object "
@@ -116,18 +116,18 @@ msgid ""
 "allowed me to find a couple of bugs by C compiler warnings."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:80
+#: ../../doc/posts/nuitka-this-week-6.rst:80
 msgid ""
 "Obviously I will want to run a compile all the world test before making "
 "it the default, which is why this will probably become part of 0.6.1 to "
 "be the default."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:85
+#: ../../doc/posts/nuitka-this-week-6.rst:85
 msgid "module_var"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:87
+#: ../../doc/posts/nuitka-this-week-6.rst:87
 msgid ""
 "Previously variable codes were making a hard distinction for module "
 "variables and make them use their own helper codes. Now this is "
@@ -136,11 +136,11 @@ msgid ""
 "better. A sign things are going smooth."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:95
+#: ../../doc/posts/nuitka-this-week-6.rst:95
 msgid "Goto Generators"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:97
+#: ../../doc/posts/nuitka-this-week-6.rst:97
 msgid ""
 "Still not released. I delayed it after my holiday, and due to the heap "
 "generator change, after stabilizing the C types work, I want to first "
@@ -148,25 +148,25 @@ msgid ""
 "will for a Anaconda3 compile all the code found in there."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:102
+#: ../../doc/posts/nuitka-this-week-6.rst:102
 msgid ""
 "Right now it's still doing that, and even found a few bugs. The heap "
 "storage can still cause issues, as can changes to cloning nodes, which "
 "happens for ``try`` nodes and their ``finally`` blocks."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:106
+#: ../../doc/posts/nuitka-this-week-6.rst:106
 msgid ""
 "This should finish these days. I looked at performance numbers and found "
 "that ``develop`` is indeed only faster, and ``factory`` due to even more "
 "optimization will be yet faster, and often noteworthy."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:112
+#: ../../doc/posts/nuitka-this-week-6.rst:112
 msgid "Benchmarks"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:114
+#: ../../doc/posts/nuitka-this-week-6.rst:114
 msgid ""
 "The Speedcenter of Nuitka is what I use right now, but it's only showing "
 "the state of 3 branches and compared to CPython, not as much historical "
@@ -174,55 +174,55 @@ msgid ""
 "tags for what improved."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:119
+#: ../../doc/posts/nuitka-this-week-6.rst:119
 msgid ""
 "After release of Nuitka 0.6.0 I will show more numbers, and I will start "
 "to focus on making it easier to understand. Therefore no link right now, "
 "google if you are so keen. ;-)"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:125
+#: ../../doc/posts/nuitka-this-week-6.rst:125
 msgid "Twitter"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:127
+#: ../../doc/posts/nuitka-this-week-6.rst:127
 msgid ""
 "During the holiday sprint, and even after, I am going to Tweet a lot "
 "about what is going on for Nuitka. So follow me on twitter if you like, I"
 " will post important stuff as it happens there:"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:131
+#: ../../doc/posts/nuitka-this-week-6.rst:131
 #, python-format
 msgid "`Follow @kayhayen <https://twitter.com/kayhayen?ref_src=twsrc%5Etfw>`_"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:133
+#: ../../doc/posts/nuitka-this-week-6.rst:133
 msgid "And lets not forget, having followers make me happy. So do re-tweets."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:137
+#: ../../doc/posts/nuitka-this-week-6.rst:137
 msgid "Poll on Executable Names"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:139
+#: ../../doc/posts/nuitka-this-week-6.rst:139
 msgid ""
 "So I put e.g. poll up on Twitter, which is now over. But it made me "
 "implement a new scheme, due to `popular consensus "
 "<https://twitter.com/KayHayen/status/1037591355319640065>`_"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:145
+#: ../../doc/posts/nuitka-this-week-6.rst:145
 msgid "Hotfixes"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:147
+#: ../../doc/posts/nuitka-this-week-6.rst:147
 msgid ""
 "Even more hotfixes. I even did 2 during my holiday, however packages "
 "built only later."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:150
+#: ../../doc/posts/nuitka-this-week-6.rst:150
 msgid ""
 "Threaded imports on 3.4 or higher of modules were not using the locking "
 "they should use. Multiprocessing on Windows with Python3 had even more "
@@ -230,18 +230,18 @@ msgid ""
 "present, but not working."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:155
+#: ../../doc/posts/nuitka-this-week-6.rst:155
 msgid ""
 "That last one was actually very strange. I had added a new option group "
 "for them, but not added it to the parser. Result: Option works. Just does"
 " not show up in help output. Really?"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:161
+#: ../../doc/posts/nuitka-this-week-6.rst:161
 msgid "Help Wanted"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:163
+#: ../../doc/posts/nuitka-this-week-6.rst:163
 #, python-format
 msgid ""
 "If you are interested, I am tagging issues `help wanted "
@@ -249,15 +249,15 @@ msgid ""
 " and there is a bunch, and very like one you can help with."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:167
+#: ../../doc/posts/nuitka-this-week-6.rst:167
 msgid "Nuitka definitely needs more people to work on it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:171
+#: ../../doc/posts/nuitka-this-week-6.rst:171
 msgid "Plans"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:173
+#: ../../doc/posts/nuitka-this-week-6.rst:173
 msgid ""
 "Working down the release backlog. Things should be out. I am already "
 "working on what should become 0.6.1, but it's not yet 0.5.33 released. "
@@ -268,14 +268,14 @@ msgid ""
 "at least."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:181
+#: ../../doc/posts/nuitka-this-week-6.rst:181
 msgid ""
 "In the mean time, I am preparing to get ``int`` working as a target C "
 "type, so e.g. comparisons of such values could be done in pure C, or "
 "relatively pure C."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:185
+#: ../../doc/posts/nuitka-this-week-6.rst:185
 msgid ""
 "Also, I noticed that e.g. in-place operations can be way more optimized "
 "and did stuff for 0.6.1 already in this domain. That is unrelated to C "
@@ -284,24 +284,27 @@ msgid ""
 " and experiments."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:191
+#: ../../doc/posts/nuitka-this-week-6.rst:191
 msgid ""
 "Having ``int`` supported should help getting some functions to C speeds, "
 "or at least much closer to it. That will make noticeable effects in many "
 "of the benchmarks. More C types will then follow one by one."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:197
+#: ../../doc/posts/nuitka-this-week-6.rst:197
 msgid "Donations"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:199
+#: ../../doc/posts/nuitka-this-week-6.rst:199
 msgid ""
 "If you want to help, but cannot spend the time, please consider to donate"
 " to Nuitka, and go here:"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-6.rst:202
+#: ../../doc/posts/nuitka-this-week-6.rst:202
 msgid "`Donate to Nuitka </pages/donations.html>`_"
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

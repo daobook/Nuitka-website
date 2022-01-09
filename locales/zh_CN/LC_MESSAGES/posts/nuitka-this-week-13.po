@@ -9,41 +9,41 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/nuitka-this-week-13.rst:7
+#: ../../doc/posts/nuitka-this-week-13.rst:7
 msgid "Nuitka this week #13"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:9
-msgid "目录"
+#: ../../doc/posts/nuitka-this-week-13.rst:9
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:13
+#: ../../doc/posts/nuitka-this-week-13.rst:13
 msgid "Communication vs. Coding"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:15
+#: ../../doc/posts/nuitka-this-week-13.rst:15
 msgid ""
 "Communication was a lot more, just not these postings. Nuitka has "
 "ventured into important realms."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:18
+#: ../../doc/posts/nuitka-this-week-13.rst:18
 msgid ""
 "First, active developers have joined Nuitka. Second, as a consequence of "
 "the later, Nuitka indeed was able to participate with a insanely powerful"
 " offering of 4 mentors."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:22
+#: ../../doc/posts/nuitka-this-week-13.rst:22
 msgid ""
 "This meant, that a lot of technical or project management debt hat to be "
 "dealt with, and there was no time to make this kind of posting. This is "
@@ -51,15 +51,15 @@ msgid ""
 "and am glad to be able to resume them."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:29
+#: ../../doc/posts/nuitka-this-week-13.rst:29
 msgid "Google Summer of Code 2019"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:32
+#: ../../doc/posts/nuitka-this-week-13.rst:32
 msgid "My Experience"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:34
+#: ../../doc/posts/nuitka-this-week-13.rst:34
 msgid ""
 "This was the most crazy ride and fun. Became the admin of an active sub-"
 "organisation under the PSF umbrella for GSoC 2019. So shortly after the "
@@ -67,20 +67,20 @@ msgid ""
 "working on things right away as early as February."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:39
+#: ../../doc/posts/nuitka-this-week-13.rst:39
 msgid ""
 "They were working hard to prove themselves and get to know Nuitka, asking"
 " many questions, with us having lots of email interviews, and even a lot "
 "of video calls, where I personally talked to people about ideas."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:43
+#: ../../doc/posts/nuitka-this-week-13.rst:43
 msgid ""
 "This happened simultaneously to more experienced developers joining the "
 "project as well, making very important contributions."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:46
+#: ../../doc/posts/nuitka-this-week-13.rst:46
 #, python-format
 msgid ""
 "This basically meant, that many days 90%-100% of my Nuitka time was for "
@@ -89,11 +89,11 @@ msgid ""
 " base. This will be detailed in other sections."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:52
+#: ../../doc/posts/nuitka-this-week-13.rst:52
 msgid "Accepted Students"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:54
+#: ../../doc/posts/nuitka-this-week-13.rst:54
 msgid ""
 "All of this has paid of in that we now have 2 really good students to "
 "work on 2 Nuitka projects over the summer. Let's welcome Batakrishna and "
@@ -101,7 +101,7 @@ msgid ""
 " going to do shortly, in separate posts."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:59
+#: ../../doc/posts/nuitka-this-week-13.rst:59
 msgid ""
 "Lets just say, this is fantastic news. We had so many good applications "
 "and its a shame, but we knew right away, not everybody who deserved it "
@@ -109,15 +109,15 @@ msgid ""
 "be open and welcoming to new people."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:66
+#: ../../doc/posts/nuitka-this-week-13.rst:66
 msgid "Optimization Work"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:69
+#: ../../doc/posts/nuitka-this-week-13.rst:69
 msgid "Core Stuff"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:71
+#: ../../doc/posts/nuitka-this-week-13.rst:71
 msgid ""
 "So, the 0.6.3 release (btw. on Windows, be sure to use the 0.6.3.1 "
 "hotfix), which was made as a consolidation effort to get the good work of"
@@ -125,7 +125,7 @@ msgid ""
 "core, as that is still my thing."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:76
+#: ../../doc/posts/nuitka-this-week-13.rst:76
 msgid ""
 "However, this changed a lot. An idea that came to my mind for how to do "
 "the massive amounts of specialized helpers needed beyond `+` and `+=`, "
@@ -133,21 +133,21 @@ msgid ""
 "based templates for C, to generate the code."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:81
+#: ../../doc/posts/nuitka-this-week-13.rst:81
 msgid ""
 "This was an important idea. Took a while, but soon the manual code for "
 "``+`` was already replaced with generated code, fixing a few bugs by the "
 "way, and from there, the generation was expanded to cover ``*`` as well."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:85
+#: ../../doc/posts/nuitka-this-week-13.rst:85
 msgid ""
 "Currently, support for the 3 (!) different kinds of additions "
 "(``TrueDiv`` and ``FloorDir`` as well as Python2 default division, dubbed"
 " ``OldDiv`` in Nuitka was added along with ``-`` ."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:89
+#: ../../doc/posts/nuitka-this-week-13.rst:89
 msgid ""
 "The reason, ``+`` and ``*`` were done first, is that they have special "
 "treatment for sequences, using ``sq_concat`` and ``sq_repeat``, where the"
@@ -156,7 +156,7 @@ msgid ""
 "cases."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:95
+#: ../../doc/posts/nuitka-this-week-13.rst:95
 msgid ""
 "I am saving a deeper explanation of 3 things we will need for the next "
 "time. Basically we need optimization of these things at compile time, and"
@@ -166,18 +166,18 @@ msgid ""
 "there."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:103
+#: ../../doc/posts/nuitka-this-week-13.rst:103
 msgid "Faster Windows Dependencies"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:105
+#: ../../doc/posts/nuitka-this-week-13.rst:105
 msgid ""
 "This is going to excite Windows users. After Orsiris de Jong had done a "
 "replacement for dependency walker that is faster, this had remained in an"
 " experimental status, just due to lack of time."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:109
+#: ../../doc/posts/nuitka-this-week-13.rst:109
 msgid ""
 "Recently however, I felt there is more time, after GSoC student selection"
 " has happened, and that I could finally work a bit on open issues like "
@@ -186,7 +186,7 @@ msgid ""
 "founds a lot more things."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:115
+#: ../../doc/posts/nuitka-this-week-13.rst:115
 msgid ""
 "That was a turn down, but turns out, nothing it finds is stuff that "
 "should not be on the white list. In fact, it's all core Windows things, "
@@ -195,7 +195,7 @@ msgid ""
 "that change the performance changed dramatically."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:121
+#: ../../doc/posts/nuitka-this-week-13.rst:121
 msgid ""
 "The dependency walker now finishes a file in milliseconds. Actually the "
 "``pefile`` is now slow (surely it ought to be compiled), and takes some "
@@ -204,25 +204,25 @@ msgid ""
 "Free Software, we will probably keep it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:127
+#: ../../doc/posts/nuitka-this-week-13.rst:127
 msgid ""
 "This will address a widespread complaint of many Windows users of the "
 "standalone mode. This is now a relatively unnoticable part of the overall"
 " experience."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:131
+#: ../../doc/posts/nuitka-this-week-13.rst:131
 msgid ""
 "Currently I need to finish off some remaining problems with it, before "
 "putting it out in the wild. Getting this into a release will solve many "
 "newcomer issues."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:137
+#: ../../doc/posts/nuitka-this-week-13.rst:137
 msgid "Nuitka Organisation"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:139
+#: ../../doc/posts/nuitka-this-week-13.rst:139
 msgid ""
 "Esp. for Google Summer of Code, Nuitka has sought and found mentors, some"
 " of which are highly experienced for the task. I will let them decide and"
@@ -231,24 +231,24 @@ msgid ""
 " participate, nor could it even overachieve as much as it does."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:146
+#: ../../doc/posts/nuitka-this-week-13.rst:146
 msgid ""
 "Therefore I welcomed Kamran and Vaibhav into the organisation and they "
 "are excited to work the the 2 accepted students, that are also added."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:151
+#: ../../doc/posts/nuitka-this-week-13.rst:151
 msgid "Plugin Work"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:153
+#: ../../doc/posts/nuitka-this-week-13.rst:153
 msgid ""
 "On the ``jorj`` branch there is a lot of work from Jorj that aims at "
 "adding support for more of the beasty stuff with hidden dependency and "
 "plugin needs."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:157
+#: ../../doc/posts/nuitka-this-week-13.rst:157
 msgid ""
 "He is also working at run time tracing of your program to be translated "
 "to automatic imports of just that. I am going to highlight this later, "
@@ -256,59 +256,59 @@ msgid ""
 " release."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:162
+#: ../../doc/posts/nuitka-this-week-13.rst:162
 msgid ""
 "But this definitely awesome stuff, and going to make Nuitka very easy to "
 "use for some people, even with stranger software."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:167
+#: ../../doc/posts/nuitka-this-week-13.rst:167
 msgid "Opening Up"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:169
+#: ../../doc/posts/nuitka-this-week-13.rst:169
 msgid ""
 "This is also a teaser. But we did so much work for the 0.6.3 release to "
 "make sure information is there, and things are accessible and changeable "
 "by everyone, or even the pre-commit hook that I am very proud of."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:173
+#: ../../doc/posts/nuitka-this-week-13.rst:173
 msgid ""
 "But I shall save this for next week, otherwise it will be too much new "
 "information."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:178
+#: ../../doc/posts/nuitka-this-week-13.rst:178
 msgid "Twitter"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:180
+#: ../../doc/posts/nuitka-this-week-13.rst:180
 msgid ""
 "I continue to be active there, although often I fall prey to of not "
 "wanting to talk about unfinished things. On Twitter of all things."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:183
+#: ../../doc/posts/nuitka-this-week-13.rst:183
 #, python-format
 msgid "`Follow @kayhayen <https://twitter.com/kayhayen?ref_src=twsrc%5Etfw>`_"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:185
+#: ../../doc/posts/nuitka-this-week-13.rst:185
 msgid "And lets not forget, having followers make me happy. So do re-tweets."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:187
+#: ../../doc/posts/nuitka-this-week-13.rst:187
 msgid ""
 "Adding Twitter more prominently to the web site is something that is also"
 " going to happen."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:192
+#: ../../doc/posts/nuitka-this-week-13.rst:192
 msgid "Help Wanted"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:194
+#: ../../doc/posts/nuitka-this-week-13.rst:194
 #, python-format
 msgid ""
 "If you are interested, I am tagging issues `help wanted "
@@ -316,21 +316,24 @@ msgid ""
 " and there is a bunch, and very likely at least one *you* can help with."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:198
+#: ../../doc/posts/nuitka-this-week-13.rst:198
 msgid "Nuitka definitely needs more people to work on it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:202
+#: ../../doc/posts/nuitka-this-week-13.rst:202
 msgid "Donations"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:204
+#: ../../doc/posts/nuitka-this-week-13.rst:204
 msgid ""
 "If you want to help, but cannot spend the time, please consider to donate"
 " to Nuitka, and go here:"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-13.rst:207
+#: ../../doc/posts/nuitka-this-week-13.rst:207
 msgid "`Donate to Nuitka </pages/donations.html>`_"
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

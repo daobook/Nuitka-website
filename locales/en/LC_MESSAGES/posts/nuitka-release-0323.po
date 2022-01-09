@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0323.rst:7
+msgid "Nuitka Release 0.3.23"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:13
+msgid "This release is the one that completes the Nuitka \"sun rise phase\"."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:15
+msgid ""
+"All of Nuitka is now released under `Apache License 2.0 "
+"<http://www.apache.org/licenses/LICENSE-2.0>`__ which is a very liberal "
+"license, and compatible with basically all Free Software licenses there "
+"are. It's only asking to allow integration, of what you send back, and "
+"patent grants for the code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:21
+msgid ""
+"In the first phase of Nuitka development, I wanted to keep control over "
+"Nuitka, so it wouldn't repeat mistakes of other projects. This is no "
+"longer a concern for me, it's not going to happen anymore."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:25
+msgid ""
+"I would like to thank Debian Legal team, for originally bringing to my "
+"attention, that this license will be better suited, than any copyright "
+"assignment could be."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:31
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:33
+msgid ""
+"The compiled functions could not be used with ``multiprocessing`` or "
+"``copy.copy``. Fixed in 0.3.22.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:36
+msgid ""
+"In-place operations for slices with not both bounds specified crashed the"
+" compiler. Fixed in 0.3.22.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:39
+msgid ""
+"Cyclic imports could trigger an endless loop, because module import "
+"expressions became the parent of the imported module object. Fixed in "
+"0.3.22.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:43
+msgid ""
+"Modules named ``proc`` or ``func`` could not be compiled to modules or "
+"embedded due to a collision with identifiers of CPython2.7 includes. "
+"Fixed in 0.3.22.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:49
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:51
+msgid ""
+"The function copying fix also makes pickling of compiled functions "
+"available. As it is the case for non-compiled functions in CPython, no "
+"code objects are stored, only names of module level variables."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:57
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:59
+msgid "Using the Apache License 2.0 for all of Nuitka now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:61
+msgid ""
+"Speedcenter has been re-activated, but is not yet having a lot of "
+"benchmarks yet, subject to change."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:64
+msgid "Update"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:66
+msgid ""
+"We have given up on this version of speedcenter meanwhile, and generate "
+"static pages with graphs instead. We can this still speedcenter."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:72
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:74
+msgid ""
+"Changed the \"CPython26\" tests to no longer disable the parts that "
+"relied on copying of functions to work as that is now supported."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:77
+msgid ""
+"Extended in-place assignment tests to cover error cases of we had issues "
+"with."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:80
+msgid ""
+"Extended compile library test to also try and compile the path where "
+"``numpy`` lives. This is apparently another path, where Debian installs "
+"some modules, and compiling this would have revealed issues sooner."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:87
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0323.rst:89
+msgid ""
+"The release contains bug fixes, and the huge step of changing `the "
+"license <http://www.apache.org/licenses/LICENSE-2.0>`__. It is made in "
+"preparation to `PyCON EU <https://ep2012.europython.eu>`__."
+msgstr ""
+

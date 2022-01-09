@@ -9,20 +9,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/going-to-europython-2013.rst:7
+#: ../../doc/posts/going-to-europython-2013.rst:7
 msgid "Going to Europython 2013"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:9
+#: ../../doc/posts/going-to-europython-2013.rst:9
 msgid ""
 "I am going to the wonderful city of Florence, and `Europython 2013 "
 "<https://ep2013.europython.eu/>`_ and make a presentation there. This "
@@ -31,19 +31,19 @@ msgid ""
 "message why I believe it is possible."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:15
-msgid "目录"
+#: ../../doc/posts/going-to-europython-2013.rst:15
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:19
+#: ../../doc/posts/going-to-europython-2013.rst:19
 msgid "Things to talk about"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:22
+#: ../../doc/posts/going-to-europython-2013.rst:22
 msgid "Status"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:24
+#: ../../doc/posts/going-to-europython-2013.rst:24
 msgid ""
 "Only briefly this time, since I will be able to say that all current "
 "Python versions are fully supported (`surely if you help me with "
@@ -53,26 +53,26 @@ msgid ""
 " should be quite obvious stuff, I am going to keep that short."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:31
+#: ../../doc/posts/going-to-europython-2013.rst:31
 msgid "What I would like to get done until then:"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:33
+#: ../../doc/posts/going-to-europython-2013.rst:33
 msgid "Win64"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:35
+#: ../../doc/posts/going-to-europython-2013.rst:35
 msgid ""
 "One remaining area of work to achieve Win64 support, which is almost "
 "complete. I epxect one of the next releases to support it."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:38
-#: ../../posts/going-to-europython-2013.rst:95
+#: ../../doc/posts/going-to-europython-2013.rst:38
+#: ../../doc/posts/going-to-europython-2013.rst:95
 msgid "Threading"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:40
+#: ../../doc/posts/going-to-europython-2013.rst:40
 msgid ""
 "And of course there is threading, which was the one real major weakness "
 "present last time, which appears only short of pronouncing break-through."
@@ -81,45 +81,45 @@ msgid ""
 " disabled. Seems I only have to convince myself of it too."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:47
+#: ../../doc/posts/going-to-europython-2013.rst:47
 msgid ""
 "Since it's not totally a priority right now, one of the next releases "
 "will support it, likely before the conference."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:50
+#: ../../doc/posts/going-to-europython-2013.rst:50
 msgid ""
 "But as you see. Completion all around is there or at least in sight. Kind"
 " of worked on this nearby."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:54
+#: ../../doc/posts/going-to-europython-2013.rst:54
 msgid "Last years questions"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:57
+#: ../../doc/posts/going-to-europython-2013.rst:57
 msgid "Builtins"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:59
+#: ../../doc/posts/going-to-europython-2013.rst:59
 msgid "For instance, writing to built-ins, what will/did happen."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:61
+#: ../../doc/posts/going-to-europython-2013.rst:61
 msgid ""
 "Changing builtins can be done in two ways. One is to set the value on the"
 " module level, which is something that has always worked. The other is "
 "writing to ``builtins`` module."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:65
+#: ../../doc/posts/going-to-europython-2013.rst:65
 msgid ""
 "This is something that is OK for Nuitka in some cases (``__import__``, "
 "``open`` ) and handled by it at run time. And it's not effective in "
 "others (``len``, ``str``)."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:69
+#: ../../doc/posts/going-to-europython-2013.rst:69
 msgid ""
 "Good news is that we got contributed a \"compiled built-ins\" code, where"
 " we now will be able to see such writes. Now it's only used to not check "
@@ -128,7 +128,7 @@ msgid ""
 "handle when we only learn of it at run time."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:75
+#: ../../doc/posts/going-to-europython-2013.rst:75
 msgid ""
 "The other element to address is, it of course whole program analysis. "
 "When Nuitka sees the write to ``builtins.str``, it may very well consider"
@@ -136,28 +136,28 @@ msgid ""
 "optimization of it, that will be interesting to cover."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:82
+#: ../../doc/posts/going-to-europython-2013.rst:82
 msgid "Currently Nuitka does nothing of this, but it will."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:85
+#: ../../doc/posts/going-to-europython-2013.rst:85
 msgid "Debugger - pdb"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:87
+#: ../../doc/posts/going-to-europython-2013.rst:87
 msgid ""
 "The compiled binaries work the same as the normal Python code. So you "
 "will be able to simply use ``pdb`` on it instead."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:90
+#: ../../doc/posts/going-to-europython-2013.rst:90
 msgid ""
 "Interacting with ``pdb`` is not *totally* out of reach, but kind of "
 "pointless mostly, unless you need to attach to long running operational "
 "programs. For now that use case is not supported though."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:97
+#: ../../doc/posts/going-to-europython-2013.rst:97
 msgid ""
 "I learned a whole lot about threading. Also thanks to the kind people of "
 "Stackless Python, who explained things to me. I am still amazed at how "
@@ -166,22 +166,22 @@ msgid ""
 "either, so my experience was non-existing."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:103
+#: ../../doc/posts/going-to-europython-2013.rst:103
 msgid ""
 "But in the mean time, I managed to come up with ideas that appear to "
 "work, and if I implement the full design, it will even be more efficient "
 "than anything."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:108
+#: ../../doc/posts/going-to-europython-2013.rst:108
 msgid "C++ to Python gaps"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:110
+#: ../../doc/posts/going-to-europython-2013.rst:110
 msgid "I consider all of these more or less solved."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:112
+#: ../../doc/posts/going-to-europython-2013.rst:112
 msgid ""
 "Well maybe except recently arose issues with MSVC for \"function calls\"."
 " It appears that compiler highlights a weakness in one of my approaches. "
@@ -189,25 +189,25 @@ msgid ""
 "around, which is kind of transparent."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:117
+#: ../../doc/posts/going-to-europython-2013.rst:117
 msgid ""
 "But MSVC actively takes liberty to calculate function arguments as it "
 "sees fit. The fix for it, is now totally different and should be highly "
 "portable and even compliant to C++."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:122
+#: ../../doc/posts/going-to-europython-2013.rst:122
 msgid "Performance"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:124
+#: ../../doc/posts/going-to-europython-2013.rst:124
 msgid ""
 "There are still slow exceptions. I would like to avoid raising C++ "
 "exceptions in the future, because they are so slow (Python exceptions are"
 " much faster)."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:128
+#: ../../doc/posts/going-to-europython-2013.rst:128
 msgid ""
 "And diagrams, I would like to have a whole lot more of these. Since I "
 "dropped speedcenter, I am making actual progress there. I hope to have "
@@ -215,14 +215,14 @@ msgid ""
 "currently is."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:133
+#: ../../doc/posts/going-to-europython-2013.rst:133
 msgid ""
 "Since I am getting closer to pronouncing Nuitka useful. I surely believe,"
 " I need to answer the performance question in larger detail. And of "
 "course, I need now a better idea, what impact measures have."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:137
+#: ../../doc/posts/going-to-europython-2013.rst:137
 msgid ""
 "But as this is a lot of work, I doubt that I will be all that perfect by "
 "then, my goal is to have a comparison with Shedskin. No matter how unfair"
@@ -231,45 +231,45 @@ msgid ""
 "analysis, Nuitka also should do it, only hampered by guards at maximum."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:144
+#: ../../doc/posts/going-to-europython-2013.rst:144
 msgid "Demos"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:146
+#: ../../doc/posts/going-to-europython-2013.rst:146
 msgid ""
 "The talk with start out with demonstration of Nuitka, something simple "
 "first, and then Mercurial as a more complex example, and then its test "
 "suite."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:150
+#: ../../doc/posts/going-to-europython-2013.rst:150
 msgid ""
 "And I will show portable binaries. It seems to work quite nicely. "
 "Generally I expect to start out with demos, and explain from there, "
 "instead of having a demo only at the end."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:154
+#: ../../doc/posts/going-to-europython-2013.rst:154
 msgid ""
 "If it all works out, this time, they will be prepared with "
 "``recordmydesktop`` so I can publish them separately too."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:158
+#: ../../doc/posts/going-to-europython-2013.rst:158
 msgid "Future Work"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:160
+#: ../../doc/posts/going-to-europython-2013.rst:160
 msgid ""
 "Generally the talk will be more directed at the future, although this is "
 "kind of a dark area now. That's its nature I guess."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:164
+#: ../../doc/posts/going-to-europython-2013.rst:164
 msgid "SSA"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:166
+#: ../../doc/posts/going-to-europython-2013.rst:166
 msgid ""
 "The talk will also be largely built SSA (static single assignment) and "
 "how it applies to Python. What everybody means, when they say \"Python is"
@@ -277,7 +277,7 @@ msgid ""
 "escape to unknown code that changes them very often."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:171
+#: ../../doc/posts/going-to-europython-2013.rst:171
 msgid ""
 "I will have to talk about that, and how get out of that trap, basically "
 "guards, much like PyPy does it too. Escaped values and strange code are "
@@ -286,18 +286,18 @@ msgid ""
 "and which not."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:178
+#: ../../doc/posts/going-to-europython-2013.rst:178
 msgid "Compiled Modules"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:180
+#: ../../doc/posts/going-to-europython-2013.rst:180
 msgid ""
 "And I believe with \"compiled modules\" potentially already in place, we "
 "can achieve very cheap guards in most cases. I can at least explain, why "
 "guards can be relatively cheap, where we need them."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:184
+#: ../../doc/posts/going-to-europython-2013.rst:184
 msgid ""
 "I am kind of bugged by that idea. It kind of means to revisit an older "
 "milestone, but now an idea has surfaced, that I previously didn't have, "
@@ -306,11 +306,11 @@ msgid ""
 "difference for the Nuitka design."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:191
+#: ../../doc/posts/going-to-europython-2013.rst:191
 msgid "Compiled Locals"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:193
+#: ../../doc/posts/going-to-europython-2013.rst:193
 msgid ""
 "Who knows, we might even have a \"compiled locals\" as well, which as a "
 "side effect, also allows total interactivity with the most absurd codes. "
@@ -318,18 +318,18 @@ msgid ""
 " very fast."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:198
+#: ../../doc/posts/going-to-europython-2013.rst:198
 msgid ""
 "But the frame locals is not in sync with it. Were it a special object, it"
 " could try and interact with these when control escapes to code that we "
 "don't know if it might use it."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:203
+#: ../../doc/posts/going-to-europython-2013.rst:203
 msgid "Whole Program Analysis"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:205
+#: ../../doc/posts/going-to-europython-2013.rst:205
 msgid ""
 "Big words. Can Nuitka avoid module objects entirely. Can it inline "
 "functions, specialize them according to the only types used (think "
@@ -338,11 +338,11 @@ msgid ""
 "known to use it any different."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:213
+#: ../../doc/posts/going-to-europython-2013.rst:213
 msgid "Perspective"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:215
+#: ../../doc/posts/going-to-europython-2013.rst:215
 msgid ""
 "Last time, I spent a lot of time on justification, \"why a new "
 "project?\", \"why not work with the others?\", what goals do I have that "
@@ -350,15 +350,15 @@ msgid ""
 " give people an idea of the project."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:220
+#: ../../doc/posts/going-to-europython-2013.rst:220
 msgid "With this out of the way, I can now focus on inclusion, and success."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:224
+#: ../../doc/posts/going-to-europython-2013.rst:224
 msgid "Funding"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:226
+#: ../../doc/posts/going-to-europython-2013.rst:226
 msgid ""
 "And, well yes, this time I may not have to pay for it all by myself. Last"
 " time I spent close to 1000 Euros for the trip (ticket to enter, hotel, "
@@ -366,7 +366,7 @@ msgid ""
 "</pages/donations.html>`_ for this specific reason."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:231
+#: ../../doc/posts/going-to-europython-2013.rst:231
 msgid ""
 "For a strange reason, I devote substantial amounts of time to the "
 "project, only to put it under the most liberal license. It's probably "
@@ -376,28 +376,28 @@ msgid ""
 "feels unlikely though. Too much fun."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:240
+#: ../../doc/posts/going-to-europython-2013.rst:240
 msgid "Final Picture"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:242
+#: ../../doc/posts/going-to-europython-2013.rst:242
 msgid ""
 "And lets have an image I made during Europython 2012 in the city of "
 "Florence. It shows what a vibrant place this town is."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:247
+#: ../../doc/posts/going-to-europython-2013.rst:247
 msgid ""
 "Florence is a place full of kind people. The mood not only of the "
 "conference, but the whole city is very open minded and helpful. It was "
 "very easy to get adopted by strangers to their party."
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:253
+#: ../../doc/posts/going-to-europython-2013.rst:253
 msgid "Final Words"
 msgstr ""
 
-#: ../../posts/going-to-europython-2013.rst:255
+#: ../../doc/posts/going-to-europython-2013.rst:255
 msgid ""
 "I am looking forward to meeting the friends I made there last time, and "
 "new friends. I kind of a great time there last time, one of these \"times"
@@ -405,4 +405,7 @@ msgid ""
 "deserved. I remember laughing a lot, learning a lot. And making unique "
 "experiences."
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-050.rst:7
+msgid "Nuitka Release 0.5.0"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:13
+msgid ""
+"This release breaks interface compatibility, therefore the major version "
+"number change. Also \"standalone mode\" has seen significant improvements"
+" on both Windows, and Linux. Should work much better now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:17
+msgid ""
+"But consider that this part of Nuitka is still in its infancy. As it is "
+"not the top priority of mine for Nuitka, which primarily is intended as "
+"an super compatible accelerator of Python, it will continue to evolve "
+"nearby."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:22
+msgid ""
+"There is also many new optimization based on structural improvements in "
+"the direction of actual SSA."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:27
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:29
+msgid ""
+"The \"standalone mode\" was not working on all Redhat, Fedora, and "
+"openSUSE platforms and gave warnings with older compilers. Fixed in "
+"0.4.7.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:33
+msgid ""
+"The \"standalone mode\" was not including all useful encodings. Fixed in "
+"0.4.7.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:36
+msgid ""
+"The \"standalone mode\" was defaulting to ``--python-flag=-S`` which "
+"disables the parsing of \"site\" module. That unfortunately made it "
+"necessary to reach some modules without modifying ``PYTHONPATH`` which "
+"conflicts with the \"out-of-the-box\" experience."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:41
+msgid ""
+"The \"standalone mode\" is now handling packages properly and generally "
+"working on Windows as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:44
+msgid ""
+"The syntax error of having an all catching except clause and then a more "
+"specific one wasn't causing a ``SyntaxError`` with Nuitka."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:56
+msgid ""
+"A corruption bug was identified, when re-raising exceptions, the top "
+"entry of the traceback was modified after usage. Depending on ``malloc`` "
+"this was potentially causing an endless loop when using it for output."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:63
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:65
+msgid ""
+"Windows: The \"standalone\" mode now properly detects used DLLs using "
+"`Dependency Walker <http://www.dependencywalker.com/>`__ which it offers "
+"to download and extra for you."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:69
+msgid ""
+"It is used as a replacement to ``ldd`` on Linux when building the binary,"
+" and as a replacement of ``strace`` on Linux when running the tests to "
+"check that nothing is loaded from the outside."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:75
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:77
+msgid ""
+"When iterating over ``list``, ``set``, this is now automatically lowered "
+"to ``tuples`` avoiding the mutable container types."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:80
+msgid "So the following code is now equivalent:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:91
+msgid ""
+"For constants, this is even more effective, because for mutable "
+"constants, no more is it necessary to make a copy."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:94
+msgid ""
+"Python2: The iteration of large ``range`` is now automatically lowered to"
+" ``xrange`` which is faster to loop over, and more memory efficient."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:98
+msgid "Added support for the ``xrange`` built-in."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:100
+msgid ""
+"The statement only expression optimization got generalized and now is "
+"capable of removing useless parts of operations, not only the whole thing"
+" when it has not side effects."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:112
+msgid "This works for all container types."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:114
+msgid ""
+"Another example is ``type`` built-in operation with single argument. When"
+" the result is not used, it need not be called."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:124
+msgid ""
+"And another example ``is`` and ``is not`` have no effect of their own as "
+"well, therefore:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:135
+msgid ""
+"Added proper handling of conditional expression branches in SSA based "
+"optimization. So far these branches were ignored, which only acceptable "
+"for temporary variables as created by tree building, but not other "
+"variable types. This is preparatory for introducing SSA for local "
+"variables."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:143
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:145
+msgid ""
+"The option ``--exe`` is now ignored and creating an executable is the "
+"default behavior of ``nuitka``, a new option ``--module`` allows to "
+"produce extension modules."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:149
+msgid ""
+"The binary ``nuitka-python`` was removed, and is replaced by ``nuitka-"
+"run`` with now only implies ``--execute`` on top of what ``nuitka`` is."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:153
+msgid ""
+"Using dedicated `Buildbot <http://buildbot.net>`__ for continuous "
+"integration testing and release creation as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:156
+msgid ""
+"The `Downloads <https://nuitka.net/doc/download.html>`__ now offers MSI "
+"files for Win64 as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:159
+msgid ""
+"Discontinued the support for cross compilation to Win32. That was too "
+"limited and the design choice is to have a running CPython instance of "
+"matching architecture at Nuitka compile time."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:165
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:167
+msgid ""
+"Expanded test coverage for \"standalone mode\" demonstrating usage of "
+"\"hex\" encoding, and PySide package."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:172
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:174
+msgid ""
+"The \"executable by default\" interface change improves on the already "
+"high ease of use. The new optimization do not give all that much in terms"
+" of numbers, but are all signs of structural improvements, and it is "
+"steadily approaching the point, where the really interesting stuff will "
+"happen."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:180
+msgid ""
+"The progress for standalone mode is of course significant. It is still "
+"not quite there yet, but it is making quick progress now. This will "
+"attract a lot of attention hopefully."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-050.rst:184
+msgid ""
+"As for optimization, the focus for it has shifted to making exception "
+"handlers work optimal by default (publish the exception to "
+"``sys.exc_info()`` and create traceback only when necessary) and be based"
+" on standard branches. Removing special handling of exception handlers, "
+"will be the next big step. This release includes some correctness fixes "
+"stemming from that work already."
+msgstr ""
+

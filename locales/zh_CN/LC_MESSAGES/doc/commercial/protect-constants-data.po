@@ -9,30 +9,57 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../doc/commercial/protect-constants-data.rst:5
+#: ../../doc/doc/commercial/protect-constants-data.rst:5
 msgid "Protect Program Constants Data"
 msgstr ""
 
-#: ../../doc/commercial/protect-constants-data.rst:7
+#: ../../doc/doc/commercial/protect-constants-data.rst:7
 msgid ""
 "Watch this demo, to see what this about. Only Nuitka commercial offers "
 "the full protection, and this illustrates the issue best."
 msgstr ""
 
-#: ../../doc/commercial/protect-constants-data.rst:12
-msgid "The demo is not yet done."
+#: ../../doc/doc/commercial/protect-constants-data.rst:12
+msgid "The demo is not yet done, but the commands and outputs are below."
 msgstr ""
 
-#: ../../doc/commercial/protect-constants-data.rst:22
+#: ../../doc/doc/commercial/protect-constants-data.rst:21
+msgid ""
+"Key is contained in the source code (separate file is dealt with in "
+"another part), and literally unprotected due to that. Lets turn it to "
+"bytecode:"
+msgstr ""
+
+#: ../../doc/doc/commercial/protect-constants-data.rst:41
+msgid ""
+"So not only are all program identified, argument names, also the string "
+"value that is our secret contained in the ``.pyc`` file. There are better"
+" ways to decode a bytecode file, that will give the data in clear form as"
+" a Python object, but at this point it should be clear, the bytecode "
+"object offers no protection for your data there. Nuitka Commercial to the"
+" rescue."
+msgstr ""
+
+#: ../../doc/doc/commercial/protect-constants-data.rst:55
+msgid ""
+"For Nuitka commercial, the output is empty. Without that plugin, the "
+"string will be found. The plugin is part of the Nuitka Commercial "
+"subscription and unqiue in this level of protection."
+msgstr ""
+
+#: ../../doc/doc/commercial/protect-constants-data.rst:58
 msgid "Go Back to Nuitka commercial overview."
 msgstr ""
+
+#~ msgid "The demo is not yet done."
+#~ msgstr ""
 

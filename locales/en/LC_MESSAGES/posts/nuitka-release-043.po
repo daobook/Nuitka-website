@@ -1,0 +1,330 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-043.rst:7
+msgid "Nuitka Release 0.4.3"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:13
+msgid ""
+"This release expands the reach of Nuitka substantially, as new platforms "
+"and compilers are now supported. A lot of polish has been applied. Under "
+"the hood there is the continued and in-progress effort to implement SSA "
+"form in Nuitka."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:20
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:22
+msgid "Support for new compiler: Microsoft Visual C++."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:24
+msgid ""
+"You can now use Visual Studio 2008 or Visual Studio 2010 for compiling "
+"under Windows."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:27
+msgid "Support for NetBSD."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:29
+msgid ""
+"Nuitka works for at least NetBSD 6.0, older versions may or may not work."
+" This required fixing bugs in the generic \"fibers\" implementation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:33
+msgid "Support for Python3 under Windows too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:35
+msgid ""
+"Nuitka uses Scons to build the generated C++ files. Unfortunately it "
+"requires Python2 to execute, which is not readily available to call from "
+"Python3. It now guesses the default installation paths of CPython 2.7 or "
+"CPython 2.6 and it will use it for running Scons instead. You have to "
+"install it to ``C:\\Python26`` or ``C:\\Python27`` for Nuitka to be able "
+"to find it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:42
+msgid "Enhanced Python 3.3 compatibility."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:44
+msgid ""
+"The support the newest version of Python has been extended, improving "
+"compatibility for many minor corner cases."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:47
+msgid ""
+"Added warning when a user compiles a module and executes it immediately "
+"when that references ``__name__``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:50
+msgid ""
+"Because very likely the intention was to create an executable. And esp. "
+"if there is code like this:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:58
+msgid ""
+"In module mode, Nuitka will optimize it away, and nothing will happen on "
+"execution. This is because the command"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:65
+msgid "is behavioral more like"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:71
+msgid "and that was a trap for new users."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:73
+msgid ""
+"All Linux architectures are now supported. Due to changes in how "
+"evaluation order is enforced, we don't have to implement for specific "
+"architectures anymore."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:79
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:81
+msgid "Dictionary creation was not fully compatible."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:83
+msgid ""
+"As revealed by using Nuitka with CPython3.3, the order in which "
+"dictionaries are to be populated needs to be reversed, i.e. CPython adds "
+"the last item first. We didn't observe this before, and it's likely the "
+"new dictionary implementation that finds it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:88
+msgid ""
+"Given that hash randomization makes dictionaries item order undetermined "
+"anyway, this is more an issue of testing."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:91
+msgid ""
+"Evaluation order for arguments of calls was not effectively enforced. It "
+"is now done in a standards compliant and therefore fully portable way. "
+"The compilers and platforms so far supported were not affected, but the "
+"newly supported Visual Studio C++ compiler was."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:96
+msgid ""
+"Using a ``__future__`` import inside a function was giving an assertion, "
+"instead of the proper syntax error."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:99
+msgid ""
+"Python3: Do not set the attributes ``sys.exc_type``, ``sys.exc_value``, "
+"``sys.exc_traceback``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:102
+msgid ""
+"Python3: Annotations of function worked only as long as their definition "
+"was not referring to local variables."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:107
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:109
+msgid "Calls with no positional arguments are now using the faster call methods."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:112
+msgid ""
+"The generated C++ code was using the ``()`` constant at call site, when "
+"doing calls that use no positional arguments, which is of course useless."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:116
+msgid "For Windows now uses OS \"Fibers\" for Nuitka \"Fibers\"."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:118
+msgid ""
+"Using threads for fibers was causing only overhead and with this API, "
+"MSVC had less issues too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:123
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:125
+msgid ""
+"Accepting `Donations <https://nuitka.net/pages/donations.html>`__ via "
+"Paypal, please support funding travels, website, etc."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:128
+msgid ""
+"The `User Manual <https://nuitka.net/doc/user-manual.html>`__ has been "
+"updated with new content. We now do support Visual Studio, documented the"
+" required LLVM version for clang, Win64 and modules may include modules "
+"too, etc. Lots of information was no longer accurate and has been "
+"updated."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:134
+msgid "The Changelog has been improved for consistency, wordings, and styles."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:137
+msgid "Nuitka is now available on the social code platforms as well"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:139
+msgid "Bitbucket (since removed)"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:140
+msgid "`Github <https://github.com/kayhayen/Nuitka>`__"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:141
+msgid "Gitorious (since discontinued)"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:142
+msgid "Google Code (since discontinued)"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:144
+msgid ""
+"Removed ``clean-up.sh``, which is practically useless, as tests now clean"
+" up after themselves reasonably, and with ``git clean -dfx`` working "
+"better."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:148
+msgid ""
+"Removed \"create-environment.sh\" script, which was only setting the "
+"``PATH`` variable, which is not necessary."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:151
+msgid ""
+"Added ``check-with-pylint --emacs`` option to make output its work with "
+"Emacs compilation mode, to allow easier fixing of warnings from PyLint."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:155
+msgid ""
+"Documentation is formatted for 80 columns now, source code will gradually"
+" aim at it too. So far 90 columns were used, and up to 100 tolerated."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:161
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:163
+msgid "Removed useless manifest and resource file creation under Windows."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:165
+msgid ""
+"Turns out this is no longer needed at all. Either CPython, MinGW, or "
+"Windows improved to no longer need it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:168
+msgid ""
+"PyLint massive cleanups and annotations bringing down the number of "
+"warnings by a lot."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:171
+msgid ""
+"Avoid use of strings and built-ins as run time pre-computed constants "
+"that are not needed for specific Python versions, or Nuitka modes."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:174
+msgid ""
+"Do not track needed tuple, list, and dict creation code variants in "
+"context, but e.g. in ``nuitka.codegen.TupleCodes`` module instead."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:177
+msgid ""
+"Introduced an \"internal\" module to host the complex call helper "
+"functions, instead of just adding it to any module that first uses it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:183
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:185
+msgid "Added basic tests for order evaluation, where there currently were None."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:188
+msgid ""
+"Added support for \"2to3\" execution under Windows too, so we can run "
+"tests for Python3 installations too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:193
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:195
+msgid ""
+"The release is clearly major step ahead. The new platform support "
+"triggered a whole range of improvements, and means this is truly complete"
+" now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-043.rst:199
+msgid ""
+"Also there is very much polish in this release, reducing the number of "
+"warnings, updated documentation, the only thing really missing is visible"
+" progress with optimization."
+msgstr ""
+

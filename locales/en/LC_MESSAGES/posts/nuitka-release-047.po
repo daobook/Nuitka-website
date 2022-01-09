@@ -1,0 +1,357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-047.rst:7
+msgid "Nuitka Release 0.4.7"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:13
+msgid ""
+"This release includes important new features, lots of polishing cleanups,"
+" and some important performance improvements as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:20
+msgid ""
+"The RPM packages didn't build due to missing in-line copy of Scons. Fixed"
+" in 0.4.6.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:23
+msgid ""
+"The recursion into modules and unfreezing them was not working for "
+"packages and modules anymore. Fixed in 0.4.6.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:26
+msgid "The Windows installer was not including Scons. Fixed in 0.4.6.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:29
+msgid ""
+"Windows: The immediate execution as performed by ``nuitka --execute`` was"
+" not preserving the exit code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:32
+msgid ""
+"Python3.3: Packages without ``__init.py__`` were not properly embedding "
+"the name-space package as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:35
+msgid ""
+"Python3: Fix, modules and packages didn't add themselves to "
+"``sys.modules`` which they should, happened only for programs."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:38
+msgid ""
+"Python3.3: Packages should set ``__package`` to their own name, not the "
+"one of their parents."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:41
+msgid "Python3.3: The ``__qualname__`` of nested classes was corrected."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:43
+msgid ""
+"For modules that recursed to other modules, an infinite loop could be "
+"triggered when comparing types with rich comparisons."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:48
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:50
+msgid ""
+"The \"standalone\" mode allows to compile standalone binaries for "
+"programs and run them without Python installation. The DLLs loaded by "
+"extension modules on Windows need to be added manually, on Linux these "
+"are determined automatically already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:55
+msgid ""
+"To achieve running without Python installation, Nuitka learned to freeze "
+"bytecode as an alternative to compiling modules, as some modules need to "
+"be present when the CPython library is initialized."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:59
+msgid ""
+"New option ``--python-flag`` allows to specify flags to the compiler that"
+" the \"python\" binary normally would. So far ``-S`` and ``-v`` are "
+"supported, with sane aliases ``no_site`` and ``trace_imports``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:63
+msgid ""
+"The recommended use of ``--python-flag=-S`` is to avoid dependency creep "
+"in standalone mode compilations, because the ``site`` module often "
+"imports many useless things that often don't apply to target systems."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:70
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:72
+#, python-format
+msgid ""
+"Faster frame stack handling for functions without ``try``/``except`` (or "
+"``try``/``finally`` in Python3). This gives a speed boost to \"PyStone\" "
+"of ca. 2.5% overall."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:76
+#, python-format
+msgid ""
+"Python2: Faster attribute getting and setting, handling special cases at "
+"compile time. This gives a minor speed boost to \"PyStone\" of ca. 0.5% "
+"overall."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:80
+msgid ""
+"Python2: Much quicker calls of ``__getattr__`` and ``__setattr__`` as "
+"this is now using the quicker call method avoiding temporary tuples."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:83
+msgid ""
+"Don't treat variables usages used in functions called directly by their "
+"owner as shared. This leads to more efficient code generation for "
+"contractions and class bodies."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:87
+msgid ""
+"Create ``unicode`` constants directly from their UTF-8 string "
+"representation for Python2 as well instead of un-streaming. So far this "
+"was only done for Python3. Affects only program start-up."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:91
+msgid ""
+"Directly create ``int`` and ``long`` constants outside of ``2**31`` and "
+"``2**32-1``, but only limited according to actual platform values. "
+"Affects only program start-up."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:95
+msgid ""
+"When creating ``set`` values, no longer use a temporary ``tuple`` value, "
+"but use a properly generated helper functions instead. This makes "
+"creating sets much faster."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:99
+msgid ""
+"Directly create ``set`` constants instead of un-streaming them. Affects "
+"only program start-up."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:102
+msgid ""
+"For correct line numbers in traceback, the current frame line number must"
+" be updated during execution. This was done more often than necessary, "
+"e.g. loops set the line number before loop entry, and at first statement."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:107
+msgid ""
+"Module variables are now accessed even faster, the gain for \"PyStone\" "
+"is only 0.1% and mostly the result of leaner code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:112
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:114
+msgid ""
+"The \"standalone mode\" code (formerly known as \"portable mode\" has "
+"been redone and activated. This is a feature that a lot of people expect "
+"from a compiler naturally. And although the overall goal for Nuitka is of"
+" course acceleration, this kind of packaging is one of the areas where "
+"CPython needs improvement."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:120
+msgid ""
+"Added package for Ubuntu 13.10 for download, removed packages for Ubuntu "
+"11.04 and 11.10, no more supported."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:123
+msgid "Added package for openSUSE 13.1 for download."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:125
+msgid "Nuitka is now part of Arch and can be installed with ``pacman -S nuitka``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:128
+msgid ""
+"Using dedicated `Buildbot <http://buildbot.net>`__ for continuous "
+"integration testing. Not yet public."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:131
+msgid ""
+"Windows: In order to speed up repeated compilation on a platform without "
+"``ccache``, added Scons level caching in the build directory."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:134
+msgid ""
+"Disabled hash randomization for inside Nuitka (but not in ultimately "
+"created binaries) for a more stable output, because dictionary constants "
+"will not change around. This makes the build results possible to cache "
+"for ``ccache`` and Scons as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:141
+msgid "Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:143
+msgid ""
+"The ``programs`` tests cases now fail if module or directory recursion is"
+" not working, being executed in another directory."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:146
+msgid ""
+"Added test runner for packages, with initial test case for package with "
+"recursion and sub-packages."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:149
+msgid "Made some test cases more strict by reducing ``PYTHONPATH`` provision."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:152
+msgid ""
+"Detect use of extra flags in tests that don't get consumed avoiding "
+"ineffective flags."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:155
+msgid ""
+"Use ``--execute`` on Windows as well, the issue that prevented it has "
+"been solved after all."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:160
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:162
+msgid ""
+"The generated code uses ``const_``, ``var_``, ``par_`` prefixes in the "
+"generated code and centralized the decision about these into single "
+"place."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:166
+msgid ""
+"Module variables no longer use C++ classes for their access, but instead "
+"accessor functions, leading to much less code generated per module "
+"variable and removing the need to trace their usage during code "
+"generation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:171
+msgid ""
+"The test runners now share common code in a dedicated module, previously "
+"they replicated it all, but that turned out to be too tedious."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:175
+msgid ""
+"Massive general cleanups, many of which came from new contributor Juan "
+"Carlos Paco."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:178
+msgid ""
+"Moved standalone and freezer related codes to dedicated package "
+"``nuitka.freezer`` to not pollute the ``nuitka`` package name space."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:181
+msgid ""
+"The code generation use variable identifiers and their accesses was "
+"cleaned up."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:184
+msgid ""
+"Removed several not-so-special case identifier classes because they now "
+"behave more identical and all work the same way, so a parameters can be "
+"used to distinguish them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:188
+msgid ""
+"Moved main program, function object, set related code generation to "
+"dedicated modules."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:193
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:195
+msgid ""
+"This release marks major technological progress with the introduction of "
+"the much sought standalone mode and performance improvements from "
+"improved code generation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:199
+msgid ""
+"The major break through for SSA optimization was not yet achieved, but "
+"this is again making progress in the direction of it. Harmonizing "
+"variables of different kinds was an important step ahead."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-047.rst:203
+msgid ""
+"Also very nice is the packaging progress, Nuitka was accepted into Arch "
+"after being in Debian Testing for a while already. Hope is to see more of"
+" this kind of integration in the future."
+msgstr ""
+

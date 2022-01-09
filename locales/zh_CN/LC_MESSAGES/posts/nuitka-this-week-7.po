@@ -9,49 +9,49 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/nuitka-this-week-7.rst:7
+#: ../../doc/posts/nuitka-this-week-7.rst:7
 msgid "Nuitka this week #7"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:9
-msgid "目录"
+#: ../../doc/posts/nuitka-this-week-7.rst:9
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:13
+#: ../../doc/posts/nuitka-this-week-7.rst:13
 msgid "Nuitka Design Philosophy"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:17
+#: ../../doc/posts/nuitka-this-week-7.rst:17
 msgid ""
 "I wrote this as part of a discussion recently, and I think it makes sense"
 " to share my take on Nuitka and design. This is a lot text though, feel "
 "free to skip forward."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:21
+#: ../../doc/posts/nuitka-this-week-7.rst:21
 msgid ""
 "The issue with Nuitka and design mainly for me is that the requirements "
 "for many parts were and are largely unknown to me, until I actually start"
 " to do it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:25
+#: ../../doc/posts/nuitka-this-week-7.rst:25
 msgid ""
 "My goto generators approach worked out as originally designed, and that "
 "felt really cool for once, but the whole \"C type\" thing was a total "
 "unknown to me, until it all magically took form."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:29
+#: ../../doc/posts/nuitka-this-week-7.rst:29
 msgid ""
 "But rather I know it will evolve further if I go from \"bool\" (complete "
 "and coming for 0.6.0) via \"void\" (should be complete already, but "
@@ -59,14 +59,14 @@ msgid ""
 " that will take."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:34
+#: ../../doc/posts/nuitka-this-week-7.rst:34
 msgid ""
 "I really think Nuitka, unlike other software that I have designed, is "
 "more of a prototype project that gradually turns more and more into the "
 "real thing."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:38
+#: ../../doc/posts/nuitka-this-week-7.rst:38
 msgid ""
 "I have literally spent *years* to inject proper design in steps into the "
 "optimization phase, what I call SSA, value tracing, and it is very much "
@@ -74,7 +74,7 @@ msgid ""
 "execute on applying type inference results to the code generation."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:43
+#: ../../doc/posts/nuitka-this-week-7.rst:43
 msgid ""
 "So I turned that into something working with code strings to something "
 "working with variable declaration objects knowing their type for the goto"
@@ -82,7 +82,7 @@ msgid ""
 " weight of passing every compatibility test there is."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:48
+#: ../../doc/posts/nuitka-this-week-7.rst:48
 msgid ""
 "Then e.g. suddenly cleaning up module variables to no longer have their "
 "special branch, but a pseudo C type, that makes them like everything "
@@ -91,14 +91,14 @@ msgid ""
 "experience from it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:54
+#: ../../doc/posts/nuitka-this-week-7.rst:54
 msgid ""
 "While doing partial solutions, the design sometimes horribly degrades, "
 "but only until some features can carry the full weight, and/or have been "
 "explored to have their final form."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:58
+#: ../../doc/posts/nuitka-this-week-7.rst:58
 msgid ""
 "Making a whole Nuitka design upfront and then executing it, would instead"
 " give a very high probability of failing in the real world. I am "
@@ -106,7 +106,7 @@ msgid ""
 "first. And then continue to work while I clean it up."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:63
+#: ../../doc/posts/nuitka-this-week-7.rst:63
 msgid ""
 "For every feature I added, I actively go out, and change the thing, that "
 "made it hard or even fail. Always. I think Nuitka is largely developed by"
@@ -116,7 +116,7 @@ msgid ""
 " stack) right there."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:70
+#: ../../doc/posts/nuitka-this-week-7.rst:70
 msgid ""
 "That is not to say that Nuitka didn't have the typical compiler design. "
 "Like parsing inputs, optimizing a tree internally, producing outputs. But"
@@ -124,7 +124,7 @@ msgid ""
 " is stolen anyway from knowing similar projects like gcc."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:75
+#: ../../doc/posts/nuitka-this-week-7.rst:75
 msgid ""
 "There always were of course obvious designs for Nuitka, but that really "
 "never was what anybody would consider to make a Python compiler hard. But"
@@ -132,7 +132,7 @@ msgid ""
 "require examination with no solutions known ahead of time."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:80
+#: ../../doc/posts/nuitka-this-week-7.rst:80
 msgid ""
 "I guess, I am an extreme programmer, or agile, or however they call it "
 "these days. At least for Nuitka. In my professional life, I have designed"
@@ -141,13 +141,13 @@ msgid ""
 " is rare I can tell you."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:86
+#: ../../doc/posts/nuitka-this-week-7.rst:86
 msgid ""
 "But maybe that is what keeps me exciting about Nuitka. How I need to go "
 "beyond my abilities and stable ground to achieve it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:89
+#: ../../doc/posts/nuitka-this-week-7.rst:89
 msgid ""
 "But the complexity of Nuitka is so dramatically higher than anything I "
 "ever did. It is doing a complicated, i.e. detail rich work, and then it "
@@ -156,14 +156,14 @@ msgid ""
 "makes things very different from projects I typically did."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:95
+#: ../../doc/posts/nuitka-this-week-7.rst:95
 msgid ""
 "So the first version of Nuitka already had a use, and when I publicly "
 "showed it first, was capable of handling most complex programs, and the "
 "desire was to evolve gradually."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:99
+#: ../../doc/posts/nuitka-this-week-7.rst:99
 msgid ""
 "I think I have described this elsewhere, but for large parts of the well "
 "or bad designed solutions of Nuitka, there is reliable ways of "
@@ -173,7 +173,7 @@ msgid ""
 "i.e. comparing to existing implementations."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:106
+#: ../../doc/posts/nuitka-this-week-7.rst:106
 msgid ""
 "Like a calculator can be tested comparing it to one of the many already "
 "perfect ones out there. That again makes Nuitka relatively easy despite "
@@ -181,54 +181,54 @@ msgid ""
 " from wrong."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:111
+#: ../../doc/posts/nuitka-this-week-7.rst:111
 msgid ""
 "So for me, Nuitka is on the design level, something that goes through "
 "many iterations, discovery, prototyping, and is actually really exciting "
 "in that."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:115
+#: ../../doc/posts/nuitka-this-week-7.rst:115
 msgid ""
 "Compilers typically are boring. But for Nuitka that is totally not the "
 "case, because Python is not made for it. Well, that*s technically untrue,"
 " lets say not for optimizing compilers, not for type inference, etc."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:122
+#: ../../doc/posts/nuitka-this-week-7.rst:122
 msgid "UI rework"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:124
+#: ../../doc/posts/nuitka-this-week-7.rst:124
 msgid ""
 "Following up on discussion on the mailing list, the user interface of "
 "Nuitka will become more clear with ``--include-*`` options and ``--[no"
 "]follow-import*`` options that better express what is going to happen."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:129
+#: ../../doc/posts/nuitka-this-week-7.rst:129
 msgid ""
 "Also the default for following with extension modules is now precisely "
 "what you say, as going beyond what you intend to deliver makes no sense "
 "in the normal case."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:135
+#: ../../doc/posts/nuitka-this-week-7.rst:135
 msgid "Goto Generators"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:137
+#: ../../doc/posts/nuitka-this-week-7.rst:137
 msgid ""
 "Now release as 0.5.33 and there has been little regressions so far, but "
 "the one found is only in the pre-release of 0.6.0 so use that instead if "
 "you encounter a C compilation error."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:143
+#: ../../doc/posts/nuitka-this-week-7.rst:143
 msgid "Benchmarks"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:145
+#: ../../doc/posts/nuitka-this-week-7.rst:145
 msgid ""
 "The performance regressions fixed for 0.6.0 impact ``pystone`` by a lot, "
 "loops were slower, so were subscripts with constant integer indexes. It "
@@ -236,7 +236,7 @@ msgid ""
 "without noticing."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:150
+#: ../../doc/posts/nuitka-this-week-7.rst:150
 msgid ""
 "We should strive to have benchmarks with trends. Right now Nuitka "
 "speedcenter cannot do it. Focus should definitely go to this. Like I "
@@ -244,31 +244,31 @@ msgid ""
 "useful."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:157
+#: ../../doc/posts/nuitka-this-week-7.rst:157
 msgid "Twitter"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:159
+#: ../../doc/posts/nuitka-this-week-7.rst:159
 msgid ""
 "I continue to be active there. I just put out a poll about the comment "
 "system, and disabling Disqus comments I will focus on Twitter for web "
 "site comments too now."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:163
+#: ../../doc/posts/nuitka-this-week-7.rst:163
 #, python-format
 msgid "`Follow @kayhayen <https://twitter.com/kayhayen?ref_src=twsrc%5Etfw>`_"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:165
+#: ../../doc/posts/nuitka-this-week-7.rst:165
 msgid "And lets not forget, having followers make me happy. So do re-tweets."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:169
+#: ../../doc/posts/nuitka-this-week-7.rst:169
 msgid "Help Wanted"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:171
+#: ../../doc/posts/nuitka-this-week-7.rst:171
 #, python-format
 msgid ""
 "If you are interested, I am tagging issues `help wanted "
@@ -276,15 +276,15 @@ msgid ""
 " and there is a bunch, and very likely at least one *you* can help with."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:175
+#: ../../doc/posts/nuitka-this-week-7.rst:175
 msgid "Nuitka definitely needs more people to work on it."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:179
+#: ../../doc/posts/nuitka-this-week-7.rst:179
 msgid "Egg files in PYTHONPATH"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:181
+#: ../../doc/posts/nuitka-this-week-7.rst:181
 msgid ""
 "This is a relatively old issue that now got addressed. Basically these "
 "should be loaded from for compilation. Nuitka now unpacks them to a cache"
@@ -292,32 +292,32 @@ msgid ""
 " case works now, yet again improving compatibility."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:186
+#: ../../doc/posts/nuitka-this-week-7.rst:186
 msgid "Will be there for 0.6.0 release."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:190
+#: ../../doc/posts/nuitka-this-week-7.rst:190
 msgid "Certifi"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:192
+#: ../../doc/posts/nuitka-this-week-7.rst:192
 msgid ""
 "Seems request module sometimes uses that. Nuitka now includes that data "
 "file starting with 0.6.0 release."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:197
+#: ../../doc/posts/nuitka-this-week-7.rst:197
 msgid "Compatibility with pkg_resources"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:199
+#: ../../doc/posts/nuitka-this-week-7.rst:199
 msgid ""
 "It seems that getting \"distributions\" and taking versions from there, "
 "is really a thing, and Nuitka fails pkg_resources requirement checks in "
 "standalone mode at least, and that is of course sad."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:203
+#: ../../doc/posts/nuitka-this-week-7.rst:203
 msgid ""
 "I am currently researching how to fix that, not sure yet how to do it. "
 "But some forms of Python installs are apparently very affected by it. I "
@@ -327,11 +327,11 @@ msgid ""
 "better."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:212
+#: ../../doc/posts/nuitka-this-week-7.rst:212
 msgid "Plans"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:214
+#: ../../doc/posts/nuitka-this-week-7.rst:214
 msgid ""
 "Still working on the 0.6.0 release, cleaning up open ends only. Release "
 "tests seem to be pretty good looking. The UI changes and stuff are a good"
@@ -339,30 +339,33 @@ msgid ""
 "things that are low hanging fruits while I wait for test results."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:219
+#: ../../doc/posts/nuitka-this-week-7.rst:219
 msgid ""
 "But since it fixes so many performance things, it really ought to be out "
 "any day now."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:222
+#: ../../doc/posts/nuitka-this-week-7.rst:222
 msgid ""
 "Also the in-place operations stuff, I added it to 0.6.0 too, just because"
 " it feels very nice, and improves some operations by a lot too. Initially"
 " I had made a cut for 0.6.1 already, but that is no more."
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:228
+#: ../../doc/posts/nuitka-this-week-7.rst:228
 msgid "Donations"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:230
+#: ../../doc/posts/nuitka-this-week-7.rst:230
 msgid ""
 "If you want to help, but cannot spend the time, please consider to donate"
 " to Nuitka, and go here:"
 msgstr ""
 
-#: ../../posts/nuitka-this-week-7.rst:233
+#: ../../doc/posts/nuitka-this-week-7.rst:233
 msgid "`Donate to Nuitka </pages/donations.html>`_"
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

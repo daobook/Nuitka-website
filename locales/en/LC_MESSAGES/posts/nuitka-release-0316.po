@@ -1,0 +1,358 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0316.rst:7
+msgid "Nuitka Release 0.3.16"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:13
+msgid ""
+"This time there are many bug fixes, some important scalability work, and "
+"again improved compatibility and cleanups."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:16
+msgid ""
+"The release cycle had a focus on fixing the bug reports I received. I "
+"have also continued to look at CPython3 compatibility, and this is the "
+"first version to support Python3 somewhat, at least some of the basic "
+"tests programs run (of course via ``2to3`` conversion) without trouble. I"
+" don't know when, but it seems that it's going to work one day."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:22
+msgid ""
+"Also there has an effort to make the Debian packaging cleaner, addressing"
+" all kinds of small issues that prevented it from entering the Debian "
+"repository. It's still not there, but it's making progress."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:28
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:30
+msgid ""
+"Fixed a packaging problem for Linux and x64 platform, the new "
+"``swapFiber.S`` file for the fiber management was not included. Released "
+"as 0.3.15a hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:34
+msgid ""
+"Fixed an error where optimization was performed on removed unreachable "
+"code, which lead to an error. Released as 0.3.15b hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:38
+msgid ""
+"Fixed an issue with ``__import__`` and recursion not happening in any "
+"case, because when it did, it failed due to not being ported to new "
+"internal APIs. Released as 0.3.15c hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:42
+msgid ""
+"Fixed ``eval()`` and ``locals()`` to be supported in generator "
+"expressions and contractions too. Released as 0.3.15d hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:46
+msgid ""
+"Fixed the Windows batch files ``nuitka.bat`` and ``nuitka-python.bat`` to"
+" not output the ``rem`` statements with the copyright header. Released as"
+" 0.3.15d hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:50
+msgid ""
+"Fixed re-raise with ``raise``, but without a current exception set. "
+"Released as 0.3.15e hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:53
+msgid ""
+"Fixed ``vars()`` call on the module level, needs to be treated as "
+"``globals()``. Released as 0.3.15e hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:56
+msgid ""
+"Fix handling of broken new lines in source files. Read the source code in"
+" \"universal line ending mode\". Released as 0.3.15f hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:60
+msgid ""
+"Fixed handling of constant module attribute ``__name__`` being replaced. "
+"Don't replace local variables of the same name too. Released as 0.3.15g "
+"hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:64
+msgid ""
+"Fixed assigning to ``True``, ``False`` or ``None``. There was this old "
+"``TODO``, and some code has compatibility craft that does it. Released as"
+" 0.3.15g hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:68
+msgid ""
+"Fix constant dictionaries not always being recognized as shared. Released"
+" as 0.3.15g hot fix already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:71
+msgid ""
+"Fix generator function objects to not require a return frame to exist. In"
+" finalize cleanup it may not."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:74
+msgid ""
+"Fixed non-execution of cleanup codes that e.g. flush ``sys.stdout``, by "
+"adding ``Py_Finalize()``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:77
+msgid ""
+"Fix ``throw()`` method of generator expression objects to not check "
+"arguments properly."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:80
+msgid ""
+"Fix missing fallback to subscript operations for slicing with non-"
+"indexable objects."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:83
+msgid ""
+"Fix, in-place subscript operations could fail to apply the update, if the"
+" intermediate object was e.g. a list and the handle just not changed by "
+"the operation, but e.g. the length did."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:87
+msgid "Fix, the future spec was not properly preserving the future division flag."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:92
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:94
+msgid ""
+"The optimization scales now much better, because per-module optimization "
+"only require the module to be reconsidered, but not all modules all the "
+"time. With many modules recursed into, this makes a huge difference in "
+"compilation time."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:99
+msgid "The creation of dictionaries from constants is now also optimized."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:103
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:105
+msgid ""
+"As a new feature functions now have the ``func_defaults`` and "
+"``__defaults__`` attribute. It works only well for non-nested parameters "
+"and is not yet fully integrated into the parameter parsing. This improves"
+" the compatibility somewhat already though."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:110
+msgid ""
+"The names ``True``, ``False`` and ``None`` are now converted to constants"
+" only when they are read-only module variables."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:113
+msgid ""
+"The ``PYTHONPATH`` variable is now cleared when immediately executing a "
+"compiled binary unless ``--execute-with-pythonpath`` is given, in which "
+"case it is preserved. This allows to make sure that a binary is in fact "
+"containing everything required."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:120
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:122
+msgid ""
+"The help output of Nuitka was polished a lot more. It is now more "
+"readable and uses option groups to combine related options together."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:125
+msgid ""
+"The in-line copy of Scons is not checked with PyLint anymore. We of "
+"course don't care."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:128
+msgid ""
+"Program tests are no longer executed in the program directory, so failed "
+"module inclusions become immediately obvious."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:131
+msgid ""
+"The basic tests can now be run with ``PYTHON=python3.2`` and use ``2to3``"
+" conversion in that case."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:136
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:138
+msgid ""
+"Moved ``tags`` to a separate module, make optimization emit only "
+"documented tags, checked against the list of allowed ones."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:141
+msgid ""
+"The Debian package has seen lots of improvements, to make it \"lintian "
+"clean\", even in pedantic mode. The homepage of Nuitka is listed, a watch"
+" file can check for new releases, the git repository and the gitweb are "
+"referenced, etc."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:146
+msgid ""
+"Use ``os.path.join`` in more of the test code to achieve more Windows "
+"portability for them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:149
+msgid "Some more PyLint cleanups."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:153
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:155
+msgid "There is now a ``Crasher`` test, for tests that crashed Nuitka previously."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:158
+msgid ""
+"Added a program test where the imported module does a ``sys.exit()`` and "
+"make sure it really doesn't continue after the ``SystemExit`` exception "
+"that creates."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:162
+msgid ""
+"Cover the type of ``__builtins__`` in the main program and in imported "
+"modules in tests too. It's funny and differs between module and dict in "
+"CPython2."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:166
+msgid ""
+"Cover a final ``print`` statement without newline in the test. Must still"
+" receive a newline, which only happens when ``Py_Finalize()`` is called."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:170
+msgid "Added test with functions that makes a ``raise`` without an exception set."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:173
+msgid "Cover the calling of ``vars()`` on module level too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:175
+msgid "Cover the use of eval in contractions and generator expressions too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:177
+msgid "Cover ``func_defaults`` and ``__default__`` attributes for a function too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:180
+msgid ""
+"Added test function with two ``raise`` in an exception handler, so that "
+"one becomes dead code and removed without the crash."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:185
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:187
+msgid ""
+"The \"git flow\" was really great in this release cycle. There were many "
+"hot fix releases being made, so that the bugs could be addressed "
+"immediately without requiring the overhead of a full release. I believe "
+"that this makes Nuitka clearly one of the best supported projects."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:192
+msgid ""
+"This quick turn-around also encourages people to report more bugs, which "
+"is only good. And the structure is there to hold it. Of course, the many "
+"bug fixes meant that there is not as much new development, but that is "
+"not the priority, correctness is."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:197
+msgid ""
+"The work on Python3 is a bit strange. I don't need Python3 at all. I also"
+" believe it is that evil project to remove cruft from the Python core and"
+" make developers of all relevant Python software, add compatibility cruft"
+" to their software instead. Yet, I can't really stop to work on it. It "
+"has that appeal of small fixups here and there, and then something else "
+"works too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:204
+msgid ""
+"Python3 work is like when I was first struggling with Nuitka to pass the "
+"CPython2 unit tests for a first time. It's fun. And then it finds real "
+"actual bugs that apply to CPython2 too. Not doing ``Py_Finalize`` (but "
+"having to), the slice operations shortcomings, the bug of subscript in-"
+"place, and so on. There is likely more things hidden, and the earlier "
+"Python3 is supported, the more benefit from increased test covered."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0316.rst:211
+msgid ""
+"What's missing is more \"hg\" completeness. I think only the ``raise`` "
+"without exception set and the ``func_defaults`` issue were going into its"
+" direction, but it won't be enough yet."
+msgstr ""
+

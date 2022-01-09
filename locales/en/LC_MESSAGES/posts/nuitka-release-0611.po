@@ -1,0 +1,576 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0611.rst:7
+msgid "Nuitka Release 0.6.11"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:13
+msgid ""
+"This release is a massive improvement in many ways with lots of bug fixes"
+" and new features."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:20
+msgid ""
+"Fix, the ``.pyi`` file parser didn't handle relative imports. Fixed in "
+"0.6.10.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:23
+msgid ""
+"Windows: Fix, multiprocessing plugin was not working reliable following "
+"of imports from the additional entry point. Fixed in 0.6.10.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:27
+msgid ""
+"Pipenv: Workaround parsing issue with our ``setup.py`` to allow "
+"installation from Github. Fixed in 0.6.10.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:30
+msgid ""
+"Merging of branches in optimization could give indetermistic results "
+"leading to more iterations than necessary. Fixed in 0.6.10.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:33
+msgid ""
+"Windows: Avoid profile powershell when attempting to resolve symlinks. "
+"Fixed in 0.6.10.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:36
+msgid ""
+"Windows: Fix, always check for stdin, stdout, and stderr presence. This "
+"was so far restricted to gui mode applications, but it seems to be "
+"necessary in other situations too. Fixed in 0.6.10.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:40
+msgid ""
+"Python2: Fix, ``--trace-execution`` was not working for standalone mode "
+"but can be useful for debugging. Fixed in 0.6.10.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:43
+msgid ""
+"Windows: Onefile could run into path length limits. Fixed in 0.6.10.3 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:46
+msgid ""
+"Windows: The winlib gcc download link became broken and was updated. "
+"Fixed in 0.6.10.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:49
+msgid ""
+"Plugins: The \"__main__\" module was not triggering all plugin hooks, but"
+" it needs to for completeness."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:52
+msgid ""
+"Standalone: Fix, symlinked Python installations on Windows were not "
+"working, with dependency walker being unable to look into these. Fixed in"
+" 0.6.10.4 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:56
+msgid ""
+"Standalone: Fix support for numpy on Windows and macOS, the plugin failed"
+" to copy important DLLs. Fixed in 0.6.10.4 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:59
+msgid ""
+"Python3: For versions before 3.7, the symlink resolution also needs to be"
+" done, but wasn't handling the bytes output yet. Fixed in 0.6.10.4 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:63
+msgid ""
+"Fix, folder based inclusion would both pick up namespace folders and "
+"modules of the same name, crashing the compilation due to conflicts. "
+"Fixed in 0.6.10.4 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:67
+msgid "Fix, the ``--lto`` wasn't used for clang on non-Windows yet."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:69
+msgid ""
+"Fix, the order of locals dict releases wasn't enforced, which could lead "
+"to differences that break caching of C files potentially. Fixed in "
+"0.6.10.5 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:73
+msgid ""
+"Fix, ``hash`` nodes didn't consider if their argument was raising, even "
+"if the type of the argument was ``str`` and therefore the operation "
+"should not. Fixed in 0.6.10.5 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:77
+msgid ""
+"Fix, need to copy type shape and escape description for the replacement "
+"inverted comparisons when used with ``not``, otherwise the compilation "
+"can crash as these are expected to be present at all times. Fixed in "
+"0.6.10.5 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:82
+msgid ""
+"Fix, some complex constant values could be confused, e.g. ``-0j`` and "
+"``0j``. These corner cases were not properly considered in the constant "
+"loading code, only for ``float`` so far."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:86
+msgid ""
+"Standalone: Fix, bytecode only standard library modules were not working."
+" This is at least used with Fedora 33."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:89
+msgid "Linux: Fix, extension modules compiled with ``--lto`` were not working."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:92
+msgid ""
+"Windows: Retry if updating resources fails due to Virus checkers keeping "
+"files locked."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:95
+msgid ""
+"Plugins: Pre- and postload code of modules should not be allowed to cause"
+" ``ImportError``, as these will be invisible to the other parts of "
+"optimization, instead make them unraisable error traces."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:99
+msgid "Standalone: Adding missing import for SciPy 1.6 support."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:101
+msgid ""
+"Windows: Fix, only export required symbols when using MinGW64 in module "
+"mode."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:106
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:108
+msgid "Python3.9: Added official support for this version."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:110
+msgid ""
+"Onefile: Added command line options to include data files. These are "
+"``--include-package-data`` which will copy all non-DLLs and non-Python "
+"files of package names matching the pattern given. And ``--include-data-"
+"file`` takes source and relative target file paths and copies them. For "
+"onefile this is the only way to include files, for standalone mode they "
+"are mostly a convenience function."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:117
+msgid ""
+"Onefile: Added mode where the file is unpacked to a temporary folder "
+"before running instead of doing it to appdata."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:120
+msgid ""
+"Onefile: Added linux specific options ``--linux-onefile-icon`` to allow "
+"provision of an icon to use in onefile mode on Linux, so far this was "
+"only available as the hard coded path to a Python icon, which also didn't"
+" exist on all platforms."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:125
+msgid ""
+"UI: Major logging cleanup. Everything is now using our tracing classes "
+"and even error exits go through there and are therefore colored if "
+"possible."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:129
+msgid ""
+"Plugins: Make it easier to integrate commercial plugins, now only an "
+"environment variable needs to point to them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:132
+msgid ""
+"UI: Enhanced option parsing gives notes. This complains about options "
+"that conflict or that are implied in others. Trying to catch more usage "
+"errors sooner."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:136
+msgid ""
+"Plugins: Ignore exceptions in buggy plugin code, only warn about them "
+"unless in debug mode, where they still crash Nuitka."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:139
+msgid ""
+"Scons: More complete scons report files, includes list values as well and"
+" more modes used."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:142
+msgid ""
+"Windows: The ``clcache`` is now included and no longer used from the "
+"system."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:145
+msgid "Output for ``clcache`` and ``ccache`` results got improved."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:147
+msgid ""
+"Enhanced support for ``clang``, on Windows if present near a ``gcc.exe`` "
+"like it is the case for some winlibs downloads, it will be used. To use "
+"it provide ``--mingw64 --clang`` both. Without the first one, it will "
+"mean ``clangcl.exe`` which uses the MSVC compiler as a host."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:155
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:157
+msgid ""
+"Some modules had very slow load times, e.g. if they used many list "
+"objects due to linear searches for memory deduplication of objects. We "
+"now have dictionaries of practically all constant objects loaded, making "
+"these more instant."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:162
+msgid ""
+"Use less memory at compile time due using ``__slots__`` for all node "
+"types, finally figured out, how to achieve this with multiple "
+"inheritance."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:166
+msgid ""
+"Use hedley for compiler macros like ``unlikely`` as they know best how to"
+" do these."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:169
+msgid ""
+"Special case the merging of 2 branches avoiding generic code and being "
+"much faster."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:172
+msgid ""
+"Hard imports have better code generated, and are being optimized into for"
+" the few standard library modules and builtin modules we handle, they "
+"also now annotate the type shape to be module."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:176
+msgid ""
+"No longer annotate hard module import attribute lookups as control flow "
+"escapes. Not present attributes are changed into static raises. Trust for"
+" values is configured for a few values, and experimental."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:180
+msgid ""
+"Avoid preloaded packages for modules that have no side effects and are in"
+" the standard library, typically ``.pth`` files will use e.g. ``os`` but "
+"that's not needed to be preserved."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:184
+msgid ""
+"Use ``incbin`` for including binary data through inline assembly of the C"
+" compiler. This covers many more platforms than our previous linker "
+"option hacks, and the fallback to generated C code. In fact everything "
+"but Windows uses this now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:191
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:193
+msgid ""
+"Windows: For Scons we now require a Python 3.5 or higher to be installed "
+"to use it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:196
+msgid ""
+"Windows: Removed support for gcc older than version 8. This specifically "
+"affects CondaCC and older MinGW64 installations. Since Nuitka can now "
+"download the MinGW64 10, there is no point in having these and they cause"
+" issues."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:201
+msgid ""
+"We took over the maintenance of clcache as Nuitka/clcache which is not "
+"yet ready for public consumption, but should become the new source of "
+"clache in the future."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:205
+msgid ""
+"Include an inline copy of clcache in Nuitka and use it on Windows for "
+"MSVC and ClangCL."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:208
+msgid ""
+"Removed compatibility older aliases of follow option, ``--recurse-*`` and"
+" require ``--follow-*`` options to be used instead."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:211
+msgid ""
+"For pylint checking, the tool now supports a ``--diff`` mode where only "
+"the changed files get checked. This is much faster and allows to do it "
+"more often before commit."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:215
+msgid ""
+"Check the versions of isort and black when doing the autoformat to avoid "
+"using outdated versions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:218
+msgid "Handling missing pylint more gracefully when checking source code quality."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:221
+msgid ""
+"Make sure to use the codespell tool with Python3 and make sure to error "
+"exit when spelling problems were found, so we can use this in Github "
+"actions too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:225
+msgid "Removed Travis config, we now only use Github actions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:227
+msgid "Removed landscape config, it doesn't really exist anymore."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:229
+msgid "Bumped all PyPI dependnecies to their latest versions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:231
+msgid ""
+"Recommend ccache on Debian, as we now consider the absence of ccache "
+"something to warn about."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:234
+msgid ""
+"Plugins: The DLLs asked for by plugins that are not found are no longer "
+"warned about."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:237
+msgid ""
+"Allow our checker and format tools to run on outside of tree code. We are"
+" using that for Nuitka/clcache."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:240
+msgid "Added support for Fedora 33 and openSUSE 15.3, as well as Ubuntu Groovy."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:243
+msgid "Windows: Check if Windows SDK is installed for MSVC and ClangCL."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:245
+msgid ""
+"Windows: Enhanced wording in case no compiler was found. No longer tell "
+"people how to manually install MinGW64, that is no longer necessary and "
+"``pywin32`` is not needed to detect MSVC, so it's not installed if not "
+"found."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:250
+msgid ""
+"Detect \"embeddable Python\" by missing include files, and reject it with"
+" proper error message."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:253
+msgid ""
+"Added onefile and standalone as a use case to the manual and put also the"
+" DLL and data files problems as typically issues."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:258
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:260
+msgid ""
+"Avoid decimal and string comparisons for Python versions checks, these "
+"were lazy and are going to break once 3.10 surfaces. In testing we now "
+"use tuples, in Nuitka core hexacimal values much like CPython itself "
+"does."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:265
+msgid ""
+"Stop using subnode child getters and setters, and instead only use "
+"subnode attributes. This was gradually changed so far, but in this "
+"release all remaining uses have migrated. This should also make the "
+"optimization stage go faster."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:270
+msgid ""
+"Change node constructors to not use a decorator to resolve conflicts with"
+" builtin names, rather handle these with manual call changes, the "
+"decorator only made it difficult to read and less performant."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:274
+msgid ""
+"Move safe string helpers to their own dedicated helper file, allowing for"
+" reuse in plugin code that doesn't want to use all of Nuitka C helpers."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:278
+msgid ""
+"Added utils code for inline copy imports, as we use that for quite a few "
+"things now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:281
+msgid "Further restructured the Scons files to use more common code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:283
+msgid ""
+"Plugins: The module name objects now reject many ``str`` specific APIs "
+"that ought to not be used, and the code got changed to use these instead,"
+" leading to cleaner and more correct usages."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:287
+msgid "Using named tuples to specify included data files and entry points."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:289
+msgid ""
+"Use ``pkgutil`` in plugins to scan for modules rather than listing "
+"directories."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:294
+msgid "Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:296
+msgid "New option to display executed commands during comparisons."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:298
+msgid "Added test suite for onefile testing."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:302
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:304
+msgid ""
+"This release has seen Python3.9 and Onefile both being completed. The "
+"later needs compression added on Windows, but that can be added in a "
+"coming release, for now it's fully functional."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:308
+msgid ""
+"The focus clearly has been on massive cleanups, some of which will affect"
+" compile time performance. There is relatively little new optimization "
+"otherwise."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:312
+msgid ""
+"The adoption of clcache enables a very fast caching, as it's now loaded "
+"directly into the Scons process, avoiding a separate process fork."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:315
+msgid ""
+"Generally a lot of polishing has been applied with many cleanups lowering"
+" the technical debt. It will be interesting to see where the hard module "
+"imports can lead us in terms of more optimization. Static optimization of"
+" the Python version comparisons and checks is needed to lower the amount "
+"of imports to be processed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:321
+msgid ""
+"Important fixes are also included, e.g. the constants loading performance"
+" was too slow in some cases. The ``multiprocessing`` on Windows and "
+"``numpy`` plugins were regressed and finally everything ought to be back "
+"to working fine."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0611.rst:326
+msgid ""
+"Future work will have to aim at enhanced scalability. In some cases, "
+"Nuitka still takes too much time to compile if projects like Pandas "
+"include virtually everything installed as an option for it to use."
+msgstr ""
+

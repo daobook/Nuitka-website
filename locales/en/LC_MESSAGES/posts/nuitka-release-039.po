@@ -1,0 +1,489 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-039.rst:7
+msgid "Nuitka Release 0.3.9"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:13
+msgid ""
+"This is about the new release of Nuitka which some bug fixes and offers a"
+" good speed improvement."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:16
+msgid ""
+"This new release is major milestone 2 work, enhancing practically all "
+"areas of Nuitka. The main focus was on faster function calls, faster "
+"class attributes (not instance), faster unpacking, and more built-ins "
+"detected and more thoroughly optimizing them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:23
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:25
+msgid ""
+"Exceptions raised inside with statements had references to the exception "
+"and traceback leaked."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:28
+msgid ""
+"On Windows the binaries ``sys.executable`` pointed to the binary itself "
+"instead of the Python interpreter. Changed, because some code uses "
+"``sys.executable`` to know how to start Python scripts."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:32
+msgid ""
+"There is a bug (fixed in their repository) related to C++ raw strings and"
+" C++ \"trigraphs\" that affects Nuitka, added a workaround that makes "
+"Nuitka not emit \"trigraphs\" at all."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:36
+msgid ""
+"The check for mutable constants was erroneous for tuples, which could "
+"lead to assuming a tuple with only mutable elements to be not mutable, "
+"which is of course wrong."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:42
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:44
+msgid ""
+"This time there are so many new optimization, it makes sense to group "
+"them by the subject."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:48
+msgid "Exceptions"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:50
+msgid ""
+"The code to add a traceback is now our own, which made it possible to use"
+" frames that do not contain line numbers and a code object capable of "
+"lookups."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:54
+msgid ""
+"Raising exceptions or adding to tracebacks has been made way faster by "
+"reusing a cached frame objects for the task."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:57
+msgid ""
+"The class used for saving exceptions temporarily (e.g. used in "
+"``try``/``finally`` code, or with statement) has been improved."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:60
+msgid ""
+"It now doesn't make a copy of the exception with a C++ ``new`` call, but "
+"it simply stores the exception properties itself and creates the "
+"exception object only on demand, which is more efficient."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:64
+msgid ""
+"When catching exceptions, the addition of tracebacks is now done without "
+"exporting and re-importing the exception to Python, but directly on the "
+"exception objects traceback, this avoids a useless round trip."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:70
+msgid "Function Calls"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:72
+msgid ""
+"Uses of PyObject_Call provide ``NULL`` as the dictionary, instead of an "
+"empty dictionary, which is slightly faster for function calls."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:75
+msgid ""
+"There are now dedicated variants for complex function calls with ``*`` "
+"and ``**`` arguments in all forms."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:78
+msgid ""
+"These can take advantage of easier cases. For example, a merge with star "
+"arguments is only needed if there actually were any of these."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:81
+msgid ""
+"The check for non-string values in the ``**`` arguments can now be "
+"completely short-cut for the case of a dictionary that has never had a "
+"string added. There is now code that detects this case and skips the "
+"check, eliminating it as a performance concern."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:87
+msgid "Parameter Parsing"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:89
+msgid "Reversed the order in which parameters are checked."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:91
+msgid ""
+"Now the keyword dictionary is iterated first and only then the positional"
+" arguments after that is done. This iteration is not only much faster "
+"(avoiding repeated lookups for each possible parameter), it also can be "
+"more correct, in case the keyword argument is derived from a dictionary "
+"and its keys mutate it when being compared."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:97
+msgid ""
+"Comparing parameter names is now done with a fast path, in which the "
+"pointer values are compare first. This can avoid a call to the comparison"
+" at all, which has become very likely due to the interning of parameter "
+"name strings, see below."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:102
+msgid ""
+"Added a dedicated call to check for parameter equality with rich equality"
+" comparison, which doesn't raise an exception."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:105
+msgid ""
+"Unpacking of tuples is now using dedicated variants of the normal "
+"unpacking code instead of rolling out everything themselves."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:109
+msgid "Attribute Access"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:111
+msgid ""
+"The class type (in executables, not yet for extension modules) is changed"
+" to a faster variant of our own making that doesn't consider the "
+"restricted mode a possibility. This avoids very expensive calls, and "
+"makes accessing class attributes in compiled code and in non-compiled "
+"code faster."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:117
+#, python-format
+msgid ""
+"Access to attributes (but not of instances) got in-lined and therefore "
+"much faster. Due to other optimization, a specific step to intern the "
+"string used for attribute access is not necessary with Nuitka at all "
+"anymore. This made access to attributes about 50% faster which is big of "
+"course."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:124
+msgid "Constants"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:126
+msgid ""
+"The bug for mutable tuples also caused non-mutable tuples to be "
+"considered as mutable, which lead to less efficient code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:129
+msgid ""
+"The constant creation with the g++ bug worked around, can now use raw "
+"strings to create string constants, without resorting to un-pickling them"
+" as a work around. This allows us to use ``PyString_FromStringAndSize`` "
+"to create strings again, which is obviously faster, and had not been "
+"done, because of the confusion caused by the g++ bug."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:136
+msgid ""
+"For string constants that are usable as attributes (i.e. match the "
+"identifier regular expression), these are now interned, directly after "
+"creation. With this, the check for identical value of pointers for "
+"parameters has a bigger chance to succeed, and this saves some memory "
+"too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:142
+msgid ""
+"For empty containers (set, dict, list, tuple) the constants created are "
+"now are not unstreamed, but created with the dedicated API calls, saving "
+"a bit of code and being less ugly."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:146
+msgid ""
+"For mutable empty constant access (set, dict, list) the values are no "
+"longer made by copying the constant, but instead with the API functions "
+"to create new ones. This makes code like ``a = []`` a tiny bit faster."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:151
+msgid ""
+"For slice indices the code generation now takes advantage of creating a "
+"C++ ``Py_ssize_t`` from constant value if possible. Before it was "
+"converting the integer constant at run time, which was of course wasteful"
+" even if not (very) slow."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:157
+msgid "Iteration"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:159
+msgid ""
+"The creation of iterators got our own code. This avoids a function call "
+"and is otherwise only a small gain for anything but sequence iterators. "
+"These may be much faster to create now, as it avoids another call and "
+"repeated checks."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:164
+msgid ""
+"The next on iterator got our own code too, which has simpler code flow, "
+"because it avoids the double check in case of NULL returned."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:167
+msgid ""
+"The unpack check got similar code to the next iterator, it also has "
+"simpler code flow now and avoids double checks."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:171
+msgid "Built-ins"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:173
+msgid ""
+"Added support for the ``list``, ``tuple``, ``dict``, ``str``, ``float`` "
+"and ``bool`` built-ins along with optimizing their use with constant "
+"parameter."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:177
+msgid ""
+"Added support for the ``int`` and ``long`` built-ins, based on a new "
+"\"call spec\" object, that detects parameter errors at compile time and "
+"raises appropriate exceptions as required, plus it deals with keyword "
+"arguments just as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:182
+msgid ""
+"So, to Nuitka it doesn't matter now it you write ``int(value) ``or "
+"``int(x = value)`` anymore. The ``base`` parameter of these built-ins is "
+"also supported."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:186
+msgid ""
+"The use of this call spec mechanism will the expanded, currently it is "
+"not applied to the built-ins that take only one parameter. This is a work"
+" in progress as is the whole built-ins business as not all the built-ins "
+"are covered yet."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:192
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:194
+msgid ""
+"In 0.3.8 per module global classes were introduced, but the "
+"``IMPORT_MODULE`` kept using the old universal class, this got resolved "
+"and the old class is now fully gone."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:198
+msgid ""
+"Using ``assertObject`` in more cases, and in more places at all, catches "
+"errors earlier on."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:201
+msgid ""
+"Moved the addition to tracebacks into the ``_PythonException`` class, "
+"where it works directly on the contained traceback. This is cleaner as it"
+" no longer requires to export exceptions to Python, just to add a "
+"traceback entry."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:206
+msgid ""
+"Some ``PyLint`` cleanups were done, reducing the number of reports a bit,"
+" but there is still a lot to do."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:209
+msgid ""
+"Added a ``DefaultValueIdentifier`` class that encapsulates the access to "
+"default values in the parameter parsing more cleanly."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:212
+msgid ""
+"The module ``CodeTemplatesListContractions`` was renamed to "
+"``CodeTemplatesContractions`` to reflect the fact that it deals with all "
+"kinds of contractions (also set and dict contractions), not just list "
+"contractions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:217
+msgid ""
+"Moved the with related template to its own module ``CodeTemplatesWith``, "
+"so its easier to find."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:220
+msgid ""
+"The options handling for g++ based compilers was cleaned up, so that g++ "
+"4.6 and MinGW are better supported now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:223
+msgid "Documented more aspects of the Scons build file."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:225
+msgid "Some more generated code white space fixes."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:227
+msgid ""
+"Moved some helpers to dedicated files. There is now ``calling.hpp`` for "
+"function calls, an ``importing.cpp`` for import related stuff."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:230
+msgid ""
+"Moved the manifest generation to the scons file, which now produces ready"
+" to use executables."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:235
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:237
+msgid ""
+"Added a improved version of \"pybench\" that can cope with the \"0 ms\" "
+"execution time that Nuitka has for some if its sub-tests."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:240
+msgid "Reference counting test for with statement was added."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:242
+msgid ""
+"Micro benchmarks to demonstrate try finally performance when an exception"
+" travels through it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:245
+msgid ""
+"Micro benchmark for with statement that eats up exceptions raised inside "
+"the block."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:248
+msgid "Micro benchmarks for the read and write access to class attributes."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:250
+msgid ""
+"Enhanced ``Printing`` test to cover the trigraphs constant bug case. "
+"Output is required to make the error detectable."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:253
+msgid ""
+"Enhanced ``Constants`` test to cover repeated mutation of mutable tuple "
+"constants, this covers the bug mentioned."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:258
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:260
+msgid ""
+"Added a credits section to the \"README.txt\" where I give credit to the "
+"people who contributed to Nuitka, and the projects it is using. I will "
+"make it a separate posting to cite these."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:264
+msgid ""
+"Documented the requirements on the compiler more clearly, document the "
+"fact that we require scons and which version of Python (2.6 or 2.7)."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:268
+msgid ""
+"The is now a codespeed implementation up and running with historical data"
+" for up to Nuitka 0.3.8 runs of \"PyStone\" and with pybench. It will be "
+"updated for 0.3.9 once I have the infrastructure in place to do that "
+"automatically."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:273
+msgid "The cleanup script now also removes .so files."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:275
+msgid ""
+"The handling of options for g++ got improved, so it's the same for g++ "
+"and MinGW compilers, plus adequate errors messages are given, if the "
+"compiler version is too low."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:279
+msgid ""
+"There is now a ``--unstriped`` option that just keeps the debug "
+"information in the file, but doesn't keep the assertions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-039.rst:282
+msgid ""
+"This will be helpful when looking at generated assembler code from Nuitka"
+" to not have the distortions that ``--debug`` causes (reduced "
+"optimization level, assertions, etc.) and instead a clear view."
+msgstr ""
+

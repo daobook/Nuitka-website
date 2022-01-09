@@ -111,6 +111,7 @@ In the meantime you can find its `latest version here
 .. toctree::
 
    Download <doc/download>
+   use
    User Manual <doc/user-manual>
    pages/support
 

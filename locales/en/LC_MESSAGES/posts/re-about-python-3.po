@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/re-about-python-3.rst:7
+msgid "Re: About Python 3"
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:9
+msgid ""
+"In `Alex Gaynor's post <http://alexgaynor.net/2013/dec/30/about-"
+"python-3/>`__ there is just about everything right. I still want to add "
+"my take on it."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:13
+msgid ""
+"Python3 is a fork of the Python community, that has left the user base "
+"largely behind. After developing features very conservatively for a long "
+"time (``from __future__ import division`` and stuff), where features were"
+" first available but not active by default, that whole \"Python 3000\" "
+"thing came up."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:19
+msgid ""
+"Misguided, after having maintained CPython on a level of excellence for "
+"such a long time, there was a sense of \"finally we get to make free "
+"choices\". I can understand that. And having witnessed Gnome 2.0.0, and "
+"KDE 4.0.0, I even start to believe that there is some kind of underlying "
+"law. Something that makes people want to start over."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:25
+msgid ""
+"That \"5 years plan\" Alex mentioned has failed, and everybody knows that"
+" without solving the GIL within the next 5 years, i.e. another "
+"incompatible Python change, it will likely become obsolete."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:29
+msgid ""
+"In terms of Python2.8, call it that way. Or have a 3.5 that has ``print``"
+" statement, and then all kinds of incompatible changes to Python3 to make"
+" it behave sane ``bytes(7)`` needs to do what ``str(7)`` once it. That "
+"would be about ``from __past__ import ....`` I suppose."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:34
+msgid ""
+"I also had another idea, having a \"python2\" built-in module that "
+"carries a CPython2 interpreter and proxy objects for instances, where "
+"they talk to another with incompatible types (new ``bytes``/``unicode`` "
+"to old ``str``)."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:39
+msgid ""
+"Due to my work on that `Python compiler </pages/overview.html>`__ that "
+"should have existed 20 years ago, I am familiar enough, to actually be "
+"able and create that kind of CPython2/CPython3 hybrid."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:44
+msgid "But the main problems with all of that are:"
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:46
+msgid ""
+"CPython is developed by volunteers, and as such, they are neither obliged"
+" to do what we need, nor will they bend to any amount of posting. We need"
+" to get our acts together or it's not happening, and we are people who "
+"care about Python relevancy."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:51
+msgid ""
+"There may not be nearly enough overlap of people capable and caring. And "
+"that would be a tremendous amount of work. Highly speculative, in the "
+"sense, that it may not see fruits."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:55
+msgid ""
+"And then, when you got that sorted out, expect a hostile reaction from "
+"the core developers and/or PSF. Whatever it is, that you develop, you "
+"won't be able to call it Python 2.8, as they are going to hate it."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:60
+msgid ""
+"And finally, as a course of action, that may even bring the complete "
+"downfall of Python as a community. The controversy associated is not for "
+"everybody, and we don't need a libreoffice/openoffice situation in "
+"Python, do we."
+msgstr ""
+
+#: ../../doc/posts/re-about-python-3.rst:65
+msgid ""
+"It's a pity, because clearly, for Nuitka there would be a bunch of "
+"patches, that I would like to make, that would make my life far easier, "
+"and even interpreted Python faster."
+msgstr ""
+

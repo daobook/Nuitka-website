@@ -1,0 +1,381 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0614.rst:7
+msgid "Nuitka Release 0.6.14"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:13
+msgid ""
+"This release has few, but important bug fixes. The main focus was on "
+"expanding standalone support, esp. for PySide2, but also and in general "
+"with plugins added that workaround ``pkg_resources`` usage for version "
+"information."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:18
+msgid ""
+"Also an important new features was added, e.g. the project configuration "
+"in the main file should prove to be very useful."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:23
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:25
+msgid ""
+"Compatibility: Fix, modules that failed to import, should be retried on "
+"next import."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:28
+msgid ""
+"So far we only ever executed the module body once, but that is not how "
+"it's supposed to be. Instead, only if it's in ``sys.modules`` that should"
+" happen, which is the case after successful import."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:32
+msgid ""
+"Compatibility: Fix, constant ``False`` values in right hand side of "
+"``and``/``or`` conditions were generating wrong code if the left side was"
+" of known ``bool`` shape too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:36
+msgid "Standalone: Fix, add ``styles`` Qt plugins to list of sensible plugins."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:39
+msgid "Otherwise no mouse hover events are generated on some platforms."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:41
+msgid ""
+"Compatibility: Fix, relative ``from`` imports beyond level 1 were not "
+"loadingg modules from packages if necessary. Fixed in 0.6.13.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:45
+msgid ""
+"Standalone: The ``crypto`` DLL check for Qt bindings was wrong. Fixed in "
+"0.6.13.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:48
+msgid ""
+"Standalone: Added experimental support for PySide6, but for good results,"
+" 6.1 will be needed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:51
+msgid "Standalone: Added support for newer matplotlib. Fixed in 0.6.12.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:54
+msgid ""
+"Standalone: Reverted changes related to ``pkg_resources`` that were "
+"causing regressions. Fixed in 0.6.13.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:57
+msgid ""
+"Standalone: Adding missing implicit dependency for ``cytoolz`` package. "
+"Fixed in 0.6.13.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:60
+msgid ""
+"Standalone: Matching for package names to not suggest recompile for was "
+"broken and didn't match. Fixed in 0.6.13.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:65
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:67
+msgid "Added support for project options."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:69
+msgid ""
+"When found in the filename provided, Nuitka will inject options to the "
+"commandline, such that it becomes possible to do a complex project with "
+"only using"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:105
+msgid ""
+"Refer to the User Manual for a table of directives and the variables "
+"allowed to be used."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:108
+msgid "Added option to include whole data directory structures in standalone."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:111
+msgid ""
+"The new option ``--include-data-dir`` was added and is mostly required "
+"for onefile mode, but recommended for standalone too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:114
+msgid "Added ``pkg-resources`` plugin."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:116
+msgid ""
+"This one can resolve code like this at compile time without any need for "
+"pip metadata to be present or used."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:124
+msgid "Standalone: Also process early imports in optimization."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:126
+msgid ""
+"Otherwise plugins cannot work on standard library modules. This makes it "
+"possible to handle them as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:131
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:133
+msgid "Faster binary operations."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:135
+#, python-format
+msgid ""
+"Applying lessons learnt during the enhancements for in-place operations "
+"that initially gave worse results than some manual code, we apply the "
+"same tricks for all binary operations, which speeds them up by "
+"significant margins, e.g. 30% for float addition, 25% for Python int "
+"addition, and still 6% for Python int addition."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:141
+msgid "More direct optimization of unary operations on constant value."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:143
+msgid ""
+"Without this, ``-1`` was not directly a constant value, but had to go "
+"through the unary ``-`` operation, which it still does, but now it's done"
+" at tree building time."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:147
+msgid "More direct optimization for ``not`` in branches."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:149
+msgid ""
+"Invertible comparisons, i.e. ``is``/``is not`` and ``in``/``not in`` do "
+"not have do be done during optimization. This mainly avoids noise during "
+"optimization from such unimportant steps."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:153
+msgid "More direct optimization for constant slices."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:155
+msgid ""
+"These are used in Python3 for all subscripts, e.g. ``a[1:2]`` will use "
+"``slice(1,2)`` effectively. For Python2 they are used less often, but "
+"still. This also avoids a lot of noise during optimization, mostly on "
+"Python3"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:160
+msgid "Scons: Avoid writing database to disk entirely."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:162
+msgid ""
+"This saves a bit of disk churn and makes it unnecessary to specify the "
+"location such that it doesn't collide between Python versions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:165
+msgid ""
+"For optimization passes, use previous max total as minimum for next pass."
+" That will usually be a more accurate result, rather than starting from 1"
+" again. Part of 0.6.13.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:169
+msgid ""
+"Enhancements to the branch merging improve the scalability of Nuitka "
+"somewhat, although the merging itself is still not very scalable, there "
+"are some modules that are very slow to optimize still."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:173
+msgid ""
+"Use ``orderset`` if available over the inline copy for ``OrderedSet`` "
+"which is much faster and improves Nuitka compile times."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:176
+msgid ""
+"Make ``pkgutil`` a hard import too, this is in preparation of more "
+"optimization for its functions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:181
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:183
+msgid ""
+"Upstream patches for ``PySide6`` have been contributed and merged into "
+"the development branch ``dev``. Full support should be available once "
+"this is released as part of 6.1 which is waiting for Qt 6.1 naturally."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:188
+msgid ""
+"Patches for ``PySide2`` are available to commercial customers, see "
+"`PySide2 support <https://nuitka.net/pages/pyside2.html>`__ page."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:191
+msgid ""
+"Formatted all documents with ``rstfmt`` and made that part of the commit "
+"hook for Nuitka. It now works for all documents we have."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:194
+msgid ""
+"Updated inline copy of ``tqdm`` to 4.59.0 which ought to address spurious"
+" errors given."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:197
+msgid ""
+"User Manual: Remove ``--show-progress`` from the tutoral. The default "
+"progress bar is then disabled, and is actually much nicer to use."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:200
+msgid ""
+"Developer Manual: Added description of how context managers should be "
+"named."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:203
+msgid "Cleanup language for some warnings and outputs."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:205
+msgid ""
+"It was still using obsolete \"recursion\" language rather than talking "
+"about \"following imports\", which is the new one."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:210
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:212
+msgid ""
+"Remove dead code related to constants marshal, the data composer has "
+"replaced this."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:215
+msgid ""
+"Avoid internal API usage for loading extension modules on Linux, there is"
+" a function in ``sys`` module to get the ld flags."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:220
+msgid "Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:222
+msgid "Fix, the ``only`` mode wasn't working properly."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:224
+msgid ""
+"Use new project options feature for specific options in basic tests "
+"allowing to remove them from the test runner."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:229
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:231
+msgid ""
+"For PySide2 things became more perfect, but it takes upstream patches "
+"unfortunately such that only PySide6.1 will be working out of the box "
+"outside of the commercial offering. We will also attempt to provide "
+"workarounds, but there are some things that cannot be done that way."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:236
+msgid ""
+"This release added some more scalability to the optimization process, "
+"however there will be more work needed to make efficient branch merges."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:239
+msgid ""
+"For onefile, a feature to include whole directories had been missing, and"
+" could not easily be achieved with the existing options. This further "
+"rounds this up, now what's considered missing is compression and macOS "
+"support, both of which should be coming in a future release."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:244
+msgid ""
+"For the performance side of things, the binary operator work can actually"
+" yield pretty good gains, with double digit improvements, but this covers"
+" only so much. Much more C types and better type tracing would be needed,"
+" but there was no progress on this front. Future releases will have to "
+"revisit the type tracing to make sure, we know more about loop variables,"
+" etc. so we can achieve the near C speed we are looking for, at least in "
+"the field of ``int`` performance."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0614.rst:252
+msgid ""
+"This release has largely been driven by the `Nuitka Commercial "
+"</doc/commercial.html>`__ offering and needs for compatibility with more "
+"code, which is of course always a good thing."
+msgstr ""
+

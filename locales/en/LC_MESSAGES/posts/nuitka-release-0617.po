@@ -1,0 +1,672 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0617.rst:7
+msgid "Nuitka Release 0.6.17"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:13
+msgid ""
+"This release has a focus on performance improvements, while also "
+"polishing plugins and adding many new features."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:20
+msgid ""
+"Fix, plugins were not catching being used on packages not installed. "
+"Fixed in 0.6.16.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:23
+msgid ""
+"macOS: Fix weaknesses in the ``otool`` parsing to determine DLL "
+"dependency parsing. Fixed in 0.6.16.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:26
+msgid ""
+"Linux: Allow onefile program args with spaces contained to be properly "
+"passed. Fixed in 0.6.16.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:29
+msgid ""
+"Windows: Avoid using less portable C function for ``%PID%`` formatting, "
+"which restores compilation on Windows 7 with old toolchains. Fixed in "
+"0.6.16.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:33
+msgid ""
+"Standalone: Added support for ``fstrings`` package. Fixed in 0.6.16.3 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:36
+msgid ""
+"Compatibility: Fix, need to import ``.pth`` files after ``site`` module, "
+"not before. This was causing crashes on CentOS7 with Python2. Fixed in "
+"0.6.16.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:40
+msgid ""
+"Compatibility: Fix, when extension modules failed to load, in some cases "
+"the ``ImportError`` was lost to a ``KeyError``. Fixed in 0.6.16.3 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:44
+msgid ""
+"Fix, linker resource modes ``code`` and ``linker`` were not working "
+"anymore, but are needed with LTO mode at least. Fixed in 0.6.16.3 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:48
+msgid ""
+"Standalone: Bytecode modules with null bytes in standard library, "
+"typically from disk corruption, were not handled properly. Fixed in "
+"0.6.16.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:52
+msgid ""
+"Fix, failed ``.throw()`` into generators could cause corruption. Fixed in"
+" 0.6.16.4 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:55
+msgid ""
+"Python2: Fix, the bytecode compilation didn't respect the ``--python-"
+"flag=no_asserts`` mode. Fixed in 0.6.16.4 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:58
+msgid ""
+"Fix, calls were not annotating their arguments as escaped, causing "
+"corruption of mutable in static optimization. Fixed in 0.6.16.5 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:62
+msgid ""
+"Fix, some sequence objects, e.g. ``numpy.array`` actually implement in-"
+"place add operations that need to be called. Fixed in 0.6.16.5 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:66
+msgid ""
+"Windows: Fix, onefile binaries were not working after being signed. This "
+"now works."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:69
+msgid "Standalone: Added missing implicit dependency for ``sklearn``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:71
+msgid ""
+"Compatibility: Modules giving ``SyntaxError`` from source were not "
+"properly handled, giving runtime ``ImportError``. Now they are giving "
+"``SyntaxError``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:75
+msgid ""
+"Fix, the LTO mode has issues with ``incbin`` usage on older gcc, so use "
+"``linker`` mode when it is enabled."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:78
+msgid ""
+"Python3: Fix, locals dict codes were not properly checking errors that "
+"the mapping might raise when setting values."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:81
+msgid ""
+"Fix, modules named ``entry`` were causing compile time errors in the C "
+"stage."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:84
+msgid "macOS: Never include files from OS private frameworks in standalone mode."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:87
+msgid ""
+"Fix, the python flag ``--python-flag=no_warning`` wasn't working on all "
+"platforms."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:90
+msgid ""
+"Compatibility: Fix, the main code of the ``site`` module wasn't "
+"executing, so that its added builtins were not there. Of course, you "
+"ought to use ``--python-flag=no_site`` to not have it in the normal case."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:95
+msgid ""
+"Python2: Added code path to handle edited standard library source code "
+"which then has no valid bytecode file."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:98
+msgid "Anaconda: In module mode, the CondaCC wasn't recognized as form of gcc."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:101
+msgid "Fix, bytecode modules could shadow compiled modules of the same name."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:103
+msgid ""
+"Onefile: Fix, expansion of ``%PID%`` wasn't working properly on non-"
+"Windows, making temp paths less unique. The time stamp is not necessarily"
+" enough."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:107
+msgid ""
+"Fix, ``multiprocessing`` error exits from slave processes were not "
+"reporting tracebacks."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:110
+msgid ""
+"Standalone: Added ``xcbglintegrations`` to the list of sensible Qt "
+"plugins to include by default, otherwise rendering will be inferior."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:113
+msgid ""
+"Standalone: Added ``platformthemes`` to the list of sensible Qt plugins "
+"to include by default, otherwise file dialogs on non-Windows would be "
+"inferior."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:117
+msgid "Fix, created ``.pyi`` files were not ordered deterministically."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:119
+msgid "Standalone: Added support for ``win32file``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:121
+msgid ""
+"Fix, namespace packages were not using runtime values for their "
+"``__path__`` value."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:124
+msgid ""
+"Python3.7+: Fix, was leaking ``AttributeError`` exceptions during name "
+"imports."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:127
+msgid "Fix, standard library detection could fail for relative paths."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:131
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:133
+msgid ""
+"Added experimental support for C level PGO (Profile Guided Optimization),"
+" which runs your program and then uses feedback from the execution. At "
+"this time only gcc is supported, and only C compiler is collecting "
+"feedback. Check the User Manual for a table with current results."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:139
+msgid ""
+"macOS: Added experimental support for creating application bundles. For "
+"these, icons can be specified and console can be disabled. But at this "
+"time, onefile and accelerated mode are not yet usable with it, only "
+"standalone mode works."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:144
+msgid ""
+"Plugins: Add support for ``pkg_resources.require`` calls to be resolved "
+"at compile time. These are not working at runtime, but this avoids the "
+"issue very nicely."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:148
+msgid ""
+"Plugins: Massive improvements to the ``anti-bloat`` plugin, it can now "
+"make ``numpy``, ``scipy``, ``skimage``, ``pywt``, and ``matplotlib`` use "
+"much less packages and has better error handling."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:152
+msgid ""
+"Plugins: Added ``anti-bloat`` ability ability to append code to a module,"
+" which might get used in the future by other plugins that need some sort "
+"of post load changes to be applied."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:156
+msgid ""
+"Plugins: Added ability to replace code of functions at parse time, and "
+"use this in ``anti-bloat`` plugin to replace functions that do "
+"unnecessary stuff with variants that often just do nothing. This is "
+"illustrated here."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:169
+msgid ""
+"This example is removing ``gevent`` code that loads dependencies used for"
+" their CI release process, that need not be part of normal programs."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:173
+msgid ""
+"Added ability to persist source code changes done by plugins in the "
+"Python installation. This is considered experimental and needs write "
+"access to the Python installation, so this is best done in a virtualenv "
+"and it may confuse plugins."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:178
+msgid ""
+"Added support for ``multiprocessing.tracker`` and spawn mode for all "
+"platforms. For non-default modes outside of Windows, you need to "
+"``--enable-plugin=multiprocessing`` to use these."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:182
+msgid ""
+"Plugins: Allow multiple entry points to be provided by one or several "
+"plugins for the same modules. These are now merged into one "
+"automatically."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:186
+msgid ""
+"Standalone: Fix for numpy not working when compiling with ``--python-"
+"flag=no_docstrings``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:189
+msgid ""
+"Fix, method calls were not respecting descriptors provided by types with "
+"non-generic attribute lookups."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:192
+msgid ""
+"Windows: Add support for using self-compiled Python3 from the build "
+"folder too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:195
+msgid "Added support for Nuitka-Python 2.7, which will be our faster Python fork."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:198
+msgid ""
+"Colorized output for error outputs encountered in Scons, these are now "
+"yellow for better recognition."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:203
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:205
+msgid ""
+"Faster threading code was used for Python3.8 or higher, and this has been"
+" extended to 3.7 on Windows, but we won't be able to have it other "
+"platforms and not on earlier Python3 versions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:209
+msgid ""
+"Faster calls esp. with keyword arguments. Call with keywords no longer "
+"create dictionaries if the call target supports that, and with 3.8 or "
+"higher, non-compiled code that allows vectorcall is taken advantage of."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:214
+msgid ""
+"Faster class creation that avoids creation of argument tuples and "
+"dictionaries."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:217
+msgid "Faster attribute check code in case of non-present attributes."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:219
+msgid ""
+"Faster unbound method calls, unlike bound methods calls these were not "
+"optimized as well yet."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:222
+msgid "Type shapes for star arguments are now known and used in optimization."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:231
+msgid ""
+"Python2: Faster old-style class creation. These are classes that do not "
+"explicitly inherit from ``object``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:234
+msgid ""
+"Python2: Faster string comparisons for Python by specializing for the "
+"``str`` type as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:237
+msgid ""
+"Python3: Added specialization for ``bytes`` comparisons too. These are "
+"naturally very much the same as ``str`` comparisons in Python2."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:240
+msgid ""
+"Added specialization for ``list`` comparisons too. We had them for "
+"``tuples`` only so far."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:243
+msgid ""
+"Faster method calls when called from Python core, our ``tp_call`` slot "
+"wasn't as good as it can be."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:246
+msgid ""
+"Optimization: Faster deep copies of constants. This can speed up constant"
+" calls with mutable types. Before it was checking the type too often to "
+"be fast."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:250
+msgid ""
+"Allow using static linking with Debian Python giving much better "
+"performance with the system Python. This is actually a huge improvement "
+"as it makes things much faster. So far it's only automatically enabled "
+"for Python2, but it seems to work for Python3 on Debian too. Needs more "
+"tweaking in the future."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:256
+msgid ""
+"Optimization: Added ``functools`` module to the list of hard imports in "
+"preparation of optimizing ``functools.partial`` to work better with "
+"compiled functions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:260
+msgid ""
+"Python2: Demote to ``xrange`` when iterating over ``range`` calls, even "
+"for small ranges, they are always faster. Previously this was only done "
+"for values with at least 256 values."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:264
+msgid ""
+"Enable LTO automatically for Debian Python, this also allows more "
+"optimization."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:267
+msgid ""
+"Enable LTO automatically for Anaconda with CondaCC on non-Windows, also "
+"allowing more optimization."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:272
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:274
+msgid ""
+"Added section in the User Manual on how to deal with memory issues and C "
+"compiler bugs. This is a frequent topic and should serve as a pointer for"
+" this kind of issue."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:278
+msgid ""
+"The ``--lto`` option was changed to require an argument, so that it can "
+"also be disabled. The default is ``auto`` which is the old behaviour "
+"where it's enabled if possible."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:282
+msgid ""
+"Changed ``--no-progress`` to ``--no-progressbar`` in order to make it "
+"more clear what it's about. Previously it was possible to relate it to "
+"``--show-progress``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:286
+msgid ""
+"No longer require specific versions of dependencies in our "
+"``requirements.txt`` and relegate those to only being in ``requirements-"
+"devel.txt`` such that by default Nuitka doesn't collide with user "
+"requirements on those same packages which absolutely all the time don't "
+"really make a difference."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:292
+msgid ""
+"Added ability to check all unpushed changes with pylint with a new "
+"``./bin/check-nuitka-with-pylint --unpushed`` option. Before it was only "
+"possible to make the check (quickly) with ``--diff``, but that stopped "
+"working after commits are made."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:297
+msgid ""
+"Revived support for ``vmprof`` based analysis of compiled programs, but "
+"it requires a fork of it now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:300
+msgid ""
+"Make Windows specific compiler options visible on all platforms. There is"
+" no point in them being errors, instead warnings are given when they are "
+"specified on non-Windows."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:304
+msgid "Added project variable ``Commercial`` for use in Nuitka project syntax."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:307
+msgid ""
+"Consistent use of metavars for nicer help output should make it more "
+"readable."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:310
+msgid ""
+"Avoid ``ast`` tree dumps in case of ``KeyboardInterrupt`` exceptions, "
+"they are just very noisy. Also not annotate where Nuitka was in "
+"optimization when a plugin is asking to ``sysexit``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:316
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:318
+msgid ""
+"Encoding names for UTF8 in calls to ``.encode()`` were used inconsistent "
+"with and without dashes in the source code, added cleanup to autoformat "
+"that picks the one blessed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:322
+msgid ""
+"Cleanup taking of runtime traces of DLLs used in preparation for using it"
+" in main code eventually, moving it to a dedicated module."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:325
+msgid ""
+"Avoid special names for Nuitka options in test runner, this only adds a "
+"level of confusion. Needs more work in future release."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:328
+msgid ""
+"Unify implementation to create modules into single function. We had 3 "
+"forms, one in recursion, one for main module, and one for plugin "
+"generated code. This makes it much easier to understand and use in "
+"plugins."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:333
+msgid ""
+"Further reduced code duplication between the two Scons files, but more "
+"work will be needed there."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:336
+msgid ""
+"Escaped variables are still known to be assigned/unassigned rather than "
+"unknown, allowing for many optimizations to still work on them., esp. for"
+" immutable value"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:340
+msgid ""
+"Enhanced autoformat for rest documents, bullet list spacing is now "
+"consistent and spelling of organisational is unified automatically."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:343
+msgid ""
+"Moved icon conversion functionality to separate module, so it can be "
+"reused for other platforms more easily."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:348
+msgid "Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:350
+msgid ""
+"Removed ``reflected`` test, because of Nuitka special needs to restart "
+"with variable Python flags. This could be reverted though, since Nuitka "
+"no longer needs anything outside inline copies, and therefore no longer "
+"loads from site packages."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:355
+msgid ""
+"Use ``anti-bloat`` plugin in standalone tests of Numpy, Pandas and tests "
+"to reduce their compile times, these have become much more manageable "
+"now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:359
+msgid ""
+"Enhanced checks for used files to use proper below path checks for their "
+"ignoring."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:362
+msgid ""
+"Remove reflected test, compiling Nuitka with Nuitka has gotten too "
+"difficult."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:365
+msgid ""
+"Verify constants integrity at program end in debug mode again, so we "
+"catch corruption of them in tests."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:370
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:372
+msgid ""
+"This release is one of the most important ones in a long time. The PGO "
+"and LTO, and static libpython work make a big different for performance "
+"of created binaries."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:376
+msgid ""
+"The amount of optimization added is also huge, calls are much faster now,"
+" and object creations too. These avoiding to go through actual "
+"dictionaries and tuples in most cases when compiled code interacts gives "
+"very significant gains. This can be seen in the increase of pystone "
+"performance."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:382
+msgid ""
+"The new type specializations allow many operations to be much faster. "
+"More work will follow in this area and important types, ``str`` and "
+"``int`` do not have specialized comparisons for Python3, holding it back "
+"somewhat to where our Python2 performance is for these things."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:387
+msgid ""
+"For scalability, the ``anti-bloat`` work is extremely valuable, and this "
+"plugin should become active by default in the future, for now it must be "
+"strongly recommended. It needs more control over what parts you want to "
+"deactivate from it, in case of it causing problems, then we can and "
+"should do it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:393
+msgid ""
+"The support for macOS has been enhanced a lot, and will become perfect in"
+" the next release (currently develop). The bundle mode is needed for all "
+"kinds of GUI programs to not need a console. This platform is becoming as"
+" well supported as the others now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0617.rst:398
+msgid ""
+"Generally this release marks a huge step forward. We hope to add Python "
+"level PGO in the coming releases, for type knowledge retrofitted without "
+"any annotations used. Benchmarks will become more fun clearly."
+msgstr ""
+

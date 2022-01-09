@@ -1,0 +1,408 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0321.rst:7
+msgid "Nuitka Release 0.3.21"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:13
+msgid ""
+"This releases contains some really major enhancements, all heading "
+"towards enabling value propagation inside Nuitka. Assignments of all "
+"forms are now all simple and explicit, and as a result, now it will be "
+"easy to start tracking them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:18
+msgid ""
+"Contractions have become functions internally, with statements use "
+"temporary variables, complex unpacking statement were reduced to more "
+"simple ones, etc."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:22
+msgid ""
+"Also there are the usual few small bug fixes, and a bunch of "
+"organisational improvements, that make the release complete."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:27
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:29
+msgid ""
+"The built-in ``next`` could causes a program crash when iterating past "
+"the end of an iterator. Fixed in 0.3.20.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:32
+msgid ""
+"The ``set`` constants could cause a compiler error, as that type was not "
+"considered in the \"mutable\" check yet. Fixed in 0.3.20.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:35
+msgid ""
+"Performance regression. Optimize expression for exception types caught as"
+" well again, this was lost in last release."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:38
+msgid ""
+"Functions that contain ``exec``, are supposed to have a writable locals. "
+"But when removing that ``exec`` statement as part of optimization, this "
+"property of the function could get lost."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:42
+msgid ""
+"The so called \"overflow functions\" are once again correctly handled. "
+"These once were left behind in some refactoring and had not been repaired"
+" until now. An overflow function is a nested function with an ``exec`` or"
+" a star import."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:47
+msgid ""
+"The syntax error for ``return`` outside of a function, was not given, "
+"instead the code returned at run time. Fixed to raise a ``SyntaxError`` "
+"at compile time."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:53
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:55
+msgid ""
+"Avoid ``tuple`` objects to be created when catching multiple exception "
+"types, instead call exception match check function multiple times."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:59
+msgid ""
+"Removal of dead code following ``break``, ``continue``, ``return``, and "
+"``raise``. Code that follows these statements, or conditional statements,"
+" where all branches end with it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:65
+msgid ""
+"These may not actually occur often in actual code, but future "
+"optimization may produce them more frequently, and their removal may in "
+"turn make other possible optimization."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:69
+msgid ""
+"Detect module variables as \"read only\" after all writes have been "
+"detected to not be executed as removed. Previously the \"read only "
+"indicator\" was determined only once and then stayed the same."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:73
+msgid ""
+"Expanded conditional statement optimization to detect cases, where "
+"condition is a compile time constant, not just a constant value."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:76
+msgid ""
+"Optimize away assignments from a variable to the same variable, they have"
+" no effect. The potential side effect of accessing the variable is left "
+"intact though, so exceptions will be raised still."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:82
+msgid ""
+"An exception is where ``len = len`` actually does have an impact, because"
+" that variable becomes assignable. The \"compile itself\" test of Nuitka "
+"found that to happen with ``long`` from the ``nuitka.__past__`` module."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:87
+msgid ""
+"Created Python3 variant of quick ``unicode`` string access, there was no "
+"such thing in the CPython C/API, but we make the distinction in the "
+"source code, so it makes sense to have it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:91
+msgid ""
+"Created an optimized implementation for the built-in ``iter`` with 2 "
+"parameters as well. This allows for slightly more efficient code to be "
+"created with regards to reference handling, rather than using the CPython"
+" C/API."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:96
+msgid ""
+"For all types of variable assigned in the generated code, there are now "
+"methods that accept already taken references or not, and the code "
+"generator picks the optimal variant. This avoids the drop of references, "
+"that e.g. the local variable will insist to take."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:101
+msgid ""
+"Don't use a \"context\" object for generator functions (and generator "
+"expressions) that don't need one. And even if it does to store e.g. the "
+"given parameter values, avoid to have a \"common context\" if there is no"
+" closure taken. This avoids useless ``malloc`` calls and speeds up "
+"repeated generator object creation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:109
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:111
+msgid ""
+"Changed the Scons build file database to reside in the build directory as"
+" opposed to the current directory, not polluting it anymore. Thanks for "
+"the patch go to Michael H Kent, very much appreciated."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:116
+msgid ""
+"The ``--experimental`` option is no longer available outside of checkouts"
+" of git, and even there not on stable branches (``master``, "
+"``hotfix/...``). It only pollutes ``--help`` output as stable releases "
+"have no experimental code options, not even development version will make"
+" a difference."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:122
+msgid ""
+"The binary \"bin/Nuitka.py\" has been removed from the git repository. It"
+" was deprecated a while ago, not part of the distribution and served no "
+"good use, as it was a symbolic link only anyway."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:126
+msgid ""
+"The ``--python-version`` option is applied at Nuitka start time to re-"
+"launch Nuitka with the given Python version, to make sure that the Python"
+" run time used for computations and link time Python versions are the "
+"same. The allowed values are now checked (2.6, 2.7 and 3.2) and the user "
+"gets a nice error with wrong values."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:132
+msgid ""
+"Added ``--keep-pythonpath`` alias for ``--execute-with-pythonpath`` "
+"option, probably easier to remember."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:135
+msgid ""
+"Support ``--debug`` with clang, so it can also be used to check the "
+"generated code for all warnings, and perform assertions. Didn't report "
+"anything new."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:139
+msgid ""
+"The contents environment variable ``CXX`` determines the default C++ "
+"compiler when set, so that checking with ``CXX=g++-4.7 nuitka-python "
+"...`` has become supported."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:143
+msgid ""
+"The ``check-with-pylint`` script now has a real command line option to "
+"control the display of ``TODO`` items."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:148
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:150
+msgid ""
+"Changed complex assignments, i.e. assignments with multiple targets to "
+"such using a temporary variable and multiple simple assignments instead."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:164
+msgid ""
+"In CPython, when one assignment raises an exception, the whole thing is "
+"aborted, so the complexity of having multiple targets is no more needed, "
+"now that we have temporary variables in a block."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:168
+msgid ""
+"All that was really needed, was to evaluate the complete source "
+"expression only once, but that made code generation contain ugly loops "
+"that are no more needed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:172
+msgid "Changed unpacking assignments to use temporary variables. Code like this:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:179
+msgid "Is handled more like this:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:191
+msgid ""
+"In reality, not really ``next`` is used, as it wouldn't raise the correct"
+" exception for unpacking, and the ``finished`` check is more condensed "
+"into it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:195
+msgid ""
+"Generally this cleanup allowed that the ``AssignTargetTuple`` and "
+"associated code generation was removed, and in the future value "
+"propagation may optimize these ``next`` and ``iter`` calls away where "
+"possible. At this time, this is not done yet."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:200
+msgid ""
+"Exception handlers assign caught exception value through assignment "
+"statement."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:203
+msgid ""
+"Previously the code generated for assigning from the caught exception was"
+" not considered part of the handler. It now is the first statement of an "
+"exception handler or not present, this way it may be optimized as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:208
+msgid "Exception handlers now explicitly catch more than one type."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:210
+msgid ""
+"Catching multiple types worked by merits of the created tuple object "
+"working with the Python C/API function called, but that was not explicit "
+"at all. Now every handler has a tuple of exceptions it catches, which may"
+" only be one, or if None, it's all."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:215
+msgid "Contractions are now functions as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:217
+msgid ""
+"Contractions (list, dict, and set) are now re-formulated as function "
+"bodies that contain for loops and conditional statements. This allowed to"
+" remove a lot of special code that dealt with them and will make these "
+"easier to understand for optimization and value propagation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:223
+msgid "Global is handled during tree building."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:225
+msgid ""
+"Previously the global statement was its own node, which got removed "
+"during the optimization phase in a dedicated early optimization that "
+"applied its effect, and then removed the node."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:229
+msgid ""
+"It was determined, that there is no reason to not immediately apply the "
+"effect of the global variable and take closure variables and add them to "
+"the provider of that ``global`` statement, allowing to remove the node "
+"class."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:234
+msgid "Read only module variable detection integrated to constraint collection."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:237
+msgid ""
+"The detection of read only module variables was so far done as a separate"
+" step, which is no more necessary as the constraint collection tracks the"
+" usages of module variables anyway, so this separate and slow step could "
+"be removed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:244
+msgid "New Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:246
+msgid ""
+"Added test to cover order of calls for complex assignments that unpack, "
+"to see that they make a fresh iterator for each part of a complex "
+"assignment."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:250
+msgid ""
+"Added test that unpacks in an exception catch. It worked, due to the "
+"generic handling of assignment targets by Nuitka, and I didn't even know "
+"it can be done, example:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:261
+msgid "Will assign ``a=1`` and ``b=2``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:263
+msgid ""
+"Added test to cover return statements on module level and class level, "
+"they both must give syntax errors."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:266
+msgid "Cover exceptions from accessing unassigned global names."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:268
+msgid ""
+"Added syntax test to show that star imports do not allow other names to "
+"be imported at the same time as well."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:271
+msgid "Python3 is now also running the compile itself test successfully."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:275
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0321.rst:277
+msgid ""
+"The progress made towards value propagation and type inference is *very* "
+"significant, and makes those appears as if they are achievable."
+msgstr ""
+

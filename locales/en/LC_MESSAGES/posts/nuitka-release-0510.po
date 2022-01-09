@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0510.rst:7
+msgid "Nuitka Release 0.5.10"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:13
+msgid ""
+"This release has a focus on code generation optimization. Doing major "
+"changes away from \"C++-ish\" code to \"C-ish\" code, many constructs are"
+" now faster or got looked at and optimized."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:19
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:21
+msgid ""
+"Compatibility: The variable name in locals for the iterator provided to "
+"the generator expression should be ``.0``, now it is."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:24
+msgid ""
+"Generators could leak frames until program exit, these are now properly "
+"freed immediately."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:29
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:31
+msgid ""
+"Faster exception save and restore functions that might be in-lined by the"
+" backend C compiler."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:34
+msgid ""
+"Faster error checks for many operations, where these errors are expected,"
+" e.g. instance attribute lookups."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:37
+msgid ""
+"Do not create traceback and locals dictionary for frame when "
+"``StopIteration`` or ``GeneratorExit`` are raised. These tracebacks were "
+"wasted, as they were immediately released afterwards."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:41
+msgid ""
+"Closure variables to functions and parameters of generator functions are "
+"now attached to the function and generator objects."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:44
+msgid "The creation of functions with closure taking was accelerated."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:46
+msgid "The creation and destruction of generator objects was accelerated."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:48
+msgid ""
+"The re-formulation for in-place assignments got simplified and got faster"
+" doing so."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:51
+msgid ""
+"In-place operations of ``str`` were always copying the string, even if "
+"was not necessary."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:58
+msgid "Python2: Additions of ``int`` for Python2 are now even faster."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:60
+msgid ""
+"Access to local variable values got slightly accelerated at the expense "
+"of closure variables."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:63
+msgid "Added support for optimizing the ``complex`` built-in."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:65
+msgid ""
+"Removing unused temporary and local variables as a result of "
+"optimization, these previously still allocated storage."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:70
+msgid "Cleanup"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:72
+msgid ""
+"The use of C++ classes for variable objects was removed. Closure "
+"variables are now attached as ``PyCellObject`` to the function objects "
+"owning them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:76
+msgid ""
+"The use of C++ context classes for closure taking and generator "
+"parameters has been replaced with attaching values directly to functions "
+"and generator objects."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:80
+msgid ""
+"The indentation of code template instantiations spanning multiple was not"
+" in all cases proper. We were using emission objects that handle it new "
+"lines in code and mere ``list`` objects, that don't handle them in mixed "
+"forms. Now only the emission objects are used."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:85
+msgid ""
+"Some templates with C++ helper functions that had no variables got "
+"changed to be properly formatted templates."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:88
+msgid ""
+"The internal API for handling of exceptions is now more consistent and "
+"used more efficiently."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:91
+msgid ""
+"The printing helpers got cleaned up and moved to static code, removing "
+"any need for forward declaration."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:94
+msgid ""
+"The use of ``INCREASE_REFCOUNT_X`` was removed, it got replaced with "
+"proper ``Py_XINCREF`` usages. The function was once required before "
+"\"C-ish\" lifted the need to do everything in one function call."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:98
+msgid ""
+"The use of ``INCREASE_REFCOUNT`` got reduced. See above for why that is "
+"any good. The idea is that ``Py_INCREF`` must be good enough, and that we"
+" want to avoid the C function it was, even if in-lined."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:102
+msgid ""
+"The ``assertObject`` function that checks if an object is not ``NULL`` "
+"and has positive reference count, i.e. is sane, got turned into a "
+"preprocessor macro."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:106
+msgid ""
+"Deep hashes of constant values created in ``--debug`` mode, which cover "
+"also mutable values, and attempt to depend on actual content. These are "
+"checked at program exit for corruption. This may help uncover bugs."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:113
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:115
+msgid ""
+"Speedcenter has been enhanced with better graphing and has more "
+"benchmarks now. More work will be needed to make it useful."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:118
+msgid ""
+"Updates to the Developer Manual, reflecting the current near finished "
+"state of \"C-ish\" code generation."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:123
+msgid "Tests"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:125
+msgid ""
+"New reference count tests to cover generator expressions and their usage "
+"got added."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:128
+msgid ""
+"Many new construct based tests got added, these will be used for "
+"performance graphing, and serve as micro benchmarks now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:131
+msgid "Again, more basic tests are directly executable with Python3."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:135
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:137
+msgid ""
+"This is the next evolution of \"C-ish\" coming to pass. The use of C++ "
+"has for all practical purposes vanished. It will remain an ongoing "
+"activity to clear that up and become real C. The C++ classes were a huge "
+"road block to many things, that now will become simpler. One example of "
+"these were in-place operations, which now can be dealt with easily."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:143
+msgid ""
+"Also, lots of polishing and tweaking was done while adding construct "
+"benchmarks that were made to check the impact of these changes. Here, "
+"generators probably stand out the most, as some of the missed "
+"optimization got revealed and then addressed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:148
+msgid ""
+"Their speed increases will be visible to some programs that depend a lot "
+"on generators."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:151
+msgid ""
+"This release is clearly major in that the most important issues got "
+"addressed, future releases will provide more tuning and completeness, but"
+" structurally the \"C-ish\" migration has succeeded, and now we can reap "
+"the benefits in the coming releases. More work will be needed for all in-"
+"place operations to be accelerated."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0510.rst:157
+msgid ""
+"More work will be needed to complete this, but it's good that this is "
+"coming to an end, so we can focus on SSA based optimization for the major"
+" gains to be had."
+msgstr ""
+

@@ -9,20 +9,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/nuitka-progress-winter-2015.rst:7
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:7
 msgid "Nuitka Progress in 2015"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:9
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:9
 msgid ""
 "For quite a bit, there have been no status posts, not for lack of news, "
 "but a lot has happened indeed. I just seem to post a *lot* more to the "
@@ -30,28 +30,28 @@ msgid ""
 "essentially for a project like Nuitka everything that's going on."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:14
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:14
 msgid ""
 "Like I previously said, I am shy to make public postings about unfinished"
 " stuff and that's going to continue. But I am breaking it, to keep you up"
 " to date with where Nuitka has been going lately."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:18
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:18
 msgid ""
 "And with release focuses, I have been making some actual changes that I "
 "think are worth talking about."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:21
-msgid "目录"
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:21
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:25
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:25
 msgid "SSA (Single State Assignment Form)"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:27
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:27
 msgid ""
 "The SSA using release has been made last summer. Recent releases have "
 "lifted more and more restrictions on where and now it is applied and made"
@@ -59,7 +59,7 @@ msgid ""
 " to continue even more."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:32
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:32
 msgid ""
 "For shared variables (closure variables and module variables), Nuitka is "
 "still too conservative to make optimization. Code does annotate value "
@@ -70,11 +70,11 @@ msgid ""
 "optimization too."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:42
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:42
 msgid "Function Inlining"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:44
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:44
 msgid ""
 "When doing my talk to EuroPython 2015, I was demoing it that, and indeed,"
 " what a break through. The circumstances under which it is done are still"
@@ -83,7 +83,7 @@ msgid ""
 "most often module variables and not local to the using function."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:51
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:51
 msgid ""
 "More code generation improvements will be needed to be able to inline "
 "functions that might raise an exception. Also the \"cost\" of inlining a "
@@ -92,21 +92,21 @@ msgid ""
 "as then inlining other things than local functions will be possible too."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:57
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:57
 msgid ""
 "So there is a lot of things to do for this to really make a difference to"
 " your programs. But it's still great to have that part solved so far."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:62
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:62
 msgid "Scalability"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:65
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:65
 msgid "Parameter Parsing"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:67
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:67
 msgid ""
 "Recent releases have replaced some of the oldest code of Nuitka, the one "
 "that generated special argument parsing for each function individually, "
@@ -114,18 +114,18 @@ msgid ""
 "although quick entry points were tough to beat."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:72
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:72
 msgid ""
 "That gives the C backend compiler a much easier time. Previously 3 C "
 "functions were created per Python level function, two of which could get "
 "really big with many arguments, and these are no more."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:77
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:77
 msgid "Variable Error Messages"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:79
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:79
 msgid ""
 "Something similar was going on with variable error messages. Each had "
 "their exception value pre-computed and created at module load time. Most "
@@ -133,11 +133,11 @@ msgid ""
 "generates it on the fly, resulting in a lot less constants code."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:85
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:85
 msgid "Code Objects"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:87
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:87
 msgid ""
 "And another thing was to look after code objects, of which there often "
 "were two for each Python level function. The one used or the frame during"
@@ -145,30 +145,30 @@ msgid ""
 "sometimes by small things like flags or local variable names."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:92
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:92
 msgid ""
 "That of course was just the result of not passing that along, but created"
 " cached objects with hopefully the same options, but that not being true."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:96
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:96
 msgid ""
 "Resolving that, and sharing the code object used for creation and then "
 "the frame is gives less complex C code too."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:100
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:100
 msgid "Optimization"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:102
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:102
 msgid ""
 "The scalability of Nuitka also depends much on generated code size. With "
 "the optimization become more clever, less code is generated, and that "
 "trend will continue as more structural optimization are applied."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:106
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:106
 msgid ""
 "Every time e.g. an exception is identified to not happen, this removes "
 "the corresponding error exits from the C code, which then makes it easier"
@@ -176,11 +176,11 @@ msgid ""
 "dictionaries, is often less complex to it."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:113
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:113
 msgid "Compatibility"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:115
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:115
 msgid ""
 "Important things have happened here. Full compatibility mode is planned "
 "to not be the default anymore in upcoming releases, but that will only "
@@ -189,21 +189,21 @@ msgid ""
 "differences, the best Python version behaviour."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:123
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:123
 msgid ""
 "The stable release has full support for Python 3.5, including the new "
 "``async`` and ``await`` functions. So recent releases can pronounce it as"
 " fully supported which was quite a feat."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:127
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:127
 msgid ""
 "I am not sure, if you can fully appreciate the catch up game needed to "
 "play here. CPython clearly implements a lot of features, that I have to "
 "emulate too. That's going to repeat for every major release."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:131
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:131
 msgid ""
 "The good news is that the function type of Nuitka is now specialized to "
 "the generators and classes, and that was a massive cleanup of its core "
@@ -211,7 +211,7 @@ msgid ""
 "creation stuff and that has been helpful with a lot of other stuff."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:136
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:136
 msgid ""
 "Another focus driven from Python3, is to get ahead with type shape "
 "tracing and type inference of dictionary, and value tracing. To fully "
@@ -220,59 +220,59 @@ msgid ""
 "Good news is that the next release is making progress there too."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:144
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:144
 msgid "Performance"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:147
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:147
 msgid "Graphs and Benchmarks"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:149
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:149
 msgid ""
 "I also presented this weak point to EuroPython 2015 and my plan on how to"
 " resolve it. Unfortunately, nothing really happened here. My plan is "
 "still to use what the PyPy people have developed as vmprof."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:153
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:153
 msgid ""
 "So that is not progressing, and I could need help with that definitely. "
 "Get in contact if you think you can."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:158
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:158
 msgid "Standalone"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:160
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:160
 msgid ""
 "The standalone mode of Nuitka was pretty good, and continued to improve "
 "further, but I don't care much."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:165
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:165
 msgid "Other Stuff"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:168
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:168
 msgid "EuroPython 2015"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:170
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:170
 msgid ""
 "This was a blast. Meeting people who knew Nuitka but not me was a regular"
 " occurrence. And many people well appreciate my work. It felt much "
 "different than the years before."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:174
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:174
 msgid ""
 "I was able to present Nuitka's function in-lining indeed there, and this "
 "high goal that I set myself, quite impressed people."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:177
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:177
 msgid ""
 "Also I made many new contacts, largely with the scientific community. I "
 "hope to find work with data scientists in the coming years. More amd more"
@@ -280,35 +280,35 @@ msgid ""
 "Python."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:183
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:183
 msgid "Funding"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:185
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:185
 msgid ""
 "Nuitka receives the occasional `donation </pages/donations.html>`_ and "
 "those make me very happy. As there is no support from organization like "
 "the PSF, I am all on my own there."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:190
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:190
 msgid ""
 "This year I want to travel to Europython 2016. It would be sweet if aside"
 " of my free time it wouldn't also cost me money. So please consider "
 "donating some more, as these kind of events are really helpul to Nuitka."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:195
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:195
 msgid "Collaborators"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:197
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:197
 msgid ""
 "Nuitka is making more and more break through progress. And you can be a "
 "part of it. Now."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:200
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:200
 msgid ""
 "You can join and should do so now, just `follow this link </doc/user-"
 "manual.html#join-nuitka>`_ or become part of the mailing list (since "
@@ -317,11 +317,11 @@ msgid ""
 "know the drill probably."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:207
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:207
 msgid "Videos"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:209
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:209
 msgid ""
 "There is a Youtube channel of mine with `all the videos of Nuitka so far "
 "<https://www.youtube.com/playlist?list=PLKO58t9ADuF6o_Dcmve1DXpUkUEEVvDux>`_"
@@ -329,41 +329,41 @@ msgid ""
 " Nuitka, but so far nothing has come out of that."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:214
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:214
 msgid "I do however really want to change that. Let's see if it happens."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:217
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:217
 msgid "Twitter"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:219
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:219
 msgid ""
 "I have started to use `my Twitter account "
 "<https://twitter.com/kayhayen>`_ on occasions. You are welcome to follow "
 "me there. I will highlight interesting stuff there."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:225
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:225
 msgid "Future"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:227
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:227
 msgid "So, there is multiple things going on:"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:229
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:229
 msgid "Type Inference"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:231
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:231
 msgid ""
 "With SSA in place, Nuitka starts to recognize types, and treat things "
 "that work something assigned from ``{}`` or ``dict`` built-in with "
 "special nodes and code."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:235
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:235
 msgid ""
 "That's going to be a lot of work. For ``float`` and ``list`` there are "
 "very important use cases, where the code can be much better. But ``dict``"
@@ -371,11 +371,11 @@ msgid ""
 " are going there first."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:240
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:240
 msgid "Shape Analyisis"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:242
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:242
 msgid ""
 "The plan for types, is not to use them, but the more general shapes, "
 "things that will be more prevalent than actual type information in a "
@@ -384,7 +384,7 @@ msgid ""
 "to guess from there."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:248
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:248
 msgid ""
 "Shape analysis will begin though with concrete types like ``dict``. The "
 "reason is that some re-formulations like Python3 classes should not use "
@@ -393,11 +393,11 @@ msgid ""
 " to make that change."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:254
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:254
 msgid "Plug-ins"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:256
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:256
 msgid ""
 "Something I wish I could have shown at EuroPython was plug-ins to Nuitka."
 " It has become more complete, and some demo plug-ins for say Qt plugins "
@@ -406,42 +406,42 @@ msgid ""
 " this to expand Nuitka's reach and appeal to get more contributors."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:263
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:263
 msgid ""
 "It would be sweet, if there were any takers, aiming to complete these "
 "things."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:266
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:266
 msgid "Nested frames"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:268
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:268
 msgid ""
 "One result of in-lining will be nested frames still present for "
 "exceptions to be properly annotated, or ``locals`` giving different sets "
 "of locals and so on."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:272
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:272
 msgid ""
 "Some cleanup of these will be needed for code generation and SSA to be "
 "able to attach variables to some sort of container, and for a function to"
 " be able to reference different sets of these."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:276
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:276
 msgid ""
 "Let me know, if you are willing to help. I really need that help to make "
 "things happen faster. Nuitka will become more and more important only. "
 "And with your help, things will be there sooner."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:282
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:282
 msgid "Release Focus"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:284
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:284
 msgid ""
 "One thing I have started recently, is to make changes to Nuitka focused "
 "to just one goal, and to only deal with the rare bug in other fields, but"
@@ -451,42 +451,42 @@ msgid ""
 "for dictionary operations."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:291
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:291
 msgid ""
 "This progresses Nuitka in one field. And the next release then e.g. will "
 "only focus on making the performance comparison tool, and not continue "
 "much in other fields."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:295
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:295
 msgid ""
 "That way, more \"flow\" is possible and more visible progress too. As an "
 "example of this, these are the focuses of last releases."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:298
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:298
 msgid ""
 "Full Python 3.5 on a clean base with generators redone so that coroutines"
 " fit in nicely."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:301
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:301
 msgid "Scalability of C compilation with argument parsing redone"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:303
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:303
 msgid ""
 "Next release soon: Shape analysis of subscript usages and optimization to"
 " exact dictionaries"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:306
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:306
 msgid ""
 "Next release thereafter: Comparison benchmarking (vmprof, resolving C "
 "level function identifiers easier)"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:309
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:309
 msgid ""
 "Other focuses will also happen, but that's too far ahead. Mostly like "
 "some usability improvements will be the focus of a release some day. "
@@ -494,7 +494,7 @@ msgid ""
 " therefore never happen although surely possible."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:314
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:314
 msgid ""
 "Digging into Python3.5 coroutines and their semantics was hard enough, "
 "and the structural changes needed to integrate them properly with not too"
@@ -503,11 +503,11 @@ msgid ""
 "doing other stuff."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:322
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:322
 msgid "Summary"
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:324
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:324
 msgid ""
 "So I am very excited about Nuitka. It feels like the puzzle is coming "
 "together finally, with type inference becoming a real thing. And should "
@@ -516,16 +516,19 @@ msgid ""
 "make."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:330
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:330
 msgid ""
 "With this, and then harder import association (knowing what other modules"
 " are), and module level SSA tracing that can be trusted, we can finally "
 "expect Nuitka to be generally fast and deserve to be called a compiler."
 msgstr ""
 
-#: ../../posts/nuitka-progress-winter-2015.rst:335
+#: ../../doc/posts/nuitka-progress-winter-2015.rst:335
 msgid ""
 "That will take a while, but it's likely to happen in 2016. Let's see if I"
 " will get the funding to go to EuroPython 2016, that would be great."
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

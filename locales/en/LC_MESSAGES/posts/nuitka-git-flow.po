@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-git-flow.rst:7
+msgid "Nuitka git-flow"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:9
+msgid "Hello there,"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:11
+msgid ""
+"this is to let you know that I have switched `Nuitka "
+"</pages/overview.html>`_ to the `\"git flow\" "
+"<https://github.com/nvie/gitflow>`_ development model. That means, now "
+"there is a supported stable version, and a develop branch, together with "
+"feature branches."
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:19
+msgid "Example"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst ../../doc/posts/nuitka-git-flow.rst:26
+msgid "Git flow example for Nuitka release 0.3.12"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:30
+msgid ""
+"In case, you want and can improve the source (link since removed) "
+"visually or otherwise, please go ahead. I am using it for a presentation "
+"next week too, and would be glad if you could make it more pretty. My "
+"artistic skills are not the same as my programmer skills. :-)"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:36
+msgid "So there is now always at least these 2 branches:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:38
+msgid ""
+"Stable `(master branch) "
+"<https://nuitka.net/gitweb/?p=Nuitka.git;a=shortlog;h=refs/heads/master>`_"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:41
+msgid ""
+"Unstable `(develop branch) "
+"<https://nuitka.net/gitweb/?p=Nuitka.git;a=shortlog;h=refs/heads/develop>`_"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:44
+msgid "and then there may be feature branches, like this one currently:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:46
+msgid ""
+"Feature branch `minimize_CPython26_tests_diff "
+"<https://nuitka.net/gitweb/?p=Nuitka.git;a=shortlog;h=refs/heads/feature/minimize_CPython26_tests_diff>`_"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:49
+msgid ""
+"These will only have certain life, until they are completed, then they "
+"are merge into \"develop\" and become part of the next release. This may "
+"or may not happen, depending on how things go."
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:55
+msgid "Benefits of the new model"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:57
+msgid ""
+"Hotfixes, typically bug fixes, can be made simultaneously on stable and "
+"develop branch. The git-flow package takes care of the merging to both."
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:61
+msgid ""
+"Because that's so easy now, a stable version can be provided and "
+"supported for a longer time."
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:64
+msgid ""
+"Features can be published while under development. My idea is that "
+"feature branches should basically work, but the bar will be lower. People"
+" can have a look at them, or start their own and make me integrate them."
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:71
+msgid "Uses of Feature Branch"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:73
+msgid ""
+"For example, in the new feature branch, a couple of boring things are "
+"happening. Support for frame stack will reduce the diff, as will some "
+"work to match CPython's choices for exception line numbers. Completing "
+"will take a while, but should not block a release. So this is best done "
+"in the feature branch, esp. as nothing is going to really depend on it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:81
+msgid "General Picture"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:83
+msgid ""
+"As you can see from this diagram, I am working mostly on documentation "
+"things. The new and improved README on develop, which is closer to a User"
+" Manual in PDF form, and other organization things, may get a release "
+"before the PyCon DE next week. The README also describes this process."
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:89
+msgid ""
+"Hope is that with this approach, I will improve transparency (you can see"
+" earlier what i am working on, because there is now a place where things "
+"may break (develop) or may not yet be integrated or completed fully "
+"(feature branches) and yet be public."
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:94
+msgid ""
+"The overhead appears to minimal thanks to \"git-flow\". Developing "
+"hotfixes is actually easier, when done on the stable branch, because "
+"problems cannot originate from the current development work that may or "
+"may not be all that perfect yet."
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:99
+msgid "Yours,"
+msgstr ""
+
+#: ../../doc/posts/nuitka-git-flow.rst:100
+msgid "Kay Hayen"
+msgstr ""
+

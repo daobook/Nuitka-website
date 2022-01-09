@@ -9,27 +9,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nuitka the Python Compiler \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../posts/nuitka-progress-summer-2015.rst:7
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:7
 msgid "Nuitka Progress in Summer 2015"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:9
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:9
 msgid ""
 "A long time has passed again without me speaking about what's going on "
 "with Nuitka, and that although definitely a lot has happened. I would "
 "contend it's even *because* so much is going on."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:13
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:13
 msgid ""
 "I also am shy to make public postings about unfinished stuff it seems, "
 "but it's long overdue, so much important and great stuff has happened. We"
@@ -37,15 +37,15 @@ msgid ""
 "great achievement."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:18
-msgid "目录"
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:18
+msgid "Contents"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:22
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:22
 msgid "SSA (Single State Assignment Form)"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:24
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:24
 msgid ""
 "For a long, long time already, each release of Nuitka has worked towards "
 "increasing `\"SSA\" "
@@ -53,7 +53,7 @@ msgid ""
 "Nuitka."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:29
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:29
 msgid ""
 "Now it's there. The current pre-release just uses it. There were many "
 "things to consider before enabling it, and always a next thing to be "
@@ -61,30 +61,30 @@ msgid ""
 " the hell out of me at times."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:34
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:34
 msgid ""
 "But basically now the forward propagation of variables is in place, with "
 "some limitations that are going to fall later."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:37
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:37
 msgid ""
 "So the current release, soon to be replaced, still doesn't optimize this "
 "code as well as possible:"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:46
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:46
 msgid ""
 "But starting with the next release, the value of ``a`` is forward "
 "propagated (also in way more complex situations), and that's a serious "
 "milestone for the project."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:52
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:52
 msgid "Function Inlining"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:54
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:54
 msgid ""
 "When submitting my talk to EuroPython 2015, I was putting a lot of "
 "pressure on me by promising to demo that. And I did. It was based on the "
@@ -92,18 +92,18 @@ msgid ""
 " few other changes, and it just worked."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:59
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:59
 msgid "The example I used is this:"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:74
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:74
 msgid ""
 "So, the function ``g`` is forward propagated to a direct call, as are "
 "``x`` and ``y`` into the ``return`` statement after making the in-line, "
 "making this:"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:83
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:83
 msgid ""
 "Currently function in-lining is not yet activated by default, for this I "
 "am waiting for a release cycle to carry the load of SSA in the wild. As "
@@ -111,7 +111,7 @@ msgid ""
 "many changes at once."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:88
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:88
 msgid ""
 "And as this works for local functions only yet, it's not too important "
 "yet either. This will generally become relevant once we have this working"
@@ -119,11 +119,11 @@ msgid ""
 "will be a while until Nuitka gets there."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:95
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:95
 msgid "Scalability"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:97
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:97
 msgid ""
 "Having got Nuitka's memory usage under control, it turned out that there "
 "are files that can trigger Python recursion ``RuntimeError`` exception "
@@ -131,7 +131,7 @@ msgid ""
 "really have code with many thousands of operations to a ``+`` operation."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:102
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:102
 msgid ""
 "So, Nuitka here learned to include whole modules as bytecode when it is "
 "too complex as there is no easy way to expand the stack on Windows at "
@@ -139,35 +139,35 @@ msgid ""
 "so far, and rather very annoying too."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:107
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:107
 msgid ""
 "The scalability of Nuitka also depends much on generated code size. With "
 "the optimization become more clever, less code is generated, and that "
 "trend will continue as more structural optimization are applied."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:113
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:113
 msgid "Compatibility"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:115
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:115
 msgid ""
 "Very few things are possible here anymore. For the tests, in full "
 "compatibility mode, even more often the less good line number is used."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:118
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:118
 msgid ""
 "Also the plug-in work is leading to improved compatibility with Qt "
 "plugins of PySide and PyQt. Or another example is the ``multiprocessing``"
 " module that on Windows is now supposed to fork compiled code too."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:124
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:124
 msgid "Python 3.5"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:126
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:126
 msgid ""
 "The next release has experimental support for Python 3.5, with the "
 "notable exception that ``async`` and ``await``, these do not yet work. It"
@@ -177,14 +177,14 @@ msgid ""
 "having coverage for exception codes."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:133
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:133
 msgid ""
 "The new ``@`` operator is now supported. As the stable release of "
 "Python3.5 was made recently, there is now some pressure on having full "
 "support of course."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:137
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:137
 msgid ""
 "I am not sure, if you can fully appreciate the catch up game to play "
 "here. It will take a compiled coroutine to support these things properly."
@@ -192,7 +192,7 @@ msgid ""
 "internal cleanups so it becomes simpler."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:142
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:142
 msgid ""
 "In the case of Python3.5, the single function body node type that is used"
 " for generators, class bodies, and function, is bound to be replaced with"
@@ -200,11 +200,11 @@ msgid ""
 " then with coroutines added."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:148
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:148
 msgid "Importing Enhancements"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:150
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:150
 msgid ""
 "A while ago, the import logic was basically re-written with compatibility"
 " much increased. Then quite some issues were fixed. I am not sure, but "
@@ -212,13 +212,13 @@ msgid ""
 "the need for other fixes now."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:155
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:155
 msgid ""
 "So it may have worked for you in the past, but you might have to report "
 "new found issues."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:158
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:158
 msgid ""
 "It's mainly the standalone community that encounters these issues, when "
 "just one of these imports doesn't find the correct thing, but picking the"
@@ -227,21 +227,21 @@ msgid ""
 "solid."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:164
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:164
 msgid ""
 "I think we have gotten a long way there, but we still need to tackle some"
 " more fine details."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:169
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:169
 msgid "Performance"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:172
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:172
 msgid "Graphs and Benchmarks"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:174
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:174
 msgid ""
 "I also presented this weak point to EuroPython 2015 and my plan on how to"
 " resolve it. And low and behold, turns out the PyPy people had already "
@@ -249,7 +249,7 @@ msgid ""
 "conference."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:179
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:179
 msgid ""
 "So basically I was capable of doing kind of a prototype of comparative "
 "benchmark during EuroPython 2015 already. I will need to complete this. "
@@ -258,13 +258,13 @@ msgid ""
 "an automatic way. That matching is the hard part."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:185
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:185
 msgid ""
 "So that is already progressing, but I could need help with that "
 "definitely."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:188
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:188
 msgid ""
 "Nuitka really has to catch up with benchmarks generally.. The work on "
 "automated performance graphs has made more progress, and they are "
@@ -273,7 +273,7 @@ msgid ""
 "or ``factory`` git branches change."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:196
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:196
 msgid ""
 "There currently is no structure to these graphs. There is no explanations"
 " or comments, and there is no trend indicators. All of which makes it "
@@ -281,17 +281,17 @@ msgid ""
 "necessary."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:201
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:201
 msgid "As a glimpse of what is possible with in-lined functions, look at this:"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:203
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:203
 msgid ""
 "`Lambda call construct case <https://speedcenter.nuitka.net/constructs"
 "/construct-calllambdaexpressiondirectly.html>`__"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:206
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:206
 msgid ""
 "But we also need to put real programs and use cases to test. This may "
 "need your help. Let me know if you want to. It takes work on taking the "
@@ -299,39 +299,39 @@ msgid ""
 "ideally. That will be the tool you can just use on your own code."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:213
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:213
 msgid "Standalone"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:215
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:215
 msgid ""
 "The standalone mode of Nuitka was pretty good, and continued to improve "
 "further, now largely with the help of plug-ins."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:218
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:218
 msgid ""
 "I now know that PyGTK is an issue and will need a plug-in to work. Once "
 "the plug-in interface is public, I hope for more outside contributions "
 "here."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:224
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:224
 msgid "Other Stuff"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:227
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:227
 msgid "Funding"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:229
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:229
 msgid ""
 "Nuitka receives the occasional `donation </pages/donations.html>`_ and "
 "those make me very happy. As there is no support from organization like "
 "the PSF, I am all on my own there."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:234
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:234
 msgid ""
 "This year I traveled to Europython 2015, I needed a new desktop computer "
 "after burning the old one through with CI tests, the website has running "
@@ -339,25 +339,25 @@ msgid ""
 "of my free time it wouldn't also cost me money."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:240
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:240
 msgid "EuroPython 2015"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:242
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:242
 msgid ""
 "This was a blast. Meeting people who knew Nuitka but not me was a regular"
 " occurrence. And many people well appreciate my work. It felt much "
 "different than the years before."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:246
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:246
 msgid ""
 "I was able to present Nuitka's function in-lining indeed there, and this "
 "high goal that I set myself, quite impressed people. My talk went very "
 "well, I am going to post a link separately in another post."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:250
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:250
 msgid ""
 "Also I made many new contacts, largely with the scientific community. I "
 "hope to find work with data scientists in the coming years. More amd more"
@@ -365,15 +365,15 @@ msgid ""
 "Python."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:256
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:256
 msgid "Collaborators"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:258
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:258
 msgid "Nuitka is making break through progress. And you can be a part of it. Now."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:261
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:261
 msgid ""
 "You can join and should do so now, just `follow this link </doc/user-"
 "manual.html#join-nuitka>`_ or become part of the mailing list (since "
@@ -382,65 +382,65 @@ msgid ""
 "know the drill probably."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:269
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:269
 msgid "Future"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:271
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:271
 msgid "So, there is multiple things going on:"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:273
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:273
 msgid "Function in-lining"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:275
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:275
 msgid ""
 "For locally declared functions, it should become possible to avoid their "
 "creation, and make direct calls instead of ones that use function objects"
 " and expensive parameter handling."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:279
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:279
 msgid "Nested frames"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:281
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:281
 msgid ""
 "One result of in-lining will be nested frames still present for "
 "exceptions to be properly annotated, or ``locals`` giving different sets "
 "of locals and so on."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:285
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:285
 msgid ""
 "Some cleanup of these will be needed for code generation and SSA to be "
 "able to attach variables to some sort of container, and for a function to"
 " be able to reference different sets of these."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:289
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:289
 msgid "Type Inference"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:291
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:291
 msgid ""
 "With SSA in place, we really can start to recognize types, and treat "
 "things that work something assigned from ``[]`` different, and with code "
 "special to these."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:295
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:295
 msgid ""
 "That's going to be a lot of work. For ``float`` and ``list`` there are "
 "very important use cases, where the code can be much better."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:298
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:298
 msgid "Shape Analyisis"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:300
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:300
 msgid ""
 "My plan for types, is not to use them, but the more general shapes, "
 "things that will be more prevalent than actual type information in a "
@@ -449,11 +449,11 @@ msgid ""
 "to guess from there."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:306
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:306
 msgid "Python 3.5 new features"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:308
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:308
 msgid ""
 "The coroutines are a new type, and currently it's unclear how deep this "
 "is tied into the core of things, i.e. if a compile coroutine can be a "
@@ -462,11 +462,11 @@ msgid ""
 "stupid type checks, we shall see."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:314
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:314
 msgid "Plug-ins"
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:316
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:316
 msgid ""
 "Something I wish I could have shown at EuroPython was plug-ins to Nuitka."
 " It is recently becoming more complete, and some demo plug-ins for say Qt"
@@ -475,9 +475,12 @@ msgid ""
 "reach and appeal to get more contributors."
 msgstr ""
 
-#: ../../posts/nuitka-progress-summer-2015.rst:322
+#: ../../doc/posts/nuitka-progress-summer-2015.rst:322
 msgid ""
 "Let me know, if you are willing to help. I really need that help to make "
 "things happen faster. Nuitka will become more and more important only."
 msgstr ""
+
+#~ msgid "目录"
+#~ msgstr ""
 

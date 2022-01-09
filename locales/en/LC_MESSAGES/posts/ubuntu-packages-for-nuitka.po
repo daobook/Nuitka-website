@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/ubuntu-packages-for-nuitka.rst:7
+msgid "Ubuntu Packages for Nuitka"
+msgstr ""
+
+#: ../../doc/posts/ubuntu-packages-for-nuitka.rst:9
+msgid "Hello there,"
+msgstr ""
+
+#: ../../doc/posts/ubuntu-packages-for-nuitka.rst:11
+msgid ""
+"as I previously said, I will make these a separate announcement. Thanks "
+"to the NeuroDebian project build infrastructure, there is Nuitka packages"
+" for the Ubuntu versions back to Maverick, Natty, and Oneiric."
+msgstr ""
+
+#: ../../doc/posts/ubuntu-packages-for-nuitka.rst:15
+msgid ""
+"Please see the page `What is Nuitka? </pages/overview.html>`_ for "
+"clarification of what it is now and what it wants to be."
+msgstr ""
+
+#: ../../doc/posts/ubuntu-packages-for-nuitka.rst:18
+msgid ""
+"You may use the apt sources to track Nuitka or download the packages from"
+" the page where I offer the `latest version here "
+"</pages/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/ubuntu-packages-for-nuitka.rst:22
+msgid ""
+"Note: In fact, it's 0.3.19.1 now, which includes a hotfix release made "
+"after 0.3.19. The same is in Debian Unstable right now, waiting to "
+"propagate into Debian Testing, where there is still 0.3.18 living at this"
+" time."
+msgstr ""
+
+#: ../../doc/posts/ubuntu-packages-for-nuitka.rst:27
+msgid "I would appreciate feedback on these."
+msgstr ""
+
+#: ../../doc/posts/ubuntu-packages-for-nuitka.rst:29
+msgid "Thanks in advance, Kay"
+msgstr ""
+

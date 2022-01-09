@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-release-0616.rst:7
+msgid "Nuitka Release 0.6.16"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:13
+msgid ""
+"This release is mostly polishing and new features. Optimization looked "
+"only at threading performance, and LTO improvements on Windows."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:20
+msgid ""
+"Fix, the ``pkg-resources`` failed to resolve versions for "
+"``importlib.metadata`` from its standard library at compile time. Fixed "
+"in 0.6.15.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:24
+msgid ""
+"Standalone: Fix, ``--include-module`` was not including the module if it "
+"was an extension modules, but only for Python modules. Fixed in 0.6.15.1 "
+"already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:28
+msgid ""
+"Standalone: Added missing implicit dependencies for ``gi.overrides``. "
+"Fixed in 0.6.15.1 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:31
+msgid ""
+"Python3.9: Fix, could crash when using generic aliases in certain "
+"configurations. Fixed in 0.6.15.2 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:34
+msgid ""
+"Fix, the tensorflow plugin needed an update due to changed API. Fixed in "
+"0.6.15.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:37
+msgid ""
+"When error exiting Nuitka, it now closes any open progress bar for "
+"cleaner display."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:40
+msgid "Standalone: Added missing dependency for ``skimage``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:42
+msgid ""
+"Standalone: The ``numpy`` plugin now automatically includes Qt backend if"
+" any of the Qt binding plugins is active."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:47
+msgid "New Features"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:49
+msgid ""
+"Pyton3.5+: Added support for onefile compression. This is using ``zstd`` "
+"which is known to give very good compression with very high "
+"decompression, much better than e.g. ``zlib``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:53
+msgid "macOS: Added onefile support."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:55
+msgid "FreeBSD: Added onefile support."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:57
+msgid ""
+"Linux: Added method to use tempdir onefile support as used on other "
+"platforms as an alternative to ``AppImage`` based."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:60
+msgid ""
+"Added support for recursive addition of files from directories with "
+"patterns."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:63
+msgid "Attaching the payload to onefile now has a progress bar too."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:65
+msgid ""
+"Windows: Prelimary support for the yet unfinished Nuitka-Python that "
+"allows static linking and higher performance on Windows, esp. with "
+"Nuitka."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:69
+msgid ""
+"Windows: In acceleration mode, for uninstalled Python, now a CMD file is "
+"created rather than copying the DLL to the binary directory. That avoids "
+"conflicts with architectures and of course useless file copies."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:74
+msgid ""
+"New abilities for plugin ``anti-bloat`` allow to make it an error when "
+"certain modules are imported. Added more specific options for usual "
+"trouble makes, esp. ``setuptools``, ``pytest`` are causing an explosion "
+"for some programs, while being unused code. This makes it now easier to "
+"oversee this."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:80
+msgid ""
+"It's now possible to override ``appdirs`` decision for where cache files "
+"live with an environment variable ``NUITKA_CACHE_DIR``."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:83
+msgid ""
+"The ``-o`` option now also works with onefile mode, it previously "
+"rejected anything but acceleration mode. Fixed in 0.6.15.3 already."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:86
+msgid ""
+"Plugins: It's now possible for multiple plugins to provide pre or post "
+"load code for the same module."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:89
+msgid ""
+"Added indications for compilation modes ``standalone`` and ``onefile`` to"
+" the ``__compiled__`` attribute."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:92
+msgid ""
+"Plugins: Give nicer error message in case of colliding command line "
+"options."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:97
+msgid "Optimization"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:99
+msgid ""
+"Faster threading code is now using for Python3.8 or higher and not only "
+"3.9, giving a performance boost, esp. on Windows."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:102
+msgid ""
+"Using ``--lto`` is now the default with MSVC 2019 or higher. This will "
+"given smaller and faster binaries. It has been available for some time, "
+"but not been the default yet."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:108
+msgid "Cleanups"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:110
+msgid ""
+"Using different progress bar titles for C compilation of Python code and "
+"C compilation of onefile bootstrap."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:113
+msgid ""
+"Moved platform specific detections, for FreeBSD/OpenBSD/macOS out of the "
+"Scons file and to common Nuitka code, sometimes eliminating duplications "
+"with one version being more correct than the other."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:117
+msgid ""
+"Massive cleanup of datafile plugin, using pattern descriptions, so more "
+"code duplication can be removed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:120
+msgid "More cleanup of the scons files, sharing more common code."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:124
+msgid "Organisational"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:126
+msgid ""
+"Under the name Nuitka-Python we are now also developing a fork of CPython"
+" with enhancements, you can follow and joint it at "
+"https://github.com/Nuitka/Nuitka-Python but at this time it is not yet "
+"ready for prime time."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:131
+msgid ""
+"Onefile under Windows now only is temporary file mode. Until we figure "
+"out how to solve the problems with locking and caching, the mode where it"
+" installs to the AppData of the user is no longer available."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:136
+msgid ""
+"Renamed the plugin responsible for PyQt5 support to match the names of "
+"others. Note however, that at this time, PySide2 or PySide6 are to be "
+"recommended."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:140
+msgid ""
+"Make it clear that PySide 6.1.2 is actually going to be the supported "
+"version of PySide6."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:143
+msgid "Use MSVC in Github actions."
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:147
+msgid "Summary"
+msgstr ""
+
+#: ../../doc/posts/nuitka-release-0616.rst:149
+msgid ""
+"This release had a massive focus on expanding existing features, esp. for"
+" onefile, and plugins API, such that we can now configure ``anti-bloat`` "
+"with yaml, have really nice datafile handling options, and have onefile "
+"on all OSes practically."
+msgstr ""
+

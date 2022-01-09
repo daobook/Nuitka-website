@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:7
+msgid "Releasing Nuitka to the World"
+msgstr ""
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:9
+msgid ""
+"Obviously this is very exciting step for me. I am releasing Nuitka today."
+" Finally. For a long time I knew I would, but actually doing it, is a "
+"different beast. Reaching my goals for release turned out to be less far "
+"away than I hope, so instead of end of August, I can already release it "
+"now."
+msgstr ""
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:15
+#, python-format
+msgid ""
+"Currently it's not more than 4% faster than CPython. No surprise there, "
+"if all you did, is removing the bytecode interpretation so far. It's not "
+"impressive at all. It's not even a reason to use it. But it's also only a"
+" start. Clearly, once I get into optimizing the code generation of "
+"Nuitka, it will only get better, and then probably in sometimes dramatic "
+"steps. But I see this as a long term goal."
+msgstr ""
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:22
+msgid ""
+"I want to have infrastructure in the code place, before doing lots of "
+"possible optimizations that just make Nuitka unmaintainable. And I will "
+"want to have a look at what others did so far in the domain of type "
+"inference and how to apply that for my project."
+msgstr ""
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:27
+msgid ""
+"I look forward to the reactions about getting this far. The supported "
+"language volume is amazing, and I have a set of nice tricks used. For "
+"example the way generator functions are done is a clever hack."
+msgstr ""
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:31
+msgid ""
+"Where to go from here? Well, I guess, I am going to judge it by the "
+"feedback I receive. I personally see \"constant propagation\" as a "
+"laudable first low hanging fruit, that could be solved."
+msgstr ""
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:35
+msgid "Consider this readable code on the module level:"
+msgstr ""
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:49
+msgid ""
+"Now imagine you are using this very frequently in code. Quickly you "
+"determine that the following will be much faster:"
+msgstr ""
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:61
+msgid ""
+"Still good? Well, probably next step you are going to inline the function"
+" calls entirely. For optimization, you are making your code less "
+"readable. I do not all appreciate that. My first goal is there to make "
+"the more readable code perform as well or better as the less readable "
+"variant."
+msgstr ""
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:67
+msgid ""
+"But yes, lets see what happens. Oh, and you will find its `latest version"
+" here </pages/download.html>`_."
+msgstr ""
+
+#: ../../doc/posts/releasing-nuitka-to-the-world.rst:70
+msgid "Kay Hayen"
+msgstr ""
+

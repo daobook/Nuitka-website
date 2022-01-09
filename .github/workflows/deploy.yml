@@ -4,7 +4,7 @@ on:
   push:
     branches:
       # - main
-      # - xin
+      - xin
       - zh
       
 jobs:
@@ -49,10 +49,17 @@ jobs:
         run: |
           cd doc
           make html
-          sphinx-build -D language=zh_CN -b html ./ ../output/html/zh-CN
+          sphinx-build -D language=zh_CN -b html ./ ../output/html/zh_CN
 
       - name: 🚀 Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3.6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: output/html/
+
+      - name: delete temp
+        run: |
+          rm -rf Nuitka-main/
+          rm -rf Nuitka-develop/
+          rm -rf Nuitka-factory/
+          rm -rf output/doctrees/

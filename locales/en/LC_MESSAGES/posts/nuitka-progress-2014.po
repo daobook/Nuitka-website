@@ -1,0 +1,416 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-09 23:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../doc/posts/nuitka-progress-2014.rst:7
+msgid "Nuitka progress 2014"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:9
+msgid ""
+"Again, not much has happened publicly to Nuitka, except for some "
+"releases, so it's time to make a kind of status post, about the really "
+"exciting news there is, also looking back at 2014 for Nuitka, and forward"
+" of course."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:14
+msgid ""
+"I meant to post this basically since last year, but never got around to "
+"it, therefore the 2014 in the title."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:17
+msgid "Contents"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:21
+msgid "SSA (Single State Assignment Form)"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:23
+msgid ""
+"For a long, long time already, each release of Nuitka has worked towards "
+"enabling `\"SSA\" "
+"<http://en.wikipedia.org/wiki/Static_single_assignment_form>`_ usage in "
+"Nuitka. There is a component called \"constraint collection\", which is "
+"tasked with driving the optimization, and collecting variable traces."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:29
+msgid ""
+"Based on these traces, optimizations can be made. Having SSA or not, is "
+"(to me) the difference between Nuitka as a compiler, and Nuitka as an "
+"optimizing compiler."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:33
+msgid ""
+"The news is, SSA has carried the day, and is used throughout code "
+"generation for some time now, and gave minor improvements. It has been "
+"applied to the temporary and local variable values."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:37
+msgid ""
+"And currently, work is on the way to expand it to module and shared "
+"variables, which can get invalidated quite easily, as soon as unknown "
+"code is executed. An issue there is to identify all those spots reliably."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:42
+msgid ""
+"And this spring, we are finally going to see the big jump that is "
+"happening, once Nuitka starts to use that information to propagate "
+"things."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:46
+msgid ""
+"Still, right now, this code assigns to a local variable, then reads from "
+"it to return. But not much longer."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:55
+msgid ""
+"This is going to instantly give gains, and more importantly, will enable "
+"analysis, that leads to avoiding e.g. the creation of function objects "
+"for local functions, being able to in-line, etc."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:61
+msgid "Improved Code Generation"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:63
+msgid ""
+"Previously, under the title \"C-ish\", Nuitka moved away from C++ based "
+"code generation to less C++ based code generated, and more C-ish code. "
+"This trend continues, and has lead to removing more code generation "
+"improvements."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:68
+msgid ""
+"The important change recently was to remove the usage of the blocking "
+"holdouts, the C++ classes used for local variables are closure taking, "
+"and release, and move those to be done manually."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:72
+msgid ""
+"This enabled special code generation for in-place operations, which are "
+"the most significant improvements of the upcoming release. These were "
+"held back on, as with C++ destructors doing the release, it's practically"
+" impossible to deal with values suddenly becoming illegal. Transfer of "
+"object ownership needs to be more fluid than could be presented to C++ "
+"objects."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:79
+msgid ""
+"Currently, this allows to speed up string in-place operations, which very"
+" importantly then, can avoid to ``memcpy`` large values potentially. And "
+"this is about catching up to CPython in this regard. After that, we will "
+"likely be able to expand it to cases where CPython could never do it, "
+"e.g. also ``int`` objects"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:87
+msgid "Scalability"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:89
+msgid ""
+"The scalability of Nuitka depends much on generated code size. With it "
+"being less stupid, the generated code is now not only faster, but "
+"definitely smaller, and with more optimization, it will only become more "
+"practical."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:94
+msgid ""
+"Removing the many C++ classes already gave the backend compiler an easier"
+" time. But we need to do more, to e.g. have generic parameter parsing, "
+"instead of specialized per function, and module exclusive constants "
+"should not be pre-created, but in the module body, when they are used."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:102
+msgid "Compatibility"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:104
+msgid ""
+"There is not a whole lot to gain in the compatibility domain anymore. "
+"Nothing important certainly. But there are these minor things."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:108
+msgid "Cells for Closure"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:110
+msgid ""
+"However, since we now use ``PyCell`` objects for closure, we could start "
+"and provide a real ``__closure__`` value, that could even be writable. We"
+" could start supporting that easily."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:115
+msgid "Local Variable Storage"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:117
+msgid ""
+"Currently, local variables use stack storage. Were we to use function "
+"object or frame object attached storage, we could provide frame locals "
+"that actually work. This may be as simple as to put those in an array on "
+"the stack and use the pointer to it."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:122
+msgid ""
+"Suddenly locals would become writable. I am not saying this is useful, "
+"just that it's possible to do this."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:127
+msgid "Performance"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:130
+msgid "Graphs and Benchmarks"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:132
+msgid ""
+"The work on automated performance graphs has made progress, and they are "
+"supposed to show up on `Nuitka Speedcenter "
+"<https://speedcenter.nuitka.net>`_ each time, ``master``, ``develop`` or "
+"``factory`` git branches change."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:137
+msgid ""
+"There currently is no structure to these graphs. There is no explanations"
+" or comments, and there is no trend indicators. All of which makes it "
+"basically useless to everybody except me. And even harder for me than "
+"necessary."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:142
+msgid ""
+"At least it's updated to latest Nikola, and uses PyGal for the graphics "
+"now, so it's easier to expand. The plan here, is to integrate with "
+"special pages from a Wiki, making it easy to provide comments."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:148
+msgid "Standalone"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:150
+msgid ""
+"The standalone mode of Nuitka is pretty good, and as usual it continued "
+"to improve only."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:153
+msgid ""
+"The major improvements came from handling case collisions between modules"
+" and packages. One can have ``Module.py`` and ``module/__init__.py`` and "
+"they both are expected to be different, even on Windows, where filenames "
+"are case insensitive."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:158
+msgid ""
+"So, giving up on ``implib`` and similar, we finally have our own code to "
+"scan in a compatible way the file system, and make these determinations, "
+"whereas library code exposing functionality, doesn't handling all things "
+"in really the proper way."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:165
+msgid "Other Stuff"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:168
+msgid "Funding"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:170
+msgid ""
+"Nuitka receives some, bit not quite enough `donations "
+"</pages/donations.html>`_. There is no support from organizations like "
+"e.g. the PSF, and it seems I better not hold my breath for it. I will "
+"travel to Europython 2015, and would ask you to support me with that, "
+"it's going to be expensive."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:176
+msgid ""
+"In 2014, with donations, I bought a \"Cubox i4-Pro\", which is an ARM "
+"based machine with 4 cores, and 2GB RAM. Works from flash, and with the "
+"eSATA disk attached, it works nice for continuous integration, which "
+"helps me a lot to deliver extremely high quality releases. It's pretty "
+"nice, except that when using all 4 cores, it gets too hot. So \"systemd\""
+" to the rescue and just limited the Buildbot slave's service to use 3 "
+"cores of CPU maximum and now it runs stable."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:184
+msgid ""
+"Also with donations I bought a Terrabyte SSD, which I use on the desktop "
+"to speed up hosting the virtual machines, and my work in general."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:187
+msgid ""
+"And probably more important, the host of \"nuitka.net\" became a real "
+"machine with real hardware last year, and lots more RAM, so I can spare "
+"myself of optimizing e.g. MySQL for low memory usage. The monthly fee of "
+"that is substantial, but supported from your donations. Thanks a lot!"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:193
+msgid "Collaborators"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:195
+msgid ""
+"Things are coming along nicely. When I started out, I was fully aware "
+"that the project is something that I can do on my own if necessary, and "
+"that has not changed. Things are going slower than necessary though, but "
+"that's probably very typical."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:200
+msgid ""
+"But you can join and should do so now, just `follow this link </doc/user-"
+"manual.html#join-nuitka>`_ or become part of the mailing list (since "
+"closed) and help me there with request I make, e.g. review posts of mine,"
+" test out things, pick up small jobs, answer questions of newcomers, you "
+"know the drill probably."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:206
+msgid ""
+"Nuitka is about to make break through progress. And you can be a part of "
+"it. Now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:211
+msgid "Future"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:213
+msgid "So, there is multiple things going on:"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:215
+msgid "More \"C-ish\" code generation"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:217
+msgid ""
+"The next release is going to be more \"C-ish\" than before, and we can "
+"start to actually migrate to really \"C\" language. You can help out if "
+"you want to, this is fairly standard cleanups. Just pop up on the mailing"
+" list and say so."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:222
+msgid ""
+"This prong of action is coming to a logical end. The \"C-ish\" project, "
+"while not planned from the outset, turns out to be a full success. "
+"Initially, I would not have started Nuitka, should I have faced the full "
+"complexity of code generation that there is now. So it was good to start "
+"with \"C++\", but it's a better Nuitka now."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:228
+msgid "More SSA usage"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:230
+msgid ""
+"The previous releases consolidated on SSA. A few missing optimizations "
+"were found, because SSA didn't realize things, which were then "
+"highlighted by code generation being too good, e.g. not using exception "
+"variables."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:235
+msgid ""
+"We seem to have an SSA that can be fully trusted now, and while it can be"
+" substantially improved (e.g. the ``try/finally`` removes all knowledge, "
+"although it only needs to do a partial removing of knowledge for the "
+"finally block, not for afterwards at all), it will already allow for many"
+" nice things to happen."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:241
+msgid ""
+"Once we take it to that next level, Nuitka will be able to speed up some "
+"things by much more than the factor it basically has provided for 2 years"
+" now, and it's probably going to happen before summer, or so I hope."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:246
+msgid "Value propagation"
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:248
+msgid ""
+"Starting out with simple cases, Nuitka will forward propagate variable "
+"values, and start to eliminate variable usages entirely, where they are "
+"not needed."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:252
+msgid ""
+"That will make many things much more compact, and faster at run time. We "
+"will then try and build \"gates\" for statements that they cannot pass, "
+"so we can e.g. optimize constant things outside of loops, that kind of "
+"thing."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:257
+msgid ""
+"When these 3 things come to term, Nuitka will make a huge step ahead. I "
+"look forward to demoing function call in-lining, or at least avoiding the"
+" argument parsing at EuroPython 2015, making direct calls, which will be "
+"way faster than normal calls."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:262
+msgid ""
+"From then on, a boatload of work remains. The infrastructure in place, "
+"still there is going to be plenty of work to optimize more and more "
+"things conretely."
+msgstr ""
+
+#: ../../doc/posts/nuitka-progress-2014.rst:266
+msgid ""
+"Let me know, if you are willing to help. I really need that help to make "
+"things happen faster."
+msgstr ""
+

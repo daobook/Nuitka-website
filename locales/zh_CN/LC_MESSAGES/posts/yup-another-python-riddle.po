@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/yup-another-python-riddle.rst:7
+msgid "Yup, another Python Quiz"
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:9
+msgid ""
+"Using the following source code as a test happily in my `Python compiler "
+"Nuitka </pages/overview.html>`__ for some years now."
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:22
+msgid "Quiz Question"
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:24
+msgid ""
+"Lately, when adding Python 3.4 support, this and other code changed. So "
+"lets do this manually:"
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:52
+msgid ""
+"See, the dictionary is stable, once it gets reordered, due to hash "
+"values, but then it stays fixed. Which is pretty OK, and using a fixed "
+"hash value, it's deterministic. Random hashing is not good for comparison"
+" testing, so I disable it for tests."
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:57
+msgid "Now things get interesting, repeat with 3.4:"
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:88
+msgid ""
+"Look at how the result of \"dict\" is not reproducing itself, when used "
+"as a constant. I am only feeding the ``dict`` result to the interpreter, "
+"and it changes."
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:92
+msgid ""
+"So the quizz this time is, why does this happen. What change in "
+"CPython3.4 makes this occur. Obviously it has to do with dictionary "
+"sizes."
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:98
+msgid "Solution"
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:100
+msgid ""
+"I had a theory, but I couldn't confirm it looking at all of CPython "
+"sources \"ceval.c\" and \"dictobject.c\" differences between the two "
+"versions."
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:104
+msgid ""
+"I am suspecting a difference between presized and non-presized "
+"dictionaries, or that change to dictionary grow. When ``dict`` is being "
+"called, the amount of keys is know though, as well as when building the "
+"constant. So this ought to not play any role."
+msgstr ""
+
+#: ../../posts/yup-another-python-riddle.rst:109
+msgid "Hm, actually. I don't know the solution yet. :-)"
+msgstr ""
+

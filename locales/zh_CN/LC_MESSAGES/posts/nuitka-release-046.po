@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-046.rst:7
+msgid "Nuitka Release 0.4.6"
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:13
+msgid ""
+"This release includes progress on all fronts. The primary focus was to "
+"advance SSA optimization over older optimization code that was already in"
+" place. In this domain, there are mostly cleanups."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:17
+msgid ""
+"Another focus has been to enhance Scons with MSVC on Windows. Nuitka now "
+"finds an installed MSVC compiler automatically, properly handles "
+"architecture of Python and Windows. This improves usability a lot."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:21
+msgid ""
+"Then this is also very much about bug fixes. There have been several hot "
+"fixes for the last release, but a complicated and major issue forced a "
+"new release, and many other small issues."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:25
+msgid ""
+"And then there is performance. As can be seen in the `performance graph "
+"<https://nuitka.net/pages/performance.html>`__, this release is the "
+"fastest so far. This came mainly from examining the need for comparison "
+"slots for compiled types."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:30
+msgid ""
+"And last, but not least, this also expands the base of supported "
+"platforms, adding Gentoo, and self compiled Python to the mix."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:35
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:37
+msgid ""
+"Support Nuitka being installed to a path that contains spaces and handle "
+"main programs with spaces in their paths. Fixed in 0.4.5.1 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:41
+msgid ""
+"Support Python being installed to a path that contains spaces. Fixed in "
+"0.4.5.2 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:44
+msgid ""
+"Windows: User provided constants larger than 65k didn't work with MSVC. "
+"Fixed in 0.4.5.3 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:47
+msgid ""
+"Windows: The option ``--windows-disable-console`` was not effective with "
+"MSVC. Fixed in 0.4.5.3 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:50
+msgid ""
+"Windows: For some users, Scons was detecting their MSVC installation "
+"properly already from registry, but it didn't honor the target "
+"architecture. Fixed in 0.4.5.3 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:54
+msgid ""
+"When creating Python modules, these were marked as executable (\"x\" "
+"bit), which they are of course not. Fixed in 0.4.5.3 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:57
+msgid ""
+"Python3.3: On architectures where ``Py_ssize_t`` is not the same as "
+"``long`` this could lead to errors. Fixed in 0.4.5.3 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:60
+msgid ""
+"Code that was using nested mutable constants and changed the nested ones "
+"was not executing correctly."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:63
+msgid ""
+"Python2: Due to list contractions being re-formulated as functions, "
+"``del`` was rejected for the variables assigned in the contraction."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:74
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:76
+msgid ""
+"Compiled types when used in Python comparison now work. Code like this "
+"will work:"
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:87
+msgid ""
+"This of course also works for ``in`` operator, and is another step ahead "
+"in compatibility, and surprising too. And best of all, this works even if"
+" the checking code is not compiled with Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:91
+msgid ""
+"Windows: Detecting MSVC installation from registry, if no compiler is "
+"already present in PATH."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:94
+msgid "Windows: New options ``--mingw64`` to force compilation with MinGW."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:98
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:100
+#, python-format
+msgid ""
+"Rich comparisons (``==``, ``<``, and the like) are now faster than ever "
+"before due to a full implementation of its own in Nuitka that eliminates "
+"a bit of the overhead. In the future, we will aim at giving it type hints"
+" to make it even faster. This gives a minor speed boost to PyStone of ca."
+" 0.7% overall."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:106
+#, python-format
+msgid ""
+"Integer comparisons are now treated preferably, as they are in CPython, "
+"which gives 1.3% speed boost to CPython."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:109
+msgid ""
+"The SSA based analysis is now used to provide variable scopes for "
+"temporary variables as well as reference count needs."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:114
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:116
+msgid ""
+"Replaced \"value friend\" based optimization code with SSA based "
+"optimization, which allowed to remove complicated and old code that was "
+"still used mainly in optimization of ``or`` and ``and`` expressions."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:121
+msgid ""
+"Delayed declaration of temp variables and their reference type is now "
+"performed based on information from SSA, which may given more accurate "
+"results. Not using \"variable usage\" profiles for this anymore."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:126
+msgid ""
+"The Scons interface and related code got a massive overhaul, making it "
+"more consistent and better documented. Also updated the internal copy to "
+"2.3.0 for the platforms that use it, mostly Windows."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:130
+msgid ""
+"Stop using ``os.system`` and ``subprocess.call(..., shell = True)`` as it"
+" is not really portable at all, use ``subprocess.call(..., shell = "
+"False)`` instead."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:134
+msgid "As usual lots of cleanups related to line length issues and PyLint."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:138
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:140
+msgid "Added support for Gentoo Linux."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:142
+msgid ""
+"Added support for self compiled Python versions with and without debug "
+"enabled."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:145
+msgid "Added use of Nuitka fonts for headers in manuals."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:147
+msgid ""
+"Does not install in-line copy of Scons only on systems where it is not "
+"going to be used, that is mostly non-Windows, and Linux where it is not "
+"already present. This makes for cleaner RPM packages."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:153
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:155
+msgid ""
+"While the SSA stuff is not yet bearing performance fruits, it starts to "
+"carry weight. Taking over the temporary variable handling now also means "
+"we can apply the same stuff to local variables later."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:159
+msgid ""
+"To make up for the delay in SSA driven performance improvements, there is"
+" more traditional code acceleration for rich comparisons, making it "
+"significant, and the bug fixes make Nuitka more compatible than ever."
+msgstr ""
+
+#: ../../posts/nuitka-release-046.rst:163
+msgid ""
+"So give this a roll, it's worth it. And feel free to join the mailing "
+"list (since closed) or `make a donation "
+"<https://nuitka.net/pages/donations.html>`__ to support Nuitka."
+msgstr ""
+

@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-0517.rst:7
+msgid "Nuitka Release 0.5.17"
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:13
+msgid ""
+"This release is a major feature release, as it adds full support for "
+"Python3.5 and its coroutines. In addition, in order to properly support "
+"coroutines, the generator implementation got enhanced. On top of that, "
+"there is the usual range of corrections."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:20
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:22
+msgid ""
+"Windows: Command line arguments that are unicode strings were not "
+"properly working."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:25
+msgid ""
+"Compatibility: Fix, only the code object attached to exceptions contained"
+" all variable names, but not the one of the function object."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:28
+msgid ""
+"Python3: Support for virtualenv on Windows was using non-portable code "
+"and therefore failing."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:31
+msgid ""
+"The tree displayed with ``--display-tree`` duplicated all functions and "
+"did not resolve source lines for functions. It also displayed unused "
+"functions, which is not helpful."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:35
+msgid ""
+"Generators with parameters leaked C level memory for each instance of "
+"them leading to memory bloat for long running programs that use a lot of "
+"generators. Fixed in 0.5.16.1 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:39
+msgid ""
+"Don't drop positional arguments when called with ``--run``, also make it "
+"an error if they are present without that option."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:44
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:46
+msgid "Added full support for Python3.5, coroutines work now too."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:50
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:52
+#, python-format
+msgid ""
+"Optimized frame access of generators to not use both a local frame "
+"variable and the frame object stored in the generator object itself. This"
+" gave about 1% speed up to setting them up."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:56
+msgid ""
+"Avoid having multiple code objects for functions that can raise and have "
+"local variables. Previously one code object would be used to create the "
+"function (with parameter variable names only) and when raising an "
+"exception, another one would be used (with all local variable names). "
+"Creating them both at start-up was wasteful and also needed two tuples to"
+" be created, thus more constants setup code."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:63
+msgid ""
+"The entry point for generators is now shared code instead of being "
+"generated for each one over and over. This should make things more cache "
+"local and also results in less generated C code."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:67
+msgid ""
+"When creating frame codes, avoid working with strings, but use proper "
+"emission for less memory churn during code generation."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:72
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:74
+msgid ""
+"Updated the key for the Debian/Ubuntu repositories to remain valid for 2 "
+"more years."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:77
+msgid "Added support for Fedora 23."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:79
+msgid ""
+"MinGW32 is no more supported, use MinGW64 in the 32 bits variant, which "
+"has less issues."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:84
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:86
+msgid ""
+"Detecting function type ahead of times, allows to handle generators "
+"different from normal functions immediately."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:89
+msgid ""
+"Massive removal of code duplication between normal functions and "
+"generator functions. The later are now normal functions creating "
+"generator objects, which makes them much more lightweight."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:93
+msgid ""
+"The ``return`` statement in generators is now immediately set to the "
+"proper node as opposed to doing this in variable closure phase only. We "
+"can now use the ahead knowledge of the function type."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:97
+msgid ""
+"The ``nonlocal`` statement is now immediately checked for syntax errors "
+"as opposed to doing that only in variable closure phase."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:100
+msgid ""
+"The name of contraction making functions is no longer skewed to empty, "
+"but the real thing instead. The code name is solved differently now."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:104
+msgid ""
+"The ``local_locals`` mode for function node was removed, it was always "
+"true ever since Python2 list contractions stop using pseudo functions."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:108
+msgid ""
+"The outline nodes allowed to provide a body when creating them, although "
+"creating that body required using the outline node already to create "
+"temporary variables. Removed that argument."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:112
+msgid ""
+"Removed PyLint false positive annotations no more needed for PyLint 1.5 "
+"and solved some TODOs."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:115
+msgid ""
+"Code objects are now mostly created from specs (not yet complete) which "
+"are attached and shared between statement frames and function creations "
+"nodes, in order to have less guess work to do."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:121
+msgid "Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:123
+msgid "Added the CPython3.5 test suite."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:125
+msgid ""
+"Updated generated doctests to fix typos and use common code in all "
+"CPython test suites."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:130
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:132
+msgid ""
+"This release continues to address technical debt. Adding support for "
+"Python3.5 was the major driving force, while at the same time removing "
+"obstacles to the changes that were needed for coroutine support."
+msgstr ""
+
+#: ../../posts/nuitka-release-0517.rst:136
+msgid ""
+"With Python3.5 sorted out, it will be time to focus on general "
+"optimization again, but there is more technical debt related to classes, "
+"so the cleanup has to continue."
+msgstr ""
+

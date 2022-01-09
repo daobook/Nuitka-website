@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/python-float-quiz.rst:7
+msgid "Quiz Question"
+msgstr ""
+
+#: ../../posts/python-float-quiz.rst:9
+msgid "Say you have the following code:"
+msgstr ""
+
+#: ../../posts/python-float-quiz.rst:18
+msgid ""
+"What value of \"s\" and then \"x\" can make the code complain? Do you see"
+" the really bad side of it?"
+msgstr ""
+
+#: ../../posts/python-float-quiz.rst:21
+msgid ""
+"The answer is in the next paragraph, so stop reading if you want to find "
+"out yourself."
+msgstr ""
+
+#: ../../posts/python-float-quiz.rst:26
+msgid "Solution"
+msgstr ""
+
+#: ../../posts/python-float-quiz.rst:28
+msgid ""
+"The correct answer is that there is one float that is not equal to itself"
+" and that is float(\"nan\"). Which I find terrible. It is so bad, it "
+"spoils set, dict, and everything there is. Any container that has it "
+"inside is no longer equal to itself."
+msgstr ""
+
+#: ../../posts/python-float-quiz.rst:33
+msgid ""
+"Surprised? I was too! I only learned it while doing my `Python compiler "
+"Nuitka </pages/overview.html>`_ and I made it a separate posting, because"
+" it really surprised me how this could possibly happen. A builtin type "
+"that breaks fundamental assumptions like \"x == x\"."
+msgstr ""
+

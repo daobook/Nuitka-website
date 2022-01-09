@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:7
+msgid "Intro"
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:9
+msgid ""
+"This post compares the pytest results of dateutil to its nuitka-built "
+"``.whl`` counterpart."
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:12
+msgid ""
+"Dateutil standalone test have already been covered. Manual testing is now"
+" done to compare the pytest results of a nuitka wheel built using "
+"``python setup.py bdist_nuitka`` to the regular pytest of the dateutil "
+"package. Testing is done to ensure that nuitka is building the wheel "
+"correctly. If the pytests pass/fail in the same way, that means Nuitka "
+"built the wheel properly. Else if the tests differ, then something is "
+"wrong. Virtualenv is used to create a clean environment with no outside "
+"pollution."
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:21
+msgid "The pytest results were very similar:"
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:30
+msgid "Steps to Reproduce"
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:32
+msgid "Clone dateutil and nuitka into a new folder"
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:34
+msgid ""
+"Inside the dateutil folder, issue ``python -m pip install -r "
+"requirements-dev.txt`` to install its requirements."
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:37
+msgid ""
+"Issue ``python -m pytest --disable-warnings``, this runs the regular "
+"pytest for dateutil."
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:40
+msgid "Change into the nuitka folder and issue ``python setup.py develop``."
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:42
+msgid ""
+"Change back into dateutil and issue ``python setup.py bdist_nuitka`` to "
+"build the dateutil wheel using nuitka. The newly built wheel should be "
+"found in the ``dist`` folder."
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:46
+msgid ""
+"Use pip to uninstall the existing dateutil, then issue ``python -m pip "
+"install`` followed by the newly built ``.whl`` filename."
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:49
+msgid ""
+"Issue ``python -m pytest --disable-warnings``, this runs the nuitka-built"
+" wheel pytest for dateutil."
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:54
+msgid "Uncompile Python"
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:56
+msgid "dateutil regular pytest:"
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:112
+msgid "Compiled with Nuitka"
+msgstr ""
+
+#: ../../posts/dateutil-wheel-with-nuitka.rst:114
+msgid "nuitka wheel pytest:"
+msgstr ""
+

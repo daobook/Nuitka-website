@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-this-week-2.rst:7
+msgid "Nuitka this week #2"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:9
+msgid "目录"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:13
+msgid "New Series Rationale"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:15
+msgid ""
+"As discussed last week in `TWN #1 <./nuitka-this-week-1.html>`_ this is a"
+" new series that I am using to highlight things that are going on, newly "
+"found issues, hotfixes, all the things Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:21
+msgid "Python 3.7"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:23
+msgid ""
+"I made the first release with official 3.7 support, huge milestone in "
+"terms of catching up. Generic classes posed a few puzzles, and need more "
+"refinements for error handling, but good code works now."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:27
+msgid ""
+"The class creation got a bit more complex, yet again, which will make it "
+"even hard to know the exact base classes to be used. But eventually we "
+"will manage to overcome this and statically optimize that."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:33
+msgid "MSI 3.7 files for Nuitka"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:35
+msgid ""
+"Building the MSI files for Nuitka ran into a 3.7.0 regression of CPython "
+"failing to build them, that I reported and seems to be valid bug of "
+"theirs."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:39
+msgid ""
+"So they will be missing for some longer time. Actually I wasn't so sure "
+"if they are all that useful, or working as expected for the runners, but "
+"with the ``-m nuitka`` mode of execution, that ought to be a non-issue. "
+"so it would be nice to keep them for those who use them for deployment "
+"internally."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:47
+msgid "Planned Mode"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:49
+msgid ""
+"I have a change here. This is going to be a draft post until I publish "
+"it, so I might the link, or mention it on the list, but I do not think I "
+"will wait for feedback, where there is not going to be all that much."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:53
+msgid "So I am shooting this off the web site."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:57
+msgid "Goto Generators"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:59
+msgid ""
+"This is an exciting field of work, that I have been busy with this week. "
+"I will briefly describe the issue at hand."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:62
+msgid ""
+"So generators in Python are more generally called coroutines in other "
+"places, and basically that is code shaking hands, executing resuming in "
+"one, handing back a piece of data back and forth."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:66
+msgid ""
+"In Python, the way of doing this is ``yield`` and more recently ``yield "
+"from`` as a convienant way for of doing it in a loop in Python3. I still "
+"recall the days when that was a statement. Then communication was one way"
+" only. Actually when I was still privately doing Nuitka based on then "
+"Python 2.5 and was then puzzled for Python 2.6, when I learned in Nuitka "
+"about it becoming an expression."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:73
+msgid ""
+"The way this is implemented in Python, is that execution of a frame is "
+"simply suspended, and another frame stack bytecode is activated. This "
+"switching is of course very fast potentially, the state is already fully "
+"preserved on the stack of the virtual machine, which is owned by the "
+"frame. For Nuitka, when it still was C++, it wasn't going to be possible "
+"to interrupt execution without preserving the stack. So what I did was "
+"very similar, and I started to use ``makecontext/setcontext`` to "
+"implement what I call fibers."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:82
+msgid ""
+"Basically that is C level stack switching, but with a huge issue. Python "
+"does not grow stacks, but can need a lot of stack space below. Therefore "
+"1MB or even 2MB per generator was allocated, to be able to make deep "
+"function calls if needed."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:87
+msgid ""
+"So using a lot of generators on 32 bits could easily hit a 2GB limit. And"
+" now with Python3.5 coroutines people use more and more of them, and hit "
+"memory issues."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:91
+msgid ""
+"So, goto generators, now that C is possible, are an entirely new "
+"solution. With it, Nuitka will use one stack only. Generator code will "
+"become re-entrant, store values between entries on the heap, and continue"
+" execution at goto destinations dispatched by a switch according to last "
+"exit of the generator."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:97
+msgid ""
+"So I am now making changes to cleanup the way variable declarations and "
+"accesses for the C variables are being made. More on that next week "
+"though. For now I am very exited about the many cleanups that stem from "
+"it. The code generation used to have many special bells and whistles, and"
+" they were generalized into one thing now, making for cleaner and easier "
+"to understand Nuitka code."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:106
+msgid "Python3 Enumerators"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:108
+msgid ""
+"On interesting thing, is that an incompatibility related to ``__new__`` "
+"will go away now."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:111
+msgid ""
+"The automatic ``staticmethod`` that we had to hack into it, because the "
+"Python core will do it for uncompiled functions only, had to be done "
+"while declaring the class. So it was visible and causing issues with at "
+"least the Python enum module, which wants to call your ``__new__`` "
+"manually. Because why would it not?!"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:117
+msgid ""
+"But turns out, for Python3 the ``staticmethod`` is not needed anymore. So"
+" this is now only done for Python2, where it is needed, and things work "
+"smoothly with this kind of code now too. This is currently in my factory "
+"testing and will probably become part of a hotfix if it turns out good."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:125
+msgid "Hotfixes"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:127
+msgid ""
+"Immediately after the release, some rarely run test, where I compiled all"
+" the code on my machine, found 2 older bugs, obscure ones arguably, that "
+"I made into a hotfix, also because the test runner was having a "
+"regression with 3.7, which prevented some package builds. So that was "
+"0.5.32.1 release."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:133
+msgid ""
+"And then I received a bug report about ``await`` where a self test of "
+"Nuitka fails and reports an optimization error. Very nice, the new "
+"exceptions that automatically dump involved nodes as XML made it "
+"immediately clear from the report, what is going on, even without having "
+"to reproduce anything. I bundled a 3.7 improvement for error cases in "
+"class creation with it. So that was the 0.5.32.2 release."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:142
+msgid "Plans"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:144
+msgid ""
+"Finishing goto generators is my top priority, but I am also going over "
+"minor issues with the 3.7 test suite, fixing test cases there, and as "
+"with e.g. the enum issue, even known issues this now finds."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-2.rst:148
+msgid "Until next week."
+msgstr ""
+

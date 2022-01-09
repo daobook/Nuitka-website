@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-062.rst:7
+msgid "Nuitka Release 0.6.2"
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:13
+msgid ""
+"This release has a huge focus on organisational things. Nuitka is growing"
+" in terms of contributors and supported platforms."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:20
+msgid ""
+"Fix, the Python flag ``--python-flag=-O`` was removing doc strings, but "
+"that should only be done with ``--python-flag=-OO`` which was added too."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:24
+msgid ""
+"Fix, accelerated binaries failed to load packages from the ``virtualenv``"
+" (not ``venv``) that they were created and ran with, due to not "
+"propagating ``sys.prefix``."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:28
+msgid ""
+"Standalone: Do not include ``plat-*`` directories as frozen code, and "
+"also on some platforms they can also contain code that fails to import "
+"without error."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:32
+msgid ""
+"Standalone: Added missing implicit dependency needed for newer NumPy "
+"versions."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:37
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:39
+msgid "Added support for Alpine Linux."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:41
+msgid "Added support for MSYS2 based Python on Windows."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:43
+msgid ""
+"Added support for Python flag ``--python flag=-OO``, which allows to "
+"remove doc strings."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:46
+msgid ""
+"Added experimental support for ``pefile`` based dependency scans on "
+"Windows, thanks to Orsiris for this contribution."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:49
+msgid ""
+"Added plugin for proper Tkinter standalone support on Windows, thanks to "
+"Jorj for this contribution."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:52
+msgid ""
+"There is now a ``__compiled__`` attribute for each module that Nuitka has"
+" compiled. Should be like this now, and contains Nuitka version "
+"information for you to use, similar to what ``sys.version_info`` gives as"
+" a ``namedtuple`` for your checks."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:63
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:65
+msgid ""
+"Experimental code for variant types for ``int`` and ``long`` values, that"
+" can be plain C value, as well as the ``PyObject *``. This is not yet "
+"completed though."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:69
+msgid ""
+"Minor refinements of specialized code variants reducing them more often "
+"the actual needed code."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:74
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:76
+msgid ""
+"The Nuitka Github Organisation that was created a while ago and owns the "
+"Nuitka repo now, has gained members. Check out "
+"https://github.com/orgs/Nuitka/people for their list. This is an exciting"
+" transformation for Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:81
+msgid ""
+"Nuitka is participating in the GSoC 2019 under the PSF umbrella. We hope "
+"to grow even further. Thanks to the mentors who volunteered for this "
+"important task. Check out the `GSoC 2019 page "
+"<https://nuitka.net/pages/gsoc2019.html#mentors>`__ and thanks to the "
+"students that are already helping out."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:87
+msgid ""
+"Added Nuitka internal `API documentation <https://nuitka.net/apidoc>`__ "
+"that will receive more love in the future. It got some for this release, "
+"but a lot is missing."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:91
+msgid ""
+"The Nuitka code has been ``black``-ened and is formatted with an "
+"automatic tool now all the way, which makes contributors lives easier."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:95
+msgid ""
+"Added documentation for questions received as part of the GSoC "
+"applications and ideas work."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:98
+msgid ""
+"Some proof reading pull requests were merged for the documentation, "
+"thanks to everybody who addresses these kinds of errors. Sometimes typos,"
+" sometimes broken links, etc."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:102
+msgid ""
+"Updated inline copy of Scons used for Python3 to 3.0.4, which hopefully "
+"means more bugs are fixed."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:107
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:109
+msgid ""
+"This release is a sign of increasing adoption of Nuitka. The GSoC 2019 is"
+" showing early effects, as is more developers joining the effort. These "
+"are great times for Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:113
+msgid ""
+"This release has not much on the optimization side that is user visible, "
+"but the work that has begun is capable of producing glorious benchmarks "
+"once it will be finished."
+msgstr ""
+
+#: ../../posts/nuitka-release-062.rst:117
+msgid ""
+"The focus on this and coming releases is definitely to open up the Nuitka"
+" development now that people are coming in as permanent or temporary "
+"contributors in (relatively) high numbers."
+msgstr ""
+

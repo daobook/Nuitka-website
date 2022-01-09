@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/release-nuitka-022.rst:7
+msgid "Nuitka Release 0.2.2"
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:13
+msgid ""
+"This is some significant progress, a lot of important things were "
+"addressed."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:20
+msgid ""
+"Scope analysis is now done during the tree building instead of sometimes "
+"during code generation, this fixed a few issues that didn't show up in "
+"tests previously."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:24
+msgid ""
+"Reference leaks of generator expressions that were not fishing, but then "
+"deleted are not more."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:27
+msgid "Inlining of exec is more correct now."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:29
+msgid ""
+"More accurate exception lines when iterator creation executes compiled "
+"code, e.g. in a for loop"
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:32
+msgid ""
+"The list of base classes of a class was evaluated in the context of the "
+"class, now it is done in the context of the containing scope."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:35
+msgid ""
+"The first iterated of a generator expression was evaluated in its own "
+"context, now it is done in the context of the containing scope."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:40
+msgid "Reduced Differences"
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:42
+msgid ""
+"With the enhanced scope analysis, ``UnboundLocalError`` is now correctly "
+"supported."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:45
+msgid ""
+"Generator expressions (but not yet functions) have a ``throw()``, "
+"``send()`` and ``close()`` method."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:48
+msgid ""
+"Exec can now write to local function namespace even if ``None`` is "
+"provided at run time."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:51
+msgid ""
+"Relative imports inside packages are now correctly resolved at compile "
+"time when using ``--deep``."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:56
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:58
+msgid "The compiled function type got further enhanced and cleaned up."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:60
+msgid ""
+"The compiled generator expression function type lead to a massive cleanup"
+" of the code for generator expressions."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:63
+msgid ""
+"Cleaned up namespaces, was still using old names, or \"Py*\" which is "
+"reserved to core CPython."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:66
+msgid ""
+"Overhaul of the code responsible for ``eval`` and ``exec``, it has been "
+"split, and it pushed the detection defaults to the C++ compiler which "
+"means, we can do it at run time or compile time, depending on "
+"circumstances."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:71
+msgid ""
+"Made ``PyTemporaryObject`` safer to use, disabling copy constructor it "
+"should be also a relief to the C++ compiler if it doesn't have to "
+"eliminate all its uses."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:75
+msgid ""
+"The way delayed work is handled in ``TreeBuilding`` step has been changed"
+" to use closured functions, should be more readable."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:78
+msgid ""
+"Some more code templates have been created, making the code generation "
+"more readable in some parts. More to come."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:83
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:85
+msgid ""
+"As I start to consider announcing Nuitka, I moved the version logic so "
+"that the version can now be queried with ``--version``."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:90
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:92
+msgid ""
+"Name lookups for ``None``, ``True`` and ``False`` and now always detected"
+" as constants, eliminating many useless module variable lookups."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:98
+msgid "New Tests"
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:100
+msgid "More complete test of generator expressions."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:102
+msgid "Added test program for packages with relative imports inside the package."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:105
+msgid ""
+"The built-in ``dir()`` in a function was not having fully deterministic "
+"output list, now it does."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:110
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:112
+msgid ""
+"Overall, the amount of differences between CPython and Nuitka is heading "
+"towards zero. Also most of the improvements done in this release were "
+"very straightforward cleanups and not much work was required, mostly "
+"things are about cleanups and then it becomes easily right. The new type "
+"for the compiled generator expressions was simple to create, esp. as I "
+"could check what CPython does in its source code."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:119
+msgid ""
+"For optimization purposes, I decided that generator expressions and "
+"generator functions will be separate compiled types, as most of their "
+"behavior will not be shared. I believe optimizing generator expressions "
+"to run well is an important enough goal to warrant that they have their "
+"own implementation. Now that this is done, I will repeat it with "
+"generator functions."
+msgstr ""
+
+#: ../../posts/release-nuitka-022.rst:126
+msgid ""
+"Generator functions already work quite fine, but like generator "
+"expressions did before this release, they can leak references if not "
+"finished , and they don't have the ``throw()`` method, which seems very "
+"important to the correct operation of ``contextlib``. So I will introduce"
+" a decicated type for these too, possibly in the next release."
+msgstr ""
+

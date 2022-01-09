@@ -1,0 +1,307 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-this-week-6.rst:7
+msgid "Nuitka this week #6"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:9
+msgid "目录"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:13
+msgid "Holiday"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:15
+msgid ""
+"In my 2 weeks holiday, I indeed focused on a really big thing, and got "
+"more done that I had hoped for. For C types, ``nuitka_bool``, which is a "
+"tri-state boolean with true, false and unassigned, can be used for some "
+"variables, and executes some operations without going through objects "
+"anymore."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:22
+msgid "bool"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:24
+msgid ""
+"Condition codes are no longer special. They all need a boolean value from"
+" the expression used as a condition, and there was a special paths for "
+"some popular expressions for conditions, but of course not all. That is "
+"now a universal thing, conditional statement/expressions will now simply "
+"ask to provide a temp variable of value ``nuitka_bool`` and then code "
+"generation handles it."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:31
+msgid ""
+"For where it is used, code gets a lot lighter, and of course faster, "
+"although I didn't measure it yet. Going to ``Py_True``/``Py_False`` and "
+"comparing with it, wasn't that optimal, and it's nice this is now so much"
+" cleaner as a side effect of that C bool work."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:36
+msgid ""
+"This seems to be so good, that actually it's the default for this to be "
+"used in 0.6.0, and that itself is a major break through. Not so much for "
+"actual performance, but for structure. Other C types are going to follow "
+"soon and will give massive performance gains."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:42
+msgid "void"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:44
+msgid ""
+"And what was really good, is that not only did I get ``bool`` to work "
+"almost perfectly, I also started work on the ``void`` C target type and "
+"finished that after my return from holiday last weekend, which lead to "
+"new optimization that I am putting in the 0.5.33 release that is coming "
+"soon, even before the ``void`` code generation is out."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:50
+msgid ""
+"The ``void`` C type cannot read values back, and unused values should not"
+" be used, so this gives errors for cases where that becomes obvious."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:57
+msgid ""
+"Consider this expression. The ``or`` expression, that one is going to "
+"producing a value, which is then released, but not used otherwise. New "
+"optimzation creates a conditional statement out of it, which takes ``a`` "
+"as the condition and if not true, then evaluates ``b`` but ignores it."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:67
+msgid "The ``void`` evaluation of ``b`` can then do further optimization for it."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:70
+msgid ""
+"Void code generation can therefore highlight missed opportunities for "
+"this kid of optimization, and found a couple of these. That is why I was "
+"going for it, and I feel it pays off. Code generation checking "
+"optimization here, is a really nice synergy between the two."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:75
+msgid ""
+"Plus I got all the tests to work with it, and solved the missing "
+"optimizations it found very easily. And instead of allocating an object "
+"now, not assigning is often creating more obvious code. And that too "
+"allowed me to find a couple of bugs by C compiler warnings."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:80
+msgid ""
+"Obviously I will want to run a compile all the world test before making "
+"it the default, which is why this will probably become part of 0.6.1 to "
+"be the default."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:85
+msgid "module_var"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:87
+msgid ""
+"Previously variable codes were making a hard distinction for module "
+"variables and make them use their own helper codes. Now this is "
+"encapsulated in a normal C type class like ``nuitka_bool``, or the one "
+"for ``PyObject *`` variables, and integrates smoothly, and even got "
+"better. A sign things are going smooth."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:95
+msgid "Goto Generators"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:97
+msgid ""
+"Still not released. I delayed it after my holiday, and due to the heap "
+"generator change, after stabilizing the C types work, I want to first "
+"finish a ``tests/library/compile_python_module.py resume`` run, which "
+"will for a Anaconda3 compile all the code found in there."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:102
+msgid ""
+"Right now it's still doing that, and even found a few bugs. The heap "
+"storage can still cause issues, as can changes to cloning nodes, which "
+"happens for ``try`` nodes and their ``finally`` blocks."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:106
+msgid ""
+"This should finish these days. I looked at performance numbers and found "
+"that ``develop`` is indeed only faster, and ``factory`` due to even more "
+"optimization will be yet faster, and often noteworthy."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:112
+msgid "Benchmarks"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:114
+msgid ""
+"The Speedcenter of Nuitka is what I use right now, but it's only showing "
+"the state of 3 branches and compared to CPython, not as much historical "
+"information. Also the organization of tests is poor. At least there is "
+"tags for what improved."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:119
+msgid ""
+"After release of Nuitka 0.6.0 I will show more numbers, and I will start "
+"to focus on making it easier to understand. Therefore no link right now, "
+"google if you are so keen. ;-)"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:125
+msgid "Twitter"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:127
+msgid ""
+"During the holiday sprint, and even after, I am going to Tweet a lot "
+"about what is going on for Nuitka. So follow me on twitter if you like, I"
+" will post important stuff as it happens there:"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:131
+#, python-format
+msgid "`Follow @kayhayen <https://twitter.com/kayhayen?ref_src=twsrc%5Etfw>`_"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:133
+msgid "And lets not forget, having followers make me happy. So do re-tweets."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:137
+msgid "Poll on Executable Names"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:139
+msgid ""
+"So I put e.g. poll up on Twitter, which is now over. But it made me "
+"implement a new scheme, due to `popular consensus "
+"<https://twitter.com/KayHayen/status/1037591355319640065>`_"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:145
+msgid "Hotfixes"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:147
+msgid ""
+"Even more hotfixes. I even did 2 during my holiday, however packages "
+"built only later."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:150
+msgid ""
+"Threaded imports on 3.4 or higher of modules were not using the locking "
+"they should use. Multiprocessing on Windows with Python3 had even more "
+"problems, and the ``--include-package`` and ``--include-module`` were "
+"present, but not working."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:155
+msgid ""
+"That last one was actually very strange. I had added a new option group "
+"for them, but not added it to the parser. Result: Option works. Just does"
+" not show up in help output. Really?"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:161
+msgid "Help Wanted"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:163
+#, python-format
+msgid ""
+"If you are interested, I am tagging issues `help wanted "
+"<https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22>`_"
+" and there is a bunch, and very like one you can help with."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:167
+msgid "Nuitka definitely needs more people to work on it."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:171
+msgid "Plans"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:173
+msgid ""
+"Working down the release backlog. Things should be out. I am already "
+"working on what should become 0.6.1, but it's not yet 0.5.33 released. "
+"Not a big deal, but 0.6.0 has 2 really important fixes for performance "
+"regressions that have happened in the past. One is for loops, making that"
+" faster is probably like the most important one. The other for constant "
+"indexing, probably also very important. Very much measurable in pystone "
+"at least."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:181
+msgid ""
+"In the mean time, I am preparing to get ``int`` working as a target C "
+"type, so e.g. comparisons of such values could be done in pure C, or "
+"relatively pure C."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:185
+msgid ""
+"Also, I noticed that e.g. in-place operations can be way more optimized "
+"and did stuff for 0.6.1 already in this domain. That is unrelated to C "
+"type work, but kind of follows a similar route maybe. How to compare "
+"mixed types we know of, or one type only. That kind of things needs ideas"
+" and experiments."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:191
+msgid ""
+"Having ``int`` supported should help getting some functions to C speeds, "
+"or at least much closer to it. That will make noticeable effects in many "
+"of the benchmarks. More C types will then follow one by one."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:197
+msgid "Donations"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:199
+msgid ""
+"If you want to help, but cannot spend the time, please consider to donate"
+" to Nuitka, and go here:"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-6.rst:202
+msgid "`Donate to Nuitka </pages/donations.html>`_"
+msgstr ""
+

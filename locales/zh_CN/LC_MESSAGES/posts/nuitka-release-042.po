@@ -1,0 +1,385 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-042.rst:7
+msgid "Nuitka Release 0.4.2"
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:13
+msgid ""
+"This release comes with many bug fixes, some of which are severe. It also"
+" contains new features, like basic Python 3.3 support. And the "
+"`performance diagrams <https://nuitka.net/pages/performance.html>`__ got "
+"expanded."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:20
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:22
+msgid "Support for FreeBSD."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:24
+msgid ""
+"Nuitka works for at least FreeBSD 9.1, older versions may or may not "
+"work. This required only fixing some \"Linuxisms\" in the build process."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:28
+msgid "New option for warning about compile time detected exception raises."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:30
+msgid "Nuitka can now warn about exceptions that will be raised at run time."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:32
+msgid "Basic Python3.3 support."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:34
+msgid ""
+"The test suite of CPython3.2 passes and fails in a compatible way. New "
+"feature ``yield from`` is not yet supported, and the improved argument "
+"parsing error messages are not implemented yet."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:40
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:42
+msgid ""
+"Nuitka already supported compilation of \"main directories\", i.e. "
+"directories with a \"__main__.py\" file inside. The resulting binary name"
+" was \"__main__.exe\" though, but now it is \"directory.exe\""
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:55
+msgid ""
+"This makes this usage more obvious, and fixes an older issue for this "
+"feature."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:58
+msgid "Evaluation order of binary operators was not enforced."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:60
+msgid ""
+"Nuitka already enforces evaluation order for just about everything. But "
+"not for binary operators it seems."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:63
+msgid ""
+"Providing an ``# coding: no-exist`` was crashing under Python2, and "
+"ignored under Python3, now it does the compatible thing for both."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:66
+msgid ""
+"Global statements on the compiler level are legal in Python, and were not"
+" handled by Nuitka, they now are."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:74
+msgid "Effectively these statements can be ignored."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:76
+msgid "Future imports are only legal when they are at the start of the file."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:78
+msgid ""
+"This was not enforced by Nuitka, making it accept code, which CPython "
+"would reject. It now properly raises a syntax error."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:81
+msgid "Raising exceptions from context was leaking references."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:87
+msgid ""
+"Under CPython3.2 the above is not allowed (it is acceptable starting "
+"CPython3.3), and was also leaking references to its arguments."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:90
+msgid ""
+"Importing the module that became ``__main__`` through the module name, "
+"didn't recurse to it."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:93
+msgid ""
+"This also gives a warning. PyBench does it, and then stumbles over the "
+"non-found \"pybench\" module. Of course, programmers should use "
+"``sys.modules[ \"__main__\" ]`` to access main module code. Not only "
+"because the duplicated modules don't share data."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:98
+msgid "Compiled method ``repr`` leaked references when printed."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:100
+msgid ""
+"When printing them, they would not be freed, and subsequently hold "
+"references to the object (and class) they belong to. This could trigger "
+"bugs for code that expects ``__del__`` to run at some point."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:104
+msgid "The ``super`` built-in leaked references to given object."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:106
+msgid ""
+"This was added, because Python3 needs it. It supplies the arguments to "
+"``super`` automatically, whereas for Python2 the programmer had to do it."
+" And now it turns out that the object lost a reference, causing similar "
+"issues as above, preventing ``__del__`` to run."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:111
+msgid "The ``raise`` statement didn't enforce type of third argument."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:113
+msgid ""
+"This Python2-only form of exception raising now checks the type of the "
+"third argument before using it. Plus, when it's None (which is also "
+"legal), no reference to None is leaked."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:117
+msgid "Python3 built-in exceptions were strings instead of exceptions."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:119
+msgid ""
+"A gross mistake that went uncaught by test suites. I wonder how. Them "
+"being strings doesn't help their usage of course, fixed."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:122
+msgid "The ``-nan`` and ``nan`` both exist and make a difference."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:124
+msgid ""
+"A older story continued. There is a sign to ``nan``, which can be copied "
+"away and should be present. This is now also supported by Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:128
+msgid "Wrong optimization of ``a == a``, ``a != a``, ``a <= a`` on C++ level."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:131
+msgid ""
+"While it's not done during Nuitka optimization, the rich comparison "
+"helpers still contained short cuts for ``==``, ``!=``, and ``<=``."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:134
+msgid ""
+"The ``sys.executable`` for ``nuitka-python --python-version 3.2`` was "
+"still ``python``."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:137
+msgid ""
+"When determining the value for ``sys.executable`` the CPython library "
+"code looks at the name ``exec`` had received. It was ``python`` in all "
+"cases, but now it depends on the running version, so it propagates."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:142
+msgid ""
+"Keyword only functions with default values were losing references to "
+"defaults."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:154
+msgid "This is now corrected. Of course, a Python3 only issue."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:156
+msgid "Pressing CTRL-C didn't generate ``KeyboardInterrupt`` in compiled code."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:159
+msgid ""
+"Nuitka never executes \"pending calls\". It now does, with the upside, "
+"that the solution used, appears to be suitable for threading in Nuitka "
+"too. Expect more to come out of this."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:163
+msgid ""
+"For ``with`` statements with ``return``, ``break``, or ``continue`` to "
+"leave their body, the ``__exit__`` was not called."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:171
+msgid ""
+"This is of course quite huge, and unfortunately wasn't covered by any "
+"test suite so far. Turns out, the re-formulation of ``with`` statements, "
+"was wrongly using ``try/except/else``, but these ignore the problematic "
+"statements. Only ``try/finally`` does. The enhanced re-formulation now "
+"does the correct thing."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:177
+msgid "Starting with Python3, absolute imports are now the default."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:179
+msgid ""
+"This was already present for Python3.3, and it turns out that all of "
+"Python3 does it."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:184
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:186
+msgid ""
+"Constants are now much less often created with ``pickle`` module, but "
+"created directly."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:189
+msgid ""
+"This esp. applies for nested constants, now more values become ``is`` "
+"identical instead of only ``==`` identical, which indicates a reduced "
+"memory usage."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:200
+msgid ""
+"This is not only about memory efficiency, but also about performance. "
+"Less memory usage is more cache friendly, and the \"==\" operator will be"
+" able to shortcut dramatically in cases of identical objects."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:204
+msgid ""
+"Constants now created without ``pickle`` usage, cover ``float``, "
+"``list``, and ``dict``, which is enough for PyStone to not use it at all,"
+" which has been added support for as well."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:208
+msgid "Continue statements might be optimized away."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:210
+msgid "A terminal ``continue`` in a loop, was not optimized away:"
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:218
+msgid "The trailing ``continue`` has no effect and can therefore be removed."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:225
+msgid "Loops with only break statements are optimized away."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:232
+msgid ""
+"A loop immediately broken has of course no effect. Loop conditions are "
+"re-formulated to immediate \"if ... : break\" checks. Effectively this "
+"means that loops with conditions detected to be always false to see the "
+"loop entirely removed."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:239
+msgid "New Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:241
+msgid "Added tests for the found issues."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:243
+msgid ""
+"Running the programs test suite (i.e. recursion) for Python3.2 and "
+"Python3.2 as well, after making adaptation so that the absolute import "
+"changes are now covered."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:247
+msgid ""
+"Running the \"CPython3.2\" test suite with Python3.3 based Nuitka works "
+"and found a few minor issues."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:252
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:254
+msgid ""
+"The `Downloads <https://nuitka.net/doc/download.html>`__ page now offers "
+"RPMs for RHEL6, CentOS6, F17, F18, and openSUSE 12.1, 12.2, 12.3. This "
+"large coverage is thanks to openSUSE build service and \"ownssh\" for "
+"contributing an RPM spec file."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:259
+msgid "The page got improved with logos for the distributions."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:261
+msgid "Added \"ownssh\" as contributor."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:263
+msgid ""
+"Revamped the `User Manual <https://nuitka.net/doc/user-manual.html>`__ in"
+" terms of layout, structure, and content."
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:269
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-042.rst:271
+msgid ""
+"This release is the result of much validation work. The amount of fixes "
+"the largest of any release so far. New platforms, basic Python3.3 "
+"support, consolidation all around."
+msgstr ""
+

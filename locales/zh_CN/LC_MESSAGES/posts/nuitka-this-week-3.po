@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-this-week-3.rst:7
+msgid "Nuitka this week #3"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:9
+msgid "目录"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:13
+msgid "New Series Rationale"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:15
+msgid ""
+"This is working out well so far. I think driving more attention at the "
+"things that are going on can only be good. Also to explain will always "
+"help. It also kind of motivates me a bit."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:21
+msgid "Twitter"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:23
+msgid ""
+"Also as part of my communications offensive, I am using my Twitter "
+"account more regularly. I used to highlight important fixes, or "
+"occasionally releases of some importance there. I will continue to do "
+"only important stuff there, but with more regularity."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:28
+msgid ""
+"And I noticed in the past, even when I do not post, followers makes me "
+"happy. So here you go:"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:31
+#, python-format
+msgid "`Follow @kayhayen <https://twitter.com/kayhayen?ref_src=twsrc%5Etfw>`_"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:35
+msgid "Goto Generators"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:37
+msgid ""
+"This continues `TWN #2 <./nuitka-this-week-2.html#goto-generators>`_ "
+"where I promised to speak more of it, and this is the main focus of my "
+"work on Nuitka right now."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:41
+msgid ""
+"Brief summary, context switches were how this was initially implemented. "
+"The main reason being that for C++ there never was going to be a way to "
+"save and restore state in the middle of an expression that involves "
+"constructors and destructors."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:46
+msgid ""
+"Fast forward some years, and C-ish entered the picture. No objects are "
+"used anymore, and Nuitka is purely C11 now, which has convenience of C++,"
+" but no objects. Instead ``goto`` is used a lot already. So every time an"
+" exception occurs, a ``goto`` is done, every time a branch is done, a "
+"loop exit or continue, you get it, another ``goto``."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:52
+msgid ""
+"But so far, all Python level variables of a frame live on that C stack "
+"still, and the context switch is done with functions that swap stack. "
+"That is fast, but the imporant drawback is that it takes more memory. How"
+" deep of a stack will we need? And we can use really many, if you imagine"
+" a pool of 1000 coroutines, that quickly become impossible to deal with."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:59
+msgid "So, the new way of doing this basically goes like this:"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:67
+msgid "This was some far becoming something along this lines:"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:80
+msgid ""
+"The ``YIELD`` in there was basically doing the switching of the stacks "
+"and for the C code, it looked like a normal function call."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:83
+msgid "In the new approach, this is done:"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:109
+msgid ""
+"As you can see, the function has an initial dispatcher. Resume point 0 "
+"means we are starting at the top. Then every ``yield`` results in a "
+"function return with an updated resume point."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:113
+msgid ""
+"I experimented with this actually a long time ago, and experimental code "
+"was the result that remained in Nuitka. The problem left to solve was to "
+"store the variables that would normally live on the stack, in a heap "
+"storage. That is what I am currently working on."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:118
+msgid ""
+"This leads me to \"heap storage\", which is what I am currently working "
+"on and will report on next week. Once that is there, goto generators can "
+"work, and will become the norm. Until then, I am refactoring a lot to get"
+" accesses to variable go through proper objects that know their storage "
+"locations and types."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:126
+msgid "Hotfixes"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:128
+msgid ""
+"So there have been 2 more hotfixes. One was to make the ``enum`` and "
+"``__new__`` compatibility available that I talked about last week in `TWN"
+" #2 <./nuitka-this-week-2.html#python3-enumerators>` coupled with a new "
+"minor things."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:133
+msgid ""
+"And then another one, actually important, where Python3 "
+"``__annotations__`` by default was the empty dictionary, but then could "
+"be modified, corrupting the Nuitka internally used one severely."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:137
+msgid ""
+"Right now I have on factory another fix for nested namespace packages in "
+"Python3 and that might become another hotfix soon."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:140
+msgid ""
+"As you know, I am following the git flow model, where it's easy to push "
+"out small fixes, and just those, on top of the last release. I tend to "
+"decide based on importance. However, I feel that with the important fixes"
+" in the hotfixes now, it's probably time to make a full release, to be "
+"sure everybody gets those."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:148
+msgid "Plans"
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:150
+msgid ""
+"Finishing heap storage is my top priority right now and I hope to "
+"complete the refactorings necessary in the coming week. I will also talk "
+"about how it also enables C types work next week."
+msgstr ""
+
+#: ../../posts/nuitka-this-week-3.rst:154
+msgid "Until next week then!"
+msgstr ""
+

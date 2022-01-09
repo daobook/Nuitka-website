@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/python-assert-quiz.rst:7
+msgid "Python Assert Quiz"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:9
+msgid ""
+"At Europython conference, in my presentation, I talked about re-"
+"formulations of Python into simpler Python. It is my intention to turn "
+"this into a series of Python quiz questions that you will hopefully "
+"enjoy."
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:14
+msgid "Update"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:16
+msgid ""
+"Due to comments feedback, I made it more clear that \"-O\" affects of "
+"course both cases, and due to work on getting the recent CPython2.7 test "
+"suite to work, I noticed, how the re-formulation for Quiz Question 2 "
+"needed a version dependent solution."
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:21
+msgid "And I thought this one was easy. :-)"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:25
+msgid "Quiz Question 1"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:27
+msgid "Say you have the following code:"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:33 ../../posts/python-assert-quiz.rst:70
+msgid ""
+"How can you achieve the same thing, without using the ``assert`` "
+"statement at all. The behavior is required to be absolutely the same."
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:36 ../../posts/python-assert-quiz.rst:73
+msgid ""
+"The answer is in the next paragraph, so stop reading if you want to find "
+"out yourself."
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:41
+msgid "Solution 1"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:43
+msgid ""
+"The correct answer is that assertions are the same as a raise exception "
+"in a conditional statement."
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:51
+msgid ""
+"The thing where this makes a difference, is \"-O\", which will discard "
+"assertions, but I consider it rarely used. To be really compatible with "
+"that, it should be:"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:62
+msgid "Quiz Question 2"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:64
+msgid "But wait, there is slightly more to it. Say you have the following code:"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:78
+msgid "Solution 2"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:80
+msgid ""
+"This is actually version dependent, due to recent optimizations of "
+"CPython."
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:83
+msgid "For version 2.6 it is as follows:"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:85
+msgid ""
+"The extra value to ``assert``, simply becomes an extra value to raise, "
+"which indicates, delayed creation of the ``AssertionError`` exception."
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:94
+msgid "For version 2.7 and higher it is as follows:"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:96
+msgid ""
+"The extra value to ``assert``, simply becomes the argument to creating "
+"the ``AssertionError`` exception."
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:104
+msgid ""
+"So, even in the more complex case, you end up with a conditional "
+"``raise``."
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:107
+msgid ""
+"The only thing where this makes a difference, is \"-O\", which will "
+"discard assertions, but I consider it rarely used. To be really "
+"compatible with that, it should be:"
+msgstr ""
+
+#: ../../posts/python-assert-quiz.rst:116
+msgid ""
+"Surprised? Well, yes, there really is nothing to ``assert`` statements. I"
+" am using this for my `Python compiler Nuitka </pages/overview.html>`_ "
+"which benefits from having not to deal with ``assert`` as anything "
+"special at all. See also the `respective section in the Developer Manual "
+"</doc/developer-manual.html#the-assert-statement>`_ which explains this "
+"and other things."
+msgstr ""
+

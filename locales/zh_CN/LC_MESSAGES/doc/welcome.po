@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../doc/welcome.rst:2
+msgid "Welcome"
+msgstr ""
+
+#: ../../doc/welcome.rst:4
+msgid "This page is used for experiments in web design with Sphinx."
+msgstr ""
+
+#: ../../doc/welcome.rst:6
+msgid "New style Stripe Checkout for Nuitka commercial:"
+msgstr ""
+
+#: ../../doc/welcome.rst:8
+msgid "`Buy now </stripe/checkout-commercial-subscription>`__"
+msgstr ""
+
+#: ../../doc/welcome.rst:10 ../../doc/welcome.rst:12
+msgid "`Buy now </stripe/checkout-priority-subscription>`__"
+msgstr ""
+
+#: ../../doc/welcome.rst:14
+msgid "`Buy now </stripe/checkout-sponsor-subscription>`__"
+msgstr ""
+
+#: ../../doc/welcome.rst:26 ../../doc/welcome.rst:43
+msgid "€ 250"
+msgstr ""
+
+#: ../../doc/welcome.rst:30
+msgid "`Buy Now <https://buy.stripe.com/4gwaHmgmG4s4h2g001>`__"
+msgstr ""
+
+#: ../../doc/welcome.rst:32
+msgid "Commercial only Features"
+msgstr ""
+
+#: ../../doc/welcome.rst:34
+msgid "All your applications"
+msgstr ""
+
+#: ../../doc/welcome.rst:36
+msgid "Standard Support"
+msgstr ""
+
+#: ../../doc/welcome.rst:47
+msgid "`Buy Now <https://buy.stripe.com/7sI6r6b2mf6IaDS9AC>`__"
+msgstr ""
+
+#: ../../doc/welcome.rst:49 ../../doc/welcome.rst:83
+msgid "Best Support"
+msgstr ""
+
+#: ../../doc/welcome.rst:51
+msgid "Issues have **Priority**"
+msgstr ""
+
+#: ../../doc/welcome.rst:53
+msgid "**No** Commercial features"
+msgstr ""
+
+#: ../../doc/welcome.rst:61
+msgid "€ 400"
+msgstr ""
+
+#: ../../doc/welcome.rst:65
+msgid "`Buy Now <https://buy.stripe.com/3cs7va1rM8Ik5jy003>`__"
+msgstr ""
+
+#: ../../doc/welcome.rst:67
+msgid "Nuitka Commercial **plus**"
+msgstr ""
+
+#: ../../doc/welcome.rst:69
+msgid "Nuitka Priority"
+msgstr ""
+
+#: ../../doc/welcome.rst:77
+msgid "€ 1000"
+msgstr ""
+
+#: ../../doc/welcome.rst:81
+msgid "`Buy Now <https://buy.stripe.com/9AQ3eUb2maQs7rG28c>`__"
+msgstr ""
+
+#: ../../doc/welcome.rst:85
+msgid "Nuitka Commercial"
+msgstr ""
+
+#: ../../doc/welcome.rst:87
+msgid "Roadmap Influence"
+msgstr ""
+
+#: ../../doc/welcome.rst:89
+msgid "Use Cases Priority"
+msgstr ""
+

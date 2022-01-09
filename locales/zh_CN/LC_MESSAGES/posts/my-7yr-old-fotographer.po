@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/my-7yr-old-fotographer.rst:7
+msgid "My 7yr old fotographer"
+msgstr ""
+
+#: ../../posts/my-7yr-old-fotographer.rst:9
+msgid ""
+"This photo was shot by my 7yr old son. It's truly artful, if not perfect."
+" I have not applied any correction. He has my old camera, and knows how "
+"to use it, more and more."
+msgstr ""
+
+#: ../../posts/my-7yr-old-fotographer.rst
+msgid "Artful photo of his mom taken by my son Michael"
+msgstr ""
+
+#: ../../posts/my-7yr-old-fotographer.rst:18
+msgid "Michael shot of his mom"
+msgstr ""
+

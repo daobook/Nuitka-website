@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/tommy-gsoc-intro.rst:7
+msgid "Tommy's Google Summer of Code Intro"
+msgstr ""
+
+#: ../../posts/tommy-gsoc-intro.rst:9
+msgid "Hi all! :)"
+msgstr ""
+
+#: ../../posts/tommy-gsoc-intro.rst:11
+msgid ""
+"My name is Taofeng Li and I go by the nickname of Tommy, github handle "
+"`tommyli3318 <https://github.com/tommyli3318>`__. I'm a Computer Science "
+"major at the University of California, Irvine in the United States. I am "
+"very excited to announce that I'll be contributing to Nuitka this summer "
+"under the Google Summer of Code program!"
+msgstr ""
+
+#: ../../posts/tommy-gsoc-intro.rst:17
+msgid ""
+"My project is \"Nuitka support for PyPI top 50\", it ensures Nuitka’s "
+"compatibility with the 50 most popular PyPI packages by setting up "
+"automated testing for each package. These automated tests will serve to "
+"be very important tools for the development of Nuitka, as they will be "
+"used to assure Nuitka’s compatibility with the most used Python packages "
+"every time Nuitka receives a new update."
+msgstr ""
+
+#: ../../posts/tommy-gsoc-intro.rst:24
+msgid ""
+"My mentors will be Vaibhav Tulsyan, Kamran Ghanaat, and Kay Hayen. My "
+"project abstract can be seen `here "
+"<https://summerofcode.withgoogle.com/projects/#4874692681269248>`__ and "
+"the full details of my project can be found `here "
+"<https://docs.google.com/document/d/1tdbXyMy5xjVEeWociI_t2f6tlmge6czT0xmfCLyDXYg/edit?usp=sharing>`__."
+msgstr ""
+
+#: ../../posts/tommy-gsoc-intro.rst:30
+msgid ""
+"I am greatly looking forward to the many things that I'll learn this "
+"summer!"
+msgstr ""
+

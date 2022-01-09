@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-0521.rst:7
+msgid "Nuitka Release 0.5.21"
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:13
+msgid ""
+"This release focused on scalability work. Making Nuitka more usable in "
+"the common case, and covering more standalone use cases."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:20
+msgid ""
+"Windows: Support for newer MinGW64 was broken by a workaround for older "
+"MinGW64 versions."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:23
+msgid ""
+"Compatibility: Added support for the (unofficial) C-Python API "
+"``Py_GetArgcArgv`` that was causing ``prctl`` module to fail loading on "
+"ARM platforms."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:27
+msgid ""
+"Compatibility: The proper error message template for complex call "
+"arguments is now detected as compile time. There are changes coming, that"
+" are already in some pre-releases of CPython."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:31
+msgid ""
+"Standalone: Wasn't properly ignoring ``Tools`` and other directories in "
+"the standard library."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:36
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:38
+msgid ""
+"Windows: Detect the MinGW compiler arch and compare it to the Python "
+"arch. In case of a mismatch, the compiler is not used. Otherwise "
+"compilation or linking gives hard to understand errors. This also rules "
+"out MinGW32 as a compiler that can be used, as its arch doesn't match "
+"MinGW64 32 bits variant."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:44
+msgid ""
+"Compile modules in two passes with the option to specify which modules "
+"will be considered for a second pass at all (compiled without program "
+"optimization) or even become bytecode."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:48
+msgid ""
+"The developer mode installation of Nuitka in ``develop`` mode with the "
+"command ``pip install -e nuitka_git_checkout_dir`` is now supported too."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:54
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:56
+msgid ""
+"Popular modules known to not be performance relevant are no longer C "
+"compiled, e.g. ``numpy.distutils`` and many others frequently imported "
+"(from some other module), but mostly not used and definitely not "
+"performance relevant."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:63
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:65
+msgid ""
+"The progress tracing and the memory tracing and now more clearly separate"
+" and therefore more readable."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:68
+msgid "Moved RPM related files to new ``rpm`` directory."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:70
+msgid "Moved documentation related files to ``doc`` directory."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:72
+msgid "Converted import sorting helper script to Python and made it run fast."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:77
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:79
+msgid ""
+"The Buildbot infrastructure for Nuitka was updated to Buildbot 0.8.12 and"
+" is now maintained up to date with Ansible."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:82
+msgid ""
+"Upgraded the Nuitka bug tracker to Roundup 1.5.1 to which I had "
+"previously contributed security fixes already active."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:85
+msgid "Added SSL certificates from Let's Encrypt for the web server."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:89
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:91
+msgid ""
+"This release advances the scalability of Nuitka somewhat. The two pass "
+"approach does not yet carry all possible fruits. Caching of single pass "
+"compiled modules should follow for it to become consistently fast."
+msgstr ""
+
+#: ../../posts/nuitka-release-0521.rst:95
+msgid ""
+"More work will be needed to achieve fast and scalable compilation, and "
+"that is going to remain the focus for some time."
+msgstr ""
+

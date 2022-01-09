@@ -3,10 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      # - main
+      # - xin
       - zh
-      - xin
-
+      
 jobs:
   deploy-to-pages:
     runs-on: ubuntu-latest
@@ -43,10 +43,10 @@ jobs:
         run: |
           cd doc
           make html
+          sphinx-build -D language=zh_CN -b html ./ ../output/html/zh-CN
 
       - name: 🚀 Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3.6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: output/
-
+          publish_dir: output/html/

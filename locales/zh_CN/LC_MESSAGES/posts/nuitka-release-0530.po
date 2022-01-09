@@ -1,0 +1,308 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-0530.rst:7
+msgid "Nuitka Release 0.5.30"
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:13
+msgid ""
+"This release has improvements in all areas. Many bug fixes are "
+"accompanied with optimization changes towards value tracing."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:20
+msgid ""
+"Fix, the new setuptools runners were not used by ``pip`` breaking the use"
+" of Nuitka from PyPI."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:23
+msgid ""
+"Fix, imports of ``six.moves`` could crash the compiler for built-in "
+"names. Fixed in 0.5.29.2 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:26
+msgid ""
+"Windows: Make the ``nuitka-run`` not a symlink as these work really bad "
+"on that platform, instead make it a full copy just like we did for "
+"``nuitka3-run`` already. Fixed in 0.5.29.2 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:30
+msgid ""
+"Python3.5: In module mode, ``types.coroutine`` was monkey patched into an"
+" endless recursion if including more than one module, e.g. for a package."
+" Fixed in 0.5.29.3 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:34
+msgid ""
+"Python3.5: Dictionary unpackings with both star arguments and non star "
+"arguments could leak memory. Fixed in 0.5.29.3 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:41
+msgid ""
+"Fix, distutils usage was not working for Python2 anymore, due to using "
+"``super`` for what are old style classes on that version."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:44
+msgid "Fix, some method calls to C function members could leak references."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:54
+msgid "Python3.5: The bases classes should be treated as an unpacking too."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:61
+msgid ""
+"Windows: Added back batch files to run Nuitka from the command line. "
+"Fixed in 0.5.29.5 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:66
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:68
+msgid ""
+"Added option ``--include-package`` to force inclusion of a whole package "
+"with the submodules in a compilation result."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:71
+msgid ""
+"Added options ``--include-module`` to force inclusion of a single module "
+"in a compilation result."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:74
+msgid ""
+"The ``multiprocessing`` plug-in got adapted to Python 3.4 changes and "
+"will now also work in accelerated mode on Windows."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:77
+msgid ""
+"It is now possible to specify the Qt plugin directories with e.g. "
+"``--enable-plugin-=qt_plugins=imageformats`` and have only those "
+"included. This should avoid dependency creep for shared libraries."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:81
+msgid "Plugins can now make the decision about recursing to a module or not."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:83
+msgid "Plugins now can get their own options passed."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:87
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:89
+msgid ""
+"The re-raising of exceptions has gotten its own special node type. This "
+"aims at more readability (XML output) and avoiding the overhead of "
+"checking potential attributes during optimization."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:93
+msgid ""
+"Changed built-in ``int``, ``long``, and ``float`` to using a slot "
+"mechanism that also analyses the type shape and detects and warns about "
+"errors at compile time."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:97
+msgid ""
+"Changed the variable tracing to value tracing. This meant to cleanup all "
+"the places that were using it to find the variable."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:100
+msgid ""
+"Enable must have / must not value value optimization for all kinds of "
+"variables including module and closure variables. This often avoids error"
+" exits and leads to smaller and faster generated code."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:106
+msgid "Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:108
+msgid ""
+"Added burn test with local install of pip distribution to virtualenv "
+"before making any PyPI upload. It seems pip got its specific error "
+"sources too."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:112
+msgid ""
+"Avoid calling ``2to3`` and prefer ``<python> -m lib2to3`` instead, as it "
+"seems at least Debian Testing stopped to provide the binary by default. "
+"For Python 2.6 and 3.2 we continue to rely on it, as the don't support "
+"that mode of operation."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:117
+msgid ""
+"The PyLint checks have been made more robust and even more Python3 "
+"portable."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:120
+msgid "Added PyLint to Travis builds, so PRs are automatically checked too."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:122
+msgid ""
+"Added test for distutils usage with Nuitka that should prevent "
+"regressions for this new feature and to document how it can be used."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:125
+msgid ""
+"Make coverage taking work on Windows and provide the full information "
+"needed, the rendering stage is not there working yet though."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:128
+msgid ""
+"Expanded the trick assignment test cases to cover more slots to find bugs"
+" introduced with more aggressive optimization of closure variables."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:132
+msgid "New test to cover multiprocessing usage."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:134
+msgid ""
+"Generating more code tests out of doctests for increased coverage of "
+"Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:139
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:141
+msgid "Stop using ``--python-version`` in tests where they still remained."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:143
+msgid ""
+"Split the forms of ``int`` and ``long`` into two different nodes, they "
+"share nothing except the name. Create the constants for the zero arg "
+"variant more immediately."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:147
+msgid ""
+"Split the output comparison part into a dedicated testing module so it "
+"can be re-used, e.g. when doing distutils tests."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:150
+msgid "Removed dead code from variable closure taking."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:152
+msgid ""
+"Have a dedicated module for the metaclass of nodes in the tree, so it is "
+"easier to find, and doesn't clutter the node base classes module as much."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:156
+msgid ""
+"Have a dedicated node for reraise statements instead of checking for all "
+"the arguments to be non-present."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:161
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:163
+msgid "There is now a pull request template for Github when used."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:165
+msgid ""
+"Deprecating the ``--python-version`` argument which should be replaced by"
+" using ``-m nuitka`` with the correct Python version. Outputs have been "
+"updated to recommend this one instead."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:169
+msgid ""
+"Make automatic import sorting and autoformat tools properly executable on"
+" Windows without them changing new lines."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:172
+msgid ""
+"The documentation was updated to prefer the call method with ``-m "
+"nuitka`` and manually providing the Python binary to use."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:177
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:179
+msgid ""
+"This release continued the distutils integration adding first tests, but "
+"more features and documentation will be needed."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:182
+msgid ""
+"Also, for the locals dictionary work, the variable tracing was made "
+"generic, but not yet put to use. If we use this to also trace dictionary "
+"keys, we can expect a lot of improvements for class code again."
+msgstr ""
+
+#: ../../posts/nuitka-release-0530.rst:186
+msgid ""
+"The locals dictionary tracing will be the focus before resuming the work "
+"on C types, where the ultimate performance boost lies. However, "
+"currently, not the full compatibility has been achieved even with "
+"currently using dictionaries for classes, and we would like to be able to"
+" statically optimize those better anyway."
+msgstr ""
+

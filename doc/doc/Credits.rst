@@ -1,1 +1,1 @@
-../../Nuitka-develop/Credits.rst
+.. include:: ../../Nuitka-develop/Credits.rst

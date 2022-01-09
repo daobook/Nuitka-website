@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/try-finally-python-quiz.rst:7
+msgid "Try Finally Python Quiz"
+msgstr ""
+
+#: ../../posts/try-finally-python-quiz.rst:9
+msgid ""
+"When working on my Python compiler Nuitka, I often come across ridiculous"
+" language details of the Python language, and turn these into quizzes, "
+"for which I finally added a `dedicated quiz tag </blog/tag/quiz.html>`__."
+msgstr ""
+
+#: ../../posts/try-finally-python-quiz.rst:14
+msgid "Anyway, who can predict, what these will do to you:"
+msgstr ""
+
+#: ../../posts/try-finally-python-quiz.rst:24
+msgid "Will it return ``1`` or ``2`` ?"
+msgstr ""
+
+#: ../../posts/try-finally-python-quiz.rst:34
+msgid "Will this raise an ``ZeroDivisionError`` or return ``2`` ?"
+msgstr ""
+
+#: ../../posts/try-finally-python-quiz.rst:45
+msgid "Is this an endless loop or does it return?"
+msgstr ""
+
+#: ../../posts/try-finally-python-quiz.rst:56
+msgid "What about that? This one holds an inconsistency."
+msgstr ""
+
+#: ../../posts/try-finally-python-quiz.rst:58
+msgid "No solutions yet this time."
+msgstr ""
+

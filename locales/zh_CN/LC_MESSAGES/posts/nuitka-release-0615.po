@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-0615.rst:7
+msgid "Nuitka Release 0.6.15"
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:13
+msgid ""
+"This release polished previous work with bug fixes, but there are also "
+"important new things that help make Nuitka more usable, with one "
+"important performance improvement."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:19
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:21
+msgid ""
+"Fix, hard imports were not automatically used in code generation leading "
+"to errors when used. Fixed in 0.6.14.2 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:24
+msgid ""
+"Windows: Fix, ``clcache`` was disabled by mistake. Fixed in 0.6.14.2 "
+"already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:27
+msgid ""
+"Standalone: Added data files for ``jsonschema`` to be copied "
+"automatically."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:30
+msgid ""
+"Standalone: Support for ``pendulum`` wasn't working anymore with the last"
+" release due to plugin interface issues."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:33
+msgid ""
+"Retry downloads without SSL if that fails, as some Python do not have "
+"working SSL. Fixed in 0.6.14.5 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:36
+msgid ""
+"Fix, the ``ccache`` path wasn't working if it contained spaces. Fixed in "
+"0.6.14.5 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:39
+msgid ""
+"Onefile: For Linux and ARM using proper download off appimage. Fixed in "
+"0.6.14.5 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:42
+msgid "Standalone: Added support for ``pyreadstat``. Fixed in 0.6.14.5 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:45
+msgid ""
+"Standalone: Added missing dependencies for ``pandas``. Fixed in 0.6.14.6 "
+"already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:48
+msgid ""
+"Standalone: Some preloaded packages from ``.pth`` do not have a "
+"``__path__``, these can and must be ignored."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:51
+msgid ""
+"Onefile: On Linux, the ``sys.argv[0]`` was not the original file as "
+"advertised."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:54
+msgid ""
+"Standalone: Do not consider ``.mesh`` and ``.frag`` files as DLls in the "
+"Qt bindings when including the qml support. This was causing errors on "
+"Linux, but was generally wasteful."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:58
+msgid ""
+"Fix, project options could be injected twice, which could lead to errors "
+"with options that were only allowed once, e.g. ``--linux-onefile-icon``."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:62
+msgid ""
+"Windows: When updating the resources in created binaries, treat all kinds"
+" of ``OSError`` with information output."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:65
+msgid ""
+"Onefile: Remove onefile target binary path at startup as well, so it "
+"cannot cause confusion after error exit."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:68
+msgid ""
+"Onefile: In case of error exit from ``AppImage``, preserve its outputs "
+"and attempt to detect if there was a locking issue."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:71
+msgid ""
+"Standalone: Scan package folders on Linux for DLLs too. This is necessary"
+" to properly handle ``PyQt5`` in case of Qt installed in the system as "
+"well."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:75
+msgid "Standalone: On Linux, standard QML files were not found."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:77
+msgid ""
+"Standalone: Enforce C locale when detecting DLLs on Linux, otherwise "
+"whitelisting messages didn't work properly on newer Linux."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:80
+msgid "Standalone: Added support for ``tzdata`` package data files."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:82
+msgid "Standalone: Added support for ``exchangelib``."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:84
+msgid "Python3.9: Fix, type subscripts could cause optimization errors."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:86
+msgid ""
+"UI: Project options didn't properly handle quoting of arguments, these "
+"are normally removed by the shell."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:89
+msgid ""
+"Linux: The default icon for Python in the system is now found with more "
+"version specific names and should work on more systems."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:92
+msgid ""
+"Standalone: Do not include ``libstdc++`` as it should come from the "
+"system rather."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:97
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:99
+msgid ""
+"Added plugin ``anti-bloat`` plugin, intended to fight bloat. For now it "
+"can make including certain modules an error, a warning, or force "
+"``ImportError``, e.g. ``--noinclude-setuptools-mode=nofollow`` is very "
+"much recommended to limit compilation size."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:104
+msgid ""
+"The ``pkg-resources`` builtin now covers ``metadata`` and "
+"importlib_metadata packages for compile time version resolution as well."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:108
+msgid ""
+"Added support for ``PySide2`` on Python version before 3.6, because the "
+"patched code needs no workarounds. Fixed in 0.6.14.3 already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:111
+msgid ""
+"Windows: Convert images to icon files on the fly. So now you can specify "
+"multiple PNG files, and Nuitka will create an icon out of that "
+"automatically."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:115
+msgid "macOS: Automatically download ``ccache`` binary if not present."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:117
+msgid ""
+"Plugins: New interface to query the main script path. This allows plugins"
+" to look at its directory."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:120
+msgid "UI: Output the versions of Nuitka and Python during compilation."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:122
+msgid ""
+"UI: Added option to control static linking. So far this had been enabled "
+"only automatically for cases where we are certain, but this allows to "
+"force enable or disable it. Now an info is given, if Nuitka thinks it "
+"might be possible to enable it, but doesn't do it automatically."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:128
+msgid "UI: Added ``--no-onefile`` to disable ``--onefile`` from project options."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:133
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:135
+msgid ""
+"Much enhanced GIL interaction with Python3.9 giving a big speed boost and"
+" better threading behaviour."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:138
+msgid ""
+"Faster conversion of iterables to ``list``, if size can be know, "
+"allocation ahead saves a lot of effort."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:141
+msgid "Added support for ``GenericAlias`` objects as compile time constants."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:145
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:147
+msgid "Enhanced Github issue raising instructions."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:149
+msgid "Apply ``rstfmt`` to all documentation and make it part of the commit hook."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:152
+msgid ""
+"Make sure to check Scons files as well. This would have caught the code "
+"used to disable ``clcache`` temporarily."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:155
+msgid "Do not mention Travis in PR template anymore, we have stopped using it."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:158
+msgid "Updated requirements to latest versions."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:160
+msgid ""
+"Bump requirements for development to 3.7 at least, toosl like black do "
+"not work with 3.6 anymore."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:163
+msgid ""
+"Started work on Nuitka Python, a CPython fork intended for enhanced "
+"performance and standalone support with Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:168
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:170
+msgid ""
+"Determine system prefix without virtualenv outside of Scons, such that "
+"plugins can share the code. There was duplication with the ``numpy`` "
+"plugin, and this will only be more complete using all approaches. This "
+"also removes a lot of noise from the scons file moving it to shared code."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:176
+msgid "The Qt plugins now collect QML files with cleaner code."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:180
+msgid "Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:182
+msgid "Nicer error message if a wrong search mode is given."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:184
+msgid ""
+"Windows: Added timeout for determining run time traces with dependency "
+"walker, sometimes this hangs."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:187
+msgid "Added test to cover the zip importer."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:189
+msgid ""
+"Making use of project options in onefile tests, making it easier to "
+"execute them manually."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:194
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:196
+msgid ""
+"For Windows, it's now easier than ever to create an icon for your "
+"deployment, because you can use PNG files, and need not produce ICO files"
+" anymore, with Nuitka doing that for you."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:200
+msgid ""
+"The onefile for Linux had some more or less severe problems that got "
+"addressed, esp. also when it came to QML applications with PySide."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:203
+msgid ""
+"On the side, we are preparing to greatly improve the caching of Nuitka, "
+"starting with retaining modules that were demoted to bytecode. There are "
+"changes in this release, to support that, but it's not yet complete. We "
+"expect that scalability will then be possible to improve even further."
+msgstr ""
+
+#: ../../posts/nuitka-release-0615.rst:208
+msgid ""
+"Generally this is mostly a maintenance release, which outside of the "
+"threading performance improvement has very little to offer for faster "
+"execution, but that actually does a lot. Unfortunately right now it's "
+"limited to 3.9, but some of the newer Python's will also be supported in "
+"later releases."
+msgstr ""
+

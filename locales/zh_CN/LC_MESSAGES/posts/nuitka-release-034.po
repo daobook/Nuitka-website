@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-034.rst:7
+msgid "Nuitka Release 0.3.4"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:13
+msgid ""
+"This new release of Nuitka has a focus on re-organizing the Nuitka "
+"generated source code and a modest improvement on the performance side."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:16
+msgid ""
+"For a long time now, Nuitka has generated a single C++ file and asked the"
+" C++ compiler to translate it to an executable or shared library for "
+"CPython to load. This was done even when embedding many modules into one "
+"(the \"deep\" compilation mode, option ``--deep``)."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:21
+msgid ""
+"This was simple to do and in theory ought to allow the compiler to do the"
+" most optimization. But for large programs, the resulting source code "
+"could have exponential compile time behavior in the C++ compiler. At "
+"least for the GNU g++ this was the case, others probably as well. This is"
+" of course at the end a scalability issue of Nuitka, which now has been "
+"addressed."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:28
+msgid ""
+"So the major advancement of this release is to make the ``--deep`` option"
+" useful. But also there have been a performance improvements, which end "
+"up giving us another boost for the \"PyStone\" benchmark."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:34
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:36
+msgid ""
+"Imports of modules local to packages now work correctly, closing the "
+"small compatibility gap that was there."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:39
+msgid ""
+"Modules with a \"-\" in their name are allowed in CPython through dynamic"
+" imports. This lead to wrong C++ code created. (Thanks to Li Xuan Ji for "
+"reporting and submitting a patch to fix it.)"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:43
+msgid ""
+"There were warnings about wrong format used for ``Ssize_t`` type of "
+"CPython. (Again, thanks to Li Xuan Ji for reporting and submitting the "
+"patch to fix it.)"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:47
+msgid ""
+"When a wrong exception type is raised, the traceback should still be the "
+"one of the original one."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:50
+msgid ""
+"Set and dict contractions (Python 2.7 features) declared local variables "
+"for global variables used. This went unnoticed, because list contractions"
+" don't generate code for local variables at all, as they cannot have "
+"such."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:55
+msgid ""
+"Using the ``type()`` built-in to create a new class could attribute it to"
+" the wrong module, this is now corrected."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:60
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:62
+msgid ""
+"Uses Scons to execute the actual C++ build, giving some immediate "
+"improvements."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:65
+msgid "Now caches build results and Scons will only rebuild as needed."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:67
+msgid ""
+"The direct use of ``__import__()`` with a constant module name as "
+"parameter is also followed in \"deep\" mode. With time, non-constants may"
+" still become predictable, right now it must be a real CPython constant "
+"string."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:74
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:76
+msgid ""
+"Added optimization for the built-ins ``ord()`` and ``chr()``, these "
+"require a module and built-in module lookup, then parameter parsing. Now "
+"these are really quick with Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:80
+msgid ""
+"Added optimization for the ``type()`` built-in with one parameter. As "
+"above, using from builtin module can be very slow. Now it is "
+"instantaneous."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:84
+msgid ""
+"Added optimization for the ``type()`` built-in with three parameters. "
+"It's rarely used, but providing our own variant, allowed to fix the bug "
+"mentioned above."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:90
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:92
+msgid ""
+"Using scons is a big cleanup for the way how C++ compiler related options"
+" are applied. It also makes it easier to re-build without Nuitka, e.g. if"
+" you were using Nuitka in your packages, you can easily build in the same"
+" way than Nuitka does."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:97
+msgid ""
+"Static helpers source code has been moved to \".hpp\" and \".cpp\" files,"
+" instead of being in \".py\" files. This makes C++ compiler messages more"
+" readable and allows us to use C++ mode in Emacs etc., making it easier "
+"to write things."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:102
+msgid ""
+"Generated code for each module ends up in a separate file per module or "
+"package."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:105
+msgid ""
+"Constants etc. go to their own file (although not named sensible yet, "
+"likely going to change too)"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:108
+msgid ""
+"Module variables are now created by the ``CPythonModule`` node only and "
+"are unique, this is to make optimization of these feasible. This is a "
+"pre-step to module variable optimization."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:114
+msgid "New Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:116
+msgid ""
+"Added \"ExtremeClosure\" from my Python quiz, it was not covered by "
+"existing tests."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:119
+msgid "Added test case for program that imports a module with a dash in its name."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:122
+msgid "Added test case for main program that starts with a dash."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:124
+msgid "Extended the built-in tests to cover ``type()`` as well."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:128
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:130
+msgid ""
+"There is now a new environment variable ``NUITKA_SCONS`` which should "
+"point to the directory with the ``SingleExe.scons`` file for Nuitka. The "
+"scons file could be named better, because it is actually one and the same"
+" who builds extension modules and executables."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:135
+msgid ""
+"There is now a new environment variable ``NUITKA_CPP`` which should point"
+" to the directory with the C++ helper code of Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:138
+msgid ""
+"The script \"create-environment.sh\" can now be sourced (if you are in "
+"the top level directory of Nuitka) or be used with eval. In either case "
+"it also reports what it does."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:142
+#: ../../posts/nuitka-release-034.rst:151
+msgid "Update"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:144
+msgid ""
+"The script has become obsolete now, as the environment variables are no "
+"longer necessary."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:147
+msgid ""
+"To cleanup the many \"Program.build\" directories, there is now a "
+"\"clean-up.sh\" script for your use. Can be handy, but if you use git, "
+"you may prefer its clean command."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:153
+msgid ""
+"The script has become obsolete now, as Nuitka test executions now by "
+"default delete the build results."
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:158
+msgid "Numbers"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:160
+msgid "python 2.6:"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:167
+msgid "Nuitka 0.3.4:"
+msgstr ""
+
+#: ../../posts/nuitka-release-034.rst:174
+#, python-format
+msgid "This is 91% for 0.3.4, up from 80% before."
+msgstr ""
+

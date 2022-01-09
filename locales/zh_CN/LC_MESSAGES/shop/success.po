@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../shop/success.rst:2
+msgid "Thanks for your order!"
+msgstr ""
+
+#: ../../shop/success.rst:4
+msgid "We appreciate your business!"
+msgstr ""
+
+#: ../../shop/success.rst:6
+msgid ""
+"Processing of Nuitka commercial sales is still a manual process, but you "
+"will get an email from us at Nuitka within 24h, apart of the immediate "
+"Stripe confirmation. We will need your Github user name to grant you "
+"access. To accelerate the process, you can send it to "
+"mailto:kay.hayen@gmail.com right now."
+msgstr ""
+
+#: ../../shop/success.rst:11
+msgid "Thanks again, Kay Hayen (Nuitka Services)"
+msgstr ""
+

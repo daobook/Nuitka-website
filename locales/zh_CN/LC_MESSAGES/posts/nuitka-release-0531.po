@@ -1,0 +1,359 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-0531.rst:7
+msgid "Nuitka Release 0.5.31"
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:13
+msgid ""
+"This release is massive in terms of fixes, but also adds a lot of "
+"refinement to code generation, and more importantly adds experimental "
+"support for Python 3.7, while enhancing support for Pyt5 in standalone "
+"mode by a lot."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:20
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:22
+msgid "Standalone: Added missing dependencies for ``PyQt5.Qt`` module."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:24
+msgid "Plugins: Added support for ``PyQt5.Qt`` module and its ``qml`` plugins."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:27
+msgid ""
+"Plugins: The sensible plugin list for PyQt now includes that platforms "
+"plugins on Windows too, as they are kind of mandatory."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:30
+msgid ""
+"Python3: Fix, for uninstalled Python versions wheels that linked against "
+"the ``Python3`` library as opposed to ``Python3X``, it was not found."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:34
+msgid ""
+"Standalone: Prefer DLLs used by main program binary over ones used by "
+"wheels."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:37
+msgid ""
+"Standalone: For DLLs added by Nuitka plugins, add the package directory "
+"to the search path for dependencies where they might live."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:40
+msgid "Fix, the ``vars`` built-in didn't annotate its exception exit."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:42
+msgid ""
+"Python3: Fix, the ``bytes`` and ``complex`` built-ins needs to be treated"
+" as a slot too."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:45
+msgid ""
+"Fix, consider if ``del`` variable must be assigned, in which case no "
+"exception exit should be created. This prevented ``Tkinter`` compilation."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:49
+msgid "Python3.6: Added support for the following language construct:"
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:59
+msgid ""
+"Python3.5: Added support for cyclic imports. Now a ``from`` import with a"
+" name can really cause an import to happen, not just a module attribute "
+"lookup."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:63
+msgid "Fix, ``hasattr`` was never raising exceptions."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:65
+msgid "Fix, ``bytearray`` constant values were considered to be non-iterable."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:68
+msgid ""
+"Python3.6: Fix, now it is possible to ``del __annotations__`` in a class "
+"and behave compatible. Previously in this case we were falling back to "
+"the module variable for annotations used after that which is wrong."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:73
+msgid ""
+"Fix, some built-in type conversions are allowed to return derived types, "
+"but Nuitka assumed the exact type, this affected ``bytes``, ``int``, "
+"``long``, ``unicode``."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:77
+msgid ""
+"Standalone: Fix, the ``_socket`` module was insisted on to be found, but "
+"can be compiled in."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:82
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:84
+msgid ""
+"Added experimental support for Python 3.7, more work will be needed "
+"though for full support. Basic tests are working, but there are are at "
+"least more coroutine changes to follow."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:88
+msgid ""
+"Added support for building extension modules against statically linked "
+"Python. This aims at supporting manylinux containers, which are supposed "
+"to be used for creating widely usable binary wheels for Linux. Programs "
+"won't work with statically linked Python though."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:93
+msgid ""
+"Added options to allow ignoring the Windows cache for DLL dependencies or"
+" force an update."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:96
+msgid ""
+"Allow passing options from distutils to Nuitka compilation via setup "
+"options."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:99
+msgid ""
+"Added option to disable the DLL dependency cache on Windows as it may "
+"become wrong after installing new software."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:102
+msgid ""
+"Added experimental ability to provide extra options for Nuitka to "
+"setuptools."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:105
+msgid ""
+"Python3: Remove frame preservation and restoration of exceptions. This is"
+" not needed, but leaked over from Python2 code."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:110
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:112
+msgid ""
+"Apply value tracing to local dict variables too, enhancing the "
+"optimization for class bodies and function with ``exec`` statements by a "
+"lot."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:116
+msgid ""
+"Better optimization for \"must not have value\", wasn't considering merge"
+" traces of uninitialized values, for which this is also the case."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:120
+#, python-format
+msgid ""
+"Use 10% less memory at compile time due to specialized base classes for "
+"statements with a single child only allowing ``__slots__`` usage by not "
+"having multiple inheritance for those."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:124
+msgid ""
+"More immediately optimize branches with known truth values, so that "
+"merges are avoided and do not prevent trace based optimization before the"
+" pass after the next one. In some cases, optimization based on traces "
+"could fail to be done if there was no next pass caused by other things."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:130
+msgid ""
+"Much faster handling for functions with a lot of ``eval`` and ``exec`` "
+"calls."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:133
+msgid ""
+"Static optimization of ``type`` with known type shapes, the value is "
+"predicted at compile time."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:136
+msgid ""
+"Optimize containers for all compile time constants into constant nodes. "
+"This also enables further compile time checks using them, e.g. with "
+"``isinstance`` or ``in`` checks."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:140
+msgid ""
+"Standalone: Using threads when determining DLL dependencies. This will "
+"speed up the un-cached case on Windows by a fair bit."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:143
+msgid "Also remove unused assignments for mutable constant values."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:145
+msgid ""
+"Python3: Also optimize calls to ``bytes`` built-in, this was so far not "
+"done."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:148
+msgid ""
+"Statically optimize iteration over constant values that are not iterable "
+"into errors."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:151
+msgid ""
+"Removed Fortran, Java, LaTex, PDF, etc. stuff from the inline copies of "
+"Scons for faster startup and leaner code. Also updated to 3.0.1 which is "
+"no important difference over 3.0.0 for Nuitka however."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:155
+msgid ""
+"Make sure to always release temporary objects before checking for error "
+"exits. When done the other way around, more C code than necessary will be"
+" created, releasing them in both normal case and error case after the "
+"check."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:160
+msgid "Also remove unused assignments in case the value is a mutable constant."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:165
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:167
+msgid ""
+"Don't store \"version\" numbers of variable traces for code generation, "
+"instead directly use the references to the value traces instead, avoiding"
+" later lookups."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:171
+msgid "Added dedicated module for ``complex`` built-in nodes."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:173
+msgid ""
+"Moved C helpers for integer and complex types to dedicated files, solving"
+" the TODOs around them."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:176
+msgid "Removed some Python 3.2 only codes."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:180
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:182
+msgid ""
+"For better bug reports, the ``--version`` output now contains also the "
+"Python version information and the binary path being used."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:185
+msgid ""
+"Started using specialized exceptions for some types of errors, which will"
+" output the involved data for better debugging without having to "
+"reproduce anything. This does e.g. output XML dumps of problematic nodes."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:190
+msgid ""
+"When encountering a problem (compiler crash) in optimization, output the "
+"source code line that is causing the issue."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:193
+msgid "Added support for Fedora 28 RPM builds."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:195
+msgid "Remove more instances of mentions of 3.2 as supported or usable."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:197
+msgid "Renovated the graphing code and made it more useful."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:201
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:203
+msgid ""
+"This release marks important progress, as the locals dictionary tracing "
+"is a huge step ahead in terms of correctness and proper optimization. The"
+" actual resulting dictionary is not yet optimized, but that ought to "
+"follow soon now."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:208
+msgid ""
+"The initial support of 3.7 is important. Right now it apparently works "
+"pretty well as a 3.6 replacement already, but definitely a lot more work "
+"will be needed to fully catch up."
+msgstr ""
+
+#: ../../posts/nuitka-release-0531.rst:212
+msgid ""
+"For standalone, this accumulated a lot of improvements related to the "
+"plugin side of Nuitka. Thanks to those involved in making this better. On"
+" Windows things ought to be much faster now, due to parallel usage of "
+"dependency walker."
+msgstr ""
+

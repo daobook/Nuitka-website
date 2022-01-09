@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-and-debian-changes.rst:7
+msgid "Nuitka and Debian changes"
+msgstr ""
+
+#: ../../posts/nuitka-and-debian-changes.rst:9
+msgid "Hello everybody,"
+msgstr ""
+
+#: ../../posts/nuitka-and-debian-changes.rst:11
+msgid ""
+"this is just a quick note to Nuitka users that are Debian users. For "
+"Debian, the freeze has arrived. This is a time of great joy for me. I "
+"love Debian so deeply, I believe I am now for at least 10 years on it, of"
+" 15 years on Linux."
+msgstr ""
+
+#: ../../posts/nuitka-and-debian-changes.rst:16
+msgid ""
+"As you may know, Nuitka has been in Debian for some time now. In "
+"discussion with my great sponsor Yaroslav Halchenko, we needed to "
+"consider if Nuitka is ready to be maintained in Debian Stable."
+msgstr ""
+
+#: ../../posts/nuitka-and-debian-changes.rst:20
+msgid ""
+"And for that I have to admit, it is just not ready. You will be able to "
+"download packages from the `Downloads </pages/download.html>`_ and "
+"install them. They will still be in Debian Unstable, but they won't be in"
+" Debian Testing and the next Debian Stable."
+msgstr ""
+

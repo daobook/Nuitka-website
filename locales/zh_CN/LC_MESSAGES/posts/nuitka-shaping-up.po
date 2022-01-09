@@ -1,0 +1,500 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-shaping-up.rst:7
+msgid "Nuitka shaping up"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:9
+msgid ""
+"Not much has happened publicly to Nuitka, so it's time to make a kind of "
+"status post, about the exciting news there is."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:12
+msgid "目录"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:16
+msgid "SSA (Single State Assignment Form)"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:18
+msgid ""
+"For a long, long time already, each release of Nuitka has worked towards "
+"enabling `\"SSA\" "
+"<http://en.wikipedia.org/wiki/Static_single_assignment_form>`_ usage in "
+"Nuitka. There is a component called \"constraint collection\", which is "
+"tasked with driving the optimization, and collecting variable traces."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:24
+msgid ""
+"Based on these traces, optimizations could be made. Having SSA or not, is"
+" (to me) the difference between Nuitka as a compiler, and Nuitka as an "
+"optimizing compiler."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:28
+msgid ""
+"The news is, SSA is shaping up, and will be used in the next release. Not"
+" yet to drive variable based optimization (reserved for a release after "
+"it), but to aid the code generation to avoid useless checks."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:34
+msgid "Improved Code Generation"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:36
+msgid ""
+"Previously, under the title \"C-ish\", Nuitka moved away from C++ based "
+"code generation to less C++ based code generated, and more C-ish code. "
+"This trend continues, and has lead to removing even more code cleanups."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:40
+msgid ""
+"The more important change is from the SSA derived knowledge. Now Nuitka "
+"knows that a variable must be assigned, cannot be assigned, may be "
+"assigned, based on its SSA traces."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:44
+msgid "Lets check out an example:"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:52
+msgid ""
+"Nevermind, that *obviously* the variable ``a`` can be removed, and this "
+"could be transformed to statically return ``1``. That is the next step "
+"(and easy if SSA is working properly), now we are looking at what changed"
+" now."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:57
+msgid "This is code as generated now, with current 0.5.5pre5:"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:70
+msgid ""
+"There are some things, wrong with it still. For one, ``var_a`` is still a"
+" C++ object, which we directly access. But the good thing is, we can "
+"assert that it starts out uninitialized, before we overwrite it. The "
+"stable release as of now, 0.5.4, generates code like this:"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:116
+msgid ""
+"As you can see, the assignment to ``var_a.object`` was checking if it "
+"were ``NULL``, and if were not (which we now statically know), would "
+"release the old value. Next up, before returning, the value of "
+"``var_a.object`` needed to be checked, if it were ``NULL``, in which "
+"case, we would need to create a Python exception, and in order to do so, "
+"we need to create a frame object, that even if cached, consumes time, and"
+" code size."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:124
+msgid ""
+"So, that is the major change to code generation. The SSA information is "
+"now used in it, and doing so, has found a bunch of issues, in how it is "
+"built, in e.g. nested branches, that kind of stuff."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:128
+msgid ""
+"The removal of local variables as C++ classes, and them managed as "
+"temporary variables, is going to happen in a future release, reducing "
+"code complexity further. Were ``a`` a temporary variable, already, the "
+"``Py_INCREF`` which implies a later ``Py_DECREF`` on the constant ``1`` "
+"could be totally avoided."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:136
+msgid "Scalability"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:138
+msgid ""
+"The scalability of Nuitka hinges much of generated code size. With it "
+"being less stupid, the generated code is now not only faster, but "
+"definitely smaller, and with more optimization, it will only become more "
+"practical."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:145
+msgid "Compatibility"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:148
+msgid "Python2 exec statements"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:150
+msgid ""
+"A recent change in CPython 2.7.8+ which is supposed to become 2.7.9 one "
+"day, highlighted an issue with ``exec`` statements in Nuitka. These were "
+"considered to be fully compatible, but apparently are not totally."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:160
+msgid ""
+"The above two are supposed to be identical. So far this was rectified at "
+"run time of CPython, but apparently the parser is now tasked with it, so "
+"Nuitka now sees ``exec a in b, c`` for both lines. Which is good."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:164
+msgid ""
+"However, as it stands, Nuitka handles ``exec`` in ``locals()`` the same "
+"as ``exec`` in ``None`` for plain functions (OK to classes and modules), "
+"which is totally a bug."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:168
+msgid ""
+"I have been working on an enhanced re-formulation (it needs to be tracked"
+" if the value was ``None``, and then the sync back to locals from the "
+"provided dictionary ought to be done. But the change breaks ``execfile`` "
+"in classes, which was implemented piggy-backing on ``exec``, and now "
+"requires locals to be a dictionary, and immediately written to."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:175
+msgid ""
+"Anyway, consider ``exec`` as well working already. The non-working cases "
+"are really corner cases, obviously nobody came across so far."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:179
+msgid "Python3 classes"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:181
+msgid ""
+"Incidentally, that ``execfile`` issue will be solved as soon as a bug is "
+"fixed, that was exposed by new abilities of Python3 metaclasses. They "
+"were first observed in Python3.4 enum classes."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:192
+msgid ""
+"Currently, Nuitka is delaying the building of the dictionary (absent "
+"``execfile`` built-in), and that is not allowed, in fact, immediate "
+"writes to the mapping giving by ``__prepare__`` of the metaclass will be "
+"required, in which case, the ``enum`` class can raise an error for the "
+"second assignment to ``red``."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:198
+msgid ""
+"So that area now hinges on code generation to learn different local "
+"variable codes for classes, centered around the notion of using the "
+"locals dictionary immediately."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:203
+msgid "Python3.4"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:205
+msgid ""
+"The next release is no longer warning you if you use Python3.4, as many "
+"of the remaining problems have been sorted out. Many small things were "
+"found, and in some cases these highlighted general Python3 problems."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:209
+msgid ""
+"Nuitka for Python3 is not yet all that much in the focus in terms of "
+"performance, but correctness will have become much better, with most "
+"prominently, exception context being now correct most often."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:213
+msgid ""
+"The main focus of Nuitka is Python2, but to Nuitka the incompatibility of"
+" Python3 is largely not all that much an issue. The re-formulations to "
+"lower level operations for just about everything means that for the "
+"largest part there is not much trouble in supporting a mostly only "
+"slightly different version of Python."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:219
+msgid ""
+"The gain is mostly in that new tests are added in new releases, and these"
+" sometimes find things that affect Nuitka in all versions, or at least "
+"some others. And this could be a mere reference leak."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:223
+msgid "Consider this:"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:232
+msgid ""
+"So, that is working with Python2, but comes from a Python3 test. Python2 "
+"is supposed to unwrap the tuple and take the first argument and raise "
+"that. It didn't do that so far. Granted, obscure feature, but still an "
+"incompatibility. For Python3, a ``TypeError`` should be raised "
+"complaining that ``tuple`` is not derived from ``BaseException``."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:238
+msgid ""
+"Turned out, that also, in that case, a reference leak occurs, in that the"
+" wrong exception was not released, and therefore memory leaked. Should "
+"that happen a lot during a programs live, it will potentially become an "
+"issue, as it keeps frames on the traceback also alive."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:243
+msgid ""
+"So this lead to a compatibility fix and a reference leak fix. And it was "
+"found by the Python3.4 suite, checking that exception objects are "
+"properly released, and that the proper kind of exception is raised in the"
+" no longer supported case."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:250
+msgid "Performance"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:253
+msgid "Graphs and Benchmarks"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:255
+msgid ""
+"I had been working on automated performance graphs, and they are supposed"
+" to show up on `Nuitka Speedcenter <https://speedcenter.nuitka.net>`_ "
+"already, but currently it's broken and outdated."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:260
+msgid ""
+"Sad state of affairs. Reasons include that I found it too ugly to publish"
+" unless updated to latest Nikola, for which I didn't take the time. I "
+"intend to fix it, potentially before the release though."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:265
+msgid "Incremental Assignments"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:267
+msgid "Consider the following code:"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:273
+msgid ""
+"If ``a`` is a ``str``, and if (and only if), it's the only reference "
+"being held, then CPython, reuses the object, instead of creating a new "
+"object and copying ``a`` over. Well, Nuitka doesn't do this. This is "
+"despite the problem being known for quite some time."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:278
+msgid ""
+"With SSA in place, and \"C-ish\" code generation complete, this will be "
+"solved, but I am not going to solve this before."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:283
+msgid "Standalone"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:285
+msgid ""
+"The standalone mode of Nuitka is pretty good, and in the pre-release it "
+"was again improved. For instance, virtualenv and standalone should work "
+"now, and more modules are supported."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:289
+msgid ""
+"However, there are known issues with ``win32com`` and a few other "
+"packages, which need to be debugged. Mostly these are modules doing nasty"
+" things that make Nuitka not automatically detect imports."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:293
+msgid ""
+"This has as usual only so much priority from me. I am working on this on "
+"some occasions, as kind of interesting puzzles to solve. Most of the "
+"time, it just works though, with ``wxpython`` being the most notable "
+"exception. I am going to work on that though."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:298
+msgid ""
+"The standalone compilation exhibits scalability problems of Nuitka the "
+"most, and while it has been getting better, the recent and future "
+"improvements will lead to smaller code, which in turn means not only "
+"smaller executables, but also faster compilation. Again, ``wxpython`` is "
+"a major offender there, due to its many constants, global variables, etc."
+" in the bindings, while Qt, PySide, and GTK are apparently already good."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:308
+msgid "Other Stuff"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:311
+msgid "Funding"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:313
+msgid ""
+"Nuitka doesn't receive enough `donations </pages/donations.html>`_. There"
+" is no support from organizations like e.g. the PSF, which recently "
+"backed several projects by doubling donations given to them."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:318
+msgid ""
+"I remember talking to a PSF board member during Europython 2013 about "
+"this, and the reaction was fully in line with the Europython 2012 "
+"feedback towards me from the dictator. They wouldn't help Nuitka in any "
+"way before it is successful."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:323
+msgid ""
+"I have never officially applied for help with funding though with them. I"
+" am going to choose to take pride in that, I suppose."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:327
+msgid "Collaborators"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:329
+msgid ""
+"My quest to find collaborators to Nuitka is largely failing. Aside from "
+"the standalone mode, there have been too little contributions. Hope is "
+"that it will change in the future, once the significant speed gains "
+"arrive. And it might be my fault for not asking for help more, and to "
+"arrange myself with that state of things."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:335
+msgid ""
+"Not being endorsed by the Python establishment is clearly limiting the "
+"visibility of the project."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:338
+msgid ""
+"Anyway, things are coming along nicely. When I started out, I was fully "
+"aware that the project is something that I can do on my own if necessary,"
+" and that has not changed. Things are going slower than necessary though,"
+" but that's probably very typical."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:343
+msgid ""
+"But you can join now, just `follow this link </doc/user-manual.html#join-"
+"nuitka>`_ or become part of the mailing list (since closed) and help me "
+"there with request I make, e.g. review posts of mine, test out things, "
+"pick up small jobs, answer questions of newcomers, you know the drill "
+"probably."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:351
+msgid "Future"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:353
+msgid "So, there is multiple things going on:"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:355
+msgid "More \"C-ish\" code generation"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:357
+msgid ""
+"The next release is going to be more \"C-ish\" than before, generating "
+"less complex code than before, and removes the previous optimizations, "
+"which were a lot of code, to e.g. detect parameter variables without "
+"``del`` statements."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:362
+msgid ""
+"This prong of action will have to continue, as it unblocks further "
+"changes that lead to more compatibility and correctness."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:365
+msgid "More SSA usage"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:367
+msgid ""
+"The next release did and will find bugs in the SSA tracing of Nuitka. It "
+"is on purpose only using it, to add ``assert`` statements to things it "
+"now no longer does. These will trigger in tests or cause crashes, which "
+"then can be fixed."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:372
+msgid ""
+"We better know that SSA is flawless in its tracking, before we use it to "
+"make optimizations, which then have no chance to assert anything at all "
+"anymore."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:376
+msgid ""
+"Once we take it to that next level, Nuitka will be able to speed up some "
+"things by more than the factor it basically has provided for 2 years now,"
+" and it's probably going to happen this year."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:380
+msgid "More compatibility"
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:382
+msgid ""
+"The new ``exec`` code makes the dictionary synchronization explicit, and "
+"e.g. now it is optimized away to even check for its need, if we are in a "
+"module or a class, or if it can be known."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:386
+msgid ""
+"That means faster ``exec``, but more importantly, a better understood "
+"``exec``, with improved ability to do ``SSA`` traces for them. Being able"
+" to in-line them, or to know the limit of their impact, as it will help "
+"to know more invariants for that code."
+msgstr ""
+
+#: ../../posts/nuitka-shaping-up.rst:391
+msgid ""
+"When these 3 things come to term, Nuitka will be a huge, huge step ahead "
+"towards being truly a static optimizing compiler (so far it is mostly "
+"only peep hole optimization, and byte code avoidance). I still think of "
+"this as happening this year."
+msgstr ""
+

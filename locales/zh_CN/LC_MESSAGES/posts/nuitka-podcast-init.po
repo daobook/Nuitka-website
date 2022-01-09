@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-podcast-init.rst:7
+msgid "Nuitka on Podcast __init__"
+msgstr ""
+
+#: ../../posts/nuitka-podcast-init.rst:9
+msgid ""
+"So, if you want to get to know Nuitka or me, there is a really good "
+"interview from the popular podcast \"__init__\" online."
+msgstr ""
+
+#: ../../posts/nuitka-podcast-init.rst:12
+msgid ""
+"`Kay Hayen on Nuitka <https://www.pythonpodcast.com/episode-28-kay-hayen-"
+"on-nuitka/>`__"
+msgstr ""
+
+#: ../../posts/nuitka-podcast-init.rst:15
+msgid ""
+"I think it's very good at explaining things, putting it into perspective,"
+" history, future, and generally getting to know what kind of person I am."
+msgstr ""
+
+#: ../../posts/nuitka-podcast-init.rst:19
+msgid ""
+"So, this is probably as good as it ever gets. So please share, like and "
+"go ahead and spread it in this social media craziness that you use all "
+"day."
+msgstr ""
+
+#: ../../posts/nuitka-podcast-init.rst:23
+msgid "Yours,"
+msgstr ""
+
+#: ../../posts/nuitka-podcast-init.rst:24
+msgid "Kay"
+msgstr ""
+

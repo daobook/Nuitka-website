@@ -1,0 +1,184 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-059.rst:7
+msgid "Nuitka Release 0.5.9"
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:13
+msgid ""
+"This release is mostly a maintenance release, bringing out minor "
+"compatibility improvements, and some standalone improvements. Also new "
+"options to control the recursion into modules are added."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:19
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:21
+msgid ""
+"Compatibility: Checks for iterators were using ``PyIter_Check`` which is "
+"buggy when running outside of Python core, because it's comparing "
+"pointers we don't see. Replaced with ``HAS_ITERNEXT`` helper which "
+"compares against the pointer as extracting for a real non-iterator "
+"object."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:39
+msgid ""
+"Python3: Errors when creating class dictionaries raised by the "
+"``__prepare__`` dictionary (e.g. ``enum`` classes with wrong identifiers)"
+" were not immediately raised, but only by the ``type`` call."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:44
+msgid "This was not observable, but might have caused issues potentially."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:46
+msgid ""
+"Standalone macOS: Shared libraries and extension modules didn't have "
+"their DLL load paths updated, but only the main binary. This is not "
+"sufficient for more complex programs."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:50
+msgid ""
+"Standalone Linux: Shared libraries copied into the ``.dist`` folder were "
+"read-only and executing ``chrpath`` could potentially then fail. This has"
+" not been observed, but is a conclusion of macOS fix."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:54
+msgid ""
+"Standalone: When freezing standard library, the path of Nuitka and the "
+"current directory remained in the search path, which could lead to "
+"looking at the wrong files."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:60 ../../posts/nuitka-release-059.rst:87
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:62
+msgid ""
+"The ``getattr`` built-in is now optimized for compile time constants if "
+"possible, even in the presence of a ``default`` argument. This is more a "
+"cleanup than actually useful yet."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:66
+msgid ""
+"The calling of ``PyCFunction`` from normal Python extension modules got "
+"accelerated, especially for the no or single argument cases where Nuitka "
+"now avoids building the tuple."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:72
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:74
+msgid ""
+"Added the option ``--recurse-pattern`` to include modules per filename, "
+"which for Python3 is the only way to not have them in a package "
+"automatically."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:78
+msgid ""
+"Added the option ``--generate-c++-only`` to only generate the C++ source "
+"code without starting the compiler."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:81
+msgid ""
+"Mostly used for debugging and testing coverage. In the later case we do "
+"not want the C++ compiler to create any binary, but only to measure what "
+"would have been used."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:89
+msgid ""
+"Renamed the debug option ``--c++-only`` to ``--recompile-c++-only`` to "
+"make its purpose more clear and there now is ``--generate-c++-only`` too."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:95
+msgid "Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:97
+msgid ""
+"Added support for taking coverage of Nuitka in a test run on a given "
+"input file."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:100
+msgid ""
+"Added support for taking coverage for all Nuitka test runners, migrating "
+"them all to common code for searching."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:103
+msgid "Added uniform way of reporting skipped tests, not generally used yet."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:107
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:109
+msgid ""
+"This release marks progress towards having coverage testing. Recent "
+"releases had made it clear that not all code of Nuitka is actually used "
+"at least once in our release tests. We aim at identifying these."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:113
+msgid ""
+"Another direction was to catch cases, where Nuitka leaks exceptions or is"
+" subject to leaked exceptions, which revealed previously unnoticed "
+"errors."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:117
+msgid ""
+"Important changes have been delayed, e.g. the closure variables will not "
+"yet use C++ objects to share storage, but proper ``PyCellObject`` for "
+"improved compatibility, and to approach a more \"C-ish\" status. These is"
+" unfinished code that does this. And the forward propagation of values is"
+" not enabled yet again either."
+msgstr ""
+
+#: ../../posts/nuitka-release-059.rst:123
+msgid ""
+"So this is an interim step to get the bug fixes and improvements "
+"accumulated out. Expect more actual changes in the next releases."
+msgstr ""
+

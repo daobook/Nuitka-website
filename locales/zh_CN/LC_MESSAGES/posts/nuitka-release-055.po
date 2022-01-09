@@ -1,0 +1,326 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-055.rst:7
+msgid "Nuitka Release 0.5.5"
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:13
+msgid ""
+"This release is finally making full use of SSA analysis knowledge for "
+"code generation, leading to many enhancements over previous releases."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:16
+msgid ""
+"It also adds support for Python3.4, which has been longer in the making, "
+"due to many rather subtle issues. In fact, even more work will be needed "
+"to fully solve remaining minor issues, but these should affect no real "
+"code."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:21
+msgid ""
+"And then there is much improved support for using standalone mode "
+"together with virtualenv. This combination was not previously supported, "
+"but should work now."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:27
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:29
+msgid "Added support for Python3.4"
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:31
+msgid ""
+"This means support for ``clear`` method of frames to close generators, "
+"dynamic ``__qualname__``, affected by ``global`` statements, tuples as "
+"``yield from`` arguments, improved error messages, additional checks, and"
+" many more detail changes."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:38
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:40
+msgid ""
+"Using SSA knowledge, local variable assignments now no longer need to "
+"check if they need to release previous values, they know definitely for "
+"the most cases."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:50
+msgid ""
+"Using SSA knowledge, local variable references now no longer need to "
+"check for raising exceptions, let alone produce exceptions for cases, "
+"where that cannot be."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:60
+msgid ""
+"Using SSA knowledge, local variable references now are known if they can "
+"raise the ``UnboundLocalError`` exception or not. This allows to "
+"eliminate frame usages for many cases. Including the above example."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:64
+msgid "Using less memory for keeping variable information."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:66
+msgid "Also using less memory for constant nodes."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:70
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:72
+msgid ""
+"The standalone freezing code was reading Python source as UTF-8 and not "
+"using the code that handles the Python encoding properly. On some "
+"platforms there are files in standard library that are not encoded like "
+"that."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:77
+msgid ""
+"The fiber implementation for Linux amd64 was not working with glibc from "
+"RHEL 5. Fixed to use now multiple ``int`` to pass pointers as necessary. "
+"Also use ``uintptr_t`` instead of ``intprt_t`` to transport pointers, "
+"which may be more optimal."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:82
+msgid ""
+"Line numbers for exceptions were corrupted by ``with`` statements due to "
+"setting line numbers even for statements marked as internal."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:85
+msgid ""
+"Partial support for ``win32com`` by adding support for its hidden "
+"``__path__`` change."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:88
+msgid ""
+"Python3: Finally figured out proper chaining of exceptions, given proper "
+"context messages for exception raised during the handling of exceptions."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:92
+msgid ""
+"Corrected C++ memory leak for each closure variable taken, each time a "
+"function object was created."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:95
+msgid ""
+"Python3: Raising exceptions with tracebacks already attached, wasn't "
+"using always them, but producing new ones instead."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:98
+msgid ""
+"Some constants could cause errors, as they cannot be handled with the "
+"``marshal`` module as expected, e.g. ``(int,)``."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:101
+msgid ""
+"Standalone: Make sure to propagate ``sys.path`` to the Python instance "
+"used to check for standard library import dependencies. This is important"
+" for virtualenv environments, which need ``site.py`` to set the path, "
+"which is not executed in that mode."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:106
+msgid ""
+"Windows: Added support for different path layout there, so using "
+"virtualenv should work there too."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:109
+msgid ""
+"The code object flag \"optimized\" (fast locals as opposed to locals "
+"dictionary) for functions was set wrongly to value for the parent, but "
+"for frames inside it, one with the correct value. This lead to more code "
+"objects than necessary and false ``co_flags`` values attached to the "
+"function."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:115
+msgid "Options passed to ``nuitka-python`` could get lost."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:121
+msgid ""
+"The above is supposed to compile program.py, execute it immediately and "
+"pass the arguments to it. But when Nuitka decides to restart itself, it "
+"would forget these options. It does so to e.g. disable hash randomization"
+" as it would affect code generation."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:126
+msgid ""
+"Raising tuples exception as exceptions was not compatible (Python2) or "
+"reference leaking (Python3)."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:131
+msgid "Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:133
+msgid ""
+"Running ``2to3`` is now avoided for tests that are already running on "
+"both Python2 and Python3."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:136
+msgid ""
+"Made XML based optimization tests work with Python3 too. Previously these"
+" were only working on Python2."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:139
+msgid ""
+"Added support for ignoring messages that come from linking against self "
+"compiled Pythons."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:142
+msgid ""
+"Added test case for threaded generators that tortures the fiber layer a "
+"bit and exposed issues on RHEL 5."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:145
+msgid ""
+"Made reference count test of compiled functions generic. No more code "
+"duplication, and automatic detection of shared stuff. Also a more clear "
+"interface for disabling test cases."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:149
+msgid ""
+"Added Python2 specific reference counting tests, so the other cases can "
+"be executed with Python3 directly, making debugging them less tedious."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:155
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:157
+msgid ""
+"Really important removal of \"variable references\". They didn't solve "
+"any problem anymore, but their complexity was not helpful either. This "
+"allowed to make SSA usable finally, and removed a lot of code."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:161
+msgid ""
+"Removed special code generation for parameter variables, and their "
+"dedicated classes, no more needed, as every variable access code is now "
+"optimized like this."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:165
+msgid ""
+"Stop using C++ class methods at all. Now only the destructor of local "
+"variables is actually supposed to do anything, and their are no methods "
+"anymore. The unused ``var_name`` got removed, ``setVariableValue`` is now"
+" done manually."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:170
+msgid ""
+"Moved assertions for the fiber layer to a common place in the header, so "
+"they are executed on all platforms in debug mode."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:173
+msgid "As usual, also a bunch of cleanups for PyLint were applied."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:175
+msgid ""
+"The ``locals`` built-in code now uses code generation for accessing local"
+" variable values instead having its own stuff."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:180
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:182
+msgid ""
+"The Python version 3.4 is now officially supported. There are a few "
+"problems open, that will be addressed in future releases, none of which "
+"will affect normal people though."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:186
+msgid "Major cleanup of Nuitka options."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:188
+msgid ""
+"Windows specific stuff is now in a dedicated option group. This includes "
+"options for icon, disabling console, etc."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:190
+msgid ""
+"There is now a dedicated group for controlling backend compiler choices "
+"and options."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:193
+msgid ""
+"Also pickup ``g++44`` automatically, which makes using Nuitka on CentOS5 "
+"more automatic."
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:198
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-055.rst:200
+msgid ""
+"This release represents a very important step ahead. Using SSA for real "
+"stuff will allow us to build the trust necessary to take the next steps. "
+"Using the SSA information, we could start implementing more "
+"optimizations."
+msgstr ""
+

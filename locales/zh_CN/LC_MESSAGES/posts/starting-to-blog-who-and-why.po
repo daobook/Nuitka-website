@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/starting-to-blog-who-and-why.rst:7
+msgid "Starting to blog, who and why?"
+msgstr ""
+
+#: ../../posts/starting-to-blog-who-and-why.rst:9
+msgid ""
+"My name is Kay Hayen, I was born in 1972 in the very northern part of "
+"Germany very close to the North Sea."
+msgstr ""
+
+#: ../../posts/starting-to-blog-who-and-why.rst:12
+msgid ""
+"I am privately a developer of Free Software, and currently preparing the "
+"release of my Python compiler. The name of the project will be \"Nuitka\""
+" chosen to honor my Russian wife Anna. We are a happy family with 2 sons,"
+" born 2004 and 2007."
+msgstr ""
+
+#: ../../posts/starting-to-blog-who-and-why.rst:17
+msgid ""
+"I am starting this blog mostly to report about the new compiler. I don't "
+"think I will share much about my private life here, but I sure will share"
+" a couple of photos with you occasionally. But mostly I will be excited "
+"to report on the compiler progress."
+msgstr ""
+
+#: ../../posts/starting-to-blog-who-and-why.rst:22
+msgid ""
+"So far I didn't feel like I had anything to say, but the compiler is "
+"approaching its release later this month, and I will need a forum to talk"
+" about it."
+msgstr ""
+
+#: ../../posts/starting-to-blog-who-and-why.rst:26
+msgid "Kay Hayen"
+msgstr ""
+

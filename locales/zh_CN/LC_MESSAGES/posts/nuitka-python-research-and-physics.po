@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-python-research-and-physics.rst:7
+msgid "Nuitka, Python research and Physics"
+msgstr ""
+
+#: ../../posts/nuitka-python-research-and-physics.rst:9
+msgid ""
+"Once upon a time ago physics had multiple forces. Each with very distinct"
+" traits. These were the early days. Then as time went on people started "
+"to realize that weak nuclear force and electromagnetic force were the "
+"same sort. That was after discovering that electricity and magnetism were"
+" the same, and that is the pattern. It's called symmetry, equivalence, "
+"and so on."
+msgstr ""
+
+#: ../../posts/nuitka-python-research-and-physics.rst:16
+msgid ""
+"The `Nuitka </pages/overview.html>`_ project is effectively a Python "
+"research that goes through the same steps. There are e.g. currently local"
+" variables, closure variables (shared from containing function), module "
+"variables, temp holder, temp keeper, and temp variables."
+msgstr ""
+
+#: ../../posts/nuitka-python-research-and-physics.rst:21
+msgid ""
+"Often when I added one more this was driven by code generation needs or "
+"deficiencies at the time. These are of course way too many, and all are "
+"good at one thing only."
+msgstr ""
+
+#: ../../posts/nuitka-python-research-and-physics.rst:25
+msgid ""
+"So the main task Nuitka is faced with now to e.g. generalize that \"temp "
+"keeper\" variables are temporary variables local to one statement only, "
+"surely to be released afterwards, and make that particular feature e.g. "
+"work for all variables across the board. Right now, code generation uses "
+"\"cheats\" where it puts a C++ block and local declarations for \"temp "
+"keeper\" variables."
+msgstr ""
+
+#: ../../posts/nuitka-python-research-and-physics.rst:32
+msgid ""
+"It would be good, if it could be a ``try`` with ``del`` statement on the "
+"\"temp keeper variable\" in its ``finally`` part and yet, get the same "
+"code generated. Difficult, yes, but not impossible, and definitely what I"
+" am aiming at."
+msgstr ""
+
+#: ../../posts/nuitka-python-research-and-physics.rst:37
+msgid ""
+"So that is what Nuitka will be dealing with in the next releases. Once "
+"done, maybe there will be a \"gravity\", i.e. the one thing not yet "
+"harmonized, but for good reasons. Potentially limited due to lack of "
+"understanding, potentially because there is a good reason. And so not all"
+" we be unified or maybe e.g. module variables will be a bit more special "
+"than local variables, although modules are just functions with variables "
+"writable everywhere."
+msgstr ""
+
+#: ../../posts/nuitka-python-research-and-physics.rst:45
+msgid ""
+"Good stuff is coming, hold on. `Join the project </doc/user-manual.html"
+"#join-nuitka>`_, or support it financially if you wish."
+msgstr ""
+
+#: ../../posts/nuitka-python-research-and-physics.rst:49
+msgid ""
+"Nuitka still is too much of a one man show. Should I be asked to name one"
+" single weakness of it - that would be it."
+msgstr ""
+

@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:7
+msgid "Intro"
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:9
+msgid ""
+"This post compares the pytest results of urllib3 to its nuitka-built "
+"``.whl`` counterpart."
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:12
+msgid ""
+"Urllib3 standalone test have already been covered. Manual testing is now "
+"done to compare the pytest results of a nuitka wheel built using ``python"
+" setup.py bdist_nuitka`` to the regular pytest of the urllib3 package. "
+"Testing is done to ensure that nuitka is building the wheel correctly. If"
+" the pytests pass/fail in the same way, that means Nuitka built the wheel"
+" properly. Else if the tests differ, then something is wrong. Virtualenv "
+"is used to create a clean environment with no outside pollution."
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:21
+msgid ""
+"At first, the urllib3 nuitka-wheel pytest was crashing because of the "
+"unsafe assumption that imports will always exist (which is not the case "
+"if exceptions are thrown). `Issue 413 "
+"<https://github.com/Nuitka/Nuitka/issues/413>`__ was filed to record and "
+"fix this bug."
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:27
+msgid ""
+"After the fixes, the pytests were ran again and the results were very "
+"similar:"
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:35
+msgid ""
+"The extra passes are suspicious and require more investigation into why "
+"they happen. To make that easy, we are going to fully automate the "
+"process and compare outputs with verbose pytest modes."
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:41
+msgid "Steps to Reproduce"
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:43
+msgid "Clone urllib3 and nuitka into a new folder"
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:45
+msgid ""
+"Inside the urllib3 folder, issue ``python -m pip install -r dev-"
+"requirements.txt`` to install its requirements."
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:48
+msgid ""
+"Issue ``python -m pytest --disable-warnings``, this runs the regular "
+"pytest for urllib3."
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:51
+msgid "Change into the nuitka folder and issue ``python setup.py develop``."
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:53
+msgid ""
+"Change back into urllib3 and issue ``python setup.py bdist_nuitka`` to "
+"build the urllib3 wheel using nuitka. The newly built wheel should be "
+"found in the ``dist`` folder."
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:57
+msgid ""
+"Use pip to uninstall the existing urllib3, then issue ``python -m pip "
+"install`` followed by the newly built ``.whl`` filename."
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:60
+msgid ""
+"Issue ``python -m pytest --disable-warnings``, this runs the nuitka-built"
+" wheel pytest for urllib3."
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:65
+msgid "Uncompile Python"
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:67
+msgid "urllib3 regular pytest:"
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:125
+msgid "Compiled with Nuitka"
+msgstr ""
+
+#: ../../posts/urllib3-wheel-with-nuitka.rst:127
+msgid "nuitka wheel pytest:"
+msgstr ""
+

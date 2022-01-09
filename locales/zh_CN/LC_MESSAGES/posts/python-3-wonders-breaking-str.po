@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/python-3-wonders-breaking-str.rst:7
+msgid "Python 3 wonders - Breaking str"
+msgstr ""
+
+#: ../../posts/python-3-wonders-breaking-str.rst:9
+msgid ""
+"That just killed some hope inside of me, breaking code that uses ``str`` "
+"ought to be forbidden."
+msgstr ""
+
+#: ../../posts/python-3-wonders-breaking-str.rst:12
+msgid "Update"
+msgstr ""
+
+#: ../../posts/python-3-wonders-breaking-str.rst:14
+msgid ""
+"Turns out, this only a bug, and not intentional. And the bug is only in "
+"the doc string, so it's being fixed, and there is no inconsistency then "
+"any more."
+msgstr ""
+
+#: ../../posts/python-3-wonders-breaking-str.rst:18
+msgid "Python 3:"
+msgstr ""
+
+#: ../../posts/python-3-wonders-breaking-str.rst:36
+#: ../../posts/python-3-wonders-breaking-str.rst:55
+msgid "Python 2:"
+msgstr ""
+
+#: ../../posts/python-3-wonders-breaking-str.rst:51
+msgid ""
+"I do understand that it's in fact just the old ``unicode`` built-in. In "
+"fact, I made it work like that for Nuitka just now. But there is a "
+"difference, for Python2, it was well behaved."
+msgstr ""
+
+#: ../../posts/python-3-wonders-breaking-str.rst:68
+msgid "Is Python3 supposed to be more clean or what? I think it is not happening."
+msgstr ""
+
+#: ../../posts/python-3-wonders-breaking-str.rst:71
+msgid "Yours,"
+msgstr ""
+
+#: ../../posts/python-3-wonders-breaking-str.rst:72
+msgid "Kay Hayen"
+msgstr ""
+

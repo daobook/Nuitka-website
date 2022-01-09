@@ -10,8 +10,10 @@ copyright = "%s, Kay Hayen and Nuitka Contributors" % time.gmtime().tm_year
 author = "Kay Hayen"
 release = version = ""
 
+develop_root = '../Nuitka-develop'
+
 # For autodoc to work
-sys.path.insert(0, os.path.abspath("../Nuitka-develop"))
+sys.path.insert(0, os.path.abspath(develop_root))
 import nuitka
 
 # -- General configuration
@@ -37,12 +39,16 @@ extensions = [
 ]
 
 intersphinx_mapping = {
-    "python": ("https://docs.python.org/3/", None),
+    # "python": ("https://docs.python.org/3/", None),
     # "sphinx": ("https://www.sphinx-doc.org/en/master/", None),
 }
 intersphinx_disabled_domains = ["std"]
 
 templates_path = ["_templates"]
+
+# language = 'zh_CN'
+locale_dirs = ['../locales/']  # path is example but recommended.
+gettext_compact = False  # optional.
 
 # Options for ABlog
 
@@ -77,7 +83,7 @@ sitemap_url_scheme = "{link}"
 
 # -- Options for HTML output
 html_theme = "sphinx_rtd_theme"
-html_logo = "Nuitka-Logo-Symbol.png"
+html_logo = f"{develop_root}/doc/images/Nuitka-Logo-Symbol.png"
 html_copy_source = False
 html_show_sourcelink = False
 html_show_sphinx = False

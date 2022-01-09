@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-0322.rst:7
+msgid "Nuitka Release 0.3.22"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:13
+msgid ""
+"This release is a continuation of the trend of previous releases, and "
+"added more re-formulations of Python that lower the burden on code "
+"generation and optimization."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:17
+msgid ""
+"It also improves Python3 support substantially. In fact this is the first"
+" release to not only run itself under Python3, but for Nuitka to *compile"
+" itself* with Nuitka under Python3, which previously only worked for "
+"Python2. For the common language subset, it's quite fine now."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:24
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:26
+msgid ""
+"List contractions produced extra entries on the call stack, after they "
+"became functions, these are no more existent. That was made possible my "
+"making frame stack entries an optional element in the node tree, left out"
+" for list contractions."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:31
+msgid ""
+"Calling a compiled function in an exception handler cleared the exception"
+" on return, it no longer does that."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:34
+msgid "Reference counter handling with generator ``throw`` method is now correct."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:37
+msgid ""
+"A module \"builtins\" conflicted with the handling of the Python "
+"``builtins`` module. Those now use different identifiers."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:42
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:44
+msgid ""
+"New ``metaclass`` syntax for the ``class`` statement works, and the old "
+"``__metaclass__`` attribute is properly ignored."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:61
+msgid ""
+"The way to make a use of a metaclass in a portable way, is to create a "
+"based class that has it and then inherit from it. Sad, isn' it. Surely, "
+"the support for ``__metaclass__`` could still live."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:73
+msgid ""
+"The ``--dump-xml`` option works with Nuitka running under Python3. This "
+"was not previously supported."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:76
+msgid ""
+"Python3 now also has compatible parameter errors and compatible exception"
+" error messages."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:79
+msgid ""
+"Python3 has changed scope rules for list contractions (assignments don't "
+"affect outside values) and this is now respected as well."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:82
+msgid ""
+"Python3 has gained support for recursive programs and stand alone "
+"extension modules, these are now both possible as well."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:87
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:89
+msgid ""
+"Avoid frame stack entries for functions that cannot raise exceptions, "
+"i.e. where they would not be used."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:92
+msgid ""
+"This avoids overhead for the very simple functions. And example of this "
+"can be seen here:"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:100
+msgid "Optimize ``len`` built-in for non-constant, but known length values."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:102
+#: ../../posts/nuitka-release-0322.rst:126
+msgid "An example can be seen here:"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:118
+msgid ""
+"This new optimization applies to all kinds of container creations and the"
+" ``range`` built-in initially."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:121
+msgid "Optimize conditions for non-constant, but known truth values."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:123
+msgid ""
+"At this time, known truth values of non-constants means ``range`` built-"
+"in calls with know size and container creations."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:133
+msgid ""
+"It's clear, that the tuple will be true, we just need to maintain the "
+"side effect, which we do."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:136
+msgid "Optimize ``or`` and ``and`` operators for known truth values."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:138
+msgid ""
+"See above for what has known truth values currently. This will be most "
+"useful to predict conditions that need not be evaluated at all due to "
+"short circuit nature, and to avoid checking against constant values. "
+"Previously this could not be optimized, but now it can:"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:160
+msgid "Optimize print arguments to become strings."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:162
+msgid ""
+"The arguments to ``print`` statements are now converted to strings at "
+"compile time if possible."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:169
+#: ../../posts/nuitka-release-0322.rst:183
+msgid "becomes:"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:175
+msgid "Combine print arguments to single ones."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:177
+msgid "When multiple strings are printed, these are now combined."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:191
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:193
+msgid "Enhanced Python3 support, enabling support for most basic tests."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:195
+msgid "Check files with PyLint in deterministic (alphabetical) order."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:199
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:201
+msgid ""
+"Frame stack entries are now part of the node tree instead of part of the "
+"template for every function, generator, class or module."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:204
+msgid ""
+"The ``try``/``except``/``else`` has been re-formulated to use an "
+"indicator variable visible in the node tree, that tells if a handler has "
+"been executed or not."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:208
+msgid ""
+"Side effects are now a dedicated node, used in several optimization to "
+"maintain the effect of an expression with known value."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:213
+msgid "New Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:215
+msgid "Expanded and adapted basic tests to work for Python3 as well."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:217
+msgid ""
+"Added reference count tests for generator functions ``throw``, ``send``, "
+"and ``close`` methods."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:220
+msgid ""
+"Cover calling a function with ``try``/``except`` in an exception handler "
+"twice. No test was previously doing that."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:225
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:227
+msgid ""
+"This release offers enhanced compatibility with Python3, as well as the "
+"solution to many structural problems. Calculating lengths of large non-"
+"constant values at compile time, is technically a break through, as is "
+"avoiding lengthy calculations. The frame guards as nodes is a huge "
+"improvement, making that costly operational possible to be optimized "
+"away."
+msgstr ""
+
+#: ../../posts/nuitka-release-0322.rst:234
+msgid ""
+"There still is more work ahead, before value propagation will be safe "
+"enough to enable, but we are seeing the glimpse of it already. Not for "
+"long, and looking at numbers will make sense."
+msgstr ""
+

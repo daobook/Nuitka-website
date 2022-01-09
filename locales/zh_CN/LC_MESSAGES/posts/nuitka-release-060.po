@@ -1,0 +1,393 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-060.rst:7
+msgid "Nuitka Release 0.6.0"
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:13
+msgid ""
+"This release adds massive improvements for optimization and a couple of "
+"bug fixes."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:16
+msgid ""
+"It also indicates reaching the mile stone of doing actual type inference,"
+" even if only very limited."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:19
+msgid ""
+"And with the new version numbers, lots of UI changes go along. The "
+"options to control recursion into modules have all been renamed, some now"
+" have different defaults, and finally the filenames output have changed."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:26
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:28
+msgid ""
+"Python3.5: Fix, the awaiting flag was not removed for exceptions thrown "
+"into a coroutine, so next time it appeared to be awaiting instead of "
+"finished."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:32
+msgid ""
+"Python3: Classes in generators that were using built-in functions crashed"
+" the compilation with C errors."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:35
+msgid "Some regressions for XML outputs from previous changes were fixed."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:37
+msgid ""
+"Fix, ``hasattr`` was not raising an exception if used with non-string "
+"attributes."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:40
+msgid ""
+"For really large compilations, MSVC linker could choke on the input file,"
+" line length limits, which is now fixed for the inline copy of Scons."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:44
+msgid ""
+"Standalone: Follow changed hidden dependency of ``PyQt5`` to "
+"``PyQt5.sip`` for newer versions"
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:47
+msgid ""
+"Standalone: Include certificate file using by ``requests`` module in some"
+" cases as a data file."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:52
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:54
+msgid ""
+"Enabled C target type ``nuitka_bool`` for variables that are stored with "
+"boolean shape only, and generate C code for those"
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:57
+msgid ""
+"Using C target type ``nuitka_bool`` many more expressions are now handled"
+" better in conditions."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:60
+msgid ""
+"Enhanced ``is`` and ``is not`` to be C source type aware, so they can be "
+"much faster for them."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:63
+msgid ""
+"Use C target type for ``bool`` built-in giving more efficient code for "
+"some source values."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:66
+msgid ""
+"Annotate the ``not`` result to have boolean type shape, allowing for more"
+" compile time optimization with it."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:69
+msgid ""
+"Restored previously lost optimization of loop break handling "
+"``StopIteration`` which makes loops much faster again."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:72
+msgid ""
+"Restore lost optimization of subscripts with constant integer values "
+"making them faster again."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:75
+msgid ""
+"Optimize in-place operations for cases where left, right, or both sides "
+"have known type shapes for some values. Initially only a few variants "
+"were added, but there is more to come."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:79
+msgid ""
+"When adjacent parts of an f-string become known string constants, join "
+"them at compile time."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:82
+msgid ""
+"When there is only one remaining part in an f-string, use that directly "
+"as the result."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:85
+msgid ""
+"Optimize empty f-strings directly into empty strings constant during the "
+"tree building phase."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:88
+msgid ""
+"Added specialized attribute check for use in re-formulations that doesn't"
+" expose exceptions."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:91
+msgid ""
+"Remove locals sync operation in scopes without local variables, e.g. "
+"classes or modules, making ``exec`` and the like slightly leaner there."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:95
+msgid "Remove ``try`` nodes that did only re-raise exceptions."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:97
+msgid ""
+"The ``del`` of variables is now driven fully by C types and generates "
+"more compatible code."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:100
+msgid ""
+"Removed useless double exception exits annotated for expressions of "
+"conditions and added code that allows conditions to adapt themselves to "
+"the target shape bool during optimization."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:106
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:108
+msgid ""
+"Added support for using ``.egg`` files in ``PYTHONPATH``, one of the more"
+" rare uses, where Nuitka wasn't yet compatible."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:111
+msgid ""
+"Output binaries in standalone mode with platform suffix, on non-Windows "
+"that means no suffix. In accelerated mode on non-Windows, use ``.bin`` as"
+" a suffix to avoid collision with files that have no suffix."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:116
+msgid ""
+"Windows: It's now possible to use ``clang-cl.exe`` for ``CC`` with Nuitka"
+" as a third compiler on Windows, but it requires an existing MSVC install"
+" to be used for resource compilation and linking."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:120
+msgid ""
+"Windows: Added support for using ``ccache.exe`` and ``clcache.exe``, so "
+"that object files can now be cached for re-compilation."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:123
+msgid ""
+"For debug mode, report missing in-place helpers. These kinds of reports "
+"are to become more universal and are aimed at recognizing missed "
+"optimization chances in Nuitka. This features is still in its infancy. "
+"Subsequent releases will add more like these."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:130
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:132
+msgid ""
+"Disabled comments on the web site, we are going to use Twitter instead, "
+"once the site is migrated to an updated Nikola."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:135
+msgid ""
+"The static C code is now formatted with ``clang-format`` to make it "
+"easier for contributors to understand."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:138
+msgid ""
+"Moved the construct runner to top level binary and use it from there, "
+"with future changes coming that should make it generally useful outside "
+"of Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:142
+msgid ""
+"Enhanced the issue template to tell people how to get the ``develop`` "
+"version of Nuitka to try it out."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:145
+msgid ""
+"Added documentation for how use the object caching on Windows to the User"
+" Manual."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:148
+msgid ""
+"Removed the included GUI, originally intended for debugging, but XML "
+"outputs are more powerful anyway, and it had been in disrepair for a long"
+" time."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:152
+msgid ""
+"Removed long deprecated options, e.g. ``--exe`` which has long been the "
+"default and is no more accepted."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:155
+msgid ""
+"Renamed options to include plugin files to ``--include-plugin-directory``"
+" and ``--include-plugin-files`` for more clarity."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:159
+msgid ""
+"Renamed options for recursion control to e.g. ``--follow-imports`` to "
+"better express what they actually do."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:162
+msgid ""
+"Removed ``--python-version`` support for switching the version during "
+"compilation. This has only worked for very specific circumstances and has"
+" been deprecated for a while."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:166
+msgid ""
+"Removed ``--code-gen-no-statement-lines`` support for not having line "
+"numbers updated at run time. This has long been hidden and probably would"
+" never gain all that much, while causing a lot of incompatibilty."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:173
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:175
+msgid ""
+"Moved command line arguments to dedicated module, adding checks was "
+"becoming too difficult."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:178
+msgid "Moved rich comparison helpers to a dedicated C file."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:180
+msgid ""
+"Dedicated binary and unary node bases for clearer distinction and more "
+"efficient memory usage of unuary nodes. Unary operations also no longer "
+"have in-place operation as an issue."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:184
+msgid ""
+"Major cleanup of variable accesses, split up into multiple phases and all"
+" including module variables being performed through C types, with no "
+"special cases anymore."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:188
+msgid ""
+"Partial cleanups of C type classes with code duplications, there is much "
+"more to resolve though."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:191
+msgid ""
+"Windows: The way ``exec`` was performed is discouraged in the "
+"``subprocess`` documentation, so use a variant that cannot block instead."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:195
+msgid ""
+"Code proving information about built-in names and values was using not "
+"very portable constructs, and is now written in a way that PyPy would "
+"also like."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:201
+msgid "Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:203
+msgid ""
+"Avoid using ``2to3`` for basic operators test, removing test of some "
+"Python2 only stuff, that is covered elsewhere."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:206
+msgid ""
+"Added ability to cache output of CPython when comparing to it. This is to"
+" allow CI tests to not execute the same code over and over, just to get "
+"the same value to compare with. This is not enabled yet."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:212
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:214
+msgid ""
+"This release marks a point, from which on performance improvements are "
+"likely in every coming release. The C target types are a major milestone."
+" More C target types are in the work, e.g. ``void`` is coming for "
+"expressions that are done, but not used, that is scheduled for the next "
+"release."
+msgstr ""
+
+#: ../../posts/nuitka-release-060.rst:220
+msgid ""
+"Although there will be a need to also adapt optimization to take full "
+"advantage of it, progress should be quick from here. There is a lot of "
+"ground to cover, with more C types to come, and all of them needing "
+"specialized helpers. But as soon as e.g. ``int``, ``str`` are covered, "
+"many more programs are going to benefiting from this."
+msgstr ""
+

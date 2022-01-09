@@ -1,0 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/new-git-repository-to-sync-with-nuitka-releases.rst:7
+msgid "New git repository to sync with Nuitka releases"
+msgstr ""
+
+#: ../../posts/new-git-repository-to-sync-with-nuitka-releases.rst:9
+msgid ""
+"For you git fans out there I have just added a new method to download "
+"Nuitka from something I call the release git repository:"
+msgstr ""
+
+#: ../../posts/new-git-repository-to-sync-with-nuitka-releases.rst:16
+msgid "Then do your own modifications, and do:"
+msgstr ""
+
+#: ../../posts/new-git-repository-to-sync-with-nuitka-releases.rst:22
+msgid ""
+"each time there is a new release. You will be led through the merge "
+"process as usual. To reduce your differences, feel free to send me the "
+"patches you create with:"
+msgstr ""
+
+#: ../../posts/new-git-repository-to-sync-with-nuitka-releases.rst:30
+msgid "and I will incorporate useful stuff."
+msgstr ""
+
+#: ../../posts/new-git-repository-to-sync-with-nuitka-releases.rst:32
+msgid "Please note"
+msgstr ""
+
+#: ../../posts/new-git-repository-to-sync-with-nuitka-releases.rst:34
+msgid ""
+"If you publish your own git repository, please be so kind and name it "
+"\"Nuitka-unofficial\" or similar, or else it might be mistaken with the "
+"real thing, and drop me a line about it, just so I know."
+msgstr ""
+
+#: ../../posts/new-git-repository-to-sync-with-nuitka-releases.rst:38
+msgid "Kay Hayen"
+msgstr ""
+

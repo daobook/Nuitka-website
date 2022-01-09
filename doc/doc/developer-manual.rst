@@ -1,1 +1,2 @@
-../../Nuitka-master/Developer_Manual.rst
+.. include:: ../../Nuitka-main/Developer_Manual.rst
+    

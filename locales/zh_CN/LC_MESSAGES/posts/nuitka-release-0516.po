@@ -1,0 +1,301 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-0516.rst:7
+msgid "Nuitka Release 0.5.16"
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:13
+msgid ""
+"This is a maintenance release, largely intended to put out improved "
+"support for new platforms and minor corrections. It should improve the "
+"speed for standalone mode, and compilation in general for some use cases,"
+" but this is mostly to clean up open ends."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:20
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:22
+msgid ""
+"Fix, the ``len`` built-in could give false values for dictionary and set "
+"creations with the same element."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:30
+msgid ""
+"Python: Fix, the ``gi_running`` attribute of generators is no longer an "
+"``int``, but ``bool`` instead."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:33
+msgid ""
+"Python3: Fix, the ``int`` built-in with two arguments, value and base, "
+"raised ``UnicodeDecodeError`` instead of ``ValueError`` for illegal bytes"
+" given as value."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:37
+msgid ""
+"Python3: Using ``tokenize.open`` to read source code, instead of reading "
+"manually and decoding from ``tokenize.detect_encoding``, this handles "
+"corner cases more compatible."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:41
+msgid ""
+"Fix, the PyLint warnings plug-in could crash in some cases, make sure "
+"it's more robust."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:44
+msgid ""
+"Windows: Fix, the combination of Anaconda Python, MinGW 64 bits and mere "
+"acceleration was not working."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:47
+msgid ""
+"Standalone: Preserve not only namespace packages created by ``.pth`` "
+"files, but also make the imports done by them. This makes it more "
+"compatible with uses of it in Fedora 22."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:51
+msgid ""
+"Standalone: The extension modules could be duplicated, turned this into "
+"an error and cache finding them during compile time and during early "
+"import resolution to avoid duplication."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:55
+msgid ""
+"Standalone: Handle \"not found\" from ``ldd`` output, on some systems not"
+" all the libraries wanted are accessible for every library."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:58
+msgid ""
+"Python3.5: Fixed support for namespace packages, these were not yet "
+"working for that version yet."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:61
+msgid ""
+"Python3.5: Fixes lack of support for unpacking in normal ``tuple``, "
+"``list``, and ``set`` creations."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:68
+msgid ""
+"Now also gives compatible ``SyntaxError`` for earlier versions. Python2 "
+"was good already."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:71
+msgid ""
+"Python3.5: Fix, need to reduce compiled functions to ``__qualname__`` "
+"value, rather than just ``__name__`` or else pickling methods doesn't "
+"work."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:75
+msgid "Python3.5: Fix, added ``gi_yieldfrom`` attribute to generator objects."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:78
+msgid ""
+"Windows: Fixed harmless warnings for Visual Studio 2015 in ``--debug`` "
+"mode."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:83
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:85
+msgid ""
+"Re-formulate ``exec`` and ``eval`` to default to ``globals()`` as the "
+"default for the locals dictionary in modules."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:88
+msgid ""
+"The ``try`` node was making a description of nodes moved to the outside "
+"when shrinking its scope, which was using a lot of time, just to not be "
+"output, now these can be postponed."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:92
+msgid ""
+"Refactored how freezing of bytecode works. Uncompiled modules are now "
+"explicit nodes too, and in the registry. We only have one or the other of"
+" it, avoiding to compile both."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:98
+msgid "Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:100
+msgid ""
+"When ``strace`` or ``dtruss`` are not found, given proper error message, "
+"so people know what to do."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:103
+msgid ""
+"The doc tests extracted and then generated for CPython3 test suites were "
+"not printing the expressions of the doc test, leading to largely "
+"decreased test coverage here."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:107
+msgid ""
+"The CPython 3.4 test suite is now also using common runner code, and "
+"avoids ignoring all Nuitka warnings, instead more white listing was "
+"added."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:111
+msgid ""
+"Started to run CPython 3.5 test suite almost completely, but coroutines "
+"are blocking some parts of that, so these tests that use this feature are"
+" currently skipped."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:115
+msgid ""
+"Removed more CPython tests that access the network and are generally "
+"useless to testing Nuitka."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:118
+msgid ""
+"When comparing outputs, normalize typical temporary file names used on "
+"posix systems."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:121
+msgid ""
+"Coverage tests have made some progress, and some changes were made due to"
+" its results."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:124
+msgid "Added test to cover too complex code module of ``idna`` module."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:126
+msgid "Added Python3.5 only test for unpacking variants."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:130
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:132
+msgid ""
+"Prepare plug-in interface to allow suppression of import warnings to "
+"access the node doing it, making the import node is accessible."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:135
+msgid ""
+"Have dedicated class function body object, which is a specialization of "
+"the function body node base class. This allowed removing class specific "
+"code from that class."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:139
+msgid ""
+"The use of \"win_target\" as a scons parameter was useless. Make more "
+"consistent use of it as a flag indicator in the scons file."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:142
+msgid ""
+"Compiled types were mixing uses of ``compiled_`` prefixes, something with"
+" a space, sometimes with an underscore."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:147
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:149
+msgid ""
+"Improved support for Python3.5 missing compatibility with new language "
+"features."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:152
+msgid "Updated the Developer Manual with changes that SSA is now a fact."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:154
+msgid "Added Python3.5 Windows MSI downloads."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:156
+msgid ""
+"Added repository for Ubuntu Wily (15.10) for download. Removed Ubuntu "
+"Utopic package download, no longer supported by Ubuntu."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:159
+msgid "Added repository with RPM packages for Fedora 22."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:163
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:165
+msgid ""
+"So this release is mostly to lower the technical debt incurred that holds"
+" it back from supporting making more interesting changes. Upcoming "
+"releases may have continue that trend for some time."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:169
+msgid ""
+"This release is mostly about catching up with Python3.5, to make sure we "
+"did not miss anything important. The new function body variants will make"
+" it easier to implement coroutines, and help with optimization and "
+"compatibility problems that remain for Python3 classes."
+msgstr ""
+
+#: ../../posts/nuitka-release-0516.rst:174
+msgid ""
+"Ultimately it will be nice to require a lot less checks for when function"
+" in-line is going to be acceptable. Also code generation will need a "
+"continued push to use the new structure in preparation for making type "
+"specific code generation a reality."
+msgstr ""
+

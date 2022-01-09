@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-041.rst:7
+msgid "Nuitka Release 0.4.1"
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:13
+msgid ""
+"This release is the first follow-up with a focus on optimization. The "
+"major highlight is progress towards SSA form in the node tree."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:16
+msgid ""
+"Also a lot of cleanups have been performed, for both the tree building, "
+"which is now considered mostly finished, and will be only reviewed. And "
+"for the optimization part there have been large amounts of changes."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:22
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:24
+msgid "Python 3.3 experimental support"
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:26
+msgid ""
+"Now compiles many basic tests. Ported the dictionary quick access and "
+"update code to a more generic and useful interface."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:28
+msgid "Added support for ``__qualname__`` to classes and functions."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:29
+msgid ""
+"Small compatibility changes. Some exceptions changed, absolute imports "
+"are now default, etc."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:31
+msgid "For comparison tests, the hash randomization is disabled."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:33
+msgid "Python 3.2 support has been expanded."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:35
+msgid ""
+"The Python 3.2 on Ubuntu is not providing a helper function that was used"
+" by Nuitka, replaced it with out own code."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:40
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:42
+msgid "Default values were not \"is\" identical."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:52
+msgid ""
+"This now prints \"True\" as it does with CPython. The solution is "
+"actually a general code optimization, see below."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:55
+msgid ""
+"Usage of ``unicode`` built-in with more than one argument could corrupt "
+"the encoding argument string."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:58
+msgid ""
+"An implementation error of the ``unicode`` was releasing references to "
+"arguments converted to default encoding, which could corrupt it."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:61
+msgid "Assigning Python3 function annotations could cause a segmentation fault."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:66
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:68
+msgid ""
+"Improved propagation of exception raise statements, eliminating more "
+"code. They are now also propagated from all kinds of expressions. "
+"Previously this was more limited. An assertion added will make sure that "
+"all raises are propagated. Also finally, raise expressions are converted "
+"into raise statements, but without any normalization."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:95
+msgid ""
+"There is more examples, where the raise propagation is new, but you get "
+"the idea."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:98
+msgid ""
+"Conditional expression nodes are now optimized according to the truth "
+"value of the condition, and not only for compile time constants. This "
+"covers e.g. container creations, and other things."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:112
+msgid ""
+"This is simply taking advantage of infrastructure that now exists. Each "
+"node kind can overload \"getTruthValue\" and benefit from it. Help would "
+"be welcome to review which ones can be added."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:116
+msgid ""
+"Function creations only have side effects, when their defaults or "
+"annotations (Python3) do. This allows to remove them entirely, should "
+"they be found to be unused."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:120
+msgid "Code generation for constants now shares element values used in tuples."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:123
+msgid ""
+"The general case is currently too complex to solve, but we now make sure "
+"constant tuples (as e.g. used in the default value for the compiled "
+"function), and string constants share the value. This should reduce "
+"memory usage and speed up program start-up."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:130
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:132
+msgid ""
+"Optimization was initially designed around visitors that each did one "
+"thing, and did it well. It turns out though, that this approach is "
+"unnecessary, and constraint collection, allows for the most consistent "
+"results. All remaining optimization has been merged into constraint "
+"collection."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:138
+msgid ""
+"The names of modules containing node classes were harmonized to always be"
+" plural. In the beginning, this was used to convey the information that "
+"only a single node kind would be contained, but that has long changed, "
+"and is unimportant information."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:143
+msgid ""
+"The class names of nodes were stripped from the \"CPython\" prefix. "
+"Originally the intent was to express strict correlation to CPython, but "
+"with increasing amounts of re-formulations, this was not used at all, and"
+" it's also not important enough to dominate the class name."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:148
+msgid ""
+"The re-formulations performed in tree building have moved out of the "
+"\"Building\" module, into names \"ReformulationClasses\" e.g., so they "
+"are easier to locate and review. Helpers for node building are now in a "
+"separate module, and generally it's much easier to find the content of "
+"interest now."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:154
+msgid ""
+"Added new re-formulation of ``print`` statements. The conversion to "
+"strings is now made explicit in the node tree."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:159
+msgid "New Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:161
+msgid "Added test to cover default value identity."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:165
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:167
+msgid ""
+"The upload of `Nuitka to PyPI <http://pypi.python.org/pypi/Nuitka/>`__ "
+"has been repaired and now properly displays project information again."
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:173
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-041.rst:175
+msgid ""
+"The quicker release is mostly a consolidation effort, without much actual"
+" performance progress. The progress towards SSA form matter a lot on the "
+"outlook front. Once this is finished, standard compiler algorithms can be"
+" added to Nuitka which go beyond the current peephole optimization."
+msgstr ""
+

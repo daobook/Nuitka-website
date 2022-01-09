@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-031.rst:7
+msgid "Nuitka Release 0.3.1"
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:13
+msgid ""
+"This release of Nuitka continues the focus on performance and contains "
+"only cleanups and optimization. Most go into the direction of more "
+"readable code, some aim at making the basic things faster, with good "
+"results as to performance as you can see below."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:20
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:22
+msgid ""
+"Constants in conditions of conditional expressions (``a if cond else "
+"d``), ``if``/``elif`` or ``while`` are now evaluated to ``true`` or "
+"``false`` directly. Before there would be temporary python object created"
+" from it which was then checked if it had a truth value."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:27
+msgid ""
+"All of that is obviously overhead only. And it hurts the typically "
+"``while 1:`` infinite loop case badly."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:30
+msgid ""
+"Do not generate code to catch ``BreakException`` or ``ContinueException``"
+" unless a ``break`` or ``continue`` statement being in a ``try: "
+"finally:`` block inside that loop actually require this."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:35
+msgid ""
+"Even while uncaught exceptions are cheap, it is still an improvement "
+"worthwhile and it clearly improves the readability for the normal case."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:39
+msgid ""
+"The compiler more aggressively prepares tuples, lists and dicts from the "
+"source code as constants if their contents is \"immutable\" instead of "
+"building at run time. An example of a \"mutable\" tuple would be "
+"``({},)`` which is not safe to share, and therefore will still be built "
+"at run time."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:45
+msgid ""
+"For dictionaries and lists, copies will be made, under the assumption "
+"that copying a dictionary will always be faster, than making it from "
+"scratch."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:49
+msgid ""
+"The parameter parsing code was dynamically building the tuple of argument"
+" names to check if an argument name was allowed by checking the "
+"equivalent of ``name in argument_names``. This was of course wasteful and"
+" now a pre-built constant is used for this, so it should be much faster "
+"to call functions with keyword arguments."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:55
+msgid ""
+"There are new templates files and also actual templates now for the "
+"``while`` and ``for`` loop code generation. And I started work on having "
+"a template for assignments."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:61
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:63
+msgid ""
+"Do not generate code for the else of ``while`` and ``for`` loops if there"
+" is no such branch. This uncluttered the generated code somewhat."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:67
+msgid ""
+"The indentation of the generated C++ was not very good and whitespace was"
+" often trailing, or e.g. a real tab was used instead of \"\\t\". Some "
+"things didn't play well together here."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:71
+msgid ""
+"Now much of the generated C++ code is much more readable and white space "
+"cleaner. For optimization to be done, the humans need to be able to read "
+"the generated code too. Mind you, the aim is not to produce usable C++, "
+"but on the other hand, it must be possible to understand it."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:77
+msgid ""
+"To the same end of readability, the empty ``else {}`` branches are "
+"avoided for ``if``, ``while`` and ``for`` loops. While the C++ compiler "
+"can be expected to remove these, they seriously cluttered up things."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:82
+msgid ""
+"The constant management code in ``Context`` was largely simplified. Now "
+"the code is using the ``Constant`` class to find its way around the "
+"problem that dicts, sets, etc. are not hashable, or that ``complex`` is "
+"not being ordered; this was necessary to allow deeply nested constants, "
+"but it is also a simpler code now."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:88
+msgid ""
+"The C++ code generated for functions now has two entry points, one for "
+"Python calls (arguments as a list and dictionary for parsing) and one "
+"where this has happened successfully. In the future this should allow for"
+" faster function calls avoiding the building of argument tuples and "
+"dictionaries all-together."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:94
+msgid ""
+"For every function there was a \"traceback adder\" which was only used in"
+" the C++ exception handling before exit to CPython to add to the "
+"traceback object. This was now in-lined, as it won't be shared ever."
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:100
+msgid "Numbers"
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:102
+msgid "python 2.6:"
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:109
+msgid "Nuitka 0.3.1:"
+msgstr ""
+
+#: ../../posts/nuitka-release-031.rst:116
+#, python-format
+msgid ""
+"This is 58% for 0.3.1, up from the 25% before. So it's getting somewhere."
+" As always you will find its latest version here."
+msgstr ""
+

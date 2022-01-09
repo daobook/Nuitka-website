@@ -1,0 +1,331 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Kay Hayen and Nuitka Contributors
+# This file is distributed under the same license as the Nuitka the Python
+# Compiler package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nuitka the Python Compiler \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 15:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../posts/nuitka-release-065.rst:7
+msgid "Nuitka Release 0.6.5"
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:9
+msgid ""
+"This is to inform you about the new stable release of `Nuitka "
+"<https://nuitka.net>`_. It is the extremely compatible Python compiler, "
+"`\"download now\" </doc/download.html>`_."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:13
+msgid ""
+"This release contains many bug fixes all across the board. There is also "
+"new optimization and many organisational improvements."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:18
+msgid "Bug Fixes"
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:20
+msgid ""
+"Python3.4+: Fixed issues with modules that exited with an exception, that"
+" could lead to a crash, dealing with their ``__spec__`` value."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:23
+msgid ""
+"Python3.4+: The ``__loader__`` method ``is_package`` had the wrong "
+"signature."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:26
+msgid ""
+"Python3.6+: Fix for ``async with`` being broken with uncompiled "
+"generators."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:29
+msgid ""
+"Python3.5+: Fix for ``coroutines`` that got their awaited object closed "
+"behind their back, they were complaining with ``RuntimeError`` should "
+"they be closed themselves."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:33
+msgid ""
+"Fix, constant values ``None`` in a bool target that could not be "
+"optimized away, lead to failure during code generation."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:41
+msgid "Standalone: Added support for sha224, sha384, sha512 in crypto package."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:44
+msgid ""
+"Windows: The icon wasn't properly attached with MinGW64 anymore, this was"
+" a regression."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:47
+msgid ""
+"Windows: For compiler outputs, also attempt preferred locale to interpret"
+" outputs, so we have a better chance to not crash over MSVC error "
+"messages that are not UTF-8 compatible."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:51
+msgid ""
+"macOS: Handle filename collisions for generated code too, Nuitka now "
+"treats all filesystems for all OS as case insensitive for this purpose."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:55
+msgid ""
+"Compatibility: Added support for tolerant ``del`` in class exception "
+"handlers."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:69
+msgid ""
+"We already were compatible for functions and modules here, but due to the"
+" special nature of class variables really living in dictionaries, this "
+"was delayed. But after some other changes, it was now possible to solve "
+"this TODO."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:74
+msgid "Standalone: Added support for Python3 variant of Pmw."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:76
+msgid "Fix, the NumPy plugin now handles more installation types."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:78
+msgid "Fix, the qt plugin now handles multiple library paths."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:80
+msgid "Fix, need ``libm`` for some Anaconda variants too."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:82
+msgid "Fix, left over bytecode from plugins could crash the plugin loader."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:84
+msgid "Fix, ``pkgutil.iter_packages`` is now working for loaded packages."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:88
+msgid "New Features"
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:90
+msgid ""
+"Python3.8: Followed some of the changes and works with beta2 as a Python "
+"3.7, but none of the new features are implemented yet."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:93
+msgid ""
+"Added support for Torch, Tensorflow, Gevent, Sklearn, with a new Nuitka "
+"plugin."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:96
+msgid ""
+"Added support for \"hinted\" compilation, where the used modules are "
+"determined through a test run."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:99
+msgid "Added support for including TCL on Linux too."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:103
+msgid "Optimization"
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:105
+msgid ""
+"Added support for the ``any`` built-in. This handles a wide range of type"
+" shapes and constant values at compile time, while also having optimized "
+"C code."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:109
+msgid ""
+"Generate code for some ``CLONG`` operations in preparation of eventual "
+"per expression C type selection, it then will allow to avoid objects in "
+"many instances."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:113
+msgid ""
+"Windows: Avoid creating link libraries for MinGW64 as these have become "
+"unnecessary is the mean time."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:116
+msgid ""
+"Packages: Do not export entry points for all included packages, only for "
+"the main package name it is importable as."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:121
+msgid "Organisational"
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:123
+msgid "Added support for Visual Studio 2019 as a C compiler backend."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:125
+msgid ""
+"Improved plugin documentation describing how to create plugins for Nuitka"
+" even better."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:128
+msgid ""
+"The is now a mode for running the tests called ``all`` which will execute"
+" all the tests and report their errors, and only fail at the very end. "
+"This doesn't avoid wasting CPU cycles to report that e.g. all tests are "
+"broken, but it allows to know all errors before fixing some."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:134
+msgid "Added repository for Fedora 30 for download."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:136
+msgid "Added repository for openSUSE 15.1 for download."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:138
+msgid ""
+"Ask people to compile hello world program in the Github issue template, "
+"because many times, they have setup problems only."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:141
+msgid ""
+"Visual Studio Code is now the recommended IDE and has integrated "
+"configuration to make it immediately useful."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:144
+msgid ""
+"Updated internal copy of Scons to 3.1.0 as it incorporates many of our "
+"patches."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:147
+msgid ""
+"Changed wordings for optimization to use \"lowering\" as the only term to"
+" describe an optimization that simplifies."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:152
+msgid "Cleanups"
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:154
+msgid "Plugins: Major refactoring of Nuitka plugin API."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:156
+msgid ""
+"Plugins: To locate module kind, use core Nuitka code that handles more "
+"cases."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:159
+msgid "The test suite runners are also now autoformatted and checked with PyLint."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:162
+msgid "The Scons file is now PyLint clean too."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:164
+msgid ""
+"Avoid ``build_definitions.h`` to be included everywhere, in that it's "
+"only used in the main program part. This makes C linter hate us much less"
+" for using a non-existent file."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:170
+msgid "Tests"
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:172
+msgid "Run the tests using Travis on macOS for Python2 too."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:174
+msgid ""
+"More standalone tests have been properly whitelisting to cover openSSL "
+"usage from local system."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:177
+msgid "Disabled PySide2 test, it's not useful to fail and ignore it."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:179
+msgid "Tests: Fixups for coverage testing mode."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:181
+msgid ""
+"Tests: Temporarily disable some checks for constants code in reflected "
+"tests as it only exposes ``marshal`` not being deterministic."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:187
+msgid "Summary"
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:189
+msgid ""
+"This release is huge again. Main points are compatibility fixes, esp. on "
+"the coroutine side. These have become apparently very compatible now and "
+"we might eventually focus on making them better."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:193
+msgid ""
+"Again, GSoC 2019 is also showing effects, and will definitely continue to"
+" do soin the next release."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:196
+msgid ""
+"Many use cases have been improved, and on an organisational level, the "
+"adoption of Visual Studio Code seems an huge improvement to have a well "
+"configured IDE out of the box too."
+msgstr ""
+
+#: ../../posts/nuitka-release-065.rst:200
+msgid ""
+"In upcoming releases, more built-ins will be optimized, and hopefully the"
+" specialization of operations will hit more and more code with more of "
+"the infrastructure getting there."
+msgstr ""
+

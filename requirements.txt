@@ -1,0 +1,13 @@
+# pipenv
+Sphinx
+sphinx-copybutton
+sphinx-design
+sphinx-inline-tabs
+sphinxcontrib.youtube
+sphinx-favicon
+sphinx-sitemap
+sphinxcontrib.asciinema
+ablog
+restructuredtext-lint
+unidecode
+sphinx-rtd-theme

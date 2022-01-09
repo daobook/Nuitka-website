@@ -1,9 +1,9 @@
 *.py[co]
 *.tmp
-Nuitka-factory
-Nuitka-develop
-Nuitka-master
-output
+Nuitka-factory/
+Nuitka-develop/
+Nuitka-main/
+output/
 output.*
 .vscode/tags
 doc/Changelog.rst

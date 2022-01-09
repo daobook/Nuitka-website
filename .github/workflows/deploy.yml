@@ -38,6 +38,12 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
+      
+      - name: git checkout
+        run: |
+          git clone https://github.com/Nuitka/Nuitka.git -b main Nuitka-main
+          git clone https://github.com/Nuitka/Nuitka.git -b develop Nuitka-develop
+          git clone https://github.com/Nuitka/Nuitka.git -b factory Nuitka-factory
 
       - name: 🔧 Build HTML
         run: |

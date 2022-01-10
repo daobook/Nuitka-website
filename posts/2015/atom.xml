@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2015</title>
-  <updated>2022-01-09T18:36:54.058533+00:00</updated>
+  <updated>2022-01-10T05:50:08.412047+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/posts/2015/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -317,7 +317,7 @@ measure what would have been used.&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;Organisational&lt;/h2&gt;
 &lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/nuitka-doc/nuitka-doc/doc/posts/nuitka-release-059.rst&lt;/span&gt;, line 87); &lt;em&gt;&lt;a href="#id1"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/nuitka-doc/nuitka-doc/docs/posts/nuitka-release-059.rst&lt;/span&gt;, line 87); &lt;em&gt;&lt;a href="#id1"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Duplicate implicit target name: “organisational”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;ul class="simple"&gt;

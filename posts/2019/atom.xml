@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://nuitka.net</id>
   <title>Nuitka Blog - Posted in 2019</title>
-  <updated>2022-01-09T18:36:53.534521+00:00</updated>
+  <updated>2022-01-10T05:50:07.968008+00:00</updated>
   <link href="https://nuitka.net"/>
   <link href="https://nuitka.net/posts/2019/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -298,7 +298,7 @@ also going to happen.&lt;/p&gt;
 &lt;div class="section" id="help-wanted"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;Help Wanted&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/nuitka-doc/nuitka-doc/doc/posts/nuitka-this-week-12.rst&lt;/span&gt;, line 7); &lt;em&gt;&lt;a href="#id1"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/nuitka-doc/nuitka-doc/docs/posts/nuitka-this-week-12.rst&lt;/span&gt;, line 7); &lt;em&gt;&lt;a href="#id1"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Duplicate implicit target name: “help wanted”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;If you are interested, I am tagging issues &lt;a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22"&gt;help wanted&lt;/a&gt;
@@ -741,7 +741,7 @@ also going to happen.&lt;/p&gt;
 &lt;div class="section" id="help-wanted"&gt;
 &lt;h2&gt;&lt;a class="toc-backref" href="#id14"&gt;Help Wanted&lt;/a&gt;&lt;/h2&gt;
 &lt;div class="system-message"&gt;
-&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/nuitka-doc/nuitka-doc/doc/posts/nuitka-this-week-13.rst&lt;/span&gt;, line 7); &lt;em&gt;&lt;a href="#id1"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/runner/work/nuitka-doc/nuitka-doc/docs/posts/nuitka-this-week-13.rst&lt;/span&gt;, line 7); &lt;em&gt;&lt;a href="#id1"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Duplicate implicit target name: “help wanted”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;If you are interested, I am tagging issues &lt;a class="reference external" href="https://github.com/kayhayen/Nuitka/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22"&gt;help wanted&lt;/a&gt;

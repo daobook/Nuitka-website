@@ -1,10 +1,7 @@
-
 <!DOCTYPE html>
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />    <link rel="icon" href="../_static/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../_static/favicon.png" sizes="32x32" type="image/png">
     <link rel="icon" href="../_static/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="icon" href="../_static/apple-touch-icon-iphone.png" sizes="57x57" type="image/png">
@@ -13,57 +10,32 @@
     <link rel="icon" href="../_static/apple-touch-icon-ipad3.png" sizes="144x144" type="image/png">
     <link rel="apple-touch-icon" href="../_static/apple-touch-icon-180x180.png" sizes="180x180" type="image/png">
 
-    <title>Intro</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
-
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    
-      
-
-    
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/asciinema-player_2.6.1.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/asciinema-custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/my_theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
-
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/tabs.js"></script>
-    <script src="../_static/asciinema-player_2.6.1.js"></script>
-    <script src="../_static/design-tabs.js"></script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <link rel="canonical" href="https://daobook.github.io/nuitka-doc/posts/urllib3-wheel-with-nuitka.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/design-style.59c74d8c95b765a7fd995ac71d459ebe.min.css" type="text/css" />
+    <link rel="canonical" href="https://nuitka.net/posts/urllib3-wheel-with-nuitka.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-     
+    <link rel="search" title="Search" href="../search.html" />   
 <link
   rel="alternate"
   type="application/atom+xml"
-  href="../posts/atom.xml"
+  href="../blog/atom.xml"
   title="Nuitka Blog"
 />
  
@@ -92,403 +64,70 @@
   }
 </style>
 
-  </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+</head>
 
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-          
-<h2>
-   
-  19 June 2019 
-</h2>
-
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+          </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
 <ul>
-   
-<li id="author">
-  <span
-    >Author:</span
-  >
-   
-  <a href="author/taofengtommy-li.html">Taofeng(Tommy) Li</a>  
-</li>
-    
-<li id="tags">
-  <span
-    >Tags: </span
-  >
-   
-  <a href="tag/compiler.html">compiler</a>   
-  <a href="tag/python.html">Python</a>   
-  <a href="tag/nuitka.html">Nuitka</a>   
-  <a href="tag/gsoc2019.html">gsoc2019</a>  
-</li>
- 
+<li class="toctree-l1"><a class="reference internal" href="../doc/commercial.html">Nuitka Commercial</a></li>
 </ul>
-
-<h3>
-  <a href="../posts.html">Recent Posts</a>
-</h3>
+<p class="caption" role="heading"><span class="caption-text">Release Information</span></p>
 <ul>
-   
-  <li>
-    <a href="nuitka-release-0618.html"
-      >11 December - Nuitka Release 0.6.18</a
-    >
-  </li>
-  
-  <li>
-    <a href="nuitka-release-0617.html"
-      >11 November - Nuitka Release 0.6.17</a
-    >
-  </li>
-  
-  <li>
-    <a href="nuitka-release-0616.html"
-      >09 September - Nuitka Release 0.6.16</a
-    >
-  </li>
-  
-  <li>
-    <a href="nuitka-release-0615.html"
-      >05 June - Nuitka Release 0.6.15</a
-    >
-  </li>
-  
-  <li>
-    <a href="nuitka-release-0614.html"
-      >01 May - Nuitka Release 0.6.14</a
-    >
-  </li>
-  
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html">Nuitka Release 0.6.20 (Draft)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-19">Nuitka Release 0.6.19</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#nuitka-release-0-6-18">Nuitka Release 0.6.18</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/Changelog.html#older-releases">Older Releases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/roadmap.html">Roadmap</a></li>
 </ul>
-
-<h3><a href="tag.html">Tags</a></h3>
-<style type="text/css">
-  ul.ablog-cloud {
-    list-style: none;
-    overflow: auto;
-  }
-  ul.ablog-cloud li {
-    float: left;
-    height: 20pt;
-    line-height: 18pt;
-    margin-right: 5px;
-  }
-  ul.ablog-cloud a {
-    text-decoration: none;
-    vertical-align: middle;
-  }
-  li.ablog-cloud-1 {
-    font-size: 80%;
-  }
-  li.ablog-cloud-2 {
-    font-size: 95%;
-  }
-  li.ablog-cloud-3 {
-    font-size: 110%;
-  }
-  li.ablog-cloud-4 {
-    font-size: 125%;
-  }
-  li.ablog-cloud-5 {
-    font-size: 140%;
-  }
-</style>
-<ul class="ablog-cloud">
-   
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/android.html">Android</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/debian.html">Debian</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/ntw.html">NTW</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/nikola.html">Nikola</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-5">
-    <a href="tag/nuitka.html">Nuitka</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-5">
-    <a href="tag/python.html">Python</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/windows.html">Windows</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/automation.html">automation</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/benchmark.html">benchmark</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-4">
-    <a href="tag/compiler.html">compiler</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/conference.html">conference</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/europython.html">europython</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/family.html">family</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/git.html">git</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/gsoc2019.html">gsoc2019</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/physics.html">physics</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/portrait.html">portrait</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/presentation.html">presentation</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/pypi.html">pypi</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/pytest.html">pytest</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/quiz.html">quiz</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/standalone.html">standalone</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/tests.html">tests</a>
-  </li>
-    
-  <li class="ablog-cloud ablog-cloud-1">
-    <a href="tag/video.html">video</a>
-  </li>
-   
-</ul>
-
-<h3>
-  <a href="archive.html">Archives</a>
-</h3>
+<p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
 <ul>
-   
-  <li>
-    <a href="2021.html">2021 (8)</a>
-  </li>
-    
-  <li>
-    <a href="2020.html">2020 (5)</a>
-  </li>
-    
-  <li>
-    <a href="2019.html">2019 (14)</a>
-  </li>
-    
-  <li>
-    <a href="2018.html">2018 (17)</a>
-  </li>
-    
-  <li>
-    <a href="2017.html">2017 (4)</a>
-  </li>
-    
-  <li>
-    <a href="2016.html">2016 (8)</a>
-  </li>
-    
-  <li>
-    <a href="2015.html">2015 (16)</a>
-  </li>
-    
-  <li>
-    <a href="2014.html">2014 (12)</a>
-  </li>
-    
-  <li>
-    <a href="2013.html">2013 (24)</a>
-  </li>
-    
-  <li>
-    <a href="2012.html">2012 (21)</a>
-  </li>
-    
-  <li>
-    <a href="2011.html">2011 (25)</a>
-  </li>
-    
-  <li>
-    <a href="2010.html">2010 (19)</a>
-  </li>
-   
+<li class="toctree-l1"><a class="reference internal" href="../doc/api-doc.html">API doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc/factory.html">Factory Instructions</a></li>
 </ul>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.rst</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
+<p class="caption" role="heading"><span class="caption-text">Media</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Presentations.html">Presentations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/Streaming.html">Streaming</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pages/impressum.html">Impressum</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Under construction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../doc/welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/pyside2.html">Nuitka PySide2 support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/donations.html">Donations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pages/gsoc2019.html">Google Summer of Code 2019</a></li>
+</ul>
 
         </div>
+      </div>
+    </nav>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Intro
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps-to-reproduce">
-   Steps to Reproduce
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uncompile-python">
-   Uncompile Python
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compiled-with-nuitka">
-   Compiled with Nuitka
-  </a>
- </li>
-</ul>
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nuitka the Python Compiler</a>
+      </nav>
 
-            </nav>
-        </div>
-    </div>
-</div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Intro</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Intro
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps-to-reproduce">
-   Steps to Reproduce
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#uncompile-python">
-   Uncompile Python
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compiled-with-nuitka">
-   Compiled with Nuitka
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
-                 <div class="section" id="intro">
-<h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h1>
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <!-- Empty override file take the place of sphinx_rtd_theme/breadcrumbs.html, which generates the top nav breadcrumbs. -->
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+              <div class="section" id="intro">
+<h1>Intro<a class="headerlink" href="#intro" title="Permalink to this headline"></a></h1>
 <p>This post compares the pytest results of urllib3 to its nuitka-built
 <code class="docutils literal notranslate"><span class="pre">.whl</span></code> counterpart.</p>
 <p>Urllib3 standalone test have already been covered. Manual testing is now
@@ -514,7 +153,7 @@ they happen. To make that easy, we are going to fully automate the
 process and compare outputs with verbose pytest modes.</p>
 </div>
 <div class="section" id="steps-to-reproduce">
-<h1>Steps to Reproduce<a class="headerlink" href="#steps-to-reproduce" title="Permalink to this headline">¶</a></h1>
+<h1>Steps to Reproduce<a class="headerlink" href="#steps-to-reproduce" title="Permalink to this headline"></a></h1>
 <ol class="arabic simple">
 <li><p>Clone urllib3 and nuitka into a new folder</p></li>
 <li><p>Inside the urllib3 folder, issue <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span>
@@ -532,7 +171,7 @@ nuitka-built wheel pytest for urllib3.</p></li>
 </ol>
 </div>
 <div class="section" id="uncompile-python">
-<h1>Uncompile Python<a class="headerlink" href="#uncompile-python" title="Permalink to this headline">¶</a></h1>
+<h1>Uncompile Python<a class="headerlink" href="#uncompile-python" title="Permalink to this headline"></a></h1>
 <p>urllib3 regular pytest:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m pytest --disable-warnings
 ============================= test session starts =============================
@@ -589,7 +228,7 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
 </div>
 </div>
 <div class="section" id="compiled-with-nuitka">
-<h1>Compiled with Nuitka<a class="headerlink" href="#compiled-with-nuitka" title="Permalink to this headline">¶</a></h1>
+<h1>Compiled with Nuitka<a class="headerlink" href="#compiled-with-nuitka" title="Permalink to this headline"></a></h1>
 <p>nuitka wheel pytest:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -m pytest --disable-warnings
 ============================= test session starts =============================
@@ -669,30 +308,63 @@ test\with_dummyserver\test_socketlevel.py .............................. [ 98%]
   
 </div>
 
-              </div>
-              
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-</div>
-            
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Kay Hayen<br/>
-    
-        &copy; Copyright 2022, Kay Hayen and Nuitka Contributors.<br/>
-  </p>
-</footer>
-</main>
+           </div>
+          </div>
+          <footer>
 
+  <hr/>
 
-      </div>
-    </div>
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kay Hayen and Nuitka Contributors.</p>
+  </div>
+
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<div class='share-button-container'>
+    <div class="socialbutton-wrapper">
+        <a href="https://twitter.com/share?url=https://nuitka.net/posts/urllib3-wheel-with-nuitka.html&hashtags=nuitka" target="_blank">
+            <div class="socialbutton twitter" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-twitter.png">
+                </p>
 
-  </body>
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="https://www.facebook.com/sharer.php?u=https://nuitka.net/posts/urllib3-wheel-with-nuitka.html&hashtag=%23nuitka"  target="_blank">
+            <div class="socialbutton facebook" data-share-url="https://nuitka.net">
+                <p class="icon">
+                    <img src="/_static/icon-facebook.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+
+        <a href="http://www.reddit.com/submit?url=https://nuitka.net/posts/urllib3-wheel-with-nuitka.html" target="_blank">
+            <div class="socialbutton reddit">
+                <p class="icon">
+                    <img src="/_static/icon-reddit.png">
+                </p>
+
+                <p class="shares">share...</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

@@ -31,7 +31,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/asciinema-player_2.6.1.css" />
@@ -51,7 +51,7 @@
     <script src="_static/asciinema-player_2.6.1.js"></script>
     <script src="_static/translations.js"></script>
     <script src="_static/design-tabs.js"></script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <link rel="canonical" href="https://daobook.github.io/nuitka-doc/user-manual.html" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
@@ -105,7 +105,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
@@ -218,22 +223,22 @@
 
 
           
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
     <div class="topbar container-xl fixed-top">
     <div class="topbar-contents row">
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="切换导航" aria-controls="site-navigation"
-                title="切换导航" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
             
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
@@ -1314,7 +1319,7 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>这将提示你下载一个 C 语言缓存工具（以加速重复编译生成的 C 代码）和一个基于 MinGW64 的 C 语言编译器，除非你已经安装了合适的 MSVC。对这两个问题都说 <code class="docutils literal notranslate"><span class="pre">yes</span></code>。</p>
 </div>
 </div>
@@ -1338,7 +1343,7 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>有比 <code class="docutils literal notranslate"><span class="pre">--follow-imports</span></code>  更精细的控制。考虑一下 <code class="docutils literal notranslate"><span class="pre">nuitka</span> <span class="pre">--help</span></code> 的输出。在编译中包括更少的模块，而使用正常的 Python 进行编译，会使编译速度更快。</p>
 </div>
 <p>如果你有一个带有动态加载文件的源目录，即通过 <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> 正常导入语句后无法找到的目录（这将是推荐的方式），你总是可以要求一个特定的目录也应包括在可执行文件中：</p>
@@ -1346,16 +1351,16 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>如果你不做任何动态导入，只需在编译时设置你的 <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code> 就可以了。</p>
 <p>只有在你进行 Nuitka 无法预测的 <code class="docutils literal notranslate"><span class="pre">__import__()</span></code> 调用时，才使用 <code class="docutils literal notranslate"><span class="pre">--include-plugin-directory</span></code>，因为它们依赖于命令行参数。Nuitka 也会警告这些，并指出该选项。</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>产生的文件名在 Windows 上将是 <code class="docutils literal notranslate"><span class="pre">program.exe</span></code>，在其他平台上是 <code class="docutils literal notranslate"><span class="pre">program.bin</span></code>。</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>产生的二进制文件仍然依赖于 CPython 和使用的 C 扩展模块被安装。</p>
 <p>如果你想能够把它复制到另一台机器上，使用 <code class="docutils literal notranslate"><span class="pre">--standalone</span></code> 并复制创建的 <code class="docutils literal notranslate"><span class="pre">program.dist</span></code> 目录并执行放在里面的 <code class="docutils literal notranslate"><span class="pre">program.exe</span></code> （Windows）或 <code class="docutils literal notranslate"><span class="pre">program</span></code> （其他平台）”</p>
 </div>
@@ -1368,15 +1373,15 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 </div>
 <p>产生的文件 <code class="docutils literal notranslate"><span class="pre">some_module.so</span></code> 就可以代替 <code class="docutils literal notranslate"><span class="pre">some_module.py</span></code> 使用。</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>这是留给读者的一个练习，以找出如果两者都存在会发生什么。</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>选项 <code class="docutils literal notranslate"><span class="pre">--follow-imports</span></code> 和其他变体也可以工作，但所包含的模块只有在你导入了 <code class="docutils literal notranslate"><span class="pre">some_module</span></code> 的名字之后才会变得可以导入。</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>产生的扩展模块只能加载到同一版本的 CPython 中，并且不包括其他扩展模块。</p>
 </div>
 </div>
@@ -1387,7 +1392,7 @@ recommended) or <code class="docutils literal notranslate"><span class="pre">x86
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>包内容的包含需要手动提供，否则，包是空的。如果你愿意，你可以更具体一些，只包括一部分。位于包内的数据文件不会被这个过程嵌入，你需要用这种方法自己复制它们。</p>
 </div>
 </div>
@@ -1413,7 +1418,7 @@ python -m nuitka --onefile program.py
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>还有更多的平台特定选项，例如与图标、闪屏和版本信息有关的选项，请考虑 <code class="docutils literal notranslate"><span class="pre">--help</span></code> 输出以了解这些细节，并查看 “Good Looks” 部分。</p>
 </div>
 <p>同样，在 Windows 上，对于临时文件目录，默认使用用户的目录，然而这可以用 <code class="docutils literal notranslate"><span class="pre">--windows-onefile-tempdir-spec=%TEMP%\\onefile_%PID%_%TIME%</span></code> 中给出的路径规范来覆盖，这是默认的，断言创建的临时目录不能发生冲突。</p>
@@ -1450,7 +1455,7 @@ python -m nuitka --onefile program.py
 </tbody>
 </table>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>你有责任使提供的路径是唯一的，在 Windows 上，一个正在运行的程序将被锁定，虽然使用一个固定的文件夹名称是可能的，但在这种情况下，它可能导致锁定问题，即程序被重新启动。</p>
 <p>通常你需要使用 <code class="docutils literal notranslate"><span class="pre">%TIME%</span></code> 或者至少使用 <code class="docutils literal notranslate"><span class="pre">%PID%</span></code> 来使路径唯一，这主要是针对使用情况的，例如你希望事物驻留在你选择的地方或者遵守你的命名惯例。</p>
 </div>
@@ -1507,7 +1512,7 @@ python -m nuitka --onefile program.py
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>为了暂时禁止编译，你可以删除上面这一行，或者把它的值编辑成 <code class="docutils literal notranslate"><span class="pre">False</span></code>，或者从环境变量中取值，如果你选择的话，例如 <code class="docutils literal notranslate"><span class="pre">bool(os.environ.get(&quot;USE_NUITKA&quot;,</span> <span class="pre">&quot;True&quot;))</span></code>。这由你决定。</p>
 </div>
 <p>或者你可以把它放在你的 <code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> 里。</p>
@@ -1721,7 +1726,7 @@ python -m nuitka --onefile --windows-icon-template-exe<span class="o">=</span>yo
 <p>使用Python DLL，就像标准的CPython那样，可能会导致意外的减速，例如在处理 Unicode 字符串的未编译的代码中。这是因为调用 DLL 而不是驻留在 DLL 中会导致开销，这甚至发生在 DLL 与本身，比一个 Python 全部包含在一个二进制文件中更慢。</p>
 <p>所以如果可行的话，以静态链接为目标，目前只有 Anaconda Python 在非 Windows、Debian Python2、自编译的 Python（不要激活 <code class="docutils literal notranslate"><span class="pre">--enable-shared</span></code>，不需要），以及用 <code class="docutils literal notranslate"><span class="pre">pyenv</span></code> 创建的安装程序可以做到。</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>在 Anaconda 上，你可能需要执行 <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">libpython-static</span></code></p>
 </div>
 </div>
@@ -1895,7 +1900,7 @@ account, but obviously with not too many details. <a class="reference external" 
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p><a class="reference external" href="https://nuitka.net/doc/developer-manual.html">开发者手册</a> 解释了编码规则，使用的分支模型，与功能分支和热修复版本，Nuitka 设计等等。考虑阅读它以成为一个贡献者。这份文档是为 Nuitka 用户准备的。</p>
 </div>
 </div>

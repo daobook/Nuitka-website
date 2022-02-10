@@ -31,7 +31,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/asciinema-player_2.6.1.css" />
@@ -51,7 +51,7 @@
     <script src="_static/asciinema-player_2.6.1.js"></script>
     <script src="_static/translations.js"></script>
     <script src="_static/design-tabs.js"></script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <link rel="canonical" href="https://daobook.github.io/nuitka-doc/roadmap.html" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
@@ -105,7 +105,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
@@ -218,22 +223,22 @@
 
 
           
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
     <div class="topbar container-xl fixed-top">
     <div class="topbar-contents row">
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="切换导航" aria-controls="site-navigation"
-                title="切换导航" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
             
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
@@ -314,13 +319,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#features-to-be-added-for-0-6-19">
-   Features to be added for 0.6.19
+  <a class="reference internal nav-link" href="#traceback-encryption-commercial">
+   Traceback Encryption (commercial)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#features-to-be-added-for-0-6-20">
    Features to be added for 0.6.20
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#features-to-be-added-for-0-6-21">
+   Features to be added for 0.6.21
   </a>
  </li>
 </ul>
@@ -384,13 +394,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#features-to-be-added-for-0-6-19">
-   Features to be added for 0.6.19
+  <a class="reference internal nav-link" href="#traceback-encryption-commercial">
+   Traceback Encryption (commercial)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#features-to-be-added-for-0-6-20">
    Features to be added for 0.6.20
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#features-to-be-added-for-0-6-21">
+   Features to be added for 0.6.21
   </a>
  </li>
 </ul>
@@ -417,22 +432,33 @@
 <h2>单机版<a class="headerlink" href="#standalone" title="永久链接至标题">¶</a></h2>
 <ul>
 <li><p>“多分布” 支持（未定）</p>
-<p>允许将多个主程序组合成一个，称为 “multidist”。这些程序将与一个调度器一起工作，调度器从二进制名称中决定它是什么。将会有一个大的二进制文件，能够运行每个程序。</p>
+<p>Allow combining multiple main programs into one, called
+“multidist”. These will work with a dispatcher that decides from the
+binary name what it is. There will be one big binary with the ability
+to run each program.</p>
 <p>加速模式的 CMD 文件，展示了从另一个目录加载 CPython DLL 的可能性。我们可以利用这种方法，产生 CMD 文件，以正确的方式调用二进制文件。</p>
 <p>我相信我们可以使所有的脚本在执行过程中仍然认为自己是 <code class="docutils literal notranslate"><span class="pre">__main__</span></code> 的 <code class="docutils literal notranslate"><span class="pre">__name__</span></code>，所以不需要修改代码。只是 <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code> 与 <code class="docutils literal notranslate"><span class="pre">__file__</span></code> 的位置问题。</p>
-<p>和 onefile 很像，你需要用这种方式来区分程序位置和软件包位置。注意住在 CMD 文件附近的共享东西会在 <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code> 那里看到 CMD 文件的路径，而共享的东西，例如 <code class="docutils literal notranslate"><span class="pre">xmlschema</span></code> 模块会找到它的数据文件目录，这是共享的。</p>
+<p>Much like for onefile, you need to distinguish program location and
+package location in this way. Note shared stuff living near the CMD
+file will see that CMD file path in <code class="docutils literal notranslate"><span class="pre">sys.argv[0]</span></code> there, and shared
+stuff, e.g. <code class="docutils literal notranslate"><span class="pre">xmlschema</span></code> module will find its data files in a directory
+that is shared.</p>
 <p>最重要的是，”multidist” 的胖二进制可以是独立的或单文件模式，由你选择。其缺点是，单文件的解压速度会比较大的二进制文件要慢。</p>
 </li>
 <li><p>“Sharedist” 支持 （未定）</p>
 <p>在这一点上，程序没有被合并，而是恢复了独立的编译，产生了多个分布的共享和非共享部分。</p>
 <p>Nuitka 中的插件在复制 DLLs 和数据文件时仍然有些野蛮，有时，但不总是，向核心报告，所以它可以扫描依赖性。我们正在努力清理它们。有些，最近的 numpy，已经被改变，使它们产生描述任务的对象，并在核心中执行它们。这样就有机会知道程序是做什么的，并做出这种改变。这种过渡几乎已经完成，但 Qt 插件仍未完成。</p>
-<p>我在这里的目标是说，例如一个数据文件应该是 Nuitka 商业版目前所称的 “trusted” ，独立于它是一个数据文件，现在情况并非如此，但 Nuitka 现在更接近于此。当然，这与多个发行版的情况相同。</p>
+<p>My goal here is to say that e.g. a data file should be what Nuitka
+commercial currently calls “trusted” independent of it being a
+data file, right now that is not the case, but Nuitka is much closer
+to that now. This is of course the same with multiple distributions.</p>
 <p>对于数据文件，这个插件可以用大致相同的方式钩住数据文件的复制过程，并将数据文件放在可执行文件附近或共享区域。</p>
 </li>
 <li><p>Windows：提供 CPython 的构建，允许静态链接，避免 CPython DLL。</p></li>
 <li><p>强制输出和 stderr 到文件应该支持所有操作系统。</p></li>
 <li><p>Dejong Stacks: 更强大的解析器，允许在同一文件中的 stdout 和 stderr 混合输出。</p></li>
-<li><p>增加从命令行抑制数据文件的能力，这样来自插件的东西就可以被抑制。</p></li>
+<li><p>Add ability to inhibit data files from the command line, so that
+things coming from a plugin can be suppressed.</p></li>
 <li><p>增加对 upx 的支持（公共功能）。</p></li>
 </ul>
 <p>UPX不能压缩有效载荷，这就是为什么我们不能使用它并期望它能解决单文件压缩问题。然而，对二进制文件的后期处理，甚至是来自 CPython 扩展模块的二进制文件的后期处理，似乎已经能够发挥作用，并减少二进制文件的未压缩尺寸。</p>
@@ -455,19 +481,11 @@ to replace, as it’s forking shared dictionary as necessary. With
 static libpython it can linked though, but we still might want to
 make our own replacement.</p>
 </li>
-<li><p>Support for static libpython together with LTO for Python3</p>
-<p>This gives an enormouse speed bump for Python2 with Debian package
-Python and of course for any properly self compiled Python, and to
-the Nuitka Python there will be. For Python3, this has not yet been
-achieved, but ought to be doable too. And in some cases, it can be
-known to not work and should not be suggested.</p>
-</li>
-<li><p>Better code for <code class="docutils literal notranslate"><span class="pre">+=</span> <span class="pre">1</span></code> constructs with lack of type knowledge.</p>
-<p>There is a long standing todo, to add the <code class="docutils literal notranslate"><span class="pre">CLONG</span></code> support for
+<li><p>Better code for <code class="docutils literal notranslate"><span class="pre">+=</span> <span class="pre">1</span></code> constructs with no lack of type knowledge.
+There is a long standing todo, to add the <code class="docutils literal notranslate"><span class="pre">CLONG</span></code> support for
 binary operations. It requires the code generation of Jinja to be
 abstract, but that should have been close to being reached in last
-releases.</p>
-</li>
+releases.</p></li>
 <li><p>Better code for <code class="docutils literal notranslate"><span class="pre">+=</span> <span class="pre">1</span></code> constructs even with lack of type knowledge.</p>
 <p>It should be possible to introduce prepared constants of
 <code class="docutils literal notranslate"><span class="pre">nuitka_int</span></code> type that have the object ready for use, as well as
@@ -504,7 +522,7 @@ GUI programs yet.</p></li>
 </div>
 <div class="section" id="container-builds-commercial">
 <h2>Container Builds (commercial)<a class="headerlink" href="#container-builds-commercial" title="永久链接至标题">¶</a></h2>
-<p>Providing docker images like manylinux does with Nuitka installed into
+<p>Providing docker images like <code class="docutils literal notranslate"><span class="pre">manylinux</span></code> does with Nuitka installed into
 all of them and ready to use. Might make this a free feature once it’s
 done and supports <code class="docutils literal notranslate"><span class="pre">--commercial</span></code> download of the plugins nicely.</p>
 <p>Providing containers with old Linux, and optimally compiled CPython with
@@ -517,10 +535,12 @@ than it should.</p>
 <h2>Support for Next Python Version (3.10)<a class="headerlink" href="#support-for-next-python-version-3-10" title="永久链接至标题">¶</a></h2>
 <ul>
 <li><p>Get it to work for 3.9 test suite.</p>
-<p>The suite still needs a bit of help to run through, should be good though.</p>
+<p>The suite still needs a bit of help to run through, should be good
+though.</p>
 </li>
 <li><p>Add support for all of the new case syntax of 3.10</p>
-<p>This is partially done, but assignments in or matches do not work yet.</p>
+<p>This is partially done, but assignments in or matches do not work
+yet.</p>
 </li>
 </ul>
 </div>
@@ -531,11 +551,15 @@ than it should.</p>
 of Nuitka to the <code class="docutils literal notranslate"><span class="pre">bdist_nuitka</span></code> target.</p></li>
 </ul>
 </div>
-<div class="section" id="features-to-be-added-for-0-6-19">
-<h2>Features to be added for 0.6.19<a class="headerlink" href="#features-to-be-added-for-0-6-19" title="永久链接至标题">¶</a></h2>
-<p>List of things, we are aiming for to be included in that release.</p>
-<p>[x] Support for Kivy 2.x to work out of the box.</p>
-<p>[x] Better scalability</p>
+<div class="section" id="traceback-encryption-commercial">
+<h2>Traceback Encryption (commercial)<a class="headerlink" href="#traceback-encryption-commercial" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Right now tracebacks are entirely encrypted. But in a future update,
+you can decide which information is transferred, and what information
+is part of the encryption, and which part is not, e.g. hostname,
+client name, etc. could be output in plain text, while the variable
+names and values would not be, depending on your choice!</p></li>
+</ul>
 </div>
 <div class="section" id="features-to-be-added-for-0-6-20">
 <h2>Features to be added for 0.6.20<a class="headerlink" href="#features-to-be-added-for-0-6-20" title="永久链接至标题">¶</a></h2>
@@ -544,8 +568,15 @@ of Nuitka to the <code class="docutils literal notranslate"><span class="pre">bd
 run.</p>
 <p>[ ] Compression of onefile with bootstrap before Python3.5, so far it’s
 there for 3.5 or higher only.</p>
-<p>[x] Make pydantic support the default, removing the experimental flag
+<p>[x] Make <code class="docutils literal notranslate"><span class="pre">pydantic</span></code> support the default, removing the experimental flag
 <code class="docutils literal notranslate"><span class="pre">function-base</span></code> with it being the default behavior.</p>
+</div>
+<div class="section" id="features-to-be-added-for-0-6-21">
+<h2>Features to be added for 0.6.21<a class="headerlink" href="#features-to-be-added-for-0-6-21" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>[ ] Add ability to inhibit data files from the command line, so that</dt><dd><p>things coming from a plugin can be suppressed.</p>
+</dd>
+</dl>
 </div>
 </div>
 

@@ -31,7 +31,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/asciinema-player_2.6.1.css" />
@@ -51,7 +51,7 @@
     <script src="_static/asciinema-player_2.6.1.js"></script>
     <script src="_static/translations.js"></script>
     <script src="_static/design-tabs.js"></script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <link rel="canonical" href="https://daobook.github.io/nuitka-doc/developer-manual.html" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
@@ -105,7 +105,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
@@ -218,22 +223,22 @@
 
 
           
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
     <div class="topbar container-xl fixed-top">
     <div class="topbar-contents row">
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="切换导航" aria-controls="site-navigation"
-                title="切换导航" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">切换导航</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
             
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="下载此页面"><i
@@ -1101,11 +1106,6 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#onefile-compression-on-windows">
-     Onefile compression on Windows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#caching-of-python-level-compilation">
      Caching of Python level compilation
     </a>
@@ -1965,11 +1965,6 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#onefile-compression-on-windows">
-     Onefile compression on Windows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#caching-of-python-level-compilation">
      Caching of Python level compilation
     </a>
@@ -1991,7 +1986,7 @@
               <div>
                  <div class="section" id="nuitka-developer-manual">
 <h1><a class="toc-backref" href="#id2">Nuitka 开发者手册</a><a class="headerlink" href="#nuitka-developer-manual" title="永久链接至标题">¶</a></h1>
-<img alt="Nuitka Logo" src="_images/Nuitka-Logo-Symbol.png" />
+<img alt="Nuitka Logo" src="doc/images/Nuitka-Logo-Symbol.png" />
 <div class="contents topic" id="id1">
 <p class="topic-title">目录</p>
 <ul class="simple">
@@ -2180,11 +2175,10 @@
 <li><p><a class="reference internal" href="#memory-usage-at-compile-time" id="id134">Memory Usage at Compile Time</a></p></li>
 <li><p><a class="reference internal" href="#coverage-testing" id="id135">Coverage Testing</a></p></li>
 <li><p><a class="reference internal" href="#python3-performance" id="id136">Python3 Performance</a></p></li>
-<li><p><a class="reference internal" href="#onefile-compression-on-windows" id="id137">Onefile compression on Windows</a></p></li>
-<li><p><a class="reference internal" href="#caching-of-python-level-compilation" id="id138">Caching of Python level compilation</a></p></li>
+<li><p><a class="reference internal" href="#caching-of-python-level-compilation" id="id137">Caching of Python level compilation</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#updates-for-this-manual" id="id139">Updates for this Manual</a></p></li>
+<li><p><a class="reference internal" href="#updates-for-this-manual" id="id138">Updates for this Manual</a></p></li>
 </ul>
 </li>
 </ul>
@@ -2270,8 +2264,14 @@
 </div>
 <div class="section" id="commit-and-code-hygiene">
 <h2><a class="toc-backref" href="#id9">承诺和守则的卫士</a><a class="headerlink" href="#commit-and-code-hygiene" title="永久链接至标题">¶</a></h2>
-<p>在 Nuitka 中，我们有自动格式化代码的工具，你可以手动执行，但最好是在提交时执行，以确保当我们分享代码时，它已经被很好地格式化了，并避免做清理的噪音。</p>
-<p>这类修改也经常引起不必要的合并冲突，而自动格式化的设计也是为了在正常情况下避免合并冲突，比如说每行做导入一项，就可以避免合并冲突。</p>
+<p>In Nuitka we have tools to auto format code, you can execute them
+manually, but it’s probably best to execute them at commit time, to make
+sure when we share code, it’s already well format, and to avoid noise
+doing cleanups.</p>
+<p>The kinds of changes also often cause unnecessary merge conflicts, while
+the auto format is designed to format code also in a way that it avoids
+merge conflicts in the normal case, e.g. by doing imports one item per
+line.</p>
 <p>为了设置钩子，你需要执行这些命令：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Where python is the one you use with Nuitka, this then gets all</span>
 <span class="c1"># development requirements, can be full PATH.</span>
@@ -2294,7 +2294,7 @@ automatic formatting to code as much as possible. It uses <code class="docutils 
 <p>The tool (mostly <code class="docutils literal notranslate"><span class="pre">black</span></code> and <code class="docutils literal notranslate"><span class="pre">isort</span></code>) encodes all formatting rules,
 and makes the decisions for us. The idea being that we can focus on
 actual code and do not have to care as much about other things. It also
-deals with Windows new lines, trailing space, etc. and even sorts pylint
+deals with Windows new lines, trailing space, etc. and even sorts PyLint
 disable statements.</p>
 </div>
 <div class="section" id="identifiers">
@@ -2520,8 +2520,8 @@ Python delimiters (<code class="docutils literal notranslate"><span class="pre">
 <div class="section" id="special-doxygen-anatomy-of-doc">
 <h3><a class="toc-backref" href="#id21">Special <code class="docutils literal notranslate"><span class="pre">doxygen</span></code> Anatomy of <code class="docutils literal notranslate"><span class="pre">__doc__</span></code></a><a class="headerlink" href="#special-doxygen-anatomy-of-doc" title="永久链接至标题">¶</a></h3>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
-<p>We are replacing doxygen with sphinx, this is all obsolete</p>
+<p class="admonition-title">备注</p>
+<p>We are replacing Doxygen with sphinx, this is all obsolete</p>
 </div>
 <ul>
 <li><p>Immediately after the leading <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>, and after 1 space on the same
@@ -2777,7 +2777,7 @@ because Nuitka uses a lot of packages and imports between them.</p>
 <h2><a class="toc-backref" href="#id30">Internal/Plugin API</a><a class="headerlink" href="#internal-plugin-api" title="永久链接至标题">¶</a></h2>
 <p>The documentation from the source code for both the Python and the C
 parts are published as <a class="reference external" href="https://nuitka.net/apidoc">Nuitka API</a> and
-argumently in a relatively bad shape as we started generating those with
+arguably in a relatively bad shape as we started generating those with
 Doxygen only relatively late.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>doxygen ./doc/Doxyfile
 xdg-open html
@@ -2848,7 +2848,7 @@ git checkout origin/CPython39 -- .gitignore
 git commit --amend --no-edit .gitignore
 
 <span class="c1"># Now cherry-pick all commits of test support, these disable network, audio, GUI, random filenames and more</span>
-<span class="c1"># and are crucial for determistic outputs and non-reliance on outside stuff.</span>
+<span class="c1"># and are crucial for deterministic outputs and non-reliance on outside stuff.</span>
 git log --reverse origin/CPython39 --oneline -- test/support/__init__.py <span class="p">|</span> tail -n +2 <span class="p">|</span> cut -d<span class="s1">&#39; &#39;</span> -f1 <span class="p">|</span> xargs git cherry-pick
 
 git push
@@ -2929,7 +2929,7 @@ without any build process just fine.</p>
 and tasks scons to execute the final build, after which Nuitka again
 will take control and do more work as necessary.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>When we speak of “standalone” mode, this is handled outside of Scons,
 and after it, creating the “.dist” folder. This is done in
 <code class="docutils literal notranslate"><span class="pre">nuitka.MainControl</span></code> module.</p>
@@ -3001,8 +3001,8 @@ to make major differences.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">disable_console</span></code></p>
 <p>Windows subsystem mode: Disable console for windows builds.</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unstriped_mode</span></code></p>
-<p>Unstriped mode: Do not remove debug symbols.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">unstripped_mode</span></code></p>
+<p>Unstripped mode: Do not remove debug symbols.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">clang_mode</span></code></p>
 <p>Clang compiler mode, default on macOS X and FreeBSD, optional on
@@ -3084,7 +3084,7 @@ implementation of a <code class="docutils literal notranslate"><span class="pre"
 <p>This meta path based importer allows us to have the Nuitka provided
 module imported even when imported by non-compiled code.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>Of course, it would make sense to compile time detect which module it
 is that is being imported and then to make it directly. At this time,
 we don’t have this inter-module optimization yet, mid-term it should
@@ -3203,7 +3203,7 @@ best cases, it might be removed completely. Also this will play a role
 when in-lining function. The frame stack entry will then be
 automatically preserved without extra care.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>In the actual code, <code class="docutils literal notranslate"><span class="pre">nuitka.nodes.FrameNodes.StatementsFrame</span></code> is
 represents this as a set of statements to be guarded by a frame
 presence.</p>
@@ -3322,7 +3322,7 @@ branches creates the merge trace.</p>
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>For conditional expressions, there are always only two branches. Even
 if you think you have more than one branch, you do not. It’s always
 nested branches, already when it comes out of the <code class="docutils literal notranslate"><span class="pre">ast</span></code> parser.</p>
@@ -3752,7 +3752,7 @@ operands only.</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>This allows optimizations to discover the file opening nature easily
 and apply file embedding or whatever we will have there one day.</p>
 </div>
@@ -3903,14 +3903,14 @@ well.</p>
 It will be the job of optimizations to try and remove unnecessary
 unpacking, in case e.g. the source is a known tuple or list creation.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">unpack</span></code> is a special node which is a form of <code class="docutils literal notranslate"><span class="pre">next</span></code> that
 will raise a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> when it cannot get the next value, rather
 than a <code class="docutils literal notranslate"><span class="pre">StopIteration</span></code>. The message text contains the number of
 values to unpack, therefore the integer argument.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">unpack_check</span></code> is a special node that raises a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>
 exception if the iterator is not finished, i.e. there are more values
 to unpack. Again the number of values to unpack is provided to
@@ -3966,7 +3966,7 @@ call <code class="docutils literal notranslate"><span class="pre">__exit__</span
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>We don’t refer really to <code class="docutils literal notranslate"><span class="pre">sys.exc_info()</span></code> at all, instead, we have
 fast references to the current exception type, value and trace, taken
 directly from the caught exception object on the C level.</p>
@@ -4012,7 +4012,7 @@ implicit in the code explicitly.</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">_iter</span></code> temporary variable is of course also in a
 <code class="docutils literal notranslate"><span class="pre">try/finally</span></code> construct, to make sure it releases after its used.
 The <code class="docutils literal notranslate"><span class="pre">x,</span> <span class="pre">y</span></code> assignment is of course subject to unpacking
@@ -4049,7 +4049,7 @@ for optimization to remove always true loop conditions, without
 concerning code generation about it, and to detect such a situation,
 consider e.g. endless loops.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>Loop analysis (not yet done) can then work on a reduced problem
 (which <code class="docutils literal notranslate"><span class="pre">break</span></code> statements are executed under what conditions) and
 is then automatically very general.</p>
@@ -4473,7 +4473,7 @@ nature of its input.</p>
 </div>
 <p>Only string objects are spared from the <code class="docutils literal notranslate"><span class="pre">str</span></code> built-in wrapper,
 because that would only cause noise in optimization stage. Later
-optization can then find it unnecessary for certain arguments.</p>
+optimization can then find it unnecessary for certain arguments.</p>
 <p>Additionally, each <code class="docutils literal notranslate"><span class="pre">print</span></code> may have a target, and multiple arguments,
 which we break down as well for dumber code generation. The target is
 evaluated first and should be a file, kept referenced throughout the
@@ -4646,7 +4646,7 @@ to variable references to function references.</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">lambda</span></code> stands here for a reference to the function, rather
 than a variable reference, this is the normal forward propagation of
 values, and does not imply duplicating or moving any code at all.</p>
@@ -4877,7 +4877,7 @@ would rather write or use tools that turn an existing a C header to
 some <code class="docutils literal notranslate"><span class="pre">ctypes</span></code> declarations if it needs to be, but not mix and use
 declarations from existing header code.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>The “cffi” interface maybe won’t have the issue, but it’s not
 something we need to write or test the code for.</p>
 </div>
@@ -4904,7 +4904,7 @@ the same thing.</p>
 <p>When assigning <code class="docutils literal notranslate"><span class="pre">a</span></code> to something new, that won’t change <code class="docutils literal notranslate"><span class="pre">b</span></code> at all.
 But when an attribute is set, a method called of it, that might impact
 the actual value, referenced by both. We need to understand mutable vs.
-immutable though, as some things are not affectable by aliasing in any
+immutable though, as some things are not affected by aliasing in any
 way.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
@@ -4932,7 +4932,7 @@ behavior of a type <code class="docutils literal notranslate"><span class="pre">
 far as possible with the built-in <code class="docutils literal notranslate"><span class="pre">long</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code> at compiled time as
 well.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>This “use the real thing” concept extends beyond builtin types, e.g.
 <code class="docutils literal notranslate"><span class="pre">ctypes.c_int()</span></code> should also be used, but we must be aware of
 platform dependencies. The maximum size of <code class="docutils literal notranslate"><span class="pre">ctypes.c_int</span></code> values
@@ -4996,7 +4996,7 @@ from a function could mean to have Python code to do it, as well as C
 code to do it. Then code for the loop can be generated without any
 CPython library usage at all.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>Of course, it would only make sense where such calculations are
 “O(1)” complexity, i.e. do not require recursion like “n!” does.</p>
 </div>
@@ -5015,7 +5015,7 @@ Great. We need to ask if there are any side effects, and if there are,
 we need to maintain them of course. This is already done by existing
 optimization if an operation generates an exception.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>The optimization of <code class="docutils literal notranslate"><span class="pre">len</span></code> has been implemented and works for all
 kinds of container creation and ranges.</p>
 </div>
@@ -5097,13 +5097,13 @@ probability of being a <code class="docutils literal notranslate"><span class="p
 a <code class="docutils literal notranslate"><span class="pre">PyStringObject</span></code>, as that one has no <code class="docutils literal notranslate"><span class="pre">append</span></code> method, and would
 have raised an exception therefore.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>If classes, i.e. other types in the program, have an <code class="docutils literal notranslate"><span class="pre">append</span></code>
 attribute, it should play a role too, there needs to be a way to
 plug-in to this decisions.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>On the other hand, types without <code class="docutils literal notranslate"><span class="pre">append</span></code> attribute can be
 eliminated.</p>
 </div>
@@ -5200,7 +5200,7 @@ version, and then to decide that both indeed give the same result.</p>
 <p>The trace collection tracks variable changes in conditional branches,
 and then merges the existing state at conditional statement exits.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>A branch is considered “exiting” if it is not abortive. Should it end
 in a <code class="docutils literal notranslate"><span class="pre">raise</span></code>, <code class="docutils literal notranslate"><span class="pre">break</span></code>, <code class="docutils literal notranslate"><span class="pre">continue</span></code>, or <code class="docutils literal notranslate"><span class="pre">return</span></code>, there is no
 need to merge that branch, as execution of that branch is terminated.</p>
@@ -5223,7 +5223,7 @@ their new information.</p>
 <ul class="simple">
 <li><p>The variable <code class="docutils literal notranslate"><span class="pre">x</span></code> is an integer of value in <code class="docutils literal notranslate"><span class="pre">(1,2)</span></code></p></li>
 </ul>
-<p>Given this, we then should be able to precompute the value of this:</p>
+<p>Given this, we then should be able to pre-compute the value of this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">3</span>
 </pre></div>
 </div>
@@ -5282,7 +5282,7 @@ from there.</p>
 <code class="docutils literal notranslate"><span class="pre">tuple</span></code>. In fact, using a <code class="docutils literal notranslate"><span class="pre">tuple</span></code> is a good way to express that
 something won’t be changed later, as these are mutable.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>Better programming style, would be to use this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">cond</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
     <span class="n">a</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">something</span><span class="p">()</span> <span class="k">if</span> <span class="n">cond</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
@@ -5303,7 +5303,7 @@ know nothing about it”, we need a kind of <code class="docutils literal notran
 mechanism that is capable of say what is common with multiple
 alternative values.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>At this time, we don’t really have that mechanism to find the
 commonality between values.</p>
 </div>
@@ -5449,7 +5449,7 @@ performing trace collection. When it encounters assignments and
 references to them, it considers current state of traces and uses it for
 <code class="docutils literal notranslate"><span class="pre">computeExpression</span></code>.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>Assignments to attributes, indexes, slices, etc. will also need to
 follow the flow of <code class="docutils literal notranslate"><span class="pre">append</span></code>, so it cannot escape attention that a
 list may be modified. Usages of <code class="docutils literal notranslate"><span class="pre">append</span></code> that we cannot be sure
@@ -5590,7 +5590,7 @@ merges of course appear as usages of the <code class="docutils literal notransla
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>There are many operations in this, and all of them should be properly
 handled, or at least ignored in safe way.</p>
 </div>
@@ -5714,7 +5714,7 @@ should not block us.</p>
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>This design is not likely to be the final one.</p>
 </div>
 </div>
@@ -5809,7 +5809,7 @@ still do not contain the package, we often even have our own wrapper
 which provides a minimal fallback or exposes a sane interface for the
 subset of functionality that we use.</p>
 <div class="admonition note">
-<p class="admonition-title">注解</p>
+<p class="admonition-title">备注</p>
 <p>Therefore, please if you consider adding one of these, get in touch
 with <code class="docutils literal notranslate"><span class="pre">&#64;Nuitka-pushers</span></code> first and get a green light.</p>
 </div>
@@ -6022,7 +6022,7 @@ and Linux for unknown reasons.</p>
 only experimental code that just ignores the lock, but it likely only
 works on Linux, and I wonder why there is that lock in the first place.</p>
 <p>Ignoring the locks cannot be good. But what updates that thread state
-pointer ever without a thread change, and is this what abiflags are
+pointer ever without a thread change, and is this what ABI flags are
 about in this context, are there some that allow us to ignore the locks.</p>
 <p>An important bit would be to use a thread state once acquired for as
 much as possible, currently exception helpers do not accept it as an
@@ -6030,21 +6030,15 @@ argument, but that ought to become an option, that way saving and
 restoring an exception will be much faster, not to mention checking and
 dropping non interesting, or rewriting exceptions.</p>
 </div>
-<div class="section" id="onefile-compression-on-windows">
-<h3><a class="toc-backref" href="#id137">Onefile compression on Windows</a><a class="headerlink" href="#onefile-compression-on-windows" title="永久链接至标题">¶</a></h3>
-<p>We need to add compression on that platform too. This should use zstd
-and probably just needs integration into our build. The Python side
-already is capable of producing compressed payload.</p>
-</div>
 <div class="section" id="caching-of-python-level-compilation">
-<h3><a class="toc-backref" href="#id138">Caching of Python level compilation</a><a class="headerlink" href="#caching-of-python-level-compilation" title="永久链接至标题">¶</a></h3>
+<h3><a class="toc-backref" href="#id137">Caching of Python level compilation</a><a class="headerlink" href="#caching-of-python-level-compilation" title="永久链接至标题">¶</a></h3>
 <p>While the C compilation result is already cached with ccache and friends
 now, we need to also cover our bases and save the resulting node tree of
 potential expensive optimization on the module level.</p>
 </div>
 </div>
 <div class="section" id="updates-for-this-manual">
-<h2><a class="toc-backref" href="#id139">Updates for this Manual</a><a class="headerlink" href="#updates-for-this-manual" title="永久链接至标题">¶</a></h2>
+<h2><a class="toc-backref" href="#id138">Updates for this Manual</a><a class="headerlink" href="#updates-for-this-manual" title="永久链接至标题">¶</a></h2>
 <p>This document is written in REST. That is an ASCII format which is
 readable to human, but easily used to generate PDF or HTML documents.</p>
 <p>You will find the current source under:

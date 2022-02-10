@@ -33,7 +33,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Factory Instructions" href="factory.html" />
-    <link rel="prev" title="Nuitka Roadmap" href="roadmap.html" />   
+    <link rel="prev" title="Nuitka Developer Manual" href="developer-manual.html" />   
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -74,10 +74,12 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="../index.html" class="icon icon-home"> Nuitka the Python Compiler
+            <img src="../_static/Nuitka-Logo-Symbol.svg" class="logo" alt="Logo"/>
           </a><!-- Empty override file take the place of searchbox.html, which generates search box. -->
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user-manual.html">User Manual</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pages/support.html">Support</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Commercial Users</span></p>
@@ -94,6 +96,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">More documentation</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="developer-manual.html">Developer Manual</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API doc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="factory.html">Factory Instructions</a></li>
 </ul>
@@ -374,7 +377,7 @@ asserts of Python will happen in this mode.</p>
 </dl>
 <p>A binary is called stripped when debug information is not present, an
 unstripped when it is present. For profiling and debugging it will be
-necessary, but it doesn*t enable debug checks like <code class="docutils literal notranslate"><span class="pre">--debug</span></code> does.</p>
+necessary, but it doesn’t enable debug checks like <code class="docutils literal notranslate"><span class="pre">--debug</span></code> does.</p>
 <p>Passed to Scons as <code class="docutils literal notranslate"><span class="pre">unstripped_mode</span></code> to it can ask the linker to
 include symbol information.</p>
 </dd></dl>
@@ -587,18 +590,6 @@ from Anaconda.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="nuitka.Options.getIntendedPythonArch">
-<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getIntendedPythonArch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getIntendedPythonArch" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>str, one of <code class="docutils literal notranslate"><span class="pre">&quot;x86&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;x86_64&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-<p>Notes: This is only available on Windows, on other platforms
-it will be <cite>None</cite></p>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.isExperimental">
 <span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">isExperimental</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indication</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.isExperimental" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether a given experimental feature is enabled.</p>
@@ -779,6 +770,16 @@ a bootstrap binary there too.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.getMacOSTargetArch">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">getMacOSTargetArch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.getMacOSTargetArch" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str enum (“universal”, “arm64”, “x86_64”) derived from <code class="docutils literal notranslate"><span class="pre">--macos-target-arch</span></code> value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="nuitka.Options.shallCreateAppBundle">
 <span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">shallCreateAppBundle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.shallCreateAppBundle" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> shall create an application bundle</p>
@@ -842,6 +843,12 @@ a bootstrap binary there too.</p>
 <dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagNoRandomization">
 <span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagNoRandomization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagNoRandomization" title="Permalink to this definition"></a></dt>
 <dd><p><em>bool</em> = “no_randomization”, “-R”, “static_hashes” in python flags given</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="nuitka.Options.hasPythonFlagUnbuffered">
+<span class="sig-prename descclassname"><span class="pre">nuitka.Options.</span></span><span class="sig-name descname"><span class="pre">hasPythonFlagUnbuffered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nuitka.Options.hasPythonFlagUnbuffered" title="Permalink to this definition"></a></dt>
+<dd><p><em>bool</em> = “package_mode”, “-m” in python flags given</p>
 </dd></dl>
 
 <dl class="py function">
